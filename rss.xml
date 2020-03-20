@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedrzej Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedrzej Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 18 Mar 2020 22:02:24 GMT</lastBuildDate><item><title><![CDATA[Test post]]></title><description><![CDATA[Testing whether this thing works]]></description><link>https://j.blaszyk.me/test-post/</link><guid isPermaLink="false">https://j.blaszyk.me/test-post/</guid><pubDate>Mon, 18 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Test post&lt;/p&gt;
-&lt;p&gt;I love Horalky&lt;/p&gt;
-                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at overreacted.io. You can read it online by &lt;a href=&quot;https://j.blaszyk.me/test-post/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedrzej Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedrzej Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 Mar 2020 14:49:55 GMT</lastBuildDate><item><title><![CDATA[Sussex Coastal Marathon]]></title><description><![CDATA[My first marathon. Hilly, muddy and windy race, definitely worth the views.]]></description><link>https://j.blaszyk.me/sussex-coastal-marathon/</link><guid isPermaLink="false">https://j.blaszyk.me/sussex-coastal-marathon/</guid><pubDate>Mon, 18 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This race is part of the coastal trail series which are scenic and challenging runs mostly around the coastal paths in the UK. A great thing about the Sussex Coastal Marathon is that the route includes the Seven Sisters cliffs and offers spectacular views over the English Channel. To be honest, the localisation and the views were the main reason why my flatmate, Eduardo, managed to convince me to sign up a few months ago. Watching the &lt;a href=&quot;https://www.facebook.com/CoastalTrailSeries/videos/1666969293317932/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;promo of the race&lt;/a&gt; got me hooked up and gave me a lot of motivation during the training.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/d9249/marathon_promo.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 42.191977077363894%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGvSREV/8QAGRAAAwADAAAAAAAAAAAAAAAAAAECAxMU/9oACAEBAAEFAoy2dMo3Qz//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAERISIxMv/aAAgBAQAGPwLSgyo6R//EABkQAAMAAwAAAAAAAAAAAAAAAAABETFhgf/aAAgBAQABPyGdPYZROmRtVH//2gAMAwEAAgADAAAAEIQv/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QSf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EEz/xAAaEAACAwEBAAAAAAAAAAAAAAABEQAhYZGx/9oACAEBAAE/EHiF7aQ7DcWAQykFpXs//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Marathon promo.&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/88218/marathon_promo.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/7237a/marathon_promo.jpg 148w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/0cfdf/marathon_promo.jpg 295w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/88218/marathon_promo.jpg 590w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/77d57/marathon_promo.jpg 885w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/5a917/marathon_promo.jpg 1180w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/d9249/marathon_promo.jpg 2792w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2 id=&quot;running-for-the-climate-change&quot;&gt;&lt;a href=&quot;#running-for-the-climate-change&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Running for the climate change&lt;/h2&gt;
+&lt;p&gt;Together with my friend Ed we decided to use this challenge as an opportunity to make a difference. We managed to &lt;a href=&quot;https://www.gofundme.com/f/vmckwn?fbclid=IwAR1oINcBdvMpJPXSPR-yUCHl_uF5SwTqSKNo0BozHojsjUXsU6LDbOzjBZU&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;raise 200£&lt;/a&gt;, all of which was forwarded to &lt;a href=&quot;https://www.theclimategroup.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;The Climate Group&lt;/a&gt; that specialises on the environment. Big thank you to everyone who donated!&lt;/p&gt;
+&lt;h2 id=&quot;my-experience&quot;&gt;&lt;a href=&quot;#my-experience&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;My experience&lt;/h2&gt;
+&lt;p&gt;The marathon was rather a hard one, definitely harder than I expected. It had almost 1700m (5600ft) of elevation gain. There was quite a few muddy sections of the trail as it was raining the night before the race. During the run it was quite windy with a bit of rain.&lt;/p&gt;
+&lt;p&gt;I was definitely underprepared. My training was mostly based on running in Hyde Park which offers a few flat “trail” routes. Looking back, I should have include at least some hilly runs in my routine to prepare my legs better.&lt;/p&gt;
+&lt;p&gt;Upon starting the marathon I was confident that I will be able to run all the way to the finish line. I did a few long runs as a part of my training and I felt prepared. To my disappointment, a lot of hilly sections and muddy trail took their toll and made me walk a lot after hitting 30km mark. The result? Time &lt;code class=&quot;language-text&quot;&gt;5hr 17min&lt;/code&gt; is definitely not what I was hoping for but it’s a good motivation to carry on with the training to improve myself in the future. I’m already looking forward to new cool challenges I can sign up for. If you have a suggestion, lmk on Twitter!&lt;/p&gt;
+&lt;h2 id=&quot;photos-from-the-event&quot;&gt;&lt;a href=&quot;#photos-from-the-event&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Photos from the event&lt;/h2&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/a9a31/before_the_race.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 61.7056856187291%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAQL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABY5OdDQCQn//EABgQAAMBAQAAAAAAAAAAAAAAAAACExEB/9oACAEBAAEFArIxRSqDG9w//8QAFxEAAwEAAAAAAAAAAAAAAAAAABESIf/aAAgBAwEBPwGdRB//xAAWEQEBAQAAAAAAAAAAAAAAAAAAESH/2gAIAQIBAT8BuK//xAAZEAACAwEAAAAAAAAAAAAAAAAAAQIQMiH/2gAIAQEABj8C5I0jQr//xAAaEAADAAMBAAAAAAAAAAAAAAAAAREhMVGB/9oACAEBAAE/IVpvpNk+ceKTcvUXCP/aAAwDAQACAAMAAAAQrN//xAAWEQEBAQAAAAAAAAAAAAAAAAAAESH/2gAIAQMBAT8Q0Kf/xAAXEQEBAQEAAAAAAAAAAAAAAAABABEh/9oACAECAQE/EBdWm//EAB0QAAIBBAMAAAAAAAAAAAAAAAERACExYdFBgbH/2gAIAQEAAT8QEMFcEvYa0vBca26hXSrbqBFzeCFiEBkT/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Before the race. Waiting with the others to start.&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/88218/before_the_race.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/7237a/before_the_race.jpg 148w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/0cfdf/before_the_race.jpg 295w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/88218/before_the_race.jpg 590w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/77d57/before_the_race.jpg 885w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/5a917/before_the_race.jpg 1180w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/a9a31/before_the_race.jpg 1196w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Before the race. Waiting with the others to start.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/a9a31/route_views.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.856187290969906%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB0smpw2SEN//EABgQAAMBAQAAAAAAAAAAAAAAAAABEBMS/9oACAEBAAEFAtDRHajn/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABcRAAMBAAAAAAAAAAAAAAAAAAABERL/2gAIAQIBAT8B0ys//8QAGRAAAgMBAAAAAAAAAAAAAAAAADIBESAh/9oACAEBAAY/AuzQ4+P/xAAbEAACAQUAAAAAAAAAAAAAAAAAAXERIWGRwf/aAAgBAQABPyFL1EKTH2Nl5Vn/2gAMAwEAAgADAAAAEKQP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/ELLD/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxAL/8QAGRABAQEBAQEAAAAAAAAAAAAAAREAIVEx/9oACAEBAAE/EDLWPsYOUJ9Jm3c29yelrkHjv//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Views en route.&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/88218/route_views.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/7237a/route_views.jpg 148w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/0cfdf/route_views.jpg 295w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/88218/route_views.jpg 590w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/77d57/route_views.jpg 885w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/5a917/route_views.jpg 1180w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/a9a31/route_views.jpg 1196w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Views of the English Channel at around 30km.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/e6702/after_race.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMEAQL/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAYatfh7Fhf/EABoQAAICAwAAAAAAAAAAAAAAAAECABEDEiL/2gAIAQEAAQUCPLJjNANHAvaWZ//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAgBAgEBPwGrr//EABoQAAICAwAAAAAAAAAAAAAAAAABITECEGH/2gAIAQEABj8CmSy0Y8e//8QAHBABAAICAwEAAAAAAAAAAAAAAQAhEUFRYXGh/9oACAEBAAE/ITQ7GmPyyPYEnbjoI7Tgfk//2gAMAwEAAgADAAAAEK8f/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oACAEDAQE/EEoQ/8QAFhEBAQEAAAAAAAAAAAAAAAAAIQEQ/9oACAECAQE/EKDD/8QAHRABAAMAAgMBAAAAAAAAAAAAAQARITFxQVGBsf/aAAgBAQABPxBWsE3C/cok6oBp75hcC+OzLxoYCvF10xK01+w8RUf/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Me happy after completing the race&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/88218/after_race.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/7237a/after_race.jpg 148w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/0cfdf/after_race.jpg 295w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/88218/after_race.jpg 590w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/77d57/after_race.jpg 885w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/e6702/after_race.jpg 1008w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Super happy after completing my first marathon.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;how-covid-19-affected-the-event&quot;&gt;&lt;a href=&quot;#how-covid-19-affected-the-event&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How COVID-19 affected the event&lt;/h2&gt;
+&lt;p&gt;I did ask myself a question of whether or not should I participate. In the end I decided to take a calculated risk. Only a handful of people took part in this race, also the distances between runners were big and the organisers made sure to minimise physical touch points: all the runners were required to carry their own food and water.&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at overreacted.io. You can read it online by &lt;a href=&quot;https://j.blaszyk.me/sussex-coastal-marathon/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
               </content:encoded></item></channel></rss>
