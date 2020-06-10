@@ -1,7 +1,7 @@
 ---
 title: Geometric Deep Learning - an overview
 date: '2020-06-10'
-spoiler: Series of posts explaining learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".
+spoiler: Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".
 cta: 'gdl'
 ---
 

@@ -8,7 +8,7 @@ module.exports = {
     social: {
       twitter: '@jedr_blaszyk',
     },
-    image: '/assets/logo.png',
+    image: '/logo.png',
   },
   pathPrefix: '/',
   plugins: [

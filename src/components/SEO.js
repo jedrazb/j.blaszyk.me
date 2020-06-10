@@ -14,6 +14,7 @@ const query = graphql`
         social {
           twitter
         }
+        image
       }
     }
   }
@@ -26,7 +27,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
       render={data => {
         const { siteMetadata } = data.site;
         const metaDescription = description || siteMetadata.description;
-        const metaImage = siteMetadata.image;
+        const metaImage = `${siteMetadata.siteUrl}${siteMetadata.image}`;
         const url = `${siteMetadata.siteUrl}${slug}`;
         return (
           <Helmet
