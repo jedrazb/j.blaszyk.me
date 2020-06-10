@@ -17,6 +17,8 @@ import {
   replaceAnchorLinksByLanguage,
 } from '../utils/i18n';
 
+import 'katex/dist/katex.min.css';
+
 const GITHUB_USERNAME = 'jedrazb';
 const GITHUB_REPO_NAME = 'personal-blog';
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -151,7 +153,11 @@ class BlogPostTemplate extends React.Component {
         <main>
           <article>
             <header>
-              <h1 style={{ color: 'var(--textTitle)' }}>
+              <h1
+                style={{
+                  color: 'var(--textTitle)',
+                }}
+              >
                 {post.frontmatter.title}
               </h1>
               <p

@@ -8,6 +8,7 @@ module.exports = {
     social: {
       twitter: '@jedr_blaszyk',
     },
+    image: '/assets/logo.png',
   },
   pathPrefix: '/',
   plugins: [
@@ -47,6 +48,13 @@ module.exports = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: 'ignore',
             },
           },
         ],
@@ -172,7 +180,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#f59e47`,
         display: `minimal-ui`,
-        icon: `src/assets/icon.png`,
+        icon: `src/assets/logo.png`,
         theme_color_in_head: false,
       },
     },
