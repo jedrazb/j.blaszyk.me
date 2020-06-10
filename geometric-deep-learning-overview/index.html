@@ -69,7 +69,7 @@
 
                 setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
               })();
-            </script><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="color:var(--textNormal);background:var(--bg);transition:color 0.2s ease-out, background 0.2s ease-out;min-height:100vh"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2.625rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:0;height:42px;line-height:2.625rem"><a style="box-shadow:none;text-decoration:none;color:rgb(245, 158, 71)" href="/">Jedrzej Blaszyk - Blog</a></h3><div style="height:24px"></div></header><main><article><header><h1 style="color:var(--textTitle)">Geometric Deep Learning - an overview</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.4rem">June 10, 2020<!-- --> • ☕️ 7 min read</p></header><div><ul>
+            </script><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper"><div style="color:var(--textNormal);background:var(--bg);transition:color 0.2s ease-out, background 0.2s ease-out;min-height:100vh"><div style="margin-left:auto;margin-right:auto;max-width:42rem;padding:2.625rem 1.3125rem"><header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2.625rem"><h3 style="font-family:Montserrat, sans-serif;margin-top:0;margin-bottom:0;height:42px;line-height:2.625rem"><a style="box-shadow:none;text-decoration:none;color:rgb(245, 158, 71)" href="/">Jedrzej Blaszyk - Blog</a></h3><div style="height:24px"></div></header><main><article><header><h1 style="color:var(--textTitle)">Geometric Deep Learning - an overview</h1><p style="font-size:0.83255rem;line-height:1.75rem;display:block;margin-bottom:1.75rem;margin-top:-1.4rem">June 10, 2020<!-- --> • ☕️☕️ 8 min read</p></header><div><ul>
 <li><a href="#non-euclidean-domains">Non-Euclidean domains</a></li>
 <li><a href="#spectral-methods">Spectral methods</a></li>
 <li><a href="#spatial-methods">Spatial methods</a></li>
@@ -166,7 +166,7 @@ This formula can be divided into the following steps:</p>
 <li>Sum up neighboring node features.</li>
 <li>Return new node embeddings.</li>
 </ol>
-<p>Pytorch Geometric provides the <code class="language-text">MessagePassing</code> class, all we need to do to implement GCN is implement <code class="language-text">update()</code> and <code class="language-text">message()</code> functions.</p>
+<p>Pytorch Geometric provides the <code class="language-text">MessagePassing</code> class, all we need to do to implement GCN is write our <code class="language-text">update()</code> and <code class="language-text">message()</code> functions.</p>
 <div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">GCNConv</span><span class="token punctuation">(</span>MessagePassing<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> in_channels<span class="token punctuation">,</span> out_channels<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token builtin">super</span><span class="token punctuation">(</span>GCNConv<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>aggr<span class="token operator">=</span><span class="token string">'add'</span><span class="token punctuation">)</span>  <span class="token comment"># "Add" aggregation.</span>
@@ -203,6 +203,56 @@ This formula can be divided into the following steps:</p>
         <span class="token keyword">return</span> aggr_out</code></pre></div>
 <p>Note: Step 4 is done by setting <code class="language-text">aggr=&#39;add&#39;</code> when initialising <code class="language-text">GCNConv</code>.</p>
 <p>Wasn’t too bad, right? PyTorch Geometric offers implementations of most popular convolutional layers and provides lots of examples. <a href="https://github.com/rusty1s/pytorch_geometric" target="_blank" rel="nofollow noopener noreferrer">Check it out on github</a>.</p>
+<p>Now we can get our hands dirty on some real-world problem. The Cora dataset consists of 2708 scientific publications classified into one of seven classes. The citation network consists of 5429 links. Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. We can create a simple model for the semi-supervised classication of each publication in the graph. Our model can be constructed as follows:</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Net</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Net<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>conv1 <span class="token operator">=</span> GCNConv<span class="token punctuation">(</span>dataset<span class="token punctuation">.</span>num_features<span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>conv2 <span class="token operator">=</span> GCNConv<span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">,</span> dataset<span class="token punctuation">.</span>num_classes<span class="token punctuation">)</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        x<span class="token punctuation">,</span> edge_index<span class="token punctuation">,</span> edge_weight <span class="token operator">=</span> data<span class="token punctuation">.</span>x<span class="token punctuation">,</span> data<span class="token punctuation">.</span>edge_index<span class="token punctuation">,</span> data<span class="token punctuation">.</span>edge_attr
+        x <span class="token operator">=</span> F<span class="token punctuation">.</span>relu<span class="token punctuation">(</span>self<span class="token punctuation">.</span>conv1<span class="token punctuation">(</span>x<span class="token punctuation">,</span> edge_index<span class="token punctuation">,</span> edge_weight<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        x <span class="token operator">=</span> F<span class="token punctuation">.</span>dropout<span class="token punctuation">(</span>x<span class="token punctuation">,</span> training<span class="token operator">=</span>self<span class="token punctuation">.</span>training<span class="token punctuation">)</span>
+        x <span class="token operator">=</span> self<span class="token punctuation">.</span>conv2<span class="token punctuation">(</span>x<span class="token punctuation">,</span> edge_index<span class="token punctuation">,</span> edge_weight<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> F<span class="token punctuation">.</span>log_softmax<span class="token punctuation">(</span>x<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre></div>
+<p>With just 140 nodes in the training set we are able to achieve <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mn>80</mn></mrow><annotation encoding="application/x-tex">&gt;80%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span><span class="mord">0</span></span></span></span> classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/f4f59a95a1022ba3b4e602731b164903/861bd/cora.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 93.17647058823528%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsSAAALEgHS3X78AAACiklEQVQ4y4VUS08TURSeH+FPMLjSuMO4VGNIXLgxLiCQEI3GxLjQjSaCSoIsEIgYH4Gu0GhVKgVCKAahlZdolEBbnkppxpZOnzOd6Z37Hi+dUmqFemcyc++d853znXO/M5JlWVxclrUYWVSBapUMyihhxDp4SMUZ5zyhJ3SoF3cQQUkjaX/6D9gOpWgKoYVojDOAgE2tCC/1I5U5Y4wBCAQsokUoI4QJh8jK58WYVcZA+peMgQzxHAkMT21MiYluxHJQ21DCKdUkDAFQEUw5xRSF4uGWofvjq+P+3345I7u/un0L2y8H1JVlmGe/PzjPEIcCm7PNA60XeupeTD8LyiHn8FxdY7j6ZNQ7CRG0KN0D892biYXI82d00Rv0tHi6qttO1XTUPBzsae72Ha5aOlIVd4/KMVXBmBxIeyu1MRYYvPH26sXOc5d7bx8bczZ8mr90Z8bzMZQ2UlmoFXLGNMeYYaLVjObUtAldXzHNOILpreiow3O+qb+hfrj9qNd13fXY7Xj/a2Yea5k8xZ3SS5gkCDEojRLyWddnANjCBABzMx4f8gdb+r3X2vprO7vOuu6e+dLRFHzzevX5k2THI6Yo+9PeSZtsRyPO5eX2idmbSx9OzN079O7K8W+tt0K9ju1XfaqjF8uyCC4Vql4oG7OXuj6WSY9kwY+w7PvuavR11w7Vn14b6cstzBveSZ7L7ZirqlR2SJxThNIiC4sjoSdoKLHZB2vTT8ML06n1AIamBQCHsEwktgAVhGJFHWMzA40klCdBat3EmAFAS/UlClaaJ0J+8S76ItgUUmcom5d3vic421fbhLH4LtK2FN1sY1hJXSo1xp4Rx1mG1LLNCuC/jASYV/yNiPEHGBAUMCFVsNMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Cora dataset"
+        title=""
+        src="/static/f4f59a95a1022ba3b4e602731b164903/799d3/cora.png"
+        srcset="/static/f4f59a95a1022ba3b4e602731b164903/00d96/cora.png 148w,
+/static/f4f59a95a1022ba3b4e602731b164903/0b23c/cora.png 295w,
+/static/f4f59a95a1022ba3b4e602731b164903/799d3/cora.png 590w,
+/static/f4f59a95a1022ba3b4e602731b164903/861bd/cora.png 850w"
+        sizes="(max-width: 590px) 100vw, 590px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    
+<em>Figure 2: Semi-supervised node classification result on Cora dataset.</em></p>
 <hr>
 <h3 id="references"><a href="#references" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>References</h3>
 <p>[1] Bronstein, Michael M., et al. “Geometric deep learning: going beyond euclidean data.” IEEE Signal Processing Magazine 34.4 (2017): 18-42.</p>
