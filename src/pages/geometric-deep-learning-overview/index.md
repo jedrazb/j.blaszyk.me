@@ -74,7 +74,7 @@ This formula can be divided into the following steps:
 5. Return new node embeddings.
 
 
-Pytorch Geometric provides the `MessagePassing` class, all we need to do to implement GCN is implement `update()` and `message()` functions.
+Pytorch Geometric provides the `MessagePassing` class, all we need to do to implement GCN is write our `update()` and `message()` functions.
 
 ```python
 class GCNConv(MessagePassing):
@@ -117,6 +117,29 @@ Note: Step 4 is done by setting `aggr='add'` when initialising `GCNConv`.
 
 
 Wasn't too bad, right? PyTorch Geometric offers implementations of most popular convolutional layers and provides lots of examples. [Check it out on github](https://github.com/rusty1s/pytorch_geometric).
+
+Now we can get our hands dirty on some real-world problem. The Cora dataset consists of 2708 scientific publications classified into one of seven classes. The citation network consists of 5429 links. Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. We can create a simple model for the semi-supervised classication of each publication in the graph. Our model can be constructed as follows:
+
+```python
+class Net(torch.nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = GCNConv(dataset.num_features, 16)
+        self.conv2 = GCNConv(16, dataset.num_classes)
+
+
+    def forward(self):
+        x, edge_index, edge_weight = data.x, data.edge_index, data.edge_attr
+        x = F.relu(self.conv1(x, edge_index, edge_weight))
+        x = F.dropout(x, training=self.training)
+        x = self.conv2(x, edge_index, edge_weight)
+        return F.log_softmax(x, dim=1)
+```
+
+With just 140 nodes in the training set we are able to achieve $>80%$ classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:
+
+![Cora dataset](./cora.png)
+*Figure 2: Semi-supervised node classification result on Cora dataset.*
 
 ***
 
