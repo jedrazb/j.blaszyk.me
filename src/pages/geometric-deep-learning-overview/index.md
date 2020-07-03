@@ -17,6 +17,9 @@ I decided to write a series of articles to cover the things I've learned while w
 
 **Geometric deep learning (GDL)**, a term first proposed by Bronstein et al. [[1]](#references), has emerged aiming to generalize deep learning models to non-Euclidean domains. This novel field in the world of machine learning was successfully used for building recommender systems [[2]](#references), protein function prediction [[3]](#references), fake news detection [[4]](#references), and detection of cancer-beating molecules in food [[5]](#references). GDL owes its success to the fact that it operates directly on the relational structure of a given problem. An example of such a structure is a graph. It can describe various concepts ranging from a social network to a chemical compound.
 
+Most GNN architectures are based on message passing (spatial methods), where at each layer the nodes update
+their hidden representations by aggregating information they collect from their neighbours. A crucial difference from traditional neural networks operating on grid-structured data is the absence of canonical ordering of the nodes in a graph. To address this, usually the aggregation function is constructed to be invariant to neighbourhood permutations.
+
 ## Non-Euclidean domains
 
 **Graph.** A graph G is a pair $(V,E)$ with the finite set of vertices $V$ and edges $E$. It captures interactions (edges) between individual units (nodes).
@@ -118,7 +121,7 @@ Note: Step 4 is done by setting `aggr='add'` when initialising `GCNConv`.
 
 Wasn't too bad, right? PyTorch Geometric offers implementations of most popular convolutional layers and provides lots of examples. [Check it out on github](https://github.com/rusty1s/pytorch_geometric).
 
-Now we can get our hands dirty on some real-world problem. The Cora dataset consists of 2708 scientific publications classified into one of seven classes. The citation network consists of 5429 links. Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. We can create a simple model for the semi-supervised classication of each publication in the graph. Our model can be constructed as follows:
+Now we can get our hands dirty with a real-world problem. The Cora dataset consists of 2708 scientific publications classified into one of seven classes. The citation network consists of 5429 links. Each publication in the dataset is described by a 0/1-valued word vector indicating the absence/presence of the corresponding word from the dictionary. We can create a simple model for the semi-supervised classication of each publication in the graph. Our model is constructed as follows:
 
 ```python
 class Net(torch.nn.Module):
@@ -136,10 +139,12 @@ class Net(torch.nn.Module):
         return F.log_softmax(x, dim=1)
 ```
 
-With just 140 nodes in the training set we are able to achieve $>80%$ classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:
+With just 140 nodes in the training set we are able to achieve >80% classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:
 
 ![Cora dataset](./cora.png)
 *Figure 2: Semi-supervised node classification result on Cora dataset.*
+
+It shows that Geometric Deep Learning is an elegant and performant approach when dealing with non-Euclidean structures.
 
 ***
 
