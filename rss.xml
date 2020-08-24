@@ -1,4 +1,492 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedrzej Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedrzej Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Jul 2020 17:00:13 GMT</lastBuildDate><item><title><![CDATA[Geometric Deep Learning - an overview]]></title><description><![CDATA[Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".]]></description><link>https://j.blaszyk.me/geometric-deep-learning-overview/</link><guid isPermaLink="false">https://j.blaszyk.me/geometric-deep-learning-overview/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedrzej Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedrzej Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 24 Aug 2020 20:08:01 GMT</lastBuildDate><item><title><![CDATA[Bikepacking & wild camping in Sweden]]></title><description><![CDATA[Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.]]></description><link>https://j.blaszyk.me/bikepacking-in-sweden/</link><guid isPermaLink="false">https://j.blaszyk.me/bikepacking-in-sweden/</guid><pubDate>Tue, 25 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#route-profile&quot;&gt;Route profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#wild-camping&quot;&gt;Wild camping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#detailed-route-stages&quot;&gt;Detailed Route Stages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#photos&quot;&gt;Photos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/55b3a/wildcamping.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.207373271889395%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFrMYV5AKf/xAAbEAACAQUAAAAAAAAAAAAAAAAAAQMCBBARE//aAAgBAQABBQJVRs6Rpq4RoWP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BhX//xAAYEAADAQEAAAAAAAAAAAAAAAAAATIRIP/aAAgBAQAGPwK0itJ4/8QAGxABAQEAAgMAAAAAAAAAAAAAAQARITFRgcH/2gAIAQEAAT8hVM9i+U2Hl2PEBEerL//aAAwDAQACAAMAAAAQKM//xAAXEQADAQAAAAAAAAAAAAAAAAAAARFB/9oACAEDAQE/EKsRWf/EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8Qg62Yf//EABoQAQEBAAMBAAAAAAAAAAAAAAERACExQVH/2gAIAQEAAT8QZKvr01cQJ2VLjq/lkfMigCYyKDrIs+b/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Bikepacking in Sweden&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/88218/wildcamping.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/7237a/wildcamping.jpg 148w,https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/0cfdf/wildcamping.jpg 295w,https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/88218/wildcamping.jpg 590w,https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/77d57/wildcamping.jpg 885w,https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/5a917/wildcamping.jpg 1180w,https://j.blaszyk.me/static/f55ba875bf6fc780f369ca3d90a0ca16/55b3a/wildcamping.jpg 2170w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Earlier this summer my friends and I packed our bikes, took a train to Gdańsk and boarded a ferry to Sweden. After an 18 hour long cruise to Nynäshamn, our Swedish bike packing adventure had begun. &lt;/p&gt;
+&lt;p&gt;We cycled along &lt;a href=&quot;https://en.eurovelo.com/ev10&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;EuroVelo 10&lt;/a&gt; - the Baltic Sea Cycle Route. It follows tranquil tarmac (80%) and gravel (20%) roads along the Baltic coastline. Often there is a separate cycling path along the normal roads. The Swedish coastline takes in beaches, cliffs, woodland, ports and marinas as well as countless large and small islands - a dream scenery for every keen bikepacker. Swedes are very kind nation, seeing people waving and cheering at us was not uncommon. Cars were overtaking with extra care. Also, everyone spoke very good English which was handy when asking around for cool wild-camping spots.&lt;/p&gt;
+&lt;h2 id=&quot;route-profile&quot;&gt;&lt;a href=&quot;#route-profile&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Route Profile&lt;/h2&gt;
+&lt;p&gt;Along this stage of EuroVelo 10 - Baltic Sea Cycle Route, you follow the Swedish coastline southwards from Stockholm, the country’s vibrant capital, to Malmö - the third-largest city in Sweden.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/f2379/route-map.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.16256157635468%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIBBAX/xAAWAQEBAQAAAAAAAAAAAAAAAAADAQL/2gAMAwEAAhADEAAAAdBGmmFkPf8A/8QAHBAAAQMFAAAAAAAAAAAAAAAAAgEDEQAQEiEy/9oACAEBAAEFAg6dWSEYreKNW//EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAgBAwEBPwHUf//EABcRAAMBAAAAAAAAAAAAAAAAAAABESH/2gAIAQIBAT8BxMp//8QAGhAAAgMBAQAAAAAAAAAAAAAAAAERIUECEP/aAAgBAQAGPwK9IL5E5wV+f//EABkQAAMBAQEAAAAAAAAAAAAAAAABESEQUf/aAAgBAQABPyFn4zUM0YiCKpGQgq1XP//aAAwDAQACAAMAAAAQzA//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQMBAT8QRGEAv//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxAdDKXb/8QAGRABAQEBAQEAAAAAAAAAAAAAAREAITFB/9oACAEBAAE/EGj6GZiGAB9cCph9S0zal1ZXmaLb15m1jv/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Route map&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/88218/route-map.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/7237a/route-map.jpg 148w,https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/0cfdf/route-map.jpg 295w,https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/88218/route-map.jpg 590w,https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/77d57/route-map.jpg 885w,https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/5a917/route-map.jpg 1180w,https://j.blaszyk.me/static/0f3b9209819284c9b4d2c8dd17d0e7b9/f2379/route-map.jpg 1624w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;We cycled from Stockholm to Ystad, since our return ferry was departing from there. The bikepacking journey took us 8 days and we averaged the distance of 115km a day. The route was &lt;strong&gt;hilly&lt;/strong&gt; with many short up- and downhills. It was quite straining especially when cycling on a fully loaded bike - we carried around 20kg of equipment and supplies. The route became progressively flatter and easier as we got near Kalmar and Karlskrona. The wind was not a big problem as for the majority of the route we were covered by trees. &lt;/p&gt;
+&lt;p&gt;Some stats from Strava:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Total distance&lt;/th&gt;
+&lt;th&gt;Total elevation&lt;/th&gt;
+&lt;th&gt;Time&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;895km&lt;/td&gt;
+&lt;td&gt;5903m&lt;/td&gt;
+&lt;td&gt;41h 52min&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;wild-camping&quot;&gt;&lt;a href=&quot;#wild-camping&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Wild Camping&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Freedom_to_roam&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;“The Everyman’s Right”&lt;/a&gt; in Sweden allows people to camp anywhere in the wilderness as long as it is not private property. It makes bikepacking quite affordable in an otherwise expensive country. We were wild camping for 8 days, usually very close to the Baltic sea or some lake. You trade views and proximity to the Swedish nature for the lack of utilities like showers or toilets. Though, I think that bathing in the lakes and regularly visiting bathrooms at gas stations can make up for all disadvantages.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/b139a/camping3.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.98785818358425%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABdwkvmpkwX//EABsQAAIDAAMAAAAAAAAAAAAAAAECAAMRBBMU/9oACAEBAAEFAu1TG5FSz3VR2MJOA15//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAEDAQE/AZiP/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/ARbb/8QAGhAAAwADAQAAAAAAAAAAAAAAAAECESExQv/aAAgBAQAGPwLaZ6OUYmcJHDao/8QAHRAAAgIBBQAAAAAAAAAAAAAAAAEhMRFBUWFxwf/aAAgBAQABPyFYzk7UNdRF4FVWJsxuUfDFVmdn/9oADAMBAAIAAwAAABCPz//EABYRAQEBAAAAAAAAAAAAAAAAAAABcf/aAAgBAwEBPxCybf/EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EG1ZLD//xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMWFxgaH/2gAIAQEAAT8QOHPKaMS7jqBT7gQCMw5AwgaezgikDdlfOb4UrBPXWf/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Camping 3&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/88218/camping3.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/7237a/camping3.jpg 148w,https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/0cfdf/camping3.jpg 295w,https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/88218/camping3.jpg 590w,https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/77d57/camping3.jpg 885w,https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/5a917/camping3.jpg 1180w,https://j.blaszyk.me/static/815922f860dac34119b9d7d63d428893/b139a/camping3.jpg 2059w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/78977/camping1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAABwXu+VZxwf//EABkQAAMBAQEAAAAAAAAAAAAAAAABAhIRE//aAAgBAQABBQKLPRc2ibKwOJZ//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABURAQEAAAAAAAAAAAAAAAAAAAAh/9oACAECAQE/AUf/xAAaEAACAgMAAAAAAAAAAAAAAAAAARExAiHh/9oACAEBAAY/AtiOlRIsbZZ//8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFhUYGh/9oACAEBAAE/IVdI8400G94Q0gd40uo+MfMY2yYhaPWf/9oADAMBAAIAAwAAABBsz//EABYRAQEBAAAAAAAAAAAAAAAAABEAMf/aAAgBAwEBPxAGzv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAESH/2gAIAQIBAT8QXXpbP//EABwQAQADAAIDAAAAAAAAAAAAAAEAESFBgTFx8f/aAAgBAQABPxAVseBWwxQdBuvT3HFecUsROk4UdsIx8hqNATPkNG4FlXeyf//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Camping 1&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/88218/camping1.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/7237a/camping1.jpg 148w,https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/0cfdf/camping1.jpg 295w,https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/88218/camping1.jpg 590w,https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/77d57/camping1.jpg 885w,https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/5a917/camping1.jpg 1180w,https://j.blaszyk.me/static/fa257d9379d71204ce9e37d5694cf173/78977/camping1.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Sweden has also a big range of &lt;a href=&quot;https://www.gone71.com/shelters-in-sweden/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;wilderness shelters&lt;/a&gt; throughout the country. It is possible to spend the night there completely for free. Usually, you will find there an open fireplace, tables and benches. We were told by local people that it is fine to set up your tent next to the hut. In a cold, windy night the hut might not be enough to protect you from the wind.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/2fd5b/kivik-shelter.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75.01764290755116%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIFAwT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAaMpMsnQIT//xAAbEAABBQEBAAAAAAAAAAAAAAABAAIDERIUE//aAAgBAQABBQLpYF0O16zKQGxGbw5f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEv/aAAgBAgEBPwFUaR//xAAaEAACAgMAAAAAAAAAAAAAAAAAAQIxECEz/9oACAEBAAY/Atsbi5XTOmbP/8QAHBAAAwACAwEAAAAAAAAAAAAAAAERIUExUXGB/9oACAEBAAE/IY1iMa2jMIm3GHOq4gvFno9yfEf/2gAMAwEAAgADAAAAEEQv/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARYf/aAAgBAgEBPxAE1ul//8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFBYYGh/9oACAEBAAE/ENyEmyYOOOygvnO+NuwZ8xGHAQkuaQdoqYJ9GEmf/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Shelter in Kivik&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/88218/kivik-shelter.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/7237a/kivik-shelter.jpg 148w,https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/0cfdf/kivik-shelter.jpg 295w,https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/88218/kivik-shelter.jpg 590w,https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/77d57/kivik-shelter.jpg 885w,https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/5a917/kivik-shelter.jpg 1180w,https://j.blaszyk.me/static/0e36f2eb82a7a0b14a9385589e967486/2fd5b/kivik-shelter.jpg 1417w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Wilderness shelter in Kivik.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;detailed-route-stages&quot;&gt;&lt;a href=&quot;#detailed-route-stages&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Detailed Route Stages&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;GPS trace&lt;/th&gt;
+&lt;th&gt;Camping spot&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3884215700&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;We spent the night near Tullgarn on a rocky hill. Amazing spot with views. You have to leave the bike at the bottom and carry your equipment on foot: &lt;a href=&quot;https://bit.ly/2FVUD3L&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;approximate GPS location&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3889586064&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Camped at Ensjön lake.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3893201117&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 3&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Camped near Gamleby at the seaside.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3898173911&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 4&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;We finished near Oskarshamn, camped at the seaside. It’s quite hard to find a good spot close to the city. It’s better to go a bit further away.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3903372251&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 5&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Camped in the forest near Torsås.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3907739263&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 6&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Camped in the shelter in Järnavik: &lt;a href=&quot;https://www.google.com/maps/dir//56.174592000000004,15.079513000000002&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;approximate location&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3912610094&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 7&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Camped in the shelter in Kivik: &lt;a href=&quot;https://www.google.com/maps/dir//55.6865063,14.2337752/@55.6765303,14.0841077,12z&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;approximate location&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.strava.com/activities/3916179399&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Day 8&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Night on the ferry 🛳&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;photos&quot;&gt;&lt;a href=&quot;#photos&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Photos&lt;/h2&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/78977/photos-packed-bike.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAACAP/aAAwDAQACEAMQAAABgknK1HLDf//EABoQAAMAAwEAAAAAAAAAAAAAAAECAwAREiH/2gAIAQEAAQUCroFW7rZ+KA+knHYs3//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AUf/xAAdEAACAgEFAAAAAAAAAAAAAAABEQACAxAhMUGB/9oACAEBAAY/AljfsoLcRACEreM9af/EABoQAQADAQEBAAAAAAAAAAAAAAEAESExUYH/2gAIAQEAAT8hqE71UTEYHey0oHSIsFuETSHxyXh8qf/aAAwDAQACAAMAAAAQgN//xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQMBAT8QCXcv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAxUf/aAAgBAgEBPxBDY7v/xAAfEAEBAAEDBQEAAAAAAAAAAAABEQAhMVFBYXGBkbH/2gAIAQEAAT8Qi9SjEZx3MlAylieb4DIENIuxWfmXlU6gfc1B1SR6ZTToAXYM/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Packed bike&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/88218/photos-packed-bike.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/7237a/photos-packed-bike.jpg 148w,https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/0cfdf/photos-packed-bike.jpg 295w,https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/88218/photos-packed-bike.jpg 590w,https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/77d57/photos-packed-bike.jpg 885w,https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/5a917/photos-packed-bike.jpg 1180w,https://j.blaszyk.me/static/0100321e1f2b721e0e84b28585425341/78977/photos-packed-bike.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Packed and ready to go.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/78977/photos-car.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDAf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAHFstzIuH//xAAbEAACAgMBAAAAAAAAAAAAAAAAAQIRAxIhIv/aAAgBAQABBQLy41EuA7ZpY8Pf/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAES/9oACAEDAQE/AYRCP//EABYRAAMAAAAAAAAAAAAAAAAAAAABE//aAAgBAgEBPwGjKs//xAAZEAACAwEAAAAAAAAAAAAAAAAAMRARIWH/2gAIAQEABj8CtcGMZux//8QAGhABAAMAAwAAAAAAAAAAAAAAAQARQSEx4f/aAAgBAQABPyE5BFup2NKlHmDTAuoZAJ//2gAMAwEAAgADAAAAEFDf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxAj/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8QJn//xAAdEAEBAQABBQEAAAAAAAAAAAABEQAhMUFRcZHh/9oACAEBAAE/EJ/ekaMkJIy8+LnhI+swUPf5uZ7tgpm6GgRjN//Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Car&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/88218/photos-car.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/7237a/photos-car.jpg 148w,https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/0cfdf/photos-car.jpg 295w,https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/88218/photos-car.jpg 590w,https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/77d57/photos-car.jpg 885w,https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/5a917/photos-car.jpg 1180w,https://j.blaszyk.me/static/836de244b7b308597e3e1cdcacacb121/78977/photos-car.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Swedes do have a taste in cars.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/afdb7/photos-camping.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.97656982193065%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAUCAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAACAf/aAAwDAQACEAMQAAAB11p4GthUI//EABkQAQADAQEAAAAAAAAAAAAAAAEAAgMQEf/aAAgBAQABBQK1Lx8I6Zi6Xe//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwFH/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEREv/aAAgBAgEBPwGLaf/EABoQAAICAwAAAAAAAAAAAAAAAAABAhARITH/2gAIAQEABj8CMto6bnK//8QAHBAAAwACAwEAAAAAAAAAAAAAAAERIXExQWGB/9oACAEBAAE/IUHXNkzTIlrekcuvpMZ7KvT/2gAMAwEAAgADAAAAEPA//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAEDAQE/ENiX/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEx/9oACAECAQE/EJap/8QAGxABAAIDAQEAAAAAAAAAAAAAAQARITFRQXH/2gAIAQEAAT8QGO7wj37KaSgp3kumibuISFCVvTL5NRdzZPM1xhJ//9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Camping&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/88218/photos-camping.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/7237a/photos-camping.jpg 148w,https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/0cfdf/photos-camping.jpg 295w,https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/88218/photos-camping.jpg 590w,https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/77d57/photos-camping.jpg 885w,https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/5a917/photos-camping.jpg 1180w,https://j.blaszyk.me/static/93d25c1bddf5afa729537e92125cc918/afdb7/photos-camping.jpg 2134w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Cool camping spot on a rocky hill.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/49ee7/photos-gravel.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9884845693229%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEFBP/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAdbltKJNB//EABgQAAMBAQAAAAAAAAAAAAAAAAABAgMT/9oACAEBAAEFAlWZ0yOmQhSOT//EABYRAAMAAAAAAAAAAAAAAAAAAAABEv/aAAgBAwEBPwGUSj//xAAWEQADAAAAAAAAAAAAAAAAAAAAARL/2gAIAQIBAT8Btls//8QAGhAAAgIDAAAAAAAAAAAAAAAAADIBECFhof/aAAgBAQAGPwJ4HG5UaMH/xAAcEAEAAgIDAQAAAAAAAAAAAAABABEhQTFRcZH/2gAIAQEAAT8hgMHB8GPc+oVcyg3LRL2J/9oADAMBAAIAAwAAABB47//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QK//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8QP//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQZHB0fD/2gAIAQEAAT8QH4L9RAOVdWLrfEsfF1Mq0bqFqhCN5GD5XIrP/9k=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Gravel&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/88218/photos-gravel.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/7237a/photos-gravel.jpg 148w,https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/0cfdf/photos-gravel.jpg 295w,https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/88218/photos-gravel.jpg 590w,https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/77d57/photos-gravel.jpg 885w,https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/5a917/photos-gravel.jpg 1180w,https://j.blaszyk.me/static/9142d5a2c655be79155b6a7eff806e6f/49ee7/photos-gravel.jpg 2171w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Endless gravel.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/78977/photos-another-camping.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIA/9oADAMBAAIQAxAAAAFRtRqSUR//xAAaEAACAwEBAAAAAAAAAAAAAAAAAQIREgMT/9oACAEBAAEFAtnrEU+dVFjMH//EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhP/2gAIAQMBAT8BcFzL/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAECAxP/2gAIAQIBAT8BWlI60f/EABoQAAICAwAAAAAAAAAAAAAAAAARARAxMpH/2gAIAQEABj8CRraMT0//xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhMUGB0f/aAAgBAQABPyF4pFZHN6HpWuCelVwRJLTRbDB//9oADAMBAAIAAwAAABDr/wD/xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBEP//EABURAQEAAAAAAAAAAAAAAAAAABBB/9oACAECAQE/EKAf/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARITFRof/aAAgBAQABPxBioB4MagrPWlYgJKeMVyE9W3yLA6sAQ7GelJ//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Another camping&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/88218/photos-another-camping.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/7237a/photos-another-camping.jpg 148w,https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/0cfdf/photos-another-camping.jpg 295w,https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/88218/photos-another-camping.jpg 590w,https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/77d57/photos-another-camping.jpg 885w,https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/5a917/photos-another-camping.jpg 1180w,https://j.blaszyk.me/static/19098bee3e5ce7e77a13ca727c6b53f8/78977/photos-another-camping.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Another camping spot at the seaside.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/b139a/photos-beach.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.98785818358425%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAaVGZU2sQf/EABoQAAICAwAAAAAAAAAAAAAAAAABBCIREiH/2gAIAQEAAQUCoUKGESOvZo//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARIT/9oACAEDAQE/Ac1If//EABYRAAMAAAAAAAAAAAAAAAAAAAABE//aAAgBAgEBPwGzKM//xAAZEAACAwEAAAAAAAAAAAAAAAAAAREhMTL/2gAIAQEABj8C6OkaUjLIcn//xAAbEAACAgMBAAAAAAAAAAAAAAAAAREhMVFhQf/aAAgBAQABPyF8DKCp5ErAToaGoRuJdP/aAAwDAQACAAMAAAAQs8//xAAWEQEBAQAAAAAAAAAAAAAAAAABEFH/2gAIAQMBAT8QTsP/xAAXEQADAQAAAAAAAAAAAAAAAAAAAUFh/9oACAECAQE/EEyGZ//EABoQAQEAAwEBAAAAAAAAAAAAAAERACFBYdH/2gAIAQEAAT8QFfXAI2Xly6G/lydQnE1gMFXTJO+52DRWnP/Z&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Beach&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/88218/photos-beach.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/7237a/photos-beach.jpg 148w,https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/0cfdf/photos-beach.jpg 295w,https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/88218/photos-beach.jpg 590w,https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/77d57/photos-beach.jpg 885w,https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/5a917/photos-beach.jpg 1180w,https://j.blaszyk.me/static/ccfeceb545577379638c17e3c4174df9/b139a/photos-beach.jpg 2059w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Break on the beach.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/78977/photos-forest.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/aAAwDAQACEAMQAAABn2dpkFZi/8QAGhABAQACAwAAAAAAAAAAAAAAAgEAEQMSIf/aAAgBAQABBQJ6ThPfzNYbDUuNX//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFX/8QAGhAAAgIDAAAAAAAAAAAAAAAAAREAAhASMf/aAAgBAQAGPwK0BY7l6uM0n//EABsQAAICAwEAAAAAAAAAAAAAAAABESExUWFx/9oACAEBAAE/IZcqTjPgi4xBybYq2o7srbpwzkH/2gAMAwEAAgADAAAAEC8//8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARQf/aAAgBAwEBPxDIL2//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARFh/9oACAECAQE/EL1J/8QAGxABAAMAAwEAAAAAAAAAAAAAAQARMSFBYbH/2gAIAQEAAT8QK0KRjpfyWbounyAxiqc9XEGN4N62cr5OT2vaj1NtpCf/2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Forest&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/88218/photos-forest.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/7237a/photos-forest.jpg 148w,https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/0cfdf/photos-forest.jpg 295w,https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/88218/photos-forest.jpg 590w,https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/77d57/photos-forest.jpg 885w,https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/5a917/photos-forest.jpg 1180w,https://j.blaszyk.me/static/7464930655cd39a24277db341f22210c/78977/photos-forest.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Camping in the forest. A moose passed by our tent at night.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/78977/photos-harbour.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.9771689497717%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAGq82x0ZCI//8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIDEzER/9oACAEBAAEFArELULIxsjzp/8QAFhEAAwAAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/AaF//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BiP/EABgQAQADAQAAAAAAAAAAAAAAAAABITEy/9oACAEBAAY/Ath1DqFLY//EAB0QAAIABwEAAAAAAAAAAAAAAAABESExQVFh4fH/2gAIAQEAAT8hXWE0PYHok2M1dZBgf//aAAwDAQACAAMAAAAQkx//xAAYEQACAwAAAAAAAAAAAAAAAAAAARFRYf/aAAgBAwEBPxDAlUf/xAAWEQADAAAAAAAAAAAAAAAAAAAAEVH/2gAIAQIBAT8QajU//8QAGhAAAwEAAwAAAAAAAAAAAAAAAAERMSGh8f/aAAgBAQABPxBJXrCaqNmjJOac5vA2qbazxD//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Harbour&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/88218/photos-harbour.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/7237a/photos-harbour.jpg 148w,https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/0cfdf/photos-harbour.jpg 295w,https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/88218/photos-harbour.jpg 590w,https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/77d57/photos-harbour.jpg 885w,https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/5a917/photos-harbour.jpg 1180w,https://j.blaszyk.me/static/9e77bbb868ec763f5216fc5d80ec2825/78977/photos-harbour.jpg 2190w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Just before entering the return ferry.&lt;/em&gt;&lt;/p&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at overreacted.io. You can read it online by &lt;a href=&quot;https://j.blaszyk.me/bikepacking-in-sweden/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Geometric Deep Learning - an overview]]></title><description><![CDATA[Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".]]></description><link>https://j.blaszyk.me/geometric-deep-learning-overview/</link><guid isPermaLink="false">https://j.blaszyk.me/geometric-deep-learning-overview/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#non-euclidean-domains&quot;&gt;Non-Euclidean domains&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#spectral-methods&quot;&gt;Spectral methods&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#spatial-methods&quot;&gt;Spatial methods&lt;/a&gt;&lt;/li&gt;
