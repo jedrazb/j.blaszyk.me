@@ -73,7 +73,6 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors);
           return;
         }
-
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
         const allSlugs = _.reduce(

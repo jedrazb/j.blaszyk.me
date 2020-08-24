@@ -40,6 +40,8 @@ class BlogIndexTemplate extends React.Component {
 
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
+            const img = get(node, 'frontmatter.img');
+            console.log(img);
             return (
               <article key={node.fields.slug}>
                 <header>
@@ -66,6 +68,12 @@ class BlogIndexTemplate extends React.Component {
                 <p
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
+
+                {img && (
+                  <img
+                    src={require('../pages/bikepacking-in-sweden/wildcamping.jpg')}
+                  />
+                )}
               </article>
             );
           })}
@@ -101,6 +109,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
+            img
           }
         }
       }
