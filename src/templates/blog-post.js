@@ -131,15 +131,12 @@ class BlogPostTemplate extends React.Component {
     });
 
     loadFontsForCode(lang);
-    // TODO: this curried function is annoying
-    const languageLink = createLanguageLink(slug, lang);
-    const enSlug = languageLink('en');
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${enSlug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.slice(
       1,
-      enSlug.length - 1
+      slug.length - 1
     )}/index${lang === 'en' ? '' : '.' + lang}.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://overreacted.io${enSlug}`
+      `https://j.blaszyk.me${slug}`
     )}`;
 
     return (
