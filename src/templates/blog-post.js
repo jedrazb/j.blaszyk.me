@@ -279,7 +279,7 @@ export const pageQuery = graphql`
         cta
         ogimage {
           childImageSharp {
-            fixed {
+            fixed(width: 960) {
               src
             }
           }
