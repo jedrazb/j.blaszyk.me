@@ -2,7 +2,8 @@
 title: Bikepacking & wild camping in Sweden
 date: '2020-08-25'
 spoiler: Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.
-img: '../pages/bikepacking-in-sweden/wildcamping.jpg'
+indexImage: './wildcamping.jpg'
+ogimage: './wildcamping.jpg'
 cta: 'react'
 ---
 

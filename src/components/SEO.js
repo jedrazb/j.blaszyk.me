@@ -75,8 +75,18 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
               },
             ]
               .concat(
-                metaImage
+                image
                   ? [
+                      {
+                        property: 'og:image',
+                        content: image,
+                      },
+                      {
+                        name: 'twitter:image',
+                        content: image,
+                      },
+                    ]
+                  : [
                       {
                         property: 'og:image',
                         content: metaImage,
@@ -86,7 +96,6 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                         content: metaImage,
                       },
                     ]
-                  : []
               )
               .concat(meta)}
           />

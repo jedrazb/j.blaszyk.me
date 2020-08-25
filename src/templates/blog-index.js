@@ -9,6 +9,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
+import Img from 'gatsby-image';
 
 class BlogIndexTemplate extends React.Component {
   render() {
@@ -40,7 +41,8 @@ class BlogIndexTemplate extends React.Component {
 
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
-            const img = get(node, 'frontmatter.img');
+            const image = get(node, 'frontmatter.indexImage');
+            console.log(image);
             return (
               <article key={node.fields.slug}>
                 <header>
@@ -68,11 +70,7 @@ class BlogIndexTemplate extends React.Component {
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
 
-                {img && (
-                  <img
-                    src={require('../pages/bikepacking-in-sweden/wildcamping.jpg')}
-                  />
-                )}
+                {image && <Img fluid={image.childImageSharp.fluid} />}
               </article>
             );
           })}
@@ -108,7 +106,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
-            img
+            indexImage {
+              childImageSharp {
+                fluid(maxWidth: 512, quality: 80) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

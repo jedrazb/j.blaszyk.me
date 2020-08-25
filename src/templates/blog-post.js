@@ -139,6 +139,9 @@ class BlogPostTemplate extends React.Component {
       `https://j.blaszyk.me${slug}`
     )}`;
 
+    const ogimage = post.frontmatter.ogimage;
+    const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -146,6 +149,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
+          image={ogImagePath}
         />
         <main>
           <article>
@@ -273,6 +277,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         spoiler
         cta
+        ogimage {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
       fields {
         slug
