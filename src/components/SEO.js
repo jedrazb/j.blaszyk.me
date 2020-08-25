@@ -29,7 +29,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
         const metaDescription = description || siteMetadata.description;
         const metaImage = `${siteMetadata.siteUrl}${siteMetadata.image}`;
         const url = `${siteMetadata.siteUrl}${slug}`;
-        const ogCustomImagePath = `${url}${image}`;
+        const ogCustomImagePath = `${siteMetadata.siteUrl}${image}`;
         return (
           <Helmet
             htmlAttributes={{ lang }}
