@@ -42,7 +42,6 @@ class BlogIndexTemplate extends React.Component {
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
             const image = get(node, 'frontmatter.indexImage');
-            console.log(image);
             return (
               <article key={node.fields.slug}>
                 <header>
