@@ -20,13 +20,13 @@ A short ride out from the centre, the city’s most popular spot for a few hours
 
 At any time you can see cyclists lapping the perimeter road, a circuit of about 12km with two climbs. And on Saturday mornings overenthusiastic local club members form huge pelotons and race around, full of Tour de France delusions, barking at anyone who gets in their way.
 
-<iframe height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/2837568599/embed/607e6e4225bf1ae7ea794ecc70aae3e9f4b14dbc'></iframe>
+[Strava activity](https://www.strava.com/activities/2837568599)
 
 ### Regent's park loops
 
 Regent’s Park’s central location makes it handy for a quick spin in the city. The road around the outer edge is 4.5km long, perfectly flat and fairly light on traffic, so it’s largely cycle-friendly and you’ll find a lot of other riders and runners here. Don't jump red lights when you train there.
 
-<iframe height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3335434534/embed/019b02f11a3095f1bdf937a7154c15af0821d7c3'></iframe>
+[Strava activity](https://www.strava.com/activities/3335434534)
 
 ## Longer routes
 
@@ -34,7 +34,9 @@ Regent’s Park’s central location makes it handy for a quick spin in the city
 
 A flat and fast route from Richmond Park out to Royal Windsor. The profile is pancake flat, so it's perfect if you're looking for a longer ride without the hills. The return leg is shorter and faster, so you'll be home in no time. I was recommended to stop by at Cinnamon Café to try their cinnamon buns but unfortunatetly it was closed due to the coronavirus.
 
-<iframe height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3349993673/embed/f91096e7aa91e36ceb6a2884f648752c408c15a4'></iframe>
+[Strava activity](https://www.strava.com/activities/3349993673)
+
+![Windsor route](./windsor_route.png)
 
 ### London to Box Hill
 
@@ -45,8 +47,9 @@ South West London and Surrey are famous when it comes to cycling. The 2012 olymp
 
 This is my favourite bike ride so far. The route I followed goes through Richmond, Bushy Park and then follows to Surrey Hills through quiet and cycling friendly roads. The return leg, after Box Hill, is not as nice with more busy roads.
 
-<iframe height='405' width='100%' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/activities/3360618841/embed/d1d35698537d17dcae309b97584109ede9ef53c4'></iframe>
+[Strava activity](https://www.strava.com/activities/3360618841)
 
+![Box hill route](./box_hill_route.png)
 
 ## London to ...
 
