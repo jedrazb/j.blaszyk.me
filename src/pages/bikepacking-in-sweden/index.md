@@ -7,8 +7,8 @@ ogimage: './wildcamping.jpg'
 cta: 'react'
 ---
 
-* [Route profile](#route-profile)
-* [Wild camping](#wild-camping)
+* [Route Profile](#route-profile)
+* [Wild Camping](#wild-camping)
 * [Detailed Route Stages](#detailed-route-stages)
 * [Photos](#photos)
 

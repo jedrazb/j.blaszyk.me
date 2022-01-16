@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jedrzej Blaszyk - Blog',
-    author: 'Jedrzej Blaszyk',
+    title: 'Jedr Blaszyk - Blog',
+    author: 'Jedr Blaszyk',
     description:
-      'Personal blog by Jedrzej Blaszyk. I write about stuff I find interesting.',
+      'Personal blog by Jedr Blaszyk. I write about stuff I find interesting.',
     siteUrl: 'https://j.blaszyk.me',
     social: {
       twitter: '@jedr_blaszyk',
@@ -26,7 +26,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1000,
             },
           },
           {
@@ -89,7 +89,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at j.blaszyk.me. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
@@ -135,7 +135,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Jedrzej Blaszyk's blog rss feed",
+            title: "Jedr Blaszyk's blog rss feed",
           },
         ],
       },
@@ -143,7 +143,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-ebook`,
       options: {
-        filename: 'overreacted-ebook.epub',
+        filename: 'jblaszyk-ebook.epub',
         query: `
           {
             site {
@@ -174,7 +174,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jedrzej Blaszyk - Personal Blog`,
+        name: `Jedr Blaszyk - Personal Blog`,
         short_name: `personal-blog`,
         start_url: `/`,
         background_color: `#ffffff`,
