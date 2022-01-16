@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedr Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedr Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 Jan 2022 16:36:05 GMT</lastBuildDate><item><title><![CDATA[Bikepacking & wild camping in Sweden]]></title><description><![CDATA[Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.]]></description><link>https://j.blaszyk.me/bikepacking-in-sweden/</link><guid isPermaLink="false">https://j.blaszyk.me/bikepacking-in-sweden/</guid><pubDate>Tue, 25 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedr Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedr Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 Jan 2022 21:52:03 GMT</lastBuildDate><item><title><![CDATA[Bikepacking & wild camping in Sweden]]></title><description><![CDATA[Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.]]></description><link>https://j.blaszyk.me/bikepacking-in-sweden/</link><guid isPermaLink="false">https://j.blaszyk.me/bikepacking-in-sweden/</guid><pubDate>Tue, 25 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#route-profile&quot;&gt;Route Profile&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#wild-camping&quot;&gt;Wild Camping&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#detailed-route-stages&quot;&gt;Detailed Route Stages&lt;/a&gt;&lt;/li&gt;
@@ -713,14 +713,45 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;h3 id=&quot;richmond-park-loops&quot;&gt;&lt;a href=&quot;#richmond-park-loops&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Richmond park loops&lt;/h3&gt;
 &lt;p&gt;A short ride out from the centre, the city’s most popular spot for a few hours of training — even some of the cycling stars, including Fabien Cancellara, have been known to ride here.&lt;/p&gt;
 &lt;p&gt;At any time you can see cyclists lapping the perimeter road, a circuit of about 12km with two climbs. And on Saturday mornings overenthusiastic local club members form huge pelotons and race around, full of Tour de France delusions, barking at anyone who gets in their way.&lt;/p&gt;
-&lt;iframe height=&apos;405&apos; width=&apos;100%&apos; frameborder=&apos;0&apos; allowtransparency=&apos;true&apos; scrolling=&apos;no&apos; src=&apos;https://www.strava.com/activities/2837568599/embed/607e6e4225bf1ae7ea794ecc70aae3e9f4b14dbc&apos;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/2837568599&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;regents-park-loops&quot;&gt;&lt;a href=&quot;#regents-park-loops&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Regent’s park loops&lt;/h3&gt;
 &lt;p&gt;Regent’s Park’s central location makes it handy for a quick spin in the city. The road around the outer edge is 4.5km long, perfectly flat and fairly light on traffic, so it’s largely cycle-friendly and you’ll find a lot of other riders and runners here. Don’t jump red lights when you train there.&lt;/p&gt;
-&lt;iframe height=&apos;405&apos; width=&apos;100%&apos; frameborder=&apos;0&apos; allowtransparency=&apos;true&apos; scrolling=&apos;no&apos; src=&apos;https://www.strava.com/activities/3335434534/embed/019b02f11a3095f1bdf937a7154c15af0821d7c3&apos;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/3335434534&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;longer-routes&quot;&gt;&lt;a href=&quot;#longer-routes&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Longer routes&lt;/h2&gt;
 &lt;h3 id=&quot;london-to-windsor&quot;&gt;&lt;a href=&quot;#london-to-windsor&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;London to Windsor&lt;/h3&gt;
 &lt;p&gt;A flat and fast route from Richmond Park out to Royal Windsor. The profile is pancake flat, so it’s perfect if you’re looking for a longer ride without the hills. The return leg is shorter and faster, so you’ll be home in no time. I was recommended to stop by at Cinnamon Café to try their cinnamon buns but unfortunatetly it was closed due to the coronavirus.&lt;/p&gt;
-&lt;iframe height=&apos;405&apos; width=&apos;100%&apos; frameborder=&apos;0&apos; allowtransparency=&apos;true&apos; scrolling=&apos;no&apos; src=&apos;https://www.strava.com/activities/3349993673/embed/f91096e7aa91e36ceb6a2884f648752c408c15a4&apos;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/3349993673&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/6c2de/windsor_route.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 1000px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 44.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVQozw3QSZKaUAAAUO5/gZwguyysrkpK050uRaOigAEZRMY/82c+tr1OH+E9b5NEfrhOSdpa3Ul4lU2hMX/IzvXdhME0IjeedNIZypytGRgQGd0T1i3ogZdF8frwI72etgUoKaFaQSGp0FhwZEfrHkgRZnhn+I6XvdW5AQmqxyCQ0+RVJr91+ypP90njCwe0oVwjpClTZLLQMsiI4LYSJOxDkSdDGePbBVT33k7eSqz2o19F70EUbfv2ldKUzYORvRmZUaWqiePaPYDTReL7w6+DOiJH7MendM5bweUavqXXt0o298M+OJ8qJjPYlrIfNIKawOlLazqtz5eXxbB4Rcut3HQKY6O8oww20gflHky4NayPwm7EOyyofrIPXc5ITrqQCUxjGIeNrrMpPw3ntgPMaO+vOB1Z3JR+bdpcmR3siiIIAM2sKC6neLlsfr/Hr9+3i2+F71OpqBPjrKQ1TCrvyrItXaHjH1Jd2tCvsijNkvbg3zbLy8+X86WKIWww+icbojU2/Cu5tn1rBqy5V9j0Lq93moY26vVdWHJDeTS0RZF1eX2fxFkVw4znx/Px+GRWAI65McJZNvP/ASjTCgNoIGgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Windsor route&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/00d43/windsor_route.png&quot;
+        srcset=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/63868/windsor_route.png 250w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/0b533/windsor_route.png 500w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/00d43/windsor_route.png 1000w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/6c2de/windsor_route.png 1334w&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h3 id=&quot;london-to-box-hill&quot;&gt;&lt;a href=&quot;#london-to-box-hill&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;London to Box Hill&lt;/h3&gt;
 &lt;p&gt;South West London and Surrey are famous when it comes to cycling. The 2012 olympic road race, and the Prudential Ride London route that followed, have firmly put Surrey on the cycling map. Starting in Richmond Park, this route heads out into the Surrey Hills and to the famous Box Hill, a (not so) steep climb of 2.5km and 129m elevation gain. According to &lt;a href=&quot;https://www.strava.com/segments/6695759&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava’s leaderboard for the Box Hill climb&lt;/a&gt; there are more than 120,000 attempts recorded on the app, with the best time of just under 5 minutes.&lt;/p&gt;
 &lt;p&gt;
@@ -756,7 +787,38 @@ This formula can be divided into the following steps:&lt;/p&gt;
     
 &lt;em&gt;Box Hill climb. Picture thanks to &lt;a href=&quot;https://www.cyclingweekly.com/fitness/training/how-to-climb-box-hill-video-266164&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Cycling Weekly&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;This is my favourite bike ride so far. The route I followed goes through Richmond, Bushy Park and then follows to Surrey Hills through quiet and cycling friendly roads. The return leg, after Box Hill, is not as nice with more busy roads.&lt;/p&gt;
-&lt;iframe height=&apos;405&apos; width=&apos;100%&apos; frameborder=&apos;0&apos; allowtransparency=&apos;true&apos; scrolling=&apos;no&apos; src=&apos;https://www.strava.com/activities/3360618841/embed/d1d35698537d17dcae309b97584109ede9ef53c4&apos;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/3360618841&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/87488/box_hill_route.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 1000px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 54.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABYlAAAWJQFJUiTwAAACA0lEQVQozw2SzXKbMACEef+n6DP01JlOO22axEls1zY2QgJJ6A+B/iUgnh7r6+5+h93ZiiYLvWpY309MLjNLVi9u0BrNlE7Sr1tMhdsRM258EumT+BWMFptMU6xoYcCSegR/rW59EM4q74XTWDOSlBJEfXyMueTtvm53U4rMjo6cTmxyc9Vl8h537+n15uXRGOyijIZHacsG4Mvh+cvEsb2veVmmxZjFp20zd6ezEVpXJFIQm2f7SjIZkmu9E0tQq+stIqffAP4UyxTLGpZiVm+WQGfBg5w+ndrGqg4HmWUdrjAinPXZyAO4XrhEpxdjdeyQWaMqZs4+Lcu8ODlr6TUzEk19BRNAGXWpucWTWPiYPPdz1x2VQtZreX6TzkzOCzPikQ5ZjOskihjNPDhWifCQepR6MDc8DPw+g7Gmpz/4H+vhEz3v+8JZ5GEtsowgNSh00CG28KHQCtgLjDeS+KAEtAy4etj/xOjQJoq6fUt20z3ghFkWfcAwoUa1V9404daFrmrmfRuvTWrIIuYwW3QRU6uywn6E7Qdhe7YpnAhNA37Avu1CDy3CloqsK5Ewz0xkpbPjnoh2x8Gul4f6+P3px1dM3lDoVZqHLPvHerFlid/Gy1kdYWgqlhgvvHv8BIOrqR/ppv4Gul8NPiEFYcSAw8E+GnKSKS+CpAGlDiX0sP4DVABGHlyJIfoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Box hill route&quot;
+        title=&quot;&quot;
+        src=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/00d43/box_hill_route.png&quot;
+        srcset=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/63868/box_hill_route.png 250w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/0b533/box_hill_route.png 500w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/00d43/box_hill_route.png 1000w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/87488/box_hill_route.png 1282w&quot;
+        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h2 id=&quot;london-to-&quot;&gt;&lt;a href=&quot;#london-to-&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;London to …&lt;/h2&gt;
 &lt;h3 id=&quot;brighton-and-seven-sisters&quot;&gt;&lt;a href=&quot;#brighton-and-seven-sisters&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Brighton (and Seven Sisters)&lt;/h3&gt;
 &lt;p&gt;From the city, through the suburbs and into the countryside, with the testing climb of Ditchling Beacon just before the beach below, the London to Brighton route is full of action and should be around 100km from the center of London. If you are looking for more adventures you can add some miles by cycling to Seven Sisters cliffs and back. You can come back to London by bike or take a train back, I recommend the latter. You can refer to this &lt;a href=&quot;https://www.strava.com/local/uk/london/cycling/routes/116?hl=en-GB&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;GPX trace on Strava&lt;/a&gt; for a route to Brighton and &lt;a href=&quot;https://www.mapmyride.com/gb/brighton-eng/brighton-to-seven-sisters-route-19626108&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;this trace&lt;/a&gt; for the route to Seven Sisters cliffs from Brighton.&lt;/p&gt;
