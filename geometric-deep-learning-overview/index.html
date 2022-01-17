@@ -40,7 +40,7 @@
         }
       }
     })
-  </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Jedr Blaszyk&#x27;s blog rss feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b90f5ef20fcb26c4fea6d015584fe4ca" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><title data-react-helmet="true">Geometric Deep Learning - an overview — Jedr Blaszyk - Blog</title><meta data-react-helmet="true" name="theme-color" content="#282c35"/><meta data-react-helmet="true" name="description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" property="og:url" content="https://j.blaszyk.me/geometric-deep-learning-overview/"/><meta data-react-helmet="true" property="og:title" content="Geometric Deep Learning - an overview"/><meta data-react-helmet="true" property="og:description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="@jedr_blaszyk"/><meta data-react-helmet="true" name="twitter:title" content="Geometric Deep Learning - an overview"/><meta data-react-helmet="true" name="twitter:description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" property="og:image" content="https://j.blaszyk.me/logo.png"/><meta data-react-helmet="true" name="twitter:image" content="https://j.blaszyk.me/logo.png"/><link as="script" rel="preload" href="/webpack-runtime-e9dcdee7e003e86792c6.js"/><link as="script" rel="preload" href="/framework-9252bfa5ea71b588207d.js"/><link as="script" rel="preload" href="/app-dd973e0101dadb247321.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/commons-a0b3f18e25b4bc2d4dcc.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js"/><link as="fetch" rel="preload" href="/page-data/geometric-deep-learning-overview/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/4190863273.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body class="light"><script>
+  </script><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="alternate" type="application/rss+xml" title="Jedr Blaszyk&#x27;s blog rss feed" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=b90f5ef20fcb26c4fea6d015584fe4ca" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b90f5ef20fcb26c4fea6d015584fe4ca"/><title data-react-helmet="true">Geometric Deep Learning - an overview — Jedr Blaszyk - Blog</title><meta data-react-helmet="true" name="theme-color" content="#282c35"/><meta data-react-helmet="true" name="description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" property="og:url" content="https://j.blaszyk.me/geometric-deep-learning-overview/"/><meta data-react-helmet="true" property="og:title" content="Geometric Deep Learning - an overview"/><meta data-react-helmet="true" property="og:description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="@jedr_blaszyk"/><meta data-react-helmet="true" name="twitter:title" content="Geometric Deep Learning - an overview"/><meta data-react-helmet="true" name="twitter:description" content="Series of posts covering learnings from my MEng thesis &quot;Geometric Deep Learning for Subcortical Brain Shape Analysis&quot;."/><meta data-react-helmet="true" property="og:image" content="https://j.blaszyk.me/logo.png"/><meta data-react-helmet="true" name="twitter:image" content="https://j.blaszyk.me/logo.png"/><link as="script" rel="preload" href="/webpack-runtime-e9dcdee7e003e86792c6.js"/><link as="script" rel="preload" href="/framework-9252bfa5ea71b588207d.js"/><link as="script" rel="preload" href="/app-12db946ff650fc806806.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/commons-a0b3f18e25b4bc2d4dcc.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js"/><link as="fetch" rel="preload" href="/page-data/geometric-deep-learning-overview/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/4190863273.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body class="light"><script>
               (function() {
                 window.__onThemeChange = function() {};
                 function setTheme(newTheme) {
@@ -89,40 +89,36 @@ their hidden representations by aggregating information they collect from their 
 <p>Spectral graph convolution draws inspiration from the Euclidean convolution in a spectral domain. The Fourier basis is used to compute spectral convolution in the classical signal processing (Read <a href="https://www-structmed.cimr.cam.ac.uk/Course/Convolution/convolution.html" target="_blank" rel="nofollow noopener noreferrer">this</a> for an in-depth explanation of Convolution theorem). Given a graph, one way to generalize a convolutional architecture is to look at linear operators that commute with the graph Laplacian. This property implies operating on the spectrum of the graph weights, given by the eigenvectors of the graph Laplacian. The concept of graph convolution is explained more in-depth <a href="https://towardsdatascience.com/spectral-graph-convolution-explained-and-implemented-step-by-step-2e495b57f801" target="_blank" rel="nofollow noopener noreferrer">in here</a>.</p>
 <h2 id="spatial-methods"><a href="#spatial-methods" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spatial methods</h2>
 <p>Spatial methods are preferred over the spectral methods for <a href="#why-spatial-is-better-than-spectral">a number of reasons</a>. The spatial convolution is considered a more versatile method for learning on non-Euclidean structures. </p>
-<p>
-  <a
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <a
     class="gatsby-resp-image-link"
     href="/static/1fbbb698e41ac0c21c7e7f9a30ecf300/3ac88/comparison_2d_graph.jpg"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 1000px; margin-left: auto; margin-right: auto;"
-  >
     <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 42%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdu4QD//xAAWEAADAAAAAAAAAAAAAAAAAAABEEH/2gAIAQEAAQUCpX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAEBAQEAAAAAAAAAAAAAAAAAITGR/9oACAEBAAE/Ib2wr//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAADAAMBAAAAAAAAAAAAAAAAAREhMUFh/9oACAEBAAE/EEs1c9FaOCfFZ//Z'); background-size: cover; display: block;"
-    >
-      <img
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdu4QD//xAAWEAADAAAAAAAAAAAAAAAAAAABEEH/2gAIAQEAAQUCpX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAEBAQEAAAAAAAAAAAAAAAAAITGR/9oACAEBAAE/Ib2wr//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAADAAMBAAAAAAAAAAAAAAAAAREhMUFh/9oACAEBAAE/EEs1c9FaOCfFZ//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="Convolution on an 2D image vs. on a graph"
-        title=""
+        title="Convolution on an 2D image vs. on a graph"
         src="/static/1fbbb698e41ac0c21c7e7f9a30ecf300/a2510/comparison_2d_graph.jpg"
         srcset="/static/1fbbb698e41ac0c21c7e7f9a30ecf300/0479a/comparison_2d_graph.jpg 250w,
 /static/1fbbb698e41ac0c21c7e7f9a30ecf300/41099/comparison_2d_graph.jpg 500w,
 /static/1fbbb698e41ac0c21c7e7f9a30ecf300/a2510/comparison_2d_graph.jpg 1000w,
 /static/1fbbb698e41ac0c21c7e7f9a30ecf300/3ac88/comparison_2d_graph.jpg 1260w"
         sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
       />
-    </span>
-  </span>
-  
   </a>
-    
+    </span>
 <em>Figure 1: 2D Convolution vs. Graph Convolution.</em></p>
 <p>Spatial methods define graph convolutions based on a node’s spatial relations, which is analogous to the convolution operation on the classical CNN. Images can be considered a special form of a graph with each pixel representing a node, connected to each neighboring pixels. A filter would be applied on the patch of the image including the pixel and its neighboring nodes. Similarly, spatial methods convolve a given node’s features, using a patch operator, with its neighbors’ features. The intuition about the spatial graph convolutions is that this operation propagates and updates node features along edges.</p>
 <h2 id="why-spatial-is-better-than-spectral"><a href="#why-spatial-is-better-than-spectral" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why spatial is better than spectral</h2>
@@ -218,39 +214,35 @@ This formula can be divided into the following steps:</p>
         x <span class="token operator">=</span> self<span class="token punctuation">.</span>conv2<span class="token punctuation">(</span>x<span class="token punctuation">,</span> edge_index<span class="token punctuation">,</span> edge_weight<span class="token punctuation">)</span>
         <span class="token keyword">return</span> F<span class="token punctuation">.</span>log_softmax<span class="token punctuation">(</span>x<span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></code></pre></div>
 <p>With just 140 nodes in the training set we are able to achieve >80% classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:</p>
-<p>
-  <a
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 850px; "
+    >
+      <a
     class="gatsby-resp-image-link"
     href="/static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png"
     style="display: block"
     target="_blank"
     rel="noopener"
   >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 850px; margin-left: auto; margin-right: auto;"
-  >
     <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 93.2%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClklEQVQ4y4VTzU8TQRTvP+HZxGg868mDUblx4KAn9KAJMXogRI2JUYgHP0jAEDWIRKMCihVQIBWrTdVEFChFa5Ua+WhZm6VQSj+22+3uzu7Mzsw628WyoMV32LzfvHkf83u/dZmmSSll33guvlJYsaBpQWaYYoihWdlcTlAAhZySs31WglCSKWbW0NbJdn9BEVRdLR9CBJ3RklOhM7VCFEDArvIiL+kSw4ahsSFYlJANmZuTbQMIsDIhPjQcHmKXFTWraoW51YWVjIRNvVgsD/GvZGtaDAQ5f8PX2vfl2Vc+tCql3nz3joZ/3e8XP08BWrlzKYRTXCLQ5rtT01l7ceRCJDH/3Bs8Ucdt35F0P1U0lXFBncl2OVKihnLpubHZt7dHH1TdrDnQfOj8QOuVJx/2HQzv3JV0v1haFBIQofVk6uCTuRk5GeTeN3nO1LZXN3Q17vH3HQlO1l8f97yKKqAoG2vrcEFDwliGiBOLbjE/KEnTqrqENDGTmxoJHG8ePnbae3XvO/ep4TZPV8+sf1Re5k0dUcY/IS4D5zEGBBcomdHAtKYlMdYhSgqCPxZt9wca7r082tlR5WnaP9ZyLtr7eL7nYarxkhGLVWSbECmdGopzd8dDl3+8ro60bBus2x28Vp/ofpRy90oDA3BhgQnA5ZAetYYpQRVMFPI+oM+l8zMR39mJ7pO++sOR/g7AzSqfPlJRtG7LsmvTkig1IBQxFlh7S15QyU938JO3ErFvUjymFSU2FdV1W2sbVkXIKoSLZdYxUjQli7IRPftTNzCFkKiqoxdd74xxBsIZpq4/C2cniBBMDYCRaomelsRNyN/aZg9mLzGcr8CGXlbO//9nWyxrnqESXTC3tM2ErQMkU4y2Tv4NwHgU4kQrgNIAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 93.2%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClklEQVQ4y4VTzU8TQRTvP+HZxGg868mDUblx4KAn9KAJMXogRI2JUYgHP0jAEDWIRKMCihVQIBWrTdVEFChFa5Ua+WhZm6VQSj+22+3uzu7Mzsw628WyoMV32LzfvHkf83u/dZmmSSll33guvlJYsaBpQWaYYoihWdlcTlAAhZySs31WglCSKWbW0NbJdn9BEVRdLR9CBJ3RklOhM7VCFEDArvIiL+kSw4ahsSFYlJANmZuTbQMIsDIhPjQcHmKXFTWraoW51YWVjIRNvVgsD/GvZGtaDAQ5f8PX2vfl2Vc+tCql3nz3joZ/3e8XP08BWrlzKYRTXCLQ5rtT01l7ceRCJDH/3Bs8Ucdt35F0P1U0lXFBncl2OVKihnLpubHZt7dHH1TdrDnQfOj8QOuVJx/2HQzv3JV0v1haFBIQofVk6uCTuRk5GeTeN3nO1LZXN3Q17vH3HQlO1l8f97yKKqAoG2vrcEFDwliGiBOLbjE/KEnTqrqENDGTmxoJHG8ePnbae3XvO/ep4TZPV8+sf1Re5k0dUcY/IS4D5zEGBBcomdHAtKYlMdYhSgqCPxZt9wca7r082tlR5WnaP9ZyLtr7eL7nYarxkhGLVWSbECmdGopzd8dDl3+8ro60bBus2x28Vp/ofpRy90oDA3BhgQnA5ZAetYYpQRVMFPI+oM+l8zMR39mJ7pO++sOR/g7AzSqfPlJRtG7LsmvTkig1IBQxFlh7S15QyU938JO3ErFvUjymFSU2FdV1W2sbVkXIKoSLZdYxUjQli7IRPftTNzCFkKiqoxdd74xxBsIZpq4/C2cniBBMDYCRaomelsRNyN/aZg9mLzGcr8CGXlbO//9nWyxrnqESXTC3tM2ErQMkU4y2Tv4NwHgU4kQrgNIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
         class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
         alt="Cora dataset"
-        title=""
+        title="Cora dataset"
         src="/static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png"
         srcset="/static/f4f59a95a1022ba3b4e602731b164903/63868/cora.png 250w,
 /static/f4f59a95a1022ba3b4e602731b164903/0b533/cora.png 500w,
 /static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png 850w"
         sizes="(max-width: 850px) 100vw, 850px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
       />
-    </span>
-  </span>
-  
   </a>
-    
+    </span>
 <em>Figure 2: Semi-supervised node classification result on Cora dataset.</em></p>
 <p>It shows that Geometric Deep Learning is an elegant and performant approach when dealing with non-Euclidean structures.</p>
 <hr>
@@ -277,4 +269,4 @@ This formula can be divided into the following steps:</p>
       
       
       
-      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/geometric-deep-learning-overview/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-da20a1db8321d70d55d6.js"],"app":["/app-dd973e0101dadb247321.js"],"component---src-pages-404-js":["/component---src-pages-404-js-80d992f3508c348047ff.js"],"component---src-templates-blog-index-js":["/component---src-templates-blog-index-js-3f073fc7b64ab84b9ca5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js"]};/*]]>*/</script><script src="/polyfill-da20a1db8321d70d55d6.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js" async=""></script><script src="/commons-a0b3f18e25b4bc2d4dcc.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-dd973e0101dadb247321.js" async=""></script><script src="/framework-9252bfa5ea71b588207d.js" async=""></script><script src="/webpack-runtime-e9dcdee7e003e86792c6.js" async=""></script></body></html>
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/geometric-deep-learning-overview/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-da20a1db8321d70d55d6.js"],"app":["/app-12db946ff650fc806806.js"],"component---src-pages-404-js":["/component---src-pages-404-js-80d992f3508c348047ff.js"],"component---src-templates-blog-index-js":["/component---src-templates-blog-index-js-3f073fc7b64ab84b9ca5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js"]};/*]]>*/</script><script src="/polyfill-da20a1db8321d70d55d6.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-cf9c6d58ea137ce286b8.js" async=""></script><script src="/commons-a0b3f18e25b4bc2d4dcc.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-12db946ff650fc806806.js" async=""></script><script src="/framework-9252bfa5ea71b588207d.js" async=""></script><script src="/webpack-runtime-e9dcdee7e003e86792c6.js" async=""></script></body></html>
