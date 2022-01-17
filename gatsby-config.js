@@ -42,6 +42,7 @@ module.exports = {
               inlineCodeMarker: '÷',
             },
           },
+          'gatsby-plugin-sitemap',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
@@ -138,37 +139,6 @@ module.exports = {
             title: "Jedr Blaszyk's blog rss feed",
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-ebook`,
-      options: {
-        filename: 'jblaszyk-ebook.epub',
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                author
-              }
-            }
-            allMarkdownRemark(
-              sort: { fields: frontmatter___date, order: ASC },
-              filter: { fields: { langKey: { eq: "en" } } }
-            ) {
-              edges {
-                node {
-                  id
-                  fileAbsolutePath
-                  rawMarkdownBody
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }
-          }`,
       },
     },
     {
