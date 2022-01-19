@@ -3,6 +3,8 @@ import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
 import Img from 'gatsby-image';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -14,7 +16,11 @@ import './ImageGallery.css';
 const ImageGallery = props => {
   const { images } = props;
 
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [previewPhotoIdx, setPreviewPhotoIdx] = useState(null);
+  const [swiper, setSwiper] = useState(null);
+
+  const slideTo = index => swiper.slideTo(index);
 
   const pageWrapperStyle = {
     marginLeft: 'auto',
@@ -45,6 +51,7 @@ const ImageGallery = props => {
           }}
         >
           <Swiper
+            onSwiper={setSwiper}
             modules={[Navigation, Pagination, Keyboard]}
             spaceBetween={50}
             slidesPerView={1}
@@ -53,9 +60,15 @@ const ImageGallery = props => {
             pagination={{ clickable: true }}
             className="swiper-container"
           >
-            {images.map(image => (
-              <SwiperSlide key={image.childImageSharp.fluid.src}>
-                <div className="image-entry">
+            {images.map((image, idx) => (
+              <SwiperSlide key={idx}>
+                <div
+                  className="image-entry"
+                  onClick={() => {
+                    setPreviewPhotoIdx(idx);
+                    setIsOpen(true);
+                  }}
+                >
                   <Img
                     fluid={image.childImageSharp.fluid}
                     objectFit="cover"
@@ -69,6 +82,30 @@ const ImageGallery = props => {
           </Swiper>
         </div>
       </div>
+      {isOpen && (
+        <Lightbox
+          mainSrc={images[previewPhotoIdx].childImageSharp.fluid.src}
+          nextSrc={
+            images[(previewPhotoIdx + 1) % images.length].childImageSharp.fluid
+              .src
+          }
+          prevSrc={
+            images[(previewPhotoIdx + images.length - 1) % images.length]
+              .childImageSharp.fluid.src
+          }
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() => {
+            setPreviewPhotoIdx(
+              (previewPhotoIdx + images.length - 1) % images.length
+            );
+            slideTo((previewPhotoIdx + images.length - 1) % images.length);
+          }}
+          onMoveNextRequest={() => {
+            setPreviewPhotoIdx((previewPhotoIdx + 1) % images.length);
+            slideTo((previewPhotoIdx + 1) % images.length);
+          }}
+        />
+      )}
     </div>
   );
 };

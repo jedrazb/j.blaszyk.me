@@ -41,6 +41,10 @@
   overflow: hidden;
 }
 
+.image-entry:hover {
+  cursor: zoom-in;
+}
+
 .swiper-container {
   width: 100%;
 }
@@ -54,10 +58,16 @@
   bottom: 0 !important;
 }
 
+.swiper-slide {
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: white !important;
   padding: 15px !important;
+  /* display: none !important; */
 }
 
 @media only screen and (max-width: 768px) {

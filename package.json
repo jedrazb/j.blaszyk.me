@@ -44,6 +44,7 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
+    "react-image-lightbox": "^5.1.4",
     "react-typography": "^0.16.13",
     "rehype-react": "^7.0.4",
     "swiper": "^7.4.1",
