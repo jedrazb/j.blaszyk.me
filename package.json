@@ -24,6 +24,7 @@
     "gatsby-plugin-sitemap": "^5.5.0",
     "gatsby-plugin-typography": "^4.5.0",
     "gatsby-remark-autolink-headers": "5.5.0",
+    "gatsby-remark-component-parent2div": "^1.2.3",
     "gatsby-remark-copy-linked-files": "^5.5.0",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^6.5.2",
@@ -44,6 +45,8 @@
     "react-dom": "^16.8.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
+    "rehype-react": "^7.0.4",
+    "swiper": "^7.4.1",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },

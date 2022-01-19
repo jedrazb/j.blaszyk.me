@@ -1404,6 +1404,12 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@mapbox/hast-util-table-cell-style@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.2.0.tgz#1003f59d54fae6f638cb5646f52110fb3da95b4d"
+  dependencies:
+    unist-util-visit "^1.4.1"
+
 "@microsoft/fetch-event-source@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@microsoft/fetch-event-source/-/fetch-event-source-2.0.1.tgz#9ceecc94b49fbaa15666e38ae8587f64acce007d"
@@ -1676,7 +1682,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.0":
   version "17.0.38"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
   dependencies:
@@ -2392,6 +2398,10 @@ bail@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bail/-/bail-1.0.5.tgz#b6fa133404a392cbc1f8c4bf63f5953351e7a776"
 
+bail@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/bail/-/bail-2.0.2.tgz#d26f5cd8fe5d6f832a31517b9f7c356040ba6d5d"
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
@@ -2951,6 +2961,10 @@ combined-stream@^1.0.8:
 comma-separated-tokens@^1.0.0:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz#632b80b6117867a158f1080ad498b2fbe7e3f5ea"
+
+comma-separated-tokens@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.2.tgz#d4c25abb679b7751c880be623c1179780fe1dd98"
 
 command-exists@^1.2.4:
   version "1.2.9"
@@ -3607,6 +3621,12 @@ dom-serializer@^1.0.1, dom-serializer@^1.3.2:
 dom-walk@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/dom-walk/-/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+
+dom7@^4.0.2:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.4.tgz#8b68c5d8e5e2ed0fddb1cb93e433bc9060c8f3fb"
+  dependencies:
+    ssr-window "^4.0.0"
 
 domelementtype@1:
   version "1.3.1"
@@ -4890,6 +4910,12 @@ gatsby-remark-autolink-headers@5.5.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
+gatsby-remark-component-parent2div@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-component-parent2div/-/gatsby-remark-component-parent2div-1.2.3.tgz#8fcdf376801ab497d7306a4821332f4f985e0186"
+  dependencies:
+    unist-util-visit "^1.1.1"
+
 gatsby-remark-copy-linked-files@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.5.0.tgz#2d4d0791144a0686fe3e8f5edf1a7b802ba0b5a6"
@@ -5619,6 +5645,18 @@ hasha@^5.2.2:
     is-stream "^2.0.0"
     type-fest "^0.8.0"
 
+hast-to-hyperscript@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/hast-to-hyperscript/-/hast-to-hyperscript-10.0.1.tgz#3decd7cb4654bca8883f6fcbd4fb3695628c4296"
+  dependencies:
+    "@types/unist" "^2.0.0"
+    comma-separated-tokens "^2.0.0"
+    property-information "^6.0.0"
+    space-separated-tokens "^2.0.0"
+    style-to-object "^0.3.0"
+    unist-util-is "^5.0.0"
+    web-namespaces "^2.0.0"
+
 hast-to-hyperscript@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/hast-to-hyperscript/-/hast-to-hyperscript-9.0.1.tgz#9b67fd188e4c81e8ad66f803855334173920218d"
@@ -5694,6 +5732,10 @@ hast-util-to-parse5@^6.0.0:
 hast-util-whitespace@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-1.0.4.tgz#e4fe77c4a9ae1cb2e6c25e02df0043d0164f6e41"
+
+hast-util-whitespace@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/hast-util-whitespace/-/hast-util-whitespace-2.0.0.tgz#4fc1086467cc1ef5ba20673cb6b03cec3a970f1c"
 
 hastscript@^6.0.0:
   version "6.0.0"
@@ -6230,6 +6272,10 @@ is-plain-obj@^1.0.0:
 is-plain-obj@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
+
+is-plain-obj@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-4.0.0.tgz#06c0999fd7574edf5a906ba5644ad0feb3a84d22"
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
@@ -8468,6 +8514,10 @@ property-information@^5.0.0, property-information@^5.3.0:
   dependencies:
     xtend "^4.0.0"
 
+property-information@^6.0.0:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/property-information/-/property-information-6.1.1.tgz#5ca85510a3019726cb9afed4197b7b8ac5926a22"
+
 protocols@^1.1.0, protocols@^1.4.0:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/protocols/-/protocols-1.4.8.tgz#48eea2d8f58d9644a4a32caae5d5db290a075ce8"
@@ -8829,6 +8879,17 @@ rehype-parse@^7.0.1:
   dependencies:
     hast-util-from-parse5 "^6.0.0"
     parse5 "^6.0.0"
+
+rehype-react@^7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/rehype-react/-/rehype-react-7.0.4.tgz#33d8d0137153ed2b0ca9dfcedbd4a81db024956c"
+  dependencies:
+    "@mapbox/hast-util-table-cell-style" "^0.2.0"
+    "@types/hast" "^2.0.0"
+    "@types/react" "^17.0.0"
+    hast-to-hyperscript "^10.0.0"
+    hast-util-whitespace "^2.0.0"
+    unified "^10.0.0"
 
 remark-footnotes@^3.0.0:
   version "3.0.0"
@@ -9496,6 +9557,10 @@ space-separated-tokens@^1.0.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz#85f32c3d10d9682007e917414ddc5c26d1aa6899"
 
+space-separated-tokens@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-2.0.1.tgz#43193cec4fb858a2ce934b7f98b7f2c18107098b"
+
 spdx-correct@^3.0.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.1.tgz#dece81ac9c1e6713e5f7d1b6f17d468fa53d89a9"
@@ -9535,6 +9600,10 @@ sprintf-js@^1.0.3:
 sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
+
+ssr-window@^4.0.0, ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
 
 st@^2.0.0:
   version "2.0.0"
@@ -9865,6 +9934,13 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
+swiper@^7.4.1:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-7.4.1.tgz#99fc586d1335b45250d2c6b3128dc91f8047d3e7"
+  dependencies:
+    dom7 "^4.0.2"
+    ssr-window "^4.0.2"
+
 symbol-observable@^1.0.4, symbol-observable@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
@@ -10062,6 +10138,10 @@ trough@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.5.tgz#b8b639cefad7d0bb2abd37d433ff8293efa5f406"
 
+trough@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/trough/-/trough-2.0.2.tgz#94a3aa9d5ce379fc561f6244905b3f36b7458d96"
+
 "true-case-path@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/true-case-path/-/true-case-path-2.2.1.tgz#c5bf04a5bbec3fd118be4084461b3a27c4d796bf"
@@ -10244,6 +10324,18 @@ unicode-property-aliases-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-2.0.0.tgz#0a36cb9a585c4f6abd51ad1deddb285c165297c8"
 
+unified@^10.0.0:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-10.1.1.tgz#345e349e3ab353ab612878338eb9d57b4dea1d46"
+  dependencies:
+    "@types/unist" "^2.0.0"
+    bail "^2.0.0"
+    extend "^3.0.0"
+    is-buffer "^2.0.0"
+    is-plain-obj "^4.0.0"
+    trough "^2.0.0"
+    vfile "^5.0.0"
+
 unified@^8.0.0:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/unified/-/unified-8.4.2.tgz#13ad58b4a437faa2751a4a4c6a16f680c500fff1"
@@ -10303,6 +10395,10 @@ unist-util-is@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.1.0.tgz#976e5f462a7a5de73d94b706bac1b90671b57797"
 
+unist-util-is@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-5.1.1.tgz#e8aece0b102fa9bc097b0fef8f870c496d4a6236"
+
 unist-util-modify-children@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unist-util-modify-children/-/unist-util-modify-children-2.0.0.tgz#9c9c30d4e32502aabb3fde10d7872a17c86801e2"
@@ -10335,6 +10431,12 @@ unist-util-stringify-position@^2.0.0:
   dependencies:
     "@types/unist" "^2.0.2"
 
+unist-util-stringify-position@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-3.0.0.tgz#d517d2883d74d0daa0b565adc3d10a02b4a8cde9"
+  dependencies:
+    "@types/unist" "^2.0.0"
+
 unist-util-visit-children@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.4.tgz#e8a087e58a33a2815f76ea1901c15dec2cb4b432"
@@ -10352,7 +10454,7 @@ unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3:
+unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   dependencies:
@@ -10515,6 +10617,13 @@ vfile-message@^2.0.0:
     "@types/unist" "^2.0.0"
     unist-util-stringify-position "^2.0.0"
 
+vfile-message@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-3.1.0.tgz#5437035aa43185ff4b9210d32fada6c640e59143"
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+
 vfile@^4.0.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/vfile/-/vfile-4.2.1.tgz#03f1dce28fc625c625bc6514350fbdb00fa9e624"
@@ -10523,6 +10632,15 @@ vfile@^4.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
+
+vfile@^5.0.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/vfile/-/vfile-5.3.0.tgz#4990c78cb3157005590ee8c930b71cd7fa6a006e"
+  dependencies:
+    "@types/unist" "^2.0.0"
+    is-buffer "^2.0.0"
+    unist-util-stringify-position "^3.0.0"
+    vfile-message "^3.0.0"
 
 watchpack@^2.3.1:
   version "2.3.1"
@@ -10538,6 +10656,10 @@ weak-lru-cache@^1.0.0:
 web-namespaces@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
+
+web-namespaces@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
 
 web-vitals@^1.1.2:
   version "1.1.2"

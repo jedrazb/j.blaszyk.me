@@ -58,6 +58,13 @@ module.exports = {
               strict: 'ignore',
             },
           },
+          {
+            resolve: 'gatsby-remark-component-parent2div',
+            options: {
+              components: ['image-gallery'],
+              verbose: true,
+            },
+          },
         ],
       },
     },

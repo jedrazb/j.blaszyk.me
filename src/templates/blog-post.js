@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
+import rehypeReact from 'rehype-react';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
+import ImageGallery from '../components/ImageGallery';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 import {
@@ -73,6 +75,17 @@ class BlogPostTemplate extends React.Component {
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
 
+    const galleryImages = post.frontmatter.galleryImages;
+
+    const renderAst = new rehypeReact({
+      createElement: React.createElement,
+      components: {
+        'image-gallery': props => (
+          <ImageGallery images={galleryImages} {...props} />
+        ),
+      },
+    }).Compiler;
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -104,7 +117,7 @@ class BlogPostTemplate extends React.Component {
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div>{renderAst(post.htmlAst)}</div>
             <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
@@ -186,6 +199,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      htmlAst
       timeToRead
       frontmatter {
         title
@@ -196,6 +210,13 @@ export const pageQuery = graphql`
           childImageSharp {
             fixed(width: 960) {
               src
+            }
+          }
+        }
+        galleryImages {
+          childImageSharp {
+            fluid(maxWidth: 1024, quality: 80) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
