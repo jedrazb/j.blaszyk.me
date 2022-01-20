@@ -74,6 +74,7 @@ const ImageGallery = props => {
                     objectFit="cover"
                     objectPosition="50% 50%"
                     alt=""
+                    loading="eager"
                   />
                 </div>
                 <div className="pagination-padding"></div>
