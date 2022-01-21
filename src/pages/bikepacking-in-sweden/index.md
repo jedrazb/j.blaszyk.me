@@ -23,17 +23,11 @@ We cycled along [EuroVelo 10](https://en.eurovelo.com/ev10) - the Baltic Sea Cyc
 
 We followed EuroVelo 10 - Baltic Sea Cycle Route, southwards from Stockholm, the country’s vibrant capital, to Malmö, going most of the time along the see.
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=38399851&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
-
-We cycled from Stockholm (Nynäshamn port) to Ystad, the point of departure of our ferry headed home. The bikepacking journey took us 8 days. We averaged the distance of roughly 115km a day. The route was **hilly** with many short up- and downhills, for the first 4 days we were averaging more thn 1000m elevation gain per day. It was quite straining especially when cycling on a fully loaded bike - we carried around 20kg of equipment and supplies. The route became progressively flatter and easier as we got near Kalmar and Karlskrona. The wind was not a big problem as for the majority of the route was covered by trees.
+We cycled from Stockholm (Nynäshamn port) to Ystad, the point of departure of our ferry headed home. The bikepacking journey took us 8 days. We averaged the distance of roughly 115km a day. The route was **hilly** with many short up- and downhills, for the first 4 days we were averaging more thn 1000m elevation gain per day. It was quite straining especially when cycling on a fully loaded bike - we carried around 20kg of equipment and supplies. The route became progressively flatter and easier as we got near Kalmar and Karlskrona. The wind was not a big problem as for the majority of the route we were rode covered by trees.
 
 ![Route](./town.jpg)
 
-A gravel bike is advisible as much of the route leads along graver and tarmac roads. 35mm-42mm tyres worked great for us.
-
-
-
-
+A gravel bike is advisible as much of the route leads along gravel and tarmac roads. 35mm-42mm tyres worked great for us.
 
 Some stats from Strava:
 
@@ -57,7 +51,9 @@ Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shel
 
 
 
-## Detailed Route Stages
+## Detailed Route and Camping Spots
+
+<iframe src="https://ridewithgps.com/embeds?type=route&id=38399851&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 
 | GPS trace                                             | Camping spot                                                                                                                                                                                             |
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
