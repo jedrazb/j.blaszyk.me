@@ -3,7 +3,7 @@ module.exports = {
     title: 'Jedr Blaszyk - Blog',
     author: 'Jedr Blaszyk',
     description:
-      'Personal blog by Jedr Blaszyk. I write about stuff I find interesting.',
+      'Personal blog by Jedr Blaszyk. Bikepacking, triathlon & tech.',
     siteUrl: 'https://j.blaszyk.me',
     social: {
       twitter: '@jedr_blaszyk',
