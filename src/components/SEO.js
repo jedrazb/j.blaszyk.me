@@ -59,6 +59,10 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                 content: metaDescription,
               },
               {
+                property: 'robots',
+                content: 'index, follow',
+              },
+              {
                 name: 'twitter:card',
                 content: 'summary',
               },
