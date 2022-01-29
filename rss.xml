@@ -1,31 +1,100 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedr Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedr Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 21 Jan 2022 18:14:54 GMT</lastBuildDate><item><title><![CDATA[Bikepacking & wild camping in Sweden]]></title><description><![CDATA[Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.]]></description><link>https://j.blaszyk.me/bikepacking-in-sweden/</link><guid isPermaLink="false">https://j.blaszyk.me/bikepacking-in-sweden/</guid><pubDate>Tue, 25 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#route-profile&quot;&gt;Route Profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#wild-camping&quot;&gt;Wild Camping&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#detailed-route-stages&quot;&gt;Detailed Route Stages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#photos&quot;&gt;Photos&lt;/a&gt;&lt;/li&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedr Blaszyk's blog rss feed]]></title><description><![CDATA[Personal blog by Jedr Blaszyk. I write about stuff I find interesting.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 29 Jan 2022 16:48:40 GMT</lastBuildDate><item><title><![CDATA[Kattegat loop, Denmark and Sweden]]></title><description><![CDATA[Bikepacking week-long trip around the Kattegat in Denmark and Sweden.]]></description><link>https://j.blaszyk.me/kattegat-loop-bikepacking/</link><guid isPermaLink="false">https://j.blaszyk.me/kattegat-loop-bikepacking/</guid><pubDate>Sat, 22 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#image-gallery&quot;&gt;Photos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#route&quot;&gt;Route&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a2267/wildcamping.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/7266e/header.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUBAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHpL2KoJxP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAQMTBBAR/9oACAEBAAEFArI2WxprJRwWv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAMBAQAAAAAAAAAAAAAAAAARMiAx/9oACAEBAAY/AqR1kY//xAAaEAEBAAIDAAAAAAAAAAAAAAABABEhEFHB/9oACAEBAAE/IRZrPO7C2rDqAicf/9oADAMBAAIAAwAAABCk3//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFB/9oACAEDAQE/EJWIs//EABgRAAIDAAAAAAAAAAAAAAAAAAABESEx/9oACAECAQE/EIa1lH//xAAcEAEBAQABBQAAAAAAAAAAAAABEQAhMUFRYXH/2gAIAQEAAT8Qknvr0w2LHkKXBVnLI9sggCZyFJkL843/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABomley02L/8QAGhAAAgMBAQAAAAAAAAAAAAAAAQIAERIDI//aAAgBAQABBQI4jOqxXUiyXyK4Hy//xAAWEQADAAAAAAAAAAAAAAAAAAAAARL/2gAIAQMBAT8BhEI//8QAFhEAAwAAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AbZTP//EABsQAAICAwEAAAAAAAAAAAAAAAABETECIWGR/9oACAEBAAY/ArKbNrLwiSeCP//EABsQAAMAAgMAAAAAAAAAAAAAAAABESGBMWHh/9oACAEBAAE/IaeRVjREVpPqhWjaMVsuuSE0j//aAAwDAQACAAMAAAAQ3O//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAaf//EABYRAQEBAAAAAAAAAAAAAAAAAAABYf/aAAgBAgEBPxCwbv/EAB8QAQADAAEEAwAAAAAAAAAAAAEAESExQWGBkaHR4f/aAAgBAQABPxDmA9vqGFp4qh8x6BNFB5icAdFUmdJiSD6u2vyNUF2ud5//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Sweden&quot;
+        title=&quot;Sweden&quot;
+        src=&quot;https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/1fe05/header.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/f06cd/header.jpg 240w,https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/a5e48/header.jpg 480w,https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/1fe05/header.jpg 960w,https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/06430/header.jpg 1440w,https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/af8d6/header.jpg 1920w,https://j.blaszyk.me/static/2c3c6ba466578439a8039cc5c34ef66f/7266e/header.jpg 4009w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In the summer of 2021, my friends and I spent a week on a bikepacking trip looping the &lt;strong&gt;Kattegat&lt;/strong&gt; - a sea area bounded by the Jutlandic peninsula in the west and Sweden in the east. We started in Ystad, cycled through Gothenburg, took a ferry to Frederikshavn, Denmark and eventually closed the loop in Copenhagen.&lt;/p&gt;
+&lt;p&gt;Staying close to the sea meant that the route profile was rather flat with not that many hills, but at the same time it was windy and the weather could be unpredictable. Starting from Ystad we followed &lt;a href=&quot;https://visitsweden.com/what-to-do/nature-outdoors/biking/swedens-best-cycling-routes/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;the coastal bike path&lt;/a&gt; which got us through Malmö, Helsingborg, Halmstad and Gothenburg. The bikepacking-friendly “Everyman’s Right” law allowed us to &lt;a href=&quot;https://j.blaszyk.me/bikepacking-in-sweden/#wild-camping&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;camp in the wild&lt;/a&gt;. We used &lt;a href=&quot;https://campwild.org/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;this website&lt;/a&gt; for finding camping spots. We spent two nights camping close to the sea, waking up to the sound of waves and brewing our morning coffee on the beach. We also camped in the wilderness shelter located at the lake in the forest close to Gothenburg (&lt;a href=&quot;https://map.campwild.org/places/4112&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;map&lt;/a&gt;). The water in the lake was just great for a refreshing evening swim. During the first 3 days of cycling, we covered a distance of 440km, averaging almost 150km per day. On the 4th day, we got to Gothenburg where we took some time to rest and explore the city, in the afternoon we caught a ferry to Frederikshavn in Denmark.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/40efb/camping.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDBAX/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAF6c6gahQf/xAAbEAABBAMAAAAAAAAAAAAAAAACAAEDEQQSIf/aAAgBAQABBQLamaUKLLEXGQkPFS//xAAXEQEAAwAAAAAAAAAAAAAAAAAAARES/9oACAEDAQE/Acwp/8QAFhEBAQEAAAAAAAAAAAAAAAAAABIB/9oACAECAQE/Aa1T/8QAGxAAAwACAwAAAAAAAAAAAAAAAAERAhAhQZH/2gAIAQEABj8Crx8LGRYNk6ONf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESExUUGR/9oACAEBAAE/ISqJHFwMIztSuJ7GBjQ12C/gdkbev2f/2gAMAwEAAgADAAAAEAcP/8QAFhEAAwAAAAAAAAAAAAAAAAAAARBR/9oACAEDAQE/EBBP/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERQf/aAAgBAgEBPxBo0o//xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhMUGR/9oACAEBAAE/ELANDMXHbFnQHI1A9zfzEQ1TXVdudqpAOOtZRZ68Rn//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Camping at the sea&quot;
+        title=&quot;Camping at the sea&quot;
+        src=&quot;https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/1fe05/camping.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/f06cd/camping.jpg 240w,https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/a5e48/camping.jpg 480w,https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/1fe05/camping.jpg 960w,https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/06430/camping.jpg 1440w,https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/af8d6/camping.jpg 1920w,https://j.blaszyk.me/static/506deef6fc8aec27b4853248511f22d7/40efb/camping.jpg 3555w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;On the other side of Kattegat, we were hit with harsher weather. It got colder and windy with some rainy days. Unfortunately, wild camping in Denmark is not allowed everywhere so we had to spend two nights in established campsites for a fee. However, there are several designated forests where wild camping is permitted, here is a useful &lt;a href=&quot;https://udinaturen.dk/map-page?scIds=1150,1303,1153&amp;#x26;ffId=2468&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;map&lt;/a&gt; for finding such spots. Danish bike paths led us from Frederikshavn along the coast to Hadsund, Randers and eventually Aarhus where we got our next ferry to &lt;a href=&quot;https://www.google.com/maps/place/4583+Sj%C3%A6llands+Odde,+Denmark/@56.2359695,11.2544575,8.09z/data=!4m5!3m4!1s0x464db64c0f413e79:0x26a6d2afd1db110a!8m2!3d55.9671697!4d11.3667297&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Sjællands Odde&lt;/a&gt;, located about 100km away from Copenhagen.&lt;/p&gt;
+&lt;p&gt;Our bikepacking adventure concluded in Copenhagen, the capital city of Denmark. We took two days to immerse ourselves in the city’s vibrant life. Museums, great food or shops didn’t surprise us as much as the hippie “Free Town” Christiania. Located on an island within the city, it came to life as a squatted military area in the early 70s. This anarchist commune is somewhat independent of Danish regulations. It has its own rules, forbidding for example stealing and hard drugs. It means that the Green Light District, a cannabis market located on one of Christiania’s streets, can operate without disruptions 😎. I strongly suggest spending some time walking around and getting to know more about the history and &lt;a href=&quot;https://www.atlasobscura.com/articles/if-you-want-to-live-in-a-copenhagen-commune-get-ready-for-red-tape&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;existing housing regulations&lt;/a&gt; which I find quite amusing since Christiania originated as a squatters utopia.&lt;/p&gt;
+&lt;p&gt;In total we spent 6 days on bikes, covering about 730km. We rode on gravel/touring bikes with 35-42mm tyres. For navigation, we used a mix of Komoot and bike route signs in Sweden, which worked out well very well. This trip not only got us around Kattegat, but it also marked our completion of cycling along the Swedish southern coastline (from Stockholm to Gothenburg). On our previous bikepacking trip we cycled from Stockholm to Ystad, that journey is described in another &lt;a href=&quot;https://j.blaszyk.me/bikepacking-in-sweden/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;&lt;image-gallery&gt;&lt;/image-gallery&gt;&lt;/div&gt;
+&lt;h2 id=&quot;route&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#route&quot; aria-label=&quot;route permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Route&lt;/h2&gt;
+&lt;iframe src=&quot;https://ridewithgps.com/embeds?type=route&amp;id=38412773&amp;metricUnits=true&amp;sampleGraph=true&quot; style=&quot;width: 1px; min-width: 100%; height: 700px; border: none;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+                &lt;div style=&quot;margin-top=55px; font-style: italic;&quot;&gt;(This is an article posted to my blog at j.blaszyk.me. You can read it online by &lt;a href=&quot;https://j.blaszyk.me/kattegat-loop-bikepacking/&quot;&gt;clicking here&lt;/a&gt;.)&lt;/div&gt;
+              </content:encoded></item><item><title><![CDATA[Bikepacking & wild camping in Sweden]]></title><description><![CDATA[Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.]]></description><link>https://j.blaszyk.me/bikepacking-in-sweden/</link><guid isPermaLink="false">https://j.blaszyk.me/bikepacking-in-sweden/</guid><pubDate>Tue, 25 Aug 2020 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#route-profile&quot;&gt;Route Profile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#wild-camping&quot;&gt;Wild Camping&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#image-gallery&quot;&gt;Photos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#gps-route-and-camping-spots&quot;&gt;GPS Route and Camping Spots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a3169/wildcamping.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUBAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHpL2KoJxP/xAAaEAACAgMAAAAAAAAAAAAAAAAAAQMTBBAR/9oACAEBAAEFArI2WxprJRwWv//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAMBAQAAAAAAAAAAAAAAAAARMiAx/9oACAEBAAY/AqR1kY//xAAaEAEBAAIDAAAAAAAAAAAAAAABABEhEFHB/9oACAEBAAE/IRZrPO7C2rDqAicf/9oADAMBAAIAAwAAABCk3//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFB/9oACAEDAQE/EJWIs//EABgRAAIDAAAAAAAAAAAAAAAAAAABESEx/9oACAECAQE/EIa1lH//xAAcEAEBAQABBQAAAAAAAAAAAAABEQAhMUFRYXH/2gAIAQEAAT8Qknvr0w2LHkKXBVnLI9sggCZyFJkL843/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Bikepacking in Sweden&quot;
         title=&quot;Bikepacking in Sweden&quot;
-        src=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a2510/wildcamping.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/0479a/wildcamping.jpg 250w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/41099/wildcamping.jpg 500w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a2510/wildcamping.jpg 1000w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/c58a3/wildcamping.jpg 1500w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/3acf0/wildcamping.jpg 2000w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a2267/wildcamping.jpg 2170w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/1fe05/wildcamping.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/f06cd/wildcamping.jpg 240w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a5e48/wildcamping.jpg 480w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/1fe05/wildcamping.jpg 960w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/06430/wildcamping.jpg 1440w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/af8d6/wildcamping.jpg 1920w,https://j.blaszyk.me/static/8efe2f62af2462657942e15b689d07d3/a3169/wildcamping.jpg 2170w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -39,26 +108,26 @@
 &lt;p&gt;We cycled from Stockholm (Nynäshamn port) to Ystad, the point of departure of our ferry headed home. The bikepacking journey took us 8 days. We averaged the distance of roughly 115km a day. The route was &lt;strong&gt;hilly&lt;/strong&gt; with many short up- and downhills, for the first 4 days we were averaging more thn 1000m elevation gain per day. It was quite straining especially when cycling on a fully loaded bike - we carried around 20kg of equipment and supplies. The route became progressively flatter and easier as we got near Kalmar and Karlskrona. The wind was not a big problem as for the majority of the route we were rode covered by trees.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/d2602/town.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/657cd/town.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAVhXgObCh//EABwQAAEEAwEAAAAAAAAAAAAAAAIAAQQSAxETIf/aAAgBAQABBQIaLLI9YqrntpADR1//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEv/aAAgBAwEBPwGD/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEREv/aAAgBAgEBPwHUqf/EAB4QAAECBwEAAAAAAAAAAAAAAAABIQIDEBEiMVGR/9oACAEBAAY/AtoLDL9HOXMWp//EABsQAQEBAAIDAAAAAAAAAAAAAAERACExUWFx/9oACAEBAAE/IWiw+syMvxHe55zVtw5s9Gd1I7Qyrv/aAAwDAQACAAMAAAAQ9P8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAEDAQE/EAFt/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFixf//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExQXH/2gAIAQEAAT8QgZtlxLAtz0PqY1e6qG3ECFpNmfccE/yGHbreK7VPPmf/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABQBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAVhXgObCh//EABwQAAEEAwEAAAAAAAAAAAAAAAIAAQQSAxETIf/aAAgBAQABBQIaLLI9YqrntpADR1//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEv/aAAgBAwEBPwGD/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEREv/aAAgBAgEBPwHUqf/EAB4QAAECBwEAAAAAAAAAAAAAAAABIQIDEBEiMVGR/9oACAEBAAY/AtoLDL9HOXMWp//EABsQAQEBAAIDAAAAAAAAAAAAAAERACExUWFx/9oACAEBAAE/IWiw+syMvxHe55zVtw5s9Gd1I7Qyrv/aAAwDAQACAAMAAAAQ9P8A/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAEDAQE/EAFt/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAR/9oACAECAQE/EFixf//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExQXH/2gAIAQEAAT8QgZtlxLAtz0PqY1e6qG3ECFpNmfccE/yGHbreK7VPPmf/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Route&quot;
         title=&quot;Route&quot;
-        src=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/a2510/town.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/0479a/town.jpg 250w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/41099/town.jpg 500w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/a2510/town.jpg 1000w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/c58a3/town.jpg 1500w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/3acf0/town.jpg 2000w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/d2602/town.jpg 4032w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/1fe05/town.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/f06cd/town.jpg 240w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/a5e48/town.jpg 480w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/1fe05/town.jpg 960w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/06430/town.jpg 1440w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/af8d6/town.jpg 1920w,https://j.blaszyk.me/static/274d4e1dce95f2e2e889d200acd25ec1/657cd/town.jpg 4032w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -87,26 +156,26 @@
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Freedom_to_roam&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;“The Everyman’s Right”&lt;/a&gt; in Sweden allows people to camp anywhere in the wilderness as long as it is not private property. It makes bikepacking quite affordable in an otherwise expensive country. We were wild camping for 8 days, usually very close to the Baltic sea or some lake. You trade views and proximity to the Swedish nature for the lack of utilities like showers or toilets. Though, swimming in the lakes and having access to bathroom at gas stations can make up for all the pains.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/16b3a/campsite.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/ed0f0/campsite.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABfwivhpk0b//EABoQAAIDAQEAAAAAAAAAAAAAAAECAAMRBBT/2gAIAQEAAQUCFyxumpZ7qo7NCTgNWf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AYj/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8BFtv/xAAbEAACAwADAAAAAAAAAAAAAAAAAQIRITFBQv/aAAgBAQAGPwLUzs9FRjSRwapH/8QAHRAAAgICAwEAAAAAAAAAAAAAAAEhMRFhQVFxkf/aAAgBAQABPyFlJyOqGHM0fBUFibMblHpiiyPT/9oADAMBAAIAAwAAABCvH//EABYRAQEBAAAAAAAAAAAAAAAAAAABcf/aAAgBAwEBPxCw0//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAgEBPxCBWP/EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExYVFxgaH/2gAIAQEAAT8QFBeVLEV7S1hn7MCmlyChA2ezDlkN+T3c4g3cV86n/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABfwivhpk0b//EABoQAAIDAQEAAAAAAAAAAAAAAAECAAMRBBT/2gAIAQEAAQUCFyxumpZ7qo7NCTgNWf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AYj/xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQIBAT8BFtv/xAAbEAACAwADAAAAAAAAAAAAAAAAAQIRITFBQv/aAAgBAQAGPwLUzs9FRjSRwapH/8QAHRAAAgICAwEAAAAAAAAAAAAAAAEhMRFhQVFxkf/aAAgBAQABPyFlJyOqGHM0fBUFibMblHpiiyPT/9oADAMBAAIAAwAAABCvH//EABYRAQEBAAAAAAAAAAAAAAAAAAABcf/aAAgBAwEBPxCw0//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAgEBPxCBWP/EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExYVFxgaH/2gAIAQEAAT8QFBeVLEV7S1hn7MCmlyChA2ezDlkN+T3c4g3cV86n/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Camping 3&quot;
         title=&quot;Camping 3&quot;
-        src=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/a2510/campsite.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/0479a/campsite.jpg 250w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/41099/campsite.jpg 500w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/a2510/campsite.jpg 1000w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/c58a3/campsite.jpg 1500w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/3acf0/campsite.jpg 2000w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/16b3a/campsite.jpg 2059w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/1fe05/campsite.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/f06cd/campsite.jpg 240w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/a5e48/campsite.jpg 480w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/1fe05/campsite.jpg 960w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/06430/campsite.jpg 1440w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/af8d6/campsite.jpg 1920w,https://j.blaszyk.me/static/6fdffac515d176b7a92a6c1c62d2fd26/ed0f0/campsite.jpg 2059w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -115,26 +184,26 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/69fe4/camping-lake.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/507cf/camping-lake.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 74.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAZqRF1MpH//EABkQAAMBAQEAAAAAAAAAAAAAAAABAhIDE//aAAgBAQABBQLZ6yTfNrMMZg//xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIS/9oACAEDAQE/AXBcF//EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhL/2gAIAQIBAT8BNt23/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEQETEykf/aAAgBAQAGPwJGs0YfT//EABsQAAIDAQEBAAAAAAAAAAAAAAABESExgZGh/9oACAEBAAE/IXlVahzX9EgmOCsKuCJJeC2OH//aAAwDAQACAAMAAAAQux//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBEv//EABYRAAMAAAAAAAAAAAAAAAAAAAEQQf/aAAgBAgEBPxACq//EABsQAQEBAQADAQAAAAAAAAAAAAERIQAxQVHB/9oACAEBAAE/EHESHhjOFS7uY4ak/jxiVPla5YGWgJxKkPsn97//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/2gAMAwEAAhADEAAAAZqRF1MpH//EABkQAAMBAQEAAAAAAAAAAAAAAAABAhIDE//aAAgBAQABBQLZ6yTfNrMMZg//xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIS/9oACAEDAQE/AXBcF//EABcRAQEBAQAAAAAAAAAAAAAAAAEAAhL/2gAIAQIBAT8BNt23/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEQETEykf/aAAgBAQAGPwJGs0YfT//EABsQAAIDAQEBAAAAAAAAAAAAAAABESExgZGh/9oACAEBAAE/IXlVahzX9EgmOCsKuCJJeC2OH//aAAwDAQACAAMAAAAQux//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxBEv//EABYRAAMAAAAAAAAAAAAAAAAAAAEQQf/aAAgBAgEBPxACq//EABsQAQEBAQADAQAAAAAAAAAAAAERIQAxQVHB/9oACAEBAAE/EHESHhjOFS7uY4ak/jxiVPla5YGWgJxKkPsn97//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Camping 1&quot;
         title=&quot;Camping 1&quot;
-        src=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/a2510/camping-lake.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/0479a/camping-lake.jpg 250w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/41099/camping-lake.jpg 500w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/a2510/camping-lake.jpg 1000w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/c58a3/camping-lake.jpg 1500w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/3acf0/camping-lake.jpg 2000w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/69fe4/camping-lake.jpg 2190w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/1fe05/camping-lake.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/f06cd/camping-lake.jpg 240w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/a5e48/camping-lake.jpg 480w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/1fe05/camping-lake.jpg 960w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/06430/camping-lake.jpg 1440w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/af8d6/camping-lake.jpg 1920w,https://j.blaszyk.me/static/5239bf559c95702241f6b746963d63e7/507cf/camping-lake.jpg 2190w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -143,7 +212,7 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Sweden has also a big range of &lt;a href=&quot;https://www.gone71.com/shelters-in-sweden/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;wilderness shelters&lt;/a&gt; throughout the country. It is possible to spend the night there completely for free. Usually, you will find there an open fireplace, tables and benches. We were told by local people that it is fine to set up the tent next to the hut. In a cold, windy night the hut might not be enough to protect you from the wind.&lt;/p&gt;
 &lt;div&gt;&lt;image-gallery&gt;&lt;/image-gallery&gt;&lt;/div&gt;
-&lt;h2 id=&quot;detailed-route-and-camping-spots&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#detailed-route-and-camping-spots&quot; aria-label=&quot;detailed route and camping spots permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Detailed Route and Camping Spots&lt;/h2&gt;
+&lt;h2 id=&quot;gps-route-and-camping-spots&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#gps-route-and-camping-spots&quot; aria-label=&quot;gps route and camping spots permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GPS Route and Camping Spots&lt;/h2&gt;
 &lt;iframe src=&quot;https://ridewithgps.com/embeds?type=route&amp;id=38399851&amp;metricUnits=true&amp;sampleGraph=true&quot; style=&quot;width: 1px; min-width: 100%; height: 700px; border: none;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -210,26 +279,26 @@ their hidden representations by aggregating information they collect from their 
 &lt;p&gt;Spatial methods are preferred over the spectral methods for &lt;a href=&quot;#why-spatial-is-better-than-spectral&quot;&gt;a number of reasons&lt;/a&gt;. The spatial convolution is considered a more versatile method for learning on non-Euclidean structures.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/3ac88/comparison_2d_graph.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/57a79/comparison_2d_graph.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdu4QD//xAAWEAADAAAAAAAAAAAAAAAAAAABEEH/2gAIAQEAAQUCpX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAEBAQEAAAAAAAAAAAAAAAAAITGR/9oACAEBAAE/Ib2wr//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAADAAMBAAAAAAAAAAAAAAAAAREhMUFh/9oACAEBAAE/EEs1c9FaOCfFZ//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 42.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAdu4QD//xAAWEAADAAAAAAAAAAAAAAAAAAABEEH/2gAIAQEAAQUCpX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAXEAEBAQEAAAAAAAAAAAAAAAAAITGR/9oACAEBAAE/Ib2wr//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAADAAMBAAAAAAAAAAAAAAAAAREhMUFh/9oACAEBAAE/EEs1c9FaOCfFZ//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Convolution on an 2D image vs. on a graph&quot;
         title=&quot;Convolution on an 2D image vs. on a graph&quot;
-        src=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/a2510/comparison_2d_graph.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/0479a/comparison_2d_graph.jpg 250w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/41099/comparison_2d_graph.jpg 500w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/a2510/comparison_2d_graph.jpg 1000w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/3ac88/comparison_2d_graph.jpg 1260w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/1fe05/comparison_2d_graph.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/f06cd/comparison_2d_graph.jpg 240w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/a5e48/comparison_2d_graph.jpg 480w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/1fe05/comparison_2d_graph.jpg 960w,https://j.blaszyk.me/static/1fbbb698e41ac0c21c7e7f9a30ecf300/57a79/comparison_2d_graph.jpg 1260w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -337,21 +406,21 @@ This formula can be divided into the following steps:&lt;/p&gt;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png&quot;
+    href=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/7fd2c/cora.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 93.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClklEQVQ4y4VTzU8TQRTvP+HZxGg868mDUblx4KAn9KAJMXogRI2JUYgHP0jAEDWIRKMCihVQIBWrTdVEFChFa5Ua+WhZm6VQSj+22+3uzu7Mzsw628WyoMV32LzfvHkf83u/dZmmSSll33guvlJYsaBpQWaYYoihWdlcTlAAhZySs31WglCSKWbW0NbJdn9BEVRdLR9CBJ3RklOhM7VCFEDArvIiL+kSw4ahsSFYlJANmZuTbQMIsDIhPjQcHmKXFTWraoW51YWVjIRNvVgsD/GvZGtaDAQ5f8PX2vfl2Vc+tCql3nz3joZ/3e8XP08BWrlzKYRTXCLQ5rtT01l7ceRCJDH/3Bs8Ucdt35F0P1U0lXFBncl2OVKihnLpubHZt7dHH1TdrDnQfOj8QOuVJx/2HQzv3JV0v1haFBIQofVk6uCTuRk5GeTeN3nO1LZXN3Q17vH3HQlO1l8f97yKKqAoG2vrcEFDwliGiBOLbjE/KEnTqrqENDGTmxoJHG8ePnbae3XvO/ep4TZPV8+sf1Re5k0dUcY/IS4D5zEGBBcomdHAtKYlMdYhSgqCPxZt9wca7r082tlR5WnaP9ZyLtr7eL7nYarxkhGLVWSbECmdGopzd8dDl3+8ro60bBus2x28Vp/ofpRy90oDA3BhgQnA5ZAetYYpQRVMFPI+oM+l8zMR39mJ7pO++sOR/g7AzSqfPlJRtG7LsmvTkig1IBQxFlh7S15QyU938JO3ErFvUjymFSU2FdV1W2sbVkXIKoSLZdYxUjQli7IRPftTNzCFkKiqoxdd74xxBsIZpq4/C2cniBBMDYCRaomelsRNyN/aZg9mLzGcr8CGXlbO//9nWyxrnqESXTC3tM2ErQMkU4y2Tv4NwHgU4kQrgNIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 93.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClklEQVQ4y4VTzU8TQRTvP+HZxGg868mDUblx4KAn9KAJMXogRI2JUYgHP0jAEDWIRKMCihVQIBWrTdVEFChFa5Ua+WhZm6VQSj+22+3uzu7Mzsw628WyoMV32LzfvHkf83u/dZmmSSll33guvlJYsaBpQWaYYoihWdlcTlAAhZySs31WglCSKWbW0NbJdn9BEVRdLR9CBJ3RklOhM7VCFEDArvIiL+kSw4ahsSFYlJANmZuTbQMIsDIhPjQcHmKXFTWraoW51YWVjIRNvVgsD/GvZGtaDAQ5f8PX2vfl2Vc+tCql3nz3joZ/3e8XP08BWrlzKYRTXCLQ5rtT01l7ceRCJDH/3Bs8Ucdt35F0P1U0lXFBncl2OVKihnLpubHZt7dHH1TdrDnQfOj8QOuVJx/2HQzv3JV0v1haFBIQofVk6uCTuRk5GeTeN3nO1LZXN3Q17vH3HQlO1l8f97yKKqAoG2vrcEFDwliGiBOLbjE/KEnTqrqENDGTmxoJHG8ePnbae3XvO/ep4TZPV8+sf1Re5k0dUcY/IS4D5zEGBBcomdHAtKYlMdYhSgqCPxZt9wca7r082tlR5WnaP9ZyLtr7eL7nYarxkhGLVWSbECmdGopzd8dDl3+8ro60bBus2x28Vp/ofpRy90oDA3BhgQnA5ZAetYYpQRVMFPI+oM+l8zMR39mJ7pO++sOR/g7AzSqfPlJRtG7LsmvTkig1IBQxFlh7S15QyU938JO3ErFvUjymFSU2FdV1W2sbVkXIKoSLZdYxUjQli7IRPftTNzCFkKiqoxdd74xxBsIZpq4/C2cniBBMDYCRaomelsRNyN/aZg9mLzGcr8CGXlbO//9nWyxrnqESXTC3tM2ErQMkU4y2Tv4NwHgU4kQrgNIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Cora dataset&quot;
         title=&quot;Cora dataset&quot;
-        src=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png&quot;
-        srcset=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/63868/cora.png 250w,https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/0b533/cora.png 500w,https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/ae694/cora.png 850w&quot;
+        src=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/7fd2c/cora.png&quot;
+        srcset=&quot;https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/58794/cora.png 240w,https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/3166f/cora.png 480w,https://j.blaszyk.me/static/f4f59a95a1022ba3b4e602731b164903/7fd2c/cora.png 850w&quot;
         sizes=&quot;(max-width: 850px) 100vw, 850px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -375,26 +444,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;p&gt;First thing I did after moving in to London was getting a proper road bike and I would recommend it to anyone. Places like Richmond Park or Regent’s park are thriving with the cycling culture on every weekend. Moreover, cycling is a great option for the everyday commute and it allows you to explore London and the neighbouring towns. Here is a list of my favourite places for cycling after living 4 years in London.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/21cd0/richmond_park_cafe.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/c0bb5/richmond_park_cafe.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 64%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGd8LrMJg//xAAaEAACAwEBAAAAAAAAAAAAAAABAwACEgQQ/9oACAEBAAEFAg+4LOjU3F10WAU8/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BR//EABoQAAICAwAAAAAAAAAAAAAAAAAxARARISL/2gAIAQEABj8CjpEZEM1X/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARIVFBgf/aAAgBAQABPyFAu+IysMmto/ZyErAD2yG3rP/aAAwDAQACAAMAAAAQJO//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qla//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBBj//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQWFRccH/2gAIAQEAAT8Qu5sUfTmBnnRxv1Ha7LC1WPRcdsAtE3MltnDU/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 64.16666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGd8LrMJg//xAAaEAACAwEBAAAAAAAAAAAAAAABAwACEgQQ/9oACAEBAAEFAg+4LOjU3F10WAU8/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BR//EABoQAAICAwAAAAAAAAAAAAAAAAAxARARISL/2gAIAQEABj8CjpEZEM1X/8QAGhABAAMBAQEAAAAAAAAAAAAAAQARIVFBgf/aAAgBAQABPyFAu+IysMmto/ZyErAD2yG3rP/aAAwDAQACAAMAAAAQJO//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8Qla//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxBBj//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQWFRccH/2gAIAQEAAT8Qu5sUfTmBnnRxv1Ha7LC1WPRcdsAtE3MltnDU/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Roehampton Gate cafe early in the morning&quot;
         title=&quot;Roehampton Gate cafe early in the morning&quot;
-        src=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/a2510/richmond_park_cafe.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/0479a/richmond_park_cafe.jpg 250w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/41099/richmond_park_cafe.jpg 500w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/a2510/richmond_park_cafe.jpg 1000w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/c58a3/richmond_park_cafe.jpg 1500w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/21cd0/richmond_park_cafe.jpg 1872w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/1fe05/richmond_park_cafe.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/f06cd/richmond_park_cafe.jpg 240w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/a5e48/richmond_park_cafe.jpg 480w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/1fe05/richmond_park_cafe.jpg 960w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/06430/richmond_park_cafe.jpg 1440w,https://j.blaszyk.me/static/634c896a2e0fd6d4b333b624fe63d5b2/c0bb5/richmond_park_cafe.jpg 1872w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -416,26 +485,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/3349993673&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/6c2de/windsor_route.png&quot;
+    href=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/f56e0/windsor_route.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 44.4%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVQozw3QSZKaUAAAUO5/gZwguyysrkpK050uRaOigAEZRMY/82c+tr1OH+E9b5NEfrhOSdpa3Ul4lU2hMX/IzvXdhME0IjeedNIZypytGRgQGd0T1i3ogZdF8frwI72etgUoKaFaQSGp0FhwZEfrHkgRZnhn+I6XvdW5AQmqxyCQ0+RVJr91+ypP90njCwe0oVwjpClTZLLQMsiI4LYSJOxDkSdDGePbBVT33k7eSqz2o19F70EUbfv2ldKUzYORvRmZUaWqiePaPYDTReL7w6+DOiJH7MendM5bweUavqXXt0o298M+OJ8qJjPYlrIfNIKawOlLazqtz5eXxbB4Rcut3HQKY6O8oww20gflHky4NayPwm7EOyyofrIPXc5ITrqQCUxjGIeNrrMpPw3ntgPMaO+vOB1Z3JR+bdpcmR3siiIIAM2sKC6neLlsfr/Hr9+3i2+F71OpqBPjrKQ1TCrvyrItXaHjH1Jd2tCvsijNkvbg3zbLy8+X86WKIWww+icbojU2/Cu5tn1rBqy5V9j0Lq93moY26vVdWHJDeTS0RZF1eX2fxFkVw4znx/Px+GRWAI65McJZNvP/ASjTCgNoIGgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 44.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABYlAAAWJQFJUiTwAAABvklEQVQozw3QSZKaUAAAUO5/gZwguyysrkpK050uRaOigAEZRMY/82c+tr1OH+E9b5NEfrhOSdpa3Ul4lU2hMX/IzvXdhME0IjeedNIZypytGRgQGd0T1i3ogZdF8frwI72etgUoKaFaQSGp0FhwZEfrHkgRZnhn+I6XvdW5AQmqxyCQ0+RVJr91+ypP90njCwe0oVwjpClTZLLQMsiI4LYSJOxDkSdDGePbBVT33k7eSqz2o19F70EUbfv2ldKUzYORvRmZUaWqiePaPYDTReL7w6+DOiJH7MendM5bweUavqXXt0o298M+OJ8qJjPYlrIfNIKawOlLazqtz5eXxbB4Rcut3HQKY6O8oww20gflHky4NayPwm7EOyyofrIPXc5ITrqQCUxjGIeNrrMpPw3ntgPMaO+vOB1Z3JR+bdpcmR3siiIIAM2sKC6neLlsfr/Hr9+3i2+F71OpqBPjrKQ1TCrvyrItXaHjH1Jd2tCvsijNkvbg3zbLy8+X86WKIWww+icbojU2/Cu5tn1rBqy5V9j0Lq93moY26vVdWHJDeTS0RZF1eX2fxFkVw4znx/Px+GRWAI65McJZNvP/ASjTCgNoIGgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Windsor route&quot;
         title=&quot;Windsor route&quot;
-        src=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/00d43/windsor_route.png&quot;
-        srcset=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/63868/windsor_route.png 250w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/0b533/windsor_route.png 500w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/00d43/windsor_route.png 1000w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/6c2de/windsor_route.png 1334w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/fde0f/windsor_route.png&quot;
+        srcset=&quot;https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/58794/windsor_route.png 240w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/3166f/windsor_route.png 480w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/fde0f/windsor_route.png 960w,https://j.blaszyk.me/static/9d0aa3ab54cb9983b40386ac3113d7ac/f56e0/windsor_route.png 1334w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -446,26 +515,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;p&gt;South West London and Surrey are famous when it comes to cycling. The 2012 olympic road race, and the Prudential Ride London route that followed, have firmly put Surrey on the cycling map. Starting in Richmond Park, this route heads out into the Surrey Hills and to the famous Box Hill, a (not so) steep climb of 2.5km and 129m elevation gain. According to &lt;a href=&quot;https://www.strava.com/segments/6695759&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava’s leaderboard for the Box Hill climb&lt;/a&gt; there are more than 120,000 attempts recorded on the app, with the best time of just under 5 minutes.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/dbc87/box_hill.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/3ac96/box_hill.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGW6FoYzSP/xAAbEAACAgMBAAAAAAAAAAAAAAACAwABBBEyEv/aAAgBAQABBQL2xhXkGMvIPa+W8XP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAARIgMkH/2gAIAQEABj8Cn0SNun//xAAbEAACAgMBAAAAAAAAAAAAAAAAASFREBExcf/aAAgBAQABPyGBN0dChj1HbxC7EvI0n//aAAwDAQACAAMAAAAQYN//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFR/9oACAECAQE/EMUse3//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMUGBYf/aAAgBAQABPxBWsDd1B4Eaqjge7YFUHrDDO47V3kfInU//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGW6FoYzSP/xAAbEAACAgMBAAAAAAAAAAAAAAACAwABBBEyEv/aAAgBAQABBQL2xhXkGMvIPa+W8XP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAARIgMkH/2gAIAQEABj8Cn0SNun//xAAbEAACAgMBAAAAAAAAAAAAAAAAASFREBExcf/aAAgBAQABPyGBN0dChj1HbxC7EvI0n//aAAwDAQACAAMAAAAQYN//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFR/9oACAECAQE/EMUse3//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMUGBYf/aAAgBAQABPxBWsDd1B4Eaqjge7YFUHrDDO47V3kfInU//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Steep road leading to the top of the Box Hill.&quot;
         title=&quot;Steep road leading to the top of the Box Hill.&quot;
-        src=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/a2510/box_hill.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/0479a/box_hill.jpg 250w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/41099/box_hill.jpg 500w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/a2510/box_hill.jpg 1000w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/c58a3/box_hill.jpg 1500w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/dbc87/box_hill.jpg 1978w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/1fe05/box_hill.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/f06cd/box_hill.jpg 240w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/a5e48/box_hill.jpg 480w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/1fe05/box_hill.jpg 960w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/06430/box_hill.jpg 1440w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/af8d6/box_hill.jpg 1920w,https://j.blaszyk.me/static/bac26cc95ff748145f2156e5456e0955/3ac96/box_hill.jpg 1978w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -477,26 +546,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.strava.com/activities/3360618841&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Strava activity&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/87488/box_hill_route.png&quot;
+    href=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/3911e/box_hill_route.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 54.800000000000004%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABYlAAAWJQFJUiTwAAACA0lEQVQozw2SzXKbMACEef+n6DP01JlOO22axEls1zY2QgJJ6A+B/iUgnh7r6+5+h93ZiiYLvWpY309MLjNLVi9u0BrNlE7Sr1tMhdsRM258EumT+BWMFptMU6xoYcCSegR/rW59EM4q74XTWDOSlBJEfXyMueTtvm53U4rMjo6cTmxyc9Vl8h537+n15uXRGOyijIZHacsG4Mvh+cvEsb2veVmmxZjFp20zd6ezEVpXJFIQm2f7SjIZkmu9E0tQq+stIqffAP4UyxTLGpZiVm+WQGfBg5w+ndrGqg4HmWUdrjAinPXZyAO4XrhEpxdjdeyQWaMqZs4+Lcu8ODlr6TUzEk19BRNAGXWpucWTWPiYPPdz1x2VQtZreX6TzkzOCzPikQ5ZjOskihjNPDhWifCQepR6MDc8DPw+g7Gmpz/4H+vhEz3v+8JZ5GEtsowgNSh00CG28KHQCtgLjDeS+KAEtAy4etj/xOjQJoq6fUt20z3ghFkWfcAwoUa1V9404daFrmrmfRuvTWrIIuYwW3QRU6uywn6E7Qdhe7YpnAhNA37Avu1CDy3CloqsK5Ewz0xkpbPjnoh2x8Gul4f6+P3px1dM3lDoVZqHLPvHerFlid/Gy1kdYWgqlhgvvHv8BIOrqR/ppv4Gul8NPiEFYcSAw8E+GnKSKS+CpAGlDiX0sP4DVABGHlyJIfoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 54.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABYlAAAWJQFJUiTwAAACA0lEQVQozw2SzXKbMACEef+n6DP01JlOO22axEls1zY2QgJJ6A+B/iUgnh7r6+5+h93ZiiYLvWpY309MLjNLVi9u0BrNlE7Sr1tMhdsRM258EumT+BWMFptMU6xoYcCSegR/rW59EM4q74XTWDOSlBJEfXyMueTtvm53U4rMjo6cTmxyc9Vl8h537+n15uXRGOyijIZHacsG4Mvh+cvEsb2veVmmxZjFp20zd6ezEVpXJFIQm2f7SjIZkmu9E0tQq+stIqffAP4UyxTLGpZiVm+WQGfBg5w+ndrGqg4HmWUdrjAinPXZyAO4XrhEpxdjdeyQWaMqZs4+Lcu8ODlr6TUzEk19BRNAGXWpucWTWPiYPPdz1x2VQtZreX6TzkzOCzPikQ5ZjOskihjNPDhWifCQepR6MDc8DPw+g7Gmpz/4H+vhEz3v+8JZ5GEtsowgNSh00CG28KHQCtgLjDeS+KAEtAy4etj/xOjQJoq6fUt20z3ghFkWfcAwoUa1V9404daFrmrmfRuvTWrIIuYwW3QRU6uywn6E7Qdhe7YpnAhNA37Avu1CDy3CloqsK5Ewz0xkpbPjnoh2x8Gul4f6+P3px1dM3lDoVZqHLPvHerFlid/Gy1kdYWgqlhgvvHv8BIOrqR/ppv4Gul8NPiEFYcSAw8E+GnKSKS+CpAGlDiX0sP4DVABGHlyJIfoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Box hill route&quot;
         title=&quot;Box hill route&quot;
-        src=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/00d43/box_hill_route.png&quot;
-        srcset=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/63868/box_hill_route.png 250w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/0b533/box_hill_route.png 500w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/00d43/box_hill_route.png 1000w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/87488/box_hill_route.png 1282w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/fde0f/box_hill_route.png&quot;
+        srcset=&quot;https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/58794/box_hill_route.png 240w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/3166f/box_hill_route.png 480w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/fde0f/box_hill_route.png 960w,https://j.blaszyk.me/static/bafbbdb0f0beb67db338dde52aaf3278/3911e/box_hill_route.png 1282w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -508,26 +577,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;p&gt;From the city, through the suburbs and into the countryside, with the testing climb of Ditchling Beacon just before the beach below, the London to Brighton route is full of action and should be around 100km from the center of London. If you are looking for more adventures you can add some miles by cycling to Seven Sisters cliffs and back. You can come back to London by bike or take a train back, I recommend the latter. You can refer to this &lt;a href=&quot;https://www.strava.com/local/uk/london/cycling/routes/116?hl=en-GB&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;GPX trace on Strava&lt;/a&gt; for a route to Brighton and &lt;a href=&quot;https://www.mapmyride.com/gb/brighton-eng/brighton-to-seven-sisters-route-19626108&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;this trace&lt;/a&gt; for the route to Seven Sisters cliffs from Brighton.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/21cd0/cycling_fields.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/c0bb5/cycling_fields.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.199999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEAA//aAAwDAQACEAMQAAAB2NGbMrEkn//EABkQAAIDAQAAAAAAAAAAAAAAAAACARMUIP/aAAgBAQABBQLQhoUvjj//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEgH/2gAIAQIBAT8BpWv/xAAYEAACAwAAAAAAAAAAAAAAAAAAASAxQf/aAAgBAQAGPwLRXH//xAAcEAEAAQQDAAAAAAAAAAAAAAABABARIVExkaH/2gAIAQEAAT8hN/SJtgr+R1tOTNP/2gAMAwEAAgADAAAAEKzv/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QR//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/ELD/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhQVExkbH/2gAIAQEAAT8QVyyXENFCvHn5LWekhhncoo1Le5//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEAA//aAAwDAQACEAMQAAAB2NGbMrEkn//EABkQAAIDAQAAAAAAAAAAAAAAAAACARMUIP/aAAgBAQABBQLQhoUvjj//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQEBAQAAAAAAAAAAAAAAAAAAEgH/2gAIAQIBAT8BpWv/xAAYEAACAwAAAAAAAAAAAAAAAAAAASAxQf/aAAgBAQAGPwLRXH//xAAcEAEAAQQDAAAAAAAAAAAAAAABABARIVExkaH/2gAIAQEAAT8hN/SJtgr+R1tOTNP/2gAMAwEAAgADAAAAEKzv/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QR//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/ELD/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhQVExkbH/2gAIAQEAAT8QVyyXENFCvHn5LWekhhncoo1Le5//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Cycling through the sheep pasture.&quot;
         title=&quot;Cycling through the sheep pasture.&quot;
-        src=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/a2510/cycling_fields.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/0479a/cycling_fields.jpg 250w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/41099/cycling_fields.jpg 500w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/a2510/cycling_fields.jpg 1000w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/c58a3/cycling_fields.jpg 1500w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/21cd0/cycling_fields.jpg 1872w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/1fe05/cycling_fields.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/f06cd/cycling_fields.jpg 240w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/a5e48/cycling_fields.jpg 480w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/1fe05/cycling_fields.jpg 960w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/06430/cycling_fields.jpg 1440w,https://j.blaszyk.me/static/29c6a1cb2e6ff59d7c27bc162d8f9aad/c0bb5/cycling_fields.jpg 1872w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -537,26 +606,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;em&gt;Direct route to the coastline through a sheep pasture &gt; muddy road.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/21cd0/seven_sisters_view.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/c0bb5/seven_sisters_view.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.60000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABc+FvNfIAn//EABoQAAICAwAAAAAAAAAAAAAAAAACARMDEBT/2gAIAQEAAQUC6VFzrJZux4P/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAECAQE/AdK//8QAGRAAAgMBAAAAAAAAAAAAAAAAABEBIDEy/9oACAEBAAY/AskTp0f/xAAaEAACAgMAAAAAAAAAAAAAAAAAARFRECEx/9oACAEBAAE/IQmUNqI08JHImg//2gAMAwEAAgADAAAAEGj/AP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/ECP/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCj/8QAHRABAAICAgMAAAAAAAAAAAAAAREhAGEQMVFxsf/aAAgBAQABPxAZsd1kBTGbd+vPBFpOEzprWCU0NTf3P//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFAv/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABc+FvNfIAn//EABoQAAICAwAAAAAAAAAAAAAAAAACARMDEBT/2gAIAQEAAQUC6VFzrJZux4P/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAwEBPwGH/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAECAQE/AdK//8QAGRAAAgMBAAAAAAAAAAAAAAAAABEBIDEy/9oACAEBAAY/AskTp0f/xAAaEAACAgMAAAAAAAAAAAAAAAAAARFRECEx/9oACAEBAAE/IQmUNqI08JHImg//2gAMAwEAAgADAAAAEGj/AP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/ECP/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCj/8QAHRABAAICAgMAAAAAAAAAAAAAAREhAGEQMVFxsf/aAAgBAQABPxAZsd1kBTGbd+vPBFpOEzprWCU0NTf3P//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;View of the English Channel.&quot;
         title=&quot;View of the English Channel.&quot;
-        src=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/a2510/seven_sisters_view.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/0479a/seven_sisters_view.jpg 250w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/41099/seven_sisters_view.jpg 500w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/a2510/seven_sisters_view.jpg 1000w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/c58a3/seven_sisters_view.jpg 1500w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/21cd0/seven_sisters_view.jpg 1872w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/1fe05/seven_sisters_view.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/f06cd/seven_sisters_view.jpg 240w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/a5e48/seven_sisters_view.jpg 480w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/1fe05/seven_sisters_view.jpg 960w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/06430/seven_sisters_view.jpg 1440w,https://j.blaszyk.me/static/aec056ec439ff9af85674e8a3c2000e8/c0bb5/seven_sisters_view.jpg 1872w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -573,26 +642,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
               </content:encoded></item><item><title><![CDATA[Sussex Coastal Marathon]]></title><description><![CDATA[My first marathon. Hilly, muddy and windy race, definitely worth it.]]></description><link>https://j.blaszyk.me/sussex-coastal-marathon/</link><guid isPermaLink="false">https://j.blaszyk.me/sussex-coastal-marathon/</guid><pubDate>Wed, 18 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This race is part of the coastal trail series which are scenic and challenging runs mostly around the coastal paths in the UK. A great thing about the Sussex Coastal Marathon is that the route includes the Seven Sisters cliffs and offers spectacular views over the English Channel. To be honest, the localisation and the views were the main reason why my flatmate, Eduardo, managed to convince me to sign up a few months ago. Watching the &lt;a href=&quot;https://www.facebook.com/CoastalTrailSeries/videos/1666969293317932/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;promo of the race&lt;/a&gt; got me hooked up and gave me a lot of motivation during the training.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/f29e8/marathon_promo.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/a29d5/marathon_promo.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGvSREV/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIBAxMU/9oACAEBAAEFAktc6VNkk//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/ASf/xAAaEAACAgMAAAAAAAAAAAAAAAAAAREhIjEy/9oACAEBAAY/AtKDKjtH/8QAGRABAAIDAAAAAAAAAAAAAAAAAQARIVHB/9oACAEBAAE/IcZdhlDXSKrI/wD/2gAMAwEAAgADAAAAEPfP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QSf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EEz/xAAbEAEAAwADAQAAAAAAAAAAAAABABEhUWGRsf/aAAgBAQABPxA4LvrlHs1pXIUmQHtr7P/Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 42.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAIABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAIDBP/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGvSREV/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIBAxMU/9oACAEBAAEFAktc6VNkk//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/ASf/xAAaEAACAgMAAAAAAAAAAAAAAAAAAREhIjEy/9oACAEBAAY/AtKDKjtH/8QAGRABAAIDAAAAAAAAAAAAAAAAAQARIVHB/9oACAEBAAE/IcZdhlDXSKrI/wD/2gAMAwEAAgADAAAAEPfP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8QSf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EEz/xAAbEAEAAwADAQAAAAAAAAAAAAABABEhUWGRsf/aAAgBAQABPxA4LvrlHs1pXIUmQHtr7P/Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Marathon promo.&quot;
         title=&quot;Marathon promo.&quot;
-        src=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/a2510/marathon_promo.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/0479a/marathon_promo.jpg 250w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/41099/marathon_promo.jpg 500w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/a2510/marathon_promo.jpg 1000w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/c58a3/marathon_promo.jpg 1500w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/3acf0/marathon_promo.jpg 2000w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/f29e8/marathon_promo.jpg 2792w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/1fe05/marathon_promo.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/f06cd/marathon_promo.jpg 240w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/a5e48/marathon_promo.jpg 480w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/1fe05/marathon_promo.jpg 960w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/06430/marathon_promo.jpg 1440w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/af8d6/marathon_promo.jpg 1920w,https://j.blaszyk.me/static/f3644fb12dbfefa76b2be4377bc38348/a29d5/marathon_promo.jpg 2792w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -608,26 +677,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;h2 id=&quot;photos-from-the-event&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#photos-from-the-event&quot; aria-label=&quot;photos from the event permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Photos from the event&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/1839c/before_the_race.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/29bf2/before_the_race.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAGgs6x0BDJ//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECERMD/9oACAEBAAEFAl7RR1k7QUa8bP/EABcRAAMBAAAAAAAAAAAAAAAAAAAREiH/2gAIAQMBAT8BnUSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/Abiv/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECEDIh/9oACAEBAAY/AuSNI0K//8QAHBAAAQMFAAAAAAAAAAAAAAAAAAERMSFRYXGB/9oACAEBAAE/IYd6MqWELakmPdCDR//aAAwDAQACAAMAAAAQ/M//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/ENSLv//EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAgBAgEBPxAWoTf/xAAdEAACAgEFAAAAAAAAAAAAAAABEQAhYXGBkbHB/9oACAEBAAE/EATB1LuG+VhmF3kYS8k62gRc+BKGBoI//9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 61.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEFBv/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAGgs6x0BDJ//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECERMD/9oACAEBAAEFAl7RR1k7QUa8bP/EABcRAAMBAAAAAAAAAAAAAAAAAAAREiH/2gAIAQMBAT8BnUSf/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/Abiv/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAECEDIh/9oACAEBAAY/AuSNI0K//8QAHBAAAQMFAAAAAAAAAAAAAAAAAAERMSFRYXGB/9oACAEBAAE/IYd6MqWELakmPdCDR//aAAwDAQACAAMAAAAQ/M//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/ENSLv//EABYRAQEBAAAAAAAAAAAAAAAAAAEAIf/aAAgBAgEBPxAWoTf/xAAdEAACAgEFAAAAAAAAAAAAAAABEQAhYXGBkbHB/9oACAEBAAE/EATB1LuG+VhmF3kYS8k62gRc+BKGBoI//9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Before the race. Waiting with the others to start.&quot;
         title=&quot;Before the race. Waiting with the others to start.&quot;
-        src=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/a2510/before_the_race.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/0479a/before_the_race.jpg 250w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/41099/before_the_race.jpg 500w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/a2510/before_the_race.jpg 1000w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/1839c/before_the_race.jpg 1196w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/1fe05/before_the_race.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/f06cd/before_the_race.jpg 240w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/a5e48/before_the_race.jpg 480w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/1fe05/before_the_race.jpg 960w,https://j.blaszyk.me/static/e6d319a631acfc0857ec88dc876a99fc/29bf2/before_the_race.jpg 1196w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -637,26 +706,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;em&gt;Before the race. Waiting with the others to start.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/1839c/route_views.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/29bf2/route_views.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.8%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB0smpw2SCN//EABcQAAMBAAAAAAAAAAAAAAAAAAABExD/2gAIAQEAAQUCqURRY8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREv/aAAgBAgEBPwHTKz//xAAZEAACAwEAAAAAAAAAAAAAAAAAMgERICH/2gAIAQEABj8C7NDj4//EABkQAQEAAwEAAAAAAAAAAAAAAAEAEGFxkf/aAAgBAQABPyEEubtp+yuKt//aAAwDAQACAAMAAAAQJM//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8QsMP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/EAv/xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMVFB/9oACAEBAAE/ECXbTdkBSwnpI+sXZEuVtgnDP//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAAB0smpw2SCN//EABcQAAMBAAAAAAAAAAAAAAAAAAABExD/2gAIAQEAAQUCqURRY8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAEREv/aAAgBAgEBPwHTKz//xAAZEAACAwEAAAAAAAAAAAAAAAAAMgERICH/2gAIAQEABj8C7NDj4//EABkQAQEAAwEAAAAAAAAAAAAAAAEAEGFxkf/aAAgBAQABPyEEubtp+yuKt//aAAwDAQACAAMAAAAQJM//xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8QsMP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/EAv/xAAaEAEAAgMBAAAAAAAAAAAAAAABABEhMVFB/9oACAEBAAE/ECXbTdkBSwnpI+sXZEuVtgnDP//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Views en route.&quot;
         title=&quot;Views en route.&quot;
-        src=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/a2510/route_views.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/0479a/route_views.jpg 250w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/41099/route_views.jpg 500w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/a2510/route_views.jpg 1000w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/1839c/route_views.jpg 1196w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/1fe05/route_views.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/f06cd/route_views.jpg 240w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/a5e48/route_views.jpg 480w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/1fe05/route_views.jpg 960w,https://j.blaszyk.me/static/14dd513378590e187e041b0692843840/29bf2/route_views.jpg 1196w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
@@ -666,26 +735,26 @@ This formula can be divided into the following steps:&lt;/p&gt;
 &lt;em&gt;Views of the English Channel at around 30km.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/8a8a2/after_race.jpg&quot;
+    href=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/c6fcc/after_race.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75.2%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABhq1+FgoL/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAECERIDIv/aAAgBAQABBQJ+ZQ5ulomlei2f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAECAQE/Aauv/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEhMQIQYf/aAAgBAQAGPwKZLLRjx7//xAAcEAEAAgEFAAAAAAAAAAAAAAABACERQVFhcZH/2gAIAQEAAT8hFDsaMblkdwEnbjgIxsJ5P//aAAwDAQACAAMAAAAQrA//xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8QShD/xAAWEQEBAQAAAAAAAAAAAAAAAAAhARD/2gAIAQIBAT8QoMP/xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhcVEx/9oACAEBAAE/EHagm6F9yMnVAMe/cn49FzR42GgVks44ktZh5DH/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABhq1+FgoL/8QAGhAAAgMBAQAAAAAAAAAAAAAAAAECERIDIv/aAAgBAQABBQJ+ZQ5ulomlei2f/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oACAECAQE/Aauv/8QAGhAAAgIDAAAAAAAAAAAAAAAAAAEhMQIQYf/aAAgBAQAGPwKZLLRjx7//xAAcEAEAAgEFAAAAAAAAAAAAAAABACERQVFhcZH/2gAIAQEAAT8hFDsaMblkdwEnbjgIxsJ5P//aAAwDAQACAAMAAAAQrA//xAAWEQADAAAAAAAAAAAAAAAAAAAAARH/2gAIAQMBAT8QShD/xAAWEQEBAQAAAAAAAAAAAAAAAAAhARD/2gAIAQIBAT8QoMP/xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhcVEx/9oACAEBAAE/EHagm6F9yMnVAMe/cn49FzR42GgVks44ktZh5DH/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Me happy after completing the race&quot;
         title=&quot;Me happy after completing the race&quot;
-        src=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/a2510/after_race.jpg&quot;
-        srcset=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/0479a/after_race.jpg 250w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/41099/after_race.jpg 500w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/a2510/after_race.jpg 1000w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/8a8a2/after_race.jpg 1008w&quot;
-        sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
+        src=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/1fe05/after_race.jpg&quot;
+        srcset=&quot;https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/f06cd/after_race.jpg 240w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/a5e48/after_race.jpg 480w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/1fe05/after_race.jpg 960w,https://j.blaszyk.me/static/8e63168ff3fbefaad0e5e3dc4769edf9/c6fcc/after_race.jpg 1008w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
