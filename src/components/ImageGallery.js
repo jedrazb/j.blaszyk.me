@@ -31,7 +31,7 @@ const ImageGallery = props => {
   };
 
   return (
-    <div className="image-gallery">
+    <div className="image-gallery" id="image-gallery">
       <div className="inner-box">
         <div
           className="gallery-title-container"
