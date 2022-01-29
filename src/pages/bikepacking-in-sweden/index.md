@@ -10,8 +10,8 @@ cta: 'react'
 
 * [Route Profile](#route-profile)
 * [Wild Camping](#wild-camping)
-* [Detailed Route Stages](#detailed-route-stages)
-* [Photos](#photos)
+* [Photos](#image-gallery)
+* [GPS Route and Camping Spots](#gps-route-and-camping-spots)
 
 ![Bikepacking in Sweden](./wildcamping.jpg)
 
@@ -50,8 +50,7 @@ Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shel
 <image-gallery></image-gallery>
 
 
-
-## Detailed Route and Camping Spots
+## GPS Route and Camping Spots
 
 <iframe src="https://ridewithgps.com/embeds?type=route&id=38399851&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
 
