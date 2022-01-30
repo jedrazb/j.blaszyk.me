@@ -35,7 +35,6 @@ Some stats from Strava:
 |----------------|-----------------|-----------|
 | 895km          | 5903m           | 41h 52min |
 
-
 ## Wild Camping
 
 [“The Everyman’s Right”](https://en.wikipedia.org/wiki/Freedom_to_roam) in Sweden allows people to camp anywhere in the wilderness as long as it is not private property. It makes bikepacking quite affordable in an otherwise expensive country. We were wild camping for 8 days, usually very close to the Baltic sea or some lake. You trade views and proximity to the Swedish nature for the lack of utilities like showers or toilets. Though, swimming in the lakes and having access to bathroom at gas stations can make up for all the pains.
@@ -46,9 +45,7 @@ Some stats from Strava:
 
 Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shelters-in-sweden/) throughout the country. It is possible to spend the night there completely for free. Usually, you will find there an open fireplace, tables and benches. We were told by local people that it is fine to set up the tent next to the hut. In a cold, windy night the hut might not be enough to protect you from the wind.
 
-
 <image-gallery></image-gallery>
-
 
 ## GPS Route and Camping Spots
 
@@ -64,7 +61,3 @@ Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shel
 | [Day 6](https://www.strava.com/activities/3907739263) | Camped in the shelter in Järnavik: [approximate location](https://www.google.com/maps/dir//56.174592000000004,15.079513000000002).                                                                        |
 | [Day 7](https://www.strava.com/activities/3912610094) | Camped in the shelter in Kivik: [approximate location](https://www.google.com/maps/dir//55.6865063,14.2337752/@55.6765303,14.0841077,12z).                                                                |
 | [Day 8](https://www.strava.com/activities/3916179399) | Night on the ferry 🛳                                                                                                                                                                                    |
-
-
-
-

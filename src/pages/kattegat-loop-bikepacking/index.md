@@ -24,10 +24,8 @@ Our bikepacking adventure concluded in Copenhagen, the capital city of Denmark. 
 
 In total we spent 6 days on bikes, covering about 730km. We rode on gravel/touring bikes with 35-42mm tyres. For navigation, we used a mix of Komoot and bike route signs in Sweden, which worked out well very well. This trip not only got us around Kattegat, but it also marked our completion of cycling along the Swedish southern coastline (from Stockholm to Gothenburg). On our previous bikepacking trip we cycled from Stockholm to Ystad, that journey is described in another [blog post](https://j.blaszyk.me/bikepacking-in-sweden/).
 
-
 <image-gallery></image-gallery>
 
 ## Route
 
 <iframe src="https://ridewithgps.com/embeds?type=route&id=38412773&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
-
