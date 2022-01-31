@@ -2,13 +2,32 @@
 title: Kattegat loop, Denmark and Sweden
 date: '2022-01-22'
 spoiler: Bikepacking week-long trip around the Kattegat in Denmark and Sweden.
-galleryImages: ['./photos/1.jpg', './photos/2.jpg', './photos/4.jpg', './photos/5.jpg', './photos/6.jpg', './photos/7.jpg', './photos/8.jpg', './photos/9.jpg', './photos/10.jpg', './photos/11.jpg', './photos/12.jpg', './photos/13.jpg', './photos/14.jpg', './photos/15.jpg', './photos/16.jpg', './photos/17.jpg', './photos/18.jpg']
+galleryImages:
+  [
+    './photos/1.jpg',
+    './photos/2.jpg',
+    './photos/4.jpg',
+    './photos/5.jpg',
+    './photos/6.jpg',
+    './photos/7.jpg',
+    './photos/8.jpg',
+    './photos/9.jpg',
+    './photos/10.jpg',
+    './photos/11.jpg',
+    './photos/12.jpg',
+    './photos/13.jpg',
+    './photos/14.jpg',
+    './photos/15.jpg',
+    './photos/16.jpg',
+    './photos/17.jpg',
+    './photos/18.jpg',
+  ]
 ogimage: './photos/header.jpg'
 cta: 'react'
 ---
 
-* [Photos](#image-gallery)
-* [Route](#route)
+- [Photos](#image-gallery)
+- [Route](#route)
 
 ![Sweden](./photos/header.jpg)
 
@@ -24,10 +43,12 @@ Our bikepacking adventure concluded in Copenhagen, the capital city of Denmark. 
 
 In total we spent 6 days on bikes, covering about 730km. We rode on gravel/touring bikes with 35-42mm tyres. For navigation, we used a mix of Komoot and bike route signs in Sweden, which worked out well very well. This trip not only got us around Kattegat, but it also marked our completion of cycling along the Swedish southern coastline (from Stockholm to Gothenburg). On our previous bikepacking trip we cycled from Stockholm to Ystad, that journey is described in another [blog post](https://j.blaszyk.me/bikepacking-in-sweden/).
 
-
-<image-gallery></image-gallery>
+<ImageGallery images={props.frontmatter.galleryImages}></ImageGallery>
 
 ## Route
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=38412773&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
-
+<iframe
+  src="https://ridewithgps.com/embeds?type=route&id=38412773&metricUnits=true&sampleGraph=true"
+  style="width: 1px; min-width: 100%; height: 700px; border: none;"
+  scrolling="no"
+></iframe>

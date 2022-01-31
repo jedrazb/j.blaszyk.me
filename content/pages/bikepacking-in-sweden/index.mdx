@@ -4,14 +4,27 @@ date: '2020-08-25'
 spoiler: Baltic Sea, lakes and forests - 8 days of bikepacking and wild camping adventure.
 indexImage: './wildcamping.jpg'
 ogimage: './wildcamping.jpg'
-galleryImages: ['./gravel.jpg', './break.jpg', './camping-lake.jpg', './woods.jpg', './campsite.jpg', './lake.jpg', './cars.jpg', './town.jpg', './tarmac.jpg', './camping.jpg', './max.jpg',]
+galleryImages:
+  [
+    './gravel.jpg',
+    './break.jpg',
+    './camping-lake.jpg',
+    './woods.jpg',
+    './campsite.jpg',
+    './lake.jpg',
+    './cars.jpg',
+    './town.jpg',
+    './tarmac.jpg',
+    './camping.jpg',
+    './max.jpg',
+  ]
 cta: 'react'
 ---
 
-* [Route Profile](#route-profile)
-* [Wild Camping](#wild-camping)
-* [Photos](#image-gallery)
-* [GPS Route and Camping Spots](#gps-route-and-camping-spots)
+- [Route Profile](#route-profile)
+- [Wild Camping](#wild-camping)
+- [Photos](#image-gallery)
+- [GPS Route and Camping Spots](#gps-route-and-camping-spots)
 
 ![Bikepacking in Sweden](./wildcamping.jpg)
 
@@ -32,9 +45,8 @@ A gravel bike is advisible as much of the route leads along gravel and tarmac ro
 Some stats from Strava:
 
 | Total distance | Total elevation | Time      |
-|----------------|-----------------|-----------|
+| -------------- | --------------- | --------- |
 | 895km          | 5903m           | 41h 52min |
-
 
 ## Wild Camping
 
@@ -46,25 +58,23 @@ Some stats from Strava:
 
 Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shelters-in-sweden/) throughout the country. It is possible to spend the night there completely for free. Usually, you will find there an open fireplace, tables and benches. We were told by local people that it is fine to set up the tent next to the hut. In a cold, windy night the hut might not be enough to protect you from the wind.
 
-
-<image-gallery></image-gallery>
-
+<ImageGallery images={props.frontmatter.galleryImages}></ImageGallery>
 
 ## GPS Route and Camping Spots
 
-<iframe src="https://ridewithgps.com/embeds?type=route&id=38399851&metricUnits=true&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+<iframe
+  src="https://ridewithgps.com/embeds?type=route&id=38399851&metricUnits=true&sampleGraph=true"
+  style="width: 1px; min-width: 100%; height: 700px; border: none;"
+  scrolling="no"
+></iframe>
 
-| GPS trace                                             | Camping spot                                                                                                                                                                                             |
-|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GPS trace                                             | Camping spot                                                                                                                                                                                              |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Day 1](https://www.strava.com/activities/3884215700) | We spent the night near Tullgarn on a rocky hill. Amazing spot with views. You have to leave the bike at the bottom and carry your equipment on foot: [approximate GPS location](https://bit.ly/2FVUD3L). |
-| [Day 2](https://www.strava.com/activities/3889586064) | Camped at Ensjön lake.                                                                                                                                                                                   |
-| [Day 3](https://www.strava.com/activities/3893201117) | Camped near Gamleby at the seaside.                                                                                                                                                                      |
-| [Day 4](https://www.strava.com/activities/3898173911) | We finished near Oskarshamn, camped at the seaside. It's quite hard to find a good spot close to the city. It's better to go a bit further away.                                                         |
-| [Day 5](https://www.strava.com/activities/3903372251) | Camped in the forest near Torsås.                                                                                                                                                                        |
+| [Day 2](https://www.strava.com/activities/3889586064) | Camped at Ensjön lake.                                                                                                                                                                                    |
+| [Day 3](https://www.strava.com/activities/3893201117) | Camped near Gamleby at the seaside.                                                                                                                                                                       |
+| [Day 4](https://www.strava.com/activities/3898173911) | We finished near Oskarshamn, camped at the seaside. It's quite hard to find a good spot close to the city. It's better to go a bit further away.                                                          |
+| [Day 5](https://www.strava.com/activities/3903372251) | Camped in the forest near Torsås.                                                                                                                                                                         |
 | [Day 6](https://www.strava.com/activities/3907739263) | Camped in the shelter in Järnavik: [approximate location](https://www.google.com/maps/dir//56.174592000000004,15.079513000000002).                                                                        |
 | [Day 7](https://www.strava.com/activities/3912610094) | Camped in the shelter in Kivik: [approximate location](https://www.google.com/maps/dir//55.6865063,14.2337752/@55.6765303,14.0841077,12z).                                                                |
-| [Day 8](https://www.strava.com/activities/3916179399) | Night on the ferry 🛳                                                                                                                                                                                    |
-
-
-
-
+| [Day 8](https://www.strava.com/activities/3916179399) | Night on the ferry 🛳                                                                                                                                                                                      |

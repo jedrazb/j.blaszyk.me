@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
@@ -19,6 +20,8 @@ const GITHUB_REPO_NAME = 'personal-blog';
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
+
+const shortcodes = { Link, ImageGallery };
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -78,7 +81,11 @@ class BlogPostTemplate extends React.Component {
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
-            <MDXRenderer>{post.body}</MDXRenderer>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer frontmatter={post.frontmatter}>
+                {post.body}
+              </MDXRenderer>
+            </MDXProvider>
             <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
