@@ -20,9 +20,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -43,7 +43,6 @@ module.exports = {
               inlineCodeMarker: '÷',
             },
           },
-          'gatsby-plugin-sitemap',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
@@ -59,16 +58,10 @@ module.exports = {
               strict: 'ignore',
             },
           },
-          {
-            resolve: 'gatsby-remark-component-parent2div',
-            options: {
-              components: ['image-gallery'],
-              verbose: true,
-            },
-          },
         ],
       },
     },
+    'gatsby-plugin-sitemap',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -94,12 +87,12 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at j.blaszyk.me. You can read it online by <a href="${siteUrl +
-                  edge.node.fields.slug}">clicking here</a>.)</div>
+                  edge.node.slug}">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
@@ -113,26 +106,23 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.spoiler,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
                   custom_elements: [{ 'content:encoded': html + postText }],
                 });
               });
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
                 ) {
                   edges {
                     node {
                       excerpt(pruneLength: 250)
                       html
-                      fields { 
-                        slug   
-                      }
+                      slug
                       frontmatter {
                         title
                         date
@@ -167,13 +157,6 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
       },
     },
     `gatsby-plugin-catch-links`,

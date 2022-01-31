@@ -11,14 +11,14 @@ export function formatReadingTime(minutes) {
 }
 
 // `lang` is optional and will default to the current user agent locale
-export function formatPostDate(date, lang) {
+export function formatPostDate(date) {
   if (typeof Date.prototype.toLocaleDateString !== 'function') {
     return date;
   }
 
   date = new Date(date);
   const args = [
-    lang,
+    'en',
     { day: 'numeric', month: 'long', year: 'numeric' },
   ].filter(Boolean);
   return date.toLocaleDateString(...args);

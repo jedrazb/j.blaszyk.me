@@ -14,9 +14,8 @@ import Img from 'gatsby-image';
 class BlogIndexTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
-    const langKey = this.props.pageContext.langKey;
 
-    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    const posts = get(this, 'props.data.allMdx.edges');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -26,10 +25,10 @@ class BlogIndexTemplate extends React.Component {
         </aside>
         <main>
           {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug;
+            const title = get(node, 'frontmatter.title') || node.slug;
             const image = get(node, 'frontmatter.indexImage');
             return (
-              <article key={node.fields.slug}>
+              <article key={node.slug}>
                 <header>
                   <h3
                     style={{
@@ -40,14 +39,14 @@ class BlogIndexTemplate extends React.Component {
                   >
                     <Link
                       style={{ boxShadow: 'none' }}
-                      to={node.fields.slug}
+                      to={node.slug}
                       rel="bookmark"
                     >
                       {title}
                     </Link>
                   </h3>
                   <small>
-                    {formatPostDate(node.frontmatter.date, langKey)}
+                    {formatPostDate(node.frontmatter.date)}
                     {` • ${formatReadingTime(node.timeToRead)}`}
                   </small>
                 </header>
@@ -69,23 +68,17 @@ class BlogIndexTemplate extends React.Component {
 export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
-  query($langKey: String!) {
+  query {
     site {
       siteMetadata {
         title
         description
       }
     }
-    allMarkdownRemark(
-      filter: { fields: { langKey: { eq: $langKey } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          fields {
-            slug
-            langKey
-          }
+          slug
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
