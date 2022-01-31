@@ -124,7 +124,6 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
                 ) {
                   edges {
                     node {
@@ -167,13 +166,6 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
       },
     },
     `gatsby-plugin-catch-links`,

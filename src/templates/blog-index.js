@@ -47,7 +47,7 @@ class BlogIndexTemplate extends React.Component {
                     </Link>
                   </h3>
                   <small>
-                    {formatPostDate(node.frontmatter.date, langKey)}
+                    {formatPostDate(node.frontmatter.date)}
                     {` • ${formatReadingTime(node.timeToRead)}`}
                   </small>
                 </header>
@@ -69,22 +69,18 @@ class BlogIndexTemplate extends React.Component {
 export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
-  query($langKey: String!) {
+  query {
     site {
       siteMetadata {
         title
         description
       }
     }
-    allMarkdownRemark(
-      filter: { fields: { langKey: { eq: $langKey } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
             slug
-            langKey
           }
           timeToRead
           frontmatter {

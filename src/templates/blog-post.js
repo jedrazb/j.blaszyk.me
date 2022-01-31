@@ -11,12 +11,6 @@ import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
-import {
-  codeToLanguage,
-  createLanguageLink,
-  loadFontsForCode,
-  replaceAnchorLinksByLanguage,
-} from '../utils/i18n';
 
 import 'katex/dist/katex.min.css';
 
@@ -37,37 +31,14 @@ class BlogPostTemplate extends React.Component {
       translations,
       translatedLinks,
     } = this.props.pageContext;
-    const lang = post.fields.langKey;
 
     // Replace original links with translated when available.
     let html = post.html;
 
-    // Replace original anchor links by lang when available in whitelist
-    // see utils/whitelist.js
-    html = replaceAnchorLinksByLanguage(html, lang);
-
-    translatedLinks.forEach(link => {
-      // jeez
-      function escapeRegExp(str) {
-        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      }
-      let translatedLink = '/' + lang + link;
-      html = html.replace(
-        new RegExp('"' + escapeRegExp(link) + '"', 'g'),
-        '"' + translatedLink + '"'
-      );
-    });
-
-    translations = translations.slice();
-    translations.sort((a, b) => {
-      return codeToLanguage(a) < codeToLanguage(b) ? -1 : 1;
-    });
-
-    loadFontsForCode(lang);
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.slice(
       1,
       slug.length - 1
-    )}/index${lang === 'en' ? '' : '.' + lang}.md`;
+    )}/index.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://j.blaszyk.me${slug}`
     )}`;
@@ -89,7 +60,6 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          lang={lang}
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
@@ -113,7 +83,7 @@ class BlogPostTemplate extends React.Component {
                   marginTop: rhythm(-4 / 5),
                 }}
               >
-                {formatPostDate(post.frontmatter.date, lang)}
+                {formatPostDate(post.frontmatter.date)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
@@ -223,7 +193,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        langKey
       }
     }
   }
