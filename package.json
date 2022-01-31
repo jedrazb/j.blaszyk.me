@@ -11,6 +11,8 @@
     "url": "https://github.com/jedrazb/personal-blog"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "gatsby": "^4.5.3",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-catch-links": "^4.5.0",
@@ -18,6 +20,7 @@
     "gatsby-plugin-google-analytics": "^4.5.0",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^4.5.0",
+    "gatsby-plugin-mdx": "^3.6.0",
     "gatsby-plugin-offline": "^5.5.2",
     "gatsby-plugin-react-helmet": "^5.5.0",
     "gatsby-plugin-sharp": "4.5.2",
@@ -34,7 +37,6 @@
     "gatsby-remark-responsive-iframe": "^5.5.0",
     "gatsby-remark-smartypants": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.2",
-    "gatsby-transformer-remark": "^5.5.2",
     "gatsby-transformer-sharp": "^4.5.0",
     "husky": "^1.3.1",
     "katex": "^0.11.1",

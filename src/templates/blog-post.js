@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import rehypeReact from 'rehype-react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
@@ -22,7 +22,7 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark;
+    const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     let {
       previous,
@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
     // Replace original links with translated when available.
     let html = post.html;
 
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/posts/${slug.slice(
       1,
       slug.length - 1
     )}/index.md`;
@@ -47,15 +47,6 @@ class BlogPostTemplate extends React.Component {
     const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
 
     const galleryImages = post.frontmatter.galleryImages;
-
-    const renderAst = new rehypeReact({
-      createElement: React.createElement,
-      components: {
-        'image-gallery': props => (
-          <ImageGallery images={galleryImages} {...props} />
-        ),
-      },
-    }).Compiler;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -87,7 +78,7 @@ class BlogPostTemplate extends React.Component {
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
-            <div>{renderAst(post.htmlAst)}</div>
+            <MDXRenderer>{post.body}</MDXRenderer>
             <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
@@ -166,10 +157,9 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
-      htmlAst
+      body
       timeToRead
       frontmatter {
         title

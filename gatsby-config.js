@@ -15,14 +15,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/content/pages`,
         name: 'pages',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -43,7 +43,6 @@ module.exports = {
               inlineCodeMarker: '÷',
             },
           },
-          'gatsby-plugin-sitemap',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
@@ -52,25 +51,13 @@ module.exports = {
               target: '_blank',
             },
           },
-          {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: 'ignore',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-component-parent2div',
-            options: {
-              components: ['image-gallery'],
-              verbose: true,
-            },
-          },
         ],
       },
     },
+    'gatsby-plugin-sitemap',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-remark-images',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -94,8 +81,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at j.blaszyk.me. You can read it online by <a href="${siteUrl +
@@ -121,7 +108,7 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
                 ) {

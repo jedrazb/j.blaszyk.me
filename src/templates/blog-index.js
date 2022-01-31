@@ -16,7 +16,7 @@ class BlogIndexTemplate extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const langKey = this.props.pageContext.langKey;
 
-    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    const posts = get(this, 'props.data.allMdx.edges');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
