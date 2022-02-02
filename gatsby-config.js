@@ -56,7 +56,17 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `blurred`,
+          quality: 80,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        },
+      },
+    },
     'gatsby-remark-images',
     {
       resolve: `gatsby-plugin-google-analytics`,

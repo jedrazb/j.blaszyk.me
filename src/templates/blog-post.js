@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
     )}`;
 
     const ogimage = post.frontmatter.ogimage;
-    const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
+    const ogImagePath = ogimage && ogimage.childImageSharp.gatsbyImageData.src;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -165,16 +165,12 @@ export const pageQuery = graphql`
         cta
         ogimage {
           childImageSharp {
-            fixed(width: 960) {
-              src
-            }
+            gatsbyImageData(width: 960, layout: FIXED)
           }
         }
         galleryImages {
           childImageSharp {
-            fluid(maxWidth: 1240, quality: 80) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 1200, layout: CONSTRAINED)
           }
         }
       }

@@ -9,7 +9,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 class BlogIndexTemplate extends React.Component {
   render() {
@@ -55,7 +55,9 @@ class BlogIndexTemplate extends React.Component {
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
 
-                {image && <Img fluid={image.childImageSharp.fluid} />}
+                {image && (
+                  <GatsbyImage image={image.childImageSharp.gatsbyImageData} />
+                )}
               </article>
             );
           })}
@@ -69,7 +71,7 @@ class BlogIndexTemplate extends React.Component {
 export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
@@ -89,9 +91,7 @@ export const pageQuery = graphql`
             spoiler
             indexImage {
               childImageSharp {
-                fluid(maxWidth: 512, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 800, layout: CONSTRAINED)
               }
             }
           }

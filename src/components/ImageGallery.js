@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -69,8 +69,8 @@ const ImageGallery = props => {
                     setIsOpen(true);
                   }}
                 >
-                  <Img
-                    fluid={image.childImageSharp.fluid}
+                  <GatsbyImage
+                    image={image.childImageSharp.gatsbyImageData}
                     objectFit="cover"
                     objectPosition="50% 50%"
                     alt=""
@@ -86,14 +86,14 @@ const ImageGallery = props => {
       </div>
       {isOpen && (
         <Lightbox
-          mainSrc={images[previewPhotoIdx].childImageSharp.fluid.src}
+          mainSrc={images[previewPhotoIdx].childImageSharp.gatsbyImageData.src}
           nextSrc={
-            images[(previewPhotoIdx + 1) % images.length].childImageSharp.fluid
-              .src
+            images[(previewPhotoIdx + 1) % images.length].childImageSharp
+              .gatsbyImageData.src
           }
           prevSrc={
             images[(previewPhotoIdx + images.length - 1) % images.length]
-              .childImageSharp.fluid.src
+              .childImageSharp.gatsbyImageData.src
           }
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() => {

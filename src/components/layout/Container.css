@@ -1,0 +1,8 @@
+.layout-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-column {
+  flex: 1;
+}
