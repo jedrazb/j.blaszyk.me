@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
+import { BlockMath, InlineMath } from 'react-katex';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
@@ -21,35 +22,24 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
 
-const shortcodes = { Link, ImageGallery };
+const shortcodes = { Link, ImageGallery, BlockMath, InlineMath };
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    let {
-      previous,
-      next,
-      slug,
-      translations,
-      translatedLinks,
-    } = this.props.pageContext;
+    let { previous, next, slug } = this.props.pageContext;
 
-    // Replace original links with translated when available.
-    let html = post.html;
-
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/posts/${slug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/pages/${slug.slice(
       1,
       slug.length - 1
-    )}/index.md`;
+    )}/index.mdx`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://j.blaszyk.me${slug}`
     )}`;
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
-
-    const galleryImages = post.frontmatter.galleryImages;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

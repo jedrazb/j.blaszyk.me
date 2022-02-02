@@ -114,7 +114,6 @@ module.exports = {
                 ) {
                   edges {
                     node {
-                      excerpt(pruneLength: 250)
                       html
                       fields { 
                         slug   
@@ -130,7 +129,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Jedr Blaszyk's blog rss feed",
+            title: 'Jedr Blaszyk - Blog',
           },
         ],
       },
