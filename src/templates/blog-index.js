@@ -9,7 +9,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 class BlogIndexTemplate extends React.Component {
   render() {
@@ -27,7 +27,7 @@ class BlogIndexTemplate extends React.Component {
         <main>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
-            const image = get(node, 'frontmatter.indexImage');
+            const indexImage = get(node, 'frontmatter.indexImage');
             return (
               <article key={node.fields.slug}>
                 <header>
@@ -55,8 +55,11 @@ class BlogIndexTemplate extends React.Component {
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
 
-                {image && (
-                  <GatsbyImage image={image.childImageSharp.gatsbyImageData} />
+                {indexImage && (
+                  <GatsbyImage
+                    image={getImage(indexImage)}
+                    alt={'Blog Image'}
+                  />
                 )}
               </article>
             );

@@ -11,6 +11,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
+import ImageComponent from '../components/ImageComponent';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
@@ -22,7 +23,13 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
 
-const shortcodes = { Link, ImageGallery, BlockMath, InlineMath };
+const shortcodes = {
+  Link,
+  ImageGallery,
+  BlockMath,
+  InlineMath,
+  ImageComponent,
+};
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -168,9 +175,14 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 960, layout: FIXED)
           }
         }
-        galleryImages {
+        images {
           childImageSharp {
-            gatsbyImageData(width: 1200, layout: CONSTRAINED)
+            gatsbyImageData(width: 1600, layout: CONSTRAINED)
+          }
+        }
+        blogImages {
+          childImageSharp {
+            gatsbyImageData(width: 1600, layout: CONSTRAINED)
           }
         }
       }

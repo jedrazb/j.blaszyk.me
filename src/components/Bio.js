@@ -1,6 +1,6 @@
 import React from 'react';
-import profilePic from '../assets/profile-pic.jpg';
 import { rhythm } from '../utils/typography';
+import { StaticImage } from 'gatsby-plugin-image';
 
 class Bio extends React.Component {
   render() {
@@ -11,9 +11,9 @@ class Bio extends React.Component {
           marginBottom: rhythm(2),
         }}
       >
-        <img
-          src={profilePic}
-          alt={`Jedr Blaszyk`}
+        <StaticImage
+          src={`../assets/profile-pic.jpg`}
+          alt={`Profile pic`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,

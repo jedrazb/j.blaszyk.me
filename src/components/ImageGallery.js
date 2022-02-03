@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getSrc, getImage } from 'gatsby-plugin-image';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -69,14 +69,7 @@ const ImageGallery = props => {
                     setIsOpen(true);
                   }}
                 >
-                  <GatsbyImage
-                    image={image.childImageSharp.gatsbyImageData}
-                    objectFit="cover"
-                    objectPosition="50% 50%"
-                    alt=""
-                    loading="auto"
-                    durationFadeIn={100}
-                  />
+                  <GatsbyImage image={getImage(image)} alt="" />
                 </div>
                 <div className="pagination-padding"></div>
               </SwiperSlide>
@@ -86,15 +79,11 @@ const ImageGallery = props => {
       </div>
       {isOpen && (
         <Lightbox
-          mainSrc={images[previewPhotoIdx].childImageSharp.gatsbyImageData.src}
-          nextSrc={
-            images[(previewPhotoIdx + 1) % images.length].childImageSharp
-              .gatsbyImageData.src
-          }
-          prevSrc={
+          mainSrc={getSrc(images[previewPhotoIdx])}
+          nextSrc={getSrc(images[(previewPhotoIdx + 1) % images.length])}
+          prevSrc={getSrc(
             images[(previewPhotoIdx + images.length - 1) % images.length]
-              .childImageSharp.gatsbyImageData.src
-          }
+          )}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() => {
             setPreviewPhotoIdx(
