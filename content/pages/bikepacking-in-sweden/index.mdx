@@ -18,7 +18,8 @@ images:
     './camping.jpg',
     './max.jpg',
   ]
-cta: 'react'
+blogImages: ['./wildcamping.jpg']
+cta: 'bikepacking'
 ---
 
 - [Route Profile](#route-profile)
@@ -26,7 +27,10 @@ cta: 'react'
 - [Photos](#image-gallery)
 - [Route](#route)
 
-![Bikepacking in Sweden](./wildcamping.jpg)
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Bikepacking in Sweden"
+></ImageComponent>
 
 Earlier this summer my friends and I packed our bikes, took a train to Gdańsk and boarded a ferry headed to Nynäshamn, Sweden. After an 18 hour long cruise our Swedish bike packing adventure had begun.
 
@@ -38,7 +42,25 @@ We followed EuroVelo 10 - Baltic Sea Cycle Route, southwards from Stockholm, the
 
 We cycled from Stockholm (Nynäshamn port) to Ystad, the point of departure of our ferry headed home. The bikepacking journey took us 8 days. We averaged the distance of roughly 115km a day. The route was **hilly** with many short up- and downhills, for the first 4 days we were averaging more thn 1000m elevation gain per day. It was quite straining especially when cycling on a fully loaded bike - we carried around 20kg of equipment and supplies. The route became progressively flatter and easier as we got near Kalmar and Karlskrona. The wind was not a big problem as for the majority of the route we were rode covered by trees.
 
-![Route](./town.jpg)
+<ImageComponent
+  image={props.frontmatter.images[7]}
+  alt="Route"
+  isRow
+></ImageComponent>
+<Container>
+  <Column>
+    <ImageComponent
+      image={props.frontmatter.images[1]}
+      alt="Camping at the sea"
+    ></ImageComponent>
+  </Column>
+  <Column>
+    <ImageComponent
+      image={props.frontmatter.images[5]}
+      alt="Camping at the sea"
+    ></ImageComponent>
+  </Column>
+</Container>
 
 A gravel bike is advisible as much of the route leads along gravel and tarmac roads. 35mm-42mm tyres worked great for us.
 
@@ -52,9 +74,14 @@ Some stats from Strava:
 
 [“The Everyman’s Right”](https://en.wikipedia.org/wiki/Freedom_to_roam) in Sweden allows people to camp anywhere in the wilderness as long as it is not private property. It makes bikepacking quite affordable in an otherwise expensive country. We were wild camping for 8 days, usually very close to the Baltic sea or some lake. You trade views and proximity to the Swedish nature for the lack of utilities like showers or toilets. Though, swimming in the lakes and having access to bathroom at gas stations can make up for all the pains.
 
-![Camping 3](./campsite.jpg)
-
-![Camping 1](./camping-lake.jpg)
+<ImageComponent
+  image={props.frontmatter.images[4]}
+  alt="Camping 2"
+></ImageComponent>
+<ImageComponent
+  image={props.frontmatter.images[2]}
+  alt="Camping 3"
+></ImageComponent>
 
 Sweden has also a big range of [wilderness shelters](https://www.gone71.com/shelters-in-sweden/) throughout the country. It is possible to spend the night there completely for free. Usually, you will find there an open fireplace, tables and benches. We were told by local people that it is fine to set up the tent next to the hut. In a cold, windy night the hut might not be enough to protect you from the wind.
 

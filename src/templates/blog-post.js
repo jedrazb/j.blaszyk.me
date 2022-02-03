@@ -12,6 +12,7 @@ import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
+import { Container, Column } from '../components/layout/Container';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
@@ -29,6 +30,8 @@ const shortcodes = {
   BlockMath,
   InlineMath,
   ImageComponent,
+  Container,
+  Column,
 };
 
 class BlogPostTemplate extends React.Component {
@@ -177,12 +180,12 @@ export const pageQuery = graphql`
         }
         images {
           childImageSharp {
-            gatsbyImageData(width: 1600, layout: CONSTRAINED)
+            gatsbyImageData(width: 2400, layout: CONSTRAINED)
           }
         }
         blogImages {
           childImageSharp {
-            gatsbyImageData(width: 1600, layout: CONSTRAINED)
+            gatsbyImageData(width: 2400, layout: CONSTRAINED)
           }
         }
       }

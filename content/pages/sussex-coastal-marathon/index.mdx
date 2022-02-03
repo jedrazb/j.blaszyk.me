@@ -2,12 +2,22 @@
 title: Sussex Coastal Marathon
 date: '2020-03-18'
 spoiler: My first marathon. Hilly, muddy and windy race, definitely worth it.
-cta: 'react'
+cta: 'marathon'
+blogImages:
+  [
+    './marathon_promo.jpg',
+    './before_the_race.jpg',
+    './route_views.jpg',
+    './after_race.jpg',
+  ]
 ---
 
 This race is part of the coastal trail series which are scenic and challenging runs mostly around the coastal paths in the UK. A great thing about the Sussex Coastal Marathon is that the route includes the Seven Sisters cliffs and offers spectacular views over the English Channel. To be honest, the localisation and the views were the main reason why my flatmate, Eduardo, managed to convince me to sign up a few months ago. Watching the [promo of the race](https://www.facebook.com/CoastalTrailSeries/videos/1666969293317932/) got me hooked up and gave me a lot of motivation during the training.
 
-![Marathon promo.](./marathon_promo.jpg)
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Marathon promo."
+></ImageComponent>
 
 ## Running for the climate change
 
@@ -23,14 +33,26 @@ Upon starting the marathon I was confident that I would be able to run all the w
 
 ## Photos
 
-![Before the race. Waiting with the others to start.](./before_the_race.jpg)
-_Before the race. Waiting with the others to start._
+<ImageComponent
+  image={props.frontmatter.blogImages[1]}
+  alt="Before the race. Waiting with the others to start."
+></ImageComponent>
 
-![Views en route.](./route_views.jpg)
-_Views of the English Channel at around 30km._
+Before the race. Waiting with the others to start.
 
-![Me happy after completing the race](./after_race.jpg)
-_Super happy after completing my first marathon._
+<ImageComponent
+  image={props.frontmatter.blogImages[2]}
+  alt="Views en route."
+></ImageComponent>
+
+Views of the English Channel at around 30km.
+
+<ImageComponent
+  image={props.frontmatter.blogImages[3]}
+  alt="Me happy after completing the race"
+></ImageComponent>
+
+Super happy after completing my first marathon.
 
 ## COVID-19
 

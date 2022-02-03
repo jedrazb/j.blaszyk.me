@@ -3,6 +3,10 @@ title: Geometric Deep Learning - an overview
 date: '2020-06-10'
 spoiler: Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".
 cta: 'gdl'
+blogImages: [
+    './comparison_2d_graph.jpg',
+    './cora.png'
+]
 ---
 
 - [Non-Euclidean domains](#non-euclidean-domains)
@@ -10,8 +14,6 @@ cta: 'gdl'
 - [Spatial methods](#spatial-methods)
 - [Why spatial is better than spectral](#why-spatial-is-better-than-spectral)
 - [Introduction by example: GCN implemented in PyTorch Geometric](#introduction-by-example-gcn-implemented-in-pytorch-geometric)
-
-![Intro image GLD](./gdl.gif)
 
 I decided to write a series of articles to cover the things I've learned while working on my MEng thesis. My work is focused on applying Geometric Deep Learning methods for shape analysis in the medical setting. The first post is an overview of Geometric Deep Learning.
 
@@ -36,8 +38,12 @@ Spectral graph convolution draws inspiration from the Euclidean convolution in a
 
 Spatial methods are preferred over the spectral methods for [a number of reasons](#why-spatial-is-better-than-spectral). The spatial convolution is considered a more versatile method for learning on non-Euclidean structures.
 
-![Convolution on an 2D image vs. on a graph](./comparison_2d_graph.jpg)
-_Figure 1: 2D Convolution vs. Graph Convolution._
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Convolution on an 2D image vs. on a graph"
+></ImageComponent>
+
+Figure 1: 2D Convolution vs. Graph Convolution.
 
 Spatial methods define graph convolutions based on a node’s spatial relations, which is analogous to the convolution operation on the classical CNN. Images can be considered a special form of a graph with each pixel representing a node, connected to each neighboring pixels. A filter would be applied on the patch of the image including the pixel and its neighboring nodes. Similarly, spatial methods convolve a given node’s features, using a patch operator, with its neighbors’ features. The intuition about the spatial graph convolutions is that this operation propagates and updates node features along edges.
 
@@ -57,7 +63,7 @@ PyTorch Geometric makes use of Generic Message Passing Scheme to implement any c
 **Graph Convolutional Network (GCN)** was defined by Kipf et al. [[7]](#references). The intuition of this method is that it can alleviate the problem of overfitting on local neighborhood structures for graphs with very wide node degree distributions, such as social networks, citation networks, and many other real-world graph datasets. The computational complexity of this approach is <InlineMath>O(n)</InlineMath>. It applies simple filters acting on the 1-hop neighborhood of the graph in the spatial domain. It can be expressed in the generic message-passing scheme as:
 
 <BlockMath
-  math={`\\text{msg}(x_i, x_j) = \\frac{1}{\\sqrt{\\deg(x_i)} \\cdot \\sqrt{deg(x_j)}} \\cdot \\left( \\mathbf{x}\\_j\\mathbf{\\Theta} \\right)`}
+  math={`\\text{msg}(x_i, x_j) = \\frac{1}{\\sqrt{\\deg(x_i)} \\sqrt{deg(x_j)}} \\left( \\mathbf{x}\_j\\mathbf{\\Theta} \\right)`}
 ></BlockMath>
 
 <BlockMath
@@ -138,8 +144,12 @@ class Net(torch.nn.Module):
 
 With just 140 nodes in the training set we are able to achieve >80% classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:
 
-![Cora dataset](./cora.png)
-_Figure 2: Semi-supervised node classification result on Cora dataset._
+<ImageComponent
+  image={props.frontmatter.blogImages[1]}
+  alt="Cora dataset"
+></ImageComponent>
+
+Figure 2: Semi-supervised node classification result on Cora dataset.
 
 It shows that Geometric Deep Learning is an elegant and performant approach when dealing with non-Euclidean structures.
 
@@ -153,7 +163,7 @@ It shows that Geometric Deep Learning is an elegant and performant approach when
 
 [3] Gainza, Pablo, et al. "Deciphering interaction fingerprints from protein molecular surfaces using geometric deep learning." Nature Methods 17.2 (2020): 184-192.
 
-[4][twitter.com/fabula_ai](https://twitter.com/fabula_ai)
+[4] Twitter: [fabula_ai](https://twitter.com/fabula_ai)
 
 [5] Veselkov, Kirill, et al. "HyperFoods: Machine intelligent mapping of cancer-beating molecules in foods." Scientific reports 9.1 (2019): 1-12.
 
