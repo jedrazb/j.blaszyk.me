@@ -1,13 +1,23 @@
 ---
 title: Sussex Coastal Marathon
 date: '2020-03-18'
-spoiler: My first marathon. Hilly, muddy and windy race, definitely worth it. 
-cta: 'react'
+spoiler: My first marathon. Hilly, muddy and windy race, definitely worth it.
+cta: 'marathon'
+blogImages:
+  [
+    './marathon_promo.jpg',
+    './before_the_race.jpg',
+    './route_views.jpg',
+    './after_race.jpg',
+  ]
 ---
 
 This race is part of the coastal trail series which are scenic and challenging runs mostly around the coastal paths in the UK. A great thing about the Sussex Coastal Marathon is that the route includes the Seven Sisters cliffs and offers spectacular views over the English Channel. To be honest, the localisation and the views were the main reason why my flatmate, Eduardo, managed to convince me to sign up a few months ago. Watching the [promo of the race](https://www.facebook.com/CoastalTrailSeries/videos/1666969293317932/) got me hooked up and gave me a lot of motivation during the training.
 
-![Marathon promo.](./marathon_promo.jpg)
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Marathon promo."
+></ImageComponent>
 
 ## Running for the climate change
 
@@ -21,17 +31,29 @@ I was definitely underprepared. My training was mostly based on running in Hyde 
 
 Upon starting the marathon I was confident that I would be able to run all the way to the finish line. I did a few long runs as a part of my training and I felt prepared. To my disappointment, a lot of hilly sections and muddy trail took their toll and made me walk a lot after hitting 30km mark. The result? Time `5hr 17min` is definitely not what I was hoping for but it’s a good motivation to carry on with the training to improve myself in the future. I’m already looking forward to new cool challenges I can sign up for. If you have a suggestion, lmk on Twitter!
 
-## Photos from the event
+## Photos
 
-![Before the race. Waiting with the others to start.](./before_the_race.jpg)
-*Before the race. Waiting with the others to start.*
+<ImageComponent
+  image={props.frontmatter.blogImages[1]}
+  alt="Before the race. Waiting with the others to start."
+></ImageComponent>
 
-![Views en route.](./route_views.jpg)
-*Views of the English Channel at around 30km.*
+Before the race. Waiting with the others to start.
 
-![Me happy after completing the race](./after_race.jpg)
-*Super happy after completing my first marathon.*
+<ImageComponent
+  image={props.frontmatter.blogImages[2]}
+  alt="Views en route."
+></ImageComponent>
 
-## How COVID-19 affected the event
+Views of the English Channel at around 30km.
+
+<ImageComponent
+  image={props.frontmatter.blogImages[3]}
+  alt="Me happy after completing the race"
+></ImageComponent>
+
+Super happy after completing my first marathon.
+
+## COVID-19
 
 I did ask myself a question of whether or not should I participate. In the end I decided to take a calculated risk. Only a handful of people took part in this race, also the distances between runners were big and the organisers made sure to minimise physical touch points: all the runners were required to carry their own food and water.

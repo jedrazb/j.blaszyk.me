@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import rehypeReact from 'rehype-react';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { MDXProvider } from '@mdx-js/react';
+import { BlockMath, InlineMath } from 'react-katex';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
@@ -9,14 +11,10 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
+import ImageComponent from '../components/ImageComponent';
+import { Container, Column } from '../components/layout/Container';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
-import {
-  codeToLanguage,
-  createLanguageLink,
-  loadFontsForCode,
-  replaceAnchorLinksByLanguage,
-} from '../utils/i18n';
 
 import 'katex/dist/katex.min.css';
 
@@ -26,70 +24,36 @@ const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
 
+const shortcodes = {
+  Link,
+  ImageGallery,
+  BlockMath,
+  InlineMath,
+  ImageComponent,
+  Container,
+  Column,
+};
+
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark;
+    const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-    let {
-      previous,
-      next,
-      slug,
-      translations,
-      translatedLinks,
-    } = this.props.pageContext;
-    const lang = post.fields.langKey;
+    let { previous, next, slug } = this.props.pageContext;
 
-    // Replace original links with translated when available.
-    let html = post.html;
-
-    // Replace original anchor links by lang when available in whitelist
-    // see utils/whitelist.js
-    html = replaceAnchorLinksByLanguage(html, lang);
-
-    translatedLinks.forEach(link => {
-      // jeez
-      function escapeRegExp(str) {
-        return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      }
-      let translatedLink = '/' + lang + link;
-      html = html.replace(
-        new RegExp('"' + escapeRegExp(link) + '"', 'g'),
-        '"' + translatedLink + '"'
-      );
-    });
-
-    translations = translations.slice();
-    translations.sort((a, b) => {
-      return codeToLanguage(a) < codeToLanguage(b) ? -1 : 1;
-    });
-
-    loadFontsForCode(lang);
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/pages/${slug.slice(
       1,
       slug.length - 1
-    )}/index${lang === 'en' ? '' : '.' + lang}.md`;
+    )}/index.mdx`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://j.blaszyk.me${slug}`
     )}`;
 
     const ogimage = post.frontmatter.ogimage;
-    const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
-
-    const galleryImages = post.frontmatter.galleryImages;
-
-    const renderAst = new rehypeReact({
-      createElement: React.createElement,
-      components: {
-        'image-gallery': props => (
-          <ImageGallery images={galleryImages} {...props} />
-        ),
-      },
-    }).Compiler;
+    const ogImagePath = ogimage && ogimage.childImageSharp.gatsbyImageData.src;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          lang={lang}
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
@@ -113,11 +77,15 @@ class BlogPostTemplate extends React.Component {
                   marginTop: rhythm(-4 / 5),
                 }}
               >
-                {formatPostDate(post.frontmatter.date, lang)}
+                {formatPostDate(post.frontmatter.date)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
               </p>
             </header>
-            <div>{renderAst(post.htmlAst)}</div>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer frontmatter={post.frontmatter}>
+                {post.body}
+              </MDXRenderer>
+            </MDXProvider>
             <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
@@ -196,10 +164,9 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
-      htmlAst
+      body
       timeToRead
       frontmatter {
         title
@@ -208,22 +175,22 @@ export const pageQuery = graphql`
         cta
         ogimage {
           childImageSharp {
-            fixed(width: 960) {
-              src
-            }
+            gatsbyImageData(width: 960, layout: FIXED)
           }
         }
-        galleryImages {
+        images {
           childImageSharp {
-            fluid(maxWidth: 1240, quality: 80) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 2400, layout: CONSTRAINED)
+          }
+        }
+        blogImages {
+          childImageSharp {
+            gatsbyImageData(width: 2400, layout: CONSTRAINED)
           }
         }
       }
       fields {
         slug
-        langKey
       }
     }
   }

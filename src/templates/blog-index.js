@@ -9,14 +9,14 @@ import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 class BlogIndexTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const langKey = this.props.pageContext.langKey;
 
-    const posts = get(this, 'props.data.allMarkdownRemark.edges');
+    const posts = get(this, 'props.data.allMdx.edges');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -27,7 +27,7 @@ class BlogIndexTemplate extends React.Component {
         <main>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
-            const image = get(node, 'frontmatter.indexImage');
+            const indexImage = get(node, 'frontmatter.indexImage');
             return (
               <article key={node.fields.slug}>
                 <header>
@@ -47,7 +47,7 @@ class BlogIndexTemplate extends React.Component {
                     </Link>
                   </h3>
                   <small>
-                    {formatPostDate(node.frontmatter.date, langKey)}
+                    {formatPostDate(node.frontmatter.date)}
                     {` • ${formatReadingTime(node.timeToRead)}`}
                   </small>
                 </header>
@@ -55,7 +55,12 @@ class BlogIndexTemplate extends React.Component {
                   dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
                 />
 
-                {image && <Img fluid={image.childImageSharp.fluid} />}
+                {indexImage && (
+                  <GatsbyImage
+                    image={getImage(indexImage)}
+                    alt={'Blog Image'}
+                  />
+                )}
               </article>
             );
           })}
@@ -69,22 +74,18 @@ class BlogIndexTemplate extends React.Component {
 export default BlogIndexTemplate;
 
 export const pageQuery = graphql`
-  query($langKey: String!) {
+  {
     site {
       siteMetadata {
         title
         description
       }
     }
-    allMarkdownRemark(
-      filter: { fields: { langKey: { eq: $langKey } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
             slug
-            langKey
           }
           timeToRead
           frontmatter {
@@ -93,9 +94,7 @@ export const pageQuery = graphql`
             spoiler
             indexImage {
               childImageSharp {
-                fluid(maxWidth: 512, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(width: 800, layout: CONSTRAINED)
               }
             }
           }

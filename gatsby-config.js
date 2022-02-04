@@ -15,21 +15,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/content/pages`,
         name: 'pages',
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 960,
-              quality: 80,
-            },
-          },
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
@@ -43,7 +36,6 @@ module.exports = {
               inlineCodeMarker: '÷',
             },
           },
-          'gatsby-plugin-sitemap',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           {
@@ -52,25 +44,23 @@ module.exports = {
               target: '_blank',
             },
           },
-          {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: 'ignore',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-component-parent2div',
-            options: {
-              components: ['image-gallery'],
-              verbose: true,
-            },
-          },
         ],
       },
     },
+    'gatsby-plugin-sitemap',
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: `blurred`,
+          quality: 80,
+          breakpoints: [750, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        },
+      },
+    },
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -94,42 +84,30 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at j.blaszyk.me. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
-
-                let html = edge.node.html;
-                // Hacky workaround for https://github.com/gaearon/overreacted.io/issues/65
-                html = html
-                  .replace(/href="\//g, `href="${siteUrl}/`)
-                  .replace(/src="\//g, `src="${siteUrl}/`)
-                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
-
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.spoiler,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': html + postText }],
+                  custom_elements: [{ 'content:encoded': postText }],
                 });
               });
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
                 ) {
                   edges {
                     node {
-                      excerpt(pruneLength: 250)
-                      html
                       fields { 
                         slug   
                       }
@@ -144,7 +122,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Jedr Blaszyk's blog rss feed",
+            title: 'Jedr Blaszyk - Blog',
           },
         ],
       },
@@ -167,13 +145,6 @@ module.exports = {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'en',
-        useLangKeyLayout: false,
       },
     },
     `gatsby-plugin-catch-links`,
