@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
-import { GatsbyImage, getSrc, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getSrcSet, getImage } from 'gatsby-plugin-image';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+
+import { selectHighestResolutionFromSrcSet } from '../utils/imageUtils';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -79,9 +81,9 @@ const ImageGallery = props => {
       </div>
       {isOpen && (
         <Lightbox
-          mainSrc={getSrc(images[previewPhotoIdx])}
-          nextSrc={getSrc(images[(previewPhotoIdx + 1) % images.length])}
-          prevSrc={getSrc(
+          mainSrc={selectSrc(images[previewPhotoIdx])}
+          nextSrc={selectSrc(images[(previewPhotoIdx + 1) % images.length])}
+          prevSrc={selectSrc(
             images[(previewPhotoIdx + images.length - 1) % images.length]
           )}
           onCloseRequest={() => setIsOpen(false)}
@@ -99,6 +101,10 @@ const ImageGallery = props => {
       )}
     </div>
   );
+};
+
+const selectSrc = image => {
+  return selectHighestResolutionFromSrcSet(getSrcSet(image));
 };
 
 export default ImageGallery;

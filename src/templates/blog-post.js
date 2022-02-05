@@ -180,12 +180,12 @@ export const pageQuery = graphql`
         }
         images {
           childImageSharp {
-            gatsbyImageData(width: 2400, layout: CONSTRAINED)
+            gatsbyImageData(width: 900, layout: CONSTRAINED)
           }
         }
         blogImages {
           childImageSharp {
-            gatsbyImageData(width: 2400, layout: CONSTRAINED)
+            gatsbyImageData(width: 900, layout: CONSTRAINED)
           }
         }
       }
