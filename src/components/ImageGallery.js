@@ -47,7 +47,10 @@ const ImageGallery = props => {
         </div>
         <div
           style={{
-            ...pageWrapperStyle,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: '1024px',
+            width: '100%',
             paddingTop: '0.5rem',
             paddingBottom: '2rem',
           }}

@@ -60,6 +60,7 @@
 
 .swiper-slide {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .swiper-button-next,
