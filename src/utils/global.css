@@ -35,6 +35,10 @@ body.dark {
   --swiper-pagination-bullet-inactive-color: #fff;
 }
 
+p {
+  font-size: 1.1rem;
+}
+
 ul,
 ol {
   margin-left: 1.75rem;
