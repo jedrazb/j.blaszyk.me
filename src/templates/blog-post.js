@@ -4,6 +4,7 @@ import get from 'lodash/get';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import { BlockMath, InlineMath } from 'react-katex';
+import { getSrc } from 'gatsby-plugin-image';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
@@ -54,7 +55,7 @@ class BlogPostTemplate extends React.Component {
     )}`;
 
     const ogimage = post.frontmatter.ogimage;
-    const ogImagePath = ogimage && ogimage.childImageSharp.gatsbyImageData.src;
+    const ogImagePath = ogimage && getSrc(ogimage);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
