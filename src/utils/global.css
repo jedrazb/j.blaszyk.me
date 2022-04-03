@@ -35,6 +35,14 @@ body.dark {
   --swiper-pagination-bullet-inactive-color: #fff;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
 ul,
 ol {
   margin-left: 1.75rem;

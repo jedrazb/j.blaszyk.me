@@ -1,19 +1,22 @@
 import React from 'react';
-import { GatsbyImage, getImage, getSrcSet } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import { selectHighestResolutionFromSrcSet } from '../utils/imageUtils';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
-const ImageComponent = ({ image, alt = '', isRow = false }) => {
+import './ImageComponent.css';
+
+const ImageComponent = ({ image, alt = '', isRow = false, description }) => {
   return (
-    <a
-      className="gatsby-resp-image-link"
-      href={selectHighestResolutionFromSrcSet(getSrcSet(image))}
-      target="_blank"
-      rel="noopener"
+    <figure
       style={{ display: 'block', marginBottom: isRow ? '0.75rem' : '1.5rem' }}
+      className="image-component"
     >
-      <GatsbyImage image={getImage(image)} alt={alt} />
-    </a>
+      <Zoom overlayBgColorEnd="var(--bg)">
+        <GatsbyImage image={getImage(image)} alt={alt} />
+      </Zoom>
+      {description && <figcaption>{description}</figcaption>}
+    </figure>
   );
 };
 
