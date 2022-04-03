@@ -2,7 +2,6 @@ body {
   --orange: rgb(245, 158, 71);
   --blue: #010183;
   background-color: var(--bg);
-  font-size: 1.1rem;
 }
 
 body.light {
