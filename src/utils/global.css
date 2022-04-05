@@ -7,7 +7,7 @@ body {
 body.light {
   --bg: #ffffff;
   --bg-secondary: rgb(249, 250, 251);
-  --bg-gallery: rgb(224, 238, 255);
+  --bg-gallery: rgb(238, 247, 253);
   --header: var(--blue);
   --textNormal: #222;
   --textTitle: #222;
