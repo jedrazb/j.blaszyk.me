@@ -22,6 +22,7 @@ import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
 import 'katex/dist/katex.min.css';
+import './blog-post.css';
 
 const GITHUB_USERNAME = 'jedrazb';
 const GITHUB_REPO_NAME = 'personal-blog';
@@ -66,7 +67,7 @@ class BlogPostTemplate extends React.Component {
           image={ogImagePath}
         />
         <main>
-          <article>
+          <article className="post">
             <header>
               <h1
                 style={{
