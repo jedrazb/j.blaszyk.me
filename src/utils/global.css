@@ -1,7 +1,8 @@
 body {
   --orange: rgb(245, 158, 71);
-  --blue: #010183;
+  --blue: #024698;
   background-color: var(--bg);
+  font-family: 'Roboto', sans-serif;
 }
 
 body.light {
@@ -46,6 +47,13 @@ body {
 ul,
 ol {
   margin-left: 1.75rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /*
