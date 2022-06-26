@@ -6,8 +6,10 @@ export const Container = ({ children }) => (
   <div className="layout-container">{children}</div>
 );
 
-export const Column = ({ children }) => (
-  <div className="layout-column">{children}</div>
+export const Column = ({ children, flex = 1 }) => (
+  <div className="layout-column" style={{ flex: flex }}>
+    {children}
+  </div>
 );
 
 export const MakeItBigContainer = ({ children }) => (

@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .inner-box {
@@ -55,7 +56,7 @@
 }
 
 .swiper-pagination {
-  bottom: 0 !important;
+  bottom: -13px !important;
 }
 
 .swiper-slide {
