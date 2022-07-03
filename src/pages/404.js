@@ -7,7 +7,6 @@ import Layout from '../components/Layout';
 
 class NotFoundPage extends React.Component {
   render() {
-    console.log(this.props);
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
       <Layout location={this.props.location} title={siteTitle}>
