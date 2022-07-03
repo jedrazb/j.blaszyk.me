@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-404-js",
     "path": "/404/",
-    "result": {"pageContext":{}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"Jedr Blaszyk - Blog","description":"Personal blog by Jedr Blaszyk. Bikepacking, triathlon & tech."}}},"pageContext":{}},
     "staticQueryHashes": []}
