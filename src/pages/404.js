@@ -1,24 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+
+import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 
 class NotFoundPage extends React.Component {
   render() {
+    console.log(this.props);
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} title={siteTitle}>
         <main>
           <h1>Not Found - 404 :(</h1>
           <p>I haven’t written this post yet.</p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/vmewDMDvemg"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
           <p>
             Go back to{' '}
             <Link
@@ -38,5 +33,16 @@ class NotFoundPage extends React.Component {
     );
   }
 }
+
+export const pageQuery = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
 
 export default NotFoundPage;

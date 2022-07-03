@@ -6,6 +6,10 @@ export const Container = ({ children }) => (
   <div className="layout-container">{children}</div>
 );
 
+export const IFrameContainer = ({ children }) => (
+  <div className="layout-container layout-iframe-container">{children}</div>
+);
+
 export const Column = ({ children, flex = 1 }) => (
   <div className="layout-column" style={{ flex: flex }}>
     {children}

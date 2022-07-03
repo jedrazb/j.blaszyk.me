@@ -15,6 +15,7 @@ import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import {
   Container,
+  IFrameContainer,
   Column,
   MakeItBigContainer,
 } from '../components/layout/Container';
@@ -39,6 +40,7 @@ const shortcodes = {
   Container,
   Column,
   MakeItBigContainer,
+  IFrameContainer,
 };
 
 class BlogPostTemplate extends React.Component {
