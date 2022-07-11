@@ -9,7 +9,11 @@ import './ImageComponent.css';
 const ImageComponent = ({ image, alt = '', isRow = false, description }) => {
   return (
     <figure
-      style={{ display: 'block', marginBottom: isRow ? '0.75rem' : '1.5rem' }}
+      style={{
+        display: 'block',
+        marginBottom: isRow ? '0' : '1.5rem',
+        maxWidth: '1024px',
+      }}
       className="image-component"
     >
       <Zoom overlayBgColorEnd="var(--bg)">
