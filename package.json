@@ -41,6 +41,7 @@
     "prismjs": "^1.15.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-feather": "^2.0.10",
     "react-helmet": "^5.2.0",
     "react-image-lightbox": "^5.1.4",
     "react-katex": "^2.0.2",

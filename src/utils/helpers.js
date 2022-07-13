@@ -1,3 +1,8 @@
+import React from 'react';
+import { Camera } from 'react-feather';
+
+import get from 'lodash/get';
+
 export function formatReadingTime(minutes) {
   let cups = Math.round(minutes / 5);
   let bowls = 0;
@@ -22,4 +27,19 @@ export function formatPostDate(date, lang = 'en') {
     { day: 'numeric', month: 'long', year: 'numeric' },
   ].filter(Boolean);
   return date.toLocaleDateString(...args);
+}
+
+export function formatNumberOfPhotos(frontmatter) {
+  const photosNum =
+    (get(frontmatter, 'images') || []).length +
+    (get(frontmatter, 'blogImages') || []).length;
+
+  return (
+    photosNum > 0 && (
+      <span>
+        <Camera size={11} />
+        {` ${photosNum}`}
+      </span>
+    )
+  );
 }

@@ -19,7 +19,11 @@ import {
   Column,
   MakeItBigContainer,
 } from '../components/layout/Container';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import {
+  formatPostDate,
+  formatReadingTime,
+  formatNumberOfPhotos,
+} from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
 import 'katex/dist/katex.min.css';
@@ -88,6 +92,8 @@ class BlogPostTemplate extends React.Component {
               >
                 {formatPostDate(post.frontmatter.date)}
                 {` • ${formatReadingTime(post.timeToRead)}`}
+                {` • `}
+                {formatNumberOfPhotos(post.frontmatter)}
               </p>
             </header>
             <MDXProvider components={shortcodes}>

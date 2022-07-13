@@ -1,5 +1,9 @@
 import { Link, graphql } from 'gatsby';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import {
+  formatPostDate,
+  formatReadingTime,
+  formatNumberOfPhotos,
+} from '../utils/helpers';
 
 import Bio from '../components/Bio';
 import Footer from '../components/Footer';
@@ -48,6 +52,8 @@ class BlogIndexTemplate extends React.Component {
                   <small>
                     {formatPostDate(node.frontmatter.date)}
                     {` • ${formatReadingTime(node.timeToRead)}`}
+                    {` • `}
+                    {formatNumberOfPhotos(node.frontmatter)}
                   </small>
                 </header>
                 <p
@@ -95,6 +101,12 @@ export const pageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(width: 800, layout: CONSTRAINED)
               }
+            }
+            images {
+              id
+            }
+            blogImages {
+              id
             }
           }
         }
