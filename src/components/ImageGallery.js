@@ -46,6 +46,16 @@ const ImageGallery = props => {
           <h2 className="gallery-title">Photo gallery</h2>
         </div>
         <div
+          className="gallery-title-container"
+          style={{
+            ...pageWrapperStyle,
+            paddingTop: '0',
+            paddingBottom: '0',
+          }}
+        >
+          <small>Browse more, high-resolution photos.</small>
+        </div>
+        <div
           style={{
             marginLeft: 'auto',
             marginRight: 'auto',

@@ -1,25 +1,31 @@
 import React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage, getSrc, getSrcSet } from 'gatsby-plugin-image';
+import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
 
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css';
+import { selectThumbnailFromSrcSet } from '../utils/imageUtils';
 
 import './ImageComponent.css';
+
+import '@fancyapps/ui/dist/fancybox.css';
 
 const ImageComponent = ({ image, alt = '', isRow = false, description }) => {
   return (
     <figure
       style={{
         display: 'block',
-        marginBottom: isRow ? '0' : '1.5rem',
+        marginBottom: isRow ? '0.6rem' : '1.5rem',
         maxWidth: '1024px',
       }}
       className="image-component"
     >
-      <Zoom overlayBgColorEnd="var(--bg)">
+      <a
+        href={getSrc(image)}
+        data-fancybox="gallery"
+        data-caption={description}
+        data-thumb={selectThumbnailFromSrcSet(getSrcSet(image))}
+      >
         <GatsbyImage image={getImage(image)} alt={alt} />
-      </Zoom>
-      {description && <figcaption>{description}</figcaption>}
+      </a>
     </figure>
   );
 };
