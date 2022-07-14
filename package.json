@@ -46,7 +46,6 @@
     "react-helmet": "^5.2.0",
     "react-image-lightbox": "^5.1.4",
     "react-katex": "^2.0.2",
-    "react-medium-image-zoom": "^4.3.5",
     "react-typography": "^0.16.13",
     "rehype-react": "^7.0.4",
     "swiper": "^7.4.1",
