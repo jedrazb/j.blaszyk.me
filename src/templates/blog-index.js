@@ -32,41 +32,48 @@ class BlogIndexTemplate extends React.Component {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
             const indexImage = get(node, 'frontmatter.indexImage');
             return (
-              <article key={node.fields.slug}>
-                <header>
-                  <h3
-                    style={{
-                      fontFamily: 'Montserrat, sans-serif',
-                      fontSize: rhythm(1),
-                      marginBottom: rhythm(1 / 4),
-                    }}
-                  >
-                    <Link
-                      style={{ boxShadow: 'none' }}
-                      to={node.fields.slug}
-                      rel="bookmark"
+              <Link
+                style={{
+                  boxShadow: 'none',
+                  textDecoration: 'none',
+                  color: 'var(--textNormal)',
+                }}
+                to={node.fields.slug}
+                rel="bookmark"
+              >
+                <article key={node.fields.slug}>
+                  <header>
+                    <h3
+                      style={{
+                        color: 'var(--textLink)',
+                        fontFamily: 'Montserrat, sans-serif',
+                        fontSize: rhythm(1),
+                        marginBottom: rhythm(1 / 4),
+                      }}
                     >
                       {title}
-                    </Link>
-                  </h3>
-                  <small>
-                    {formatPostDate(node.frontmatter.date)}
-                    {` • ${formatReadingTime(node.timeToRead)}`}
-                    {` • `}
-                    {formatNumberOfPhotos(node.frontmatter)}
-                  </small>
-                </header>
-                <p
-                  dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-                />
-
-                {indexImage && (
-                  <GatsbyImage
-                    image={getImage(indexImage)}
-                    alt={'Blog Image'}
+                    </h3>
+                    <small>
+                      {formatPostDate(node.frontmatter.date)}
+                      {` • ${formatReadingTime(node.timeToRead)}`}
+                      {` • `}
+                      {formatNumberOfPhotos(node.frontmatter)}
+                    </small>
+                  </header>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.spoiler,
+                    }}
                   />
-                )}
-              </article>
+
+                  {indexImage && (
+                    <GatsbyImage
+                      image={getImage(indexImage)}
+                      alt={'Blog Image'}
+                    />
+                  )}
+                </article>
+              </Link>
             );
           })}
         </main>
