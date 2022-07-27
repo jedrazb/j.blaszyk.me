@@ -56,9 +56,9 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: `UA-61071111-2`,
+        trackingId: `G-X3VBX01YFV`,
       },
     },
     {
