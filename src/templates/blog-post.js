@@ -18,6 +18,7 @@ import {
   IFrameContainer,
   Column,
   MakeItBigContainer,
+  ThreePhotosContainer,
 } from '../components/layout/Container';
 import {
   formatPostDate,
@@ -45,6 +46,7 @@ const shortcodes = {
   Column,
   MakeItBigContainer,
   IFrameContainer,
+  ThreePhotosContainer,
 };
 
 class BlogPostTemplate extends React.Component {

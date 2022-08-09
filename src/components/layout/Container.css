@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+.layout-column-container {
+  flex-direction: column;
+  flex: calc(0.5);
+}
+
 .layout-iframe-container {
   max-width: 100% !important;
   width: auto !important;
@@ -36,4 +41,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.grid-wrapper {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin: 0 0.35rem;
+  height: calc(100% - 5px);
+}
+
+.grid-image-one {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  height: 100%;
+}
+
+.grid-image-two {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.grid-image-three {
+  grid-column: 3;
+  grid-row: 2;
 }

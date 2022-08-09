@@ -8,12 +8,18 @@ import './ImageComponent.css';
 
 import '@fancyapps/ui/dist/fancybox.css';
 
-const ImageComponent = ({ image, alt = '', isRow = false, description }) => {
+const ImageComponent = ({
+  image,
+  alt = '',
+  isRow = false,
+  noPadding = false,
+  description,
+}) => {
   return (
     <figure
       style={{
         display: 'block',
-        marginBottom: isRow ? '0.6rem' : '1.5rem',
+        marginBottom: isRow ? '0.6rem' : noPadding ? '0' : '1.5rem',
         maxWidth: '1024px',
       }}
       className="image-component"

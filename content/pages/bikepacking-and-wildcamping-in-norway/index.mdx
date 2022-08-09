@@ -1,12 +1,108 @@
 ---
 title: Bikepacking & wild camping in Norway
 date: '2022-08-14'
-spoiler:
+spoiler: 'Cycling from Trondheim to Bergen in 10 days. 1000km and 14,000m of elevation gain. Fjords, ferries and glaciers.'
 
-indexImage: null
+indexImage: './photos/glacier-cropped.jpg'
 ogimage: null
 
-images: []
+images:
+  [
+    './photos/20220715-IMG_9392.jpg',
+
+    './photos/20220716-DSCF1681.jpg',
+    './photos/20220716-DSCF1692.jpg',
+
+    './photos/20220717-DSCF1695.jpg',
+    './photos/20220717-DSCF1703.jpg',
+    './photos/20220717-DSCF1712.jpg',
+    './photos/20220717-DSCF1729.jpg',
+    './photos/20220717-DSCF1739.jpg',
+    './photos/20220717-DSCF1752.jpg',
+    './photos/20220717-DSCF1757.jpg',
+    './photos/20220717-DSCF1762.jpg',
+    './photos/20220717-DSCF1780.jpg',
+    './photos/20220717-DSCF1789.jpg',
+
+    './photos/20220718-DSCF1801.jpg',
+    './photos/20220718-DSCF1804.jpg',
+    './photos/20220718-DSCF1806.jpg',
+    './photos/20220718-DSCF1808.jpg',
+    './photos/20220718-DSCF1822.jpg',
+    './photos/20220718-DSCF1840.jpg',
+    './photos/20220718-DSCF1856.jpg',
+    './photos/20220718-DSCF1859.jpg',
+    './photos/20220718-DSCF1861.jpg',
+    './photos/20220718-DSCF1863.jpg',
+    './photos/20220718-DSCF1867.jpg',
+    './photos/20220718-DSCF1869.jpg',
+    './photos/20220718-IMG_6223.jpg',
+
+    './photos/20220719-DSCF1891.jpg',
+    './photos/20220719-DSCF1892.jpg',
+    './photos/20220719-DSCF1902.jpg',
+    './photos/20220719-DSCF1908.jpg',
+    './photos/20220719-DSCF1910.jpg',
+    './photos/20220719-DSCF1920.jpg',
+    './photos/20220719-DSCF1945.jpg',
+    './photos/20220719-DSCF1947.jpg',
+    './photos/20220719-IMG_6289.jpg',
+    './photos/20220719-IMG_6292.jpg',
+
+    './photos/20220720-DSCF1960.jpg',
+    './photos/20220720-DSCF1977.jpg',
+    './photos/20220720-DSCF1985.jpg',
+    './photos/20220720-DSCF1990.jpg',
+    './photos/20220720-DSCF1993.jpg',
+    './photos/20220720-DSCF1998.jpg',
+    './photos/20220720-DSCF2013.jpg',
+    './photos/20220720-IMG_0019.jpg',
+
+    './photos/20220721-DSCF2027.jpg',
+
+    './photos/20220722-DSCF2032.jpg',
+    './photos/20220722-DSCF2034.jpg',
+    './photos/20220722-DSCF2037.jpg',
+    './photos/20220722-DSCF2044.jpg',
+    './photos/20220722-DSCF2048.jpg',
+    './photos/20220722-IMG_6330.jpg',
+
+    './photos/20220723-DSCF2059.jpg',
+    './photos/20220723-DSCF2062.jpg',
+
+    './photos/20220724-DSCF2069.jpg',
+    './photos/20220724-DSCF2071.jpg',
+
+    './photos/20220807-DSCF2077.jpg',
+    './photos/20220807-DSCF2078.jpg',
+  ]
 
 blogImages: []
 ---
+
+<MakeItBigContainer>
+  <ImageComponent
+    image={props.frontmatter.images[41]}
+    alt="Glacier Cycling"
+  ></ImageComponent>
+</MakeItBigContainer>
+<MakeItBigContainer>
+  <ThreePhotosContainer>
+    <ImageComponent
+      image={props.frontmatter.images[1]}
+      alt="Glacier Cycling"
+      noPadding
+    ></ImageComponent>
+    <ImageComponent
+      image={props.frontmatter.images[2]}
+      alt="Glacier Cycling"
+      noPadding
+    ></ImageComponent>
+    <ImageComponent
+      image={props.frontmatter.images[3]}
+      alt="Glacier Cycling"
+      noPadding
+    ></ImageComponent>
+  </ThreePhotosContainer>
+</MakeItBigContainer>
+<ImageGallery images={props.frontmatter.images}></ImageGallery>

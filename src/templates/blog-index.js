@@ -61,6 +61,7 @@ class BlogIndexTemplate extends React.Component {
                     </small>
                   </header>
                   <p
+                    style={{ marginTop: '5px' }}
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.spoiler,
                     }}
