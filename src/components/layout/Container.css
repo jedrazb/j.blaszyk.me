@@ -61,9 +61,11 @@
 .grid-image-two {
   grid-column: 3;
   grid-row: 1;
+  width: calc(100% - 0.1rem);
 }
 
 .grid-image-three {
   grid-column: 3;
   grid-row: 2;
+  width: calc(100% - 0.11rem);
 }

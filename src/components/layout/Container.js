@@ -36,7 +36,7 @@ export const ThreePhotosContainer = ({ children }) => (
   <Container>
     <div className="grid-wrapper">
       <div className="grid-image-one">{children[0]}</div>
-      <div className="grid-image-tow">{children[1]}</div>
+      <div className="grid-image-two">{children[1]}</div>
       <div className="grid-image-three">{children[2]}</div>
     </div>
   </Container>
