@@ -50,6 +50,8 @@
   gap: 0.4rem;
   margin: 0 0.35rem;
   height: calc(100% - 5px);
+  max-width: 1024px;
+  box-sizing: border-box;
 }
 
 .grid-image-one {
