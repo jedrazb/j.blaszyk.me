@@ -54,7 +54,7 @@ const ImageGallery = props => {
             paddingBottom: '0',
           }}
         >
-          <small>Check out more, high-resolution photos from the trip.</small>
+          <small>Check out all, high-resolution photos from the trip.</small>
         </div>
         <div
           style={{

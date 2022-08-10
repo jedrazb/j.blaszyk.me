@@ -2,26 +2,29 @@ import React from 'react';
 
 import './Container.css';
 
-export const Container = ({ children }) => (
-  <div className="layout-container">{children}</div>
-);
+export const Container = ({ children }) => {
+  const isChildColumn = child => child.props.mdxType == 'Column';
+  const someAreColumns =
+    Array.isArray(children) && children.some(isChildColumn);
 
-export const ColumnContainer = ({ children }) => (
-  <div className="layout-container layout-column-container">{children}</div>
-);
+  // Fix weird behaviour with columns when taking extra margin into account
+  const extraWidth = someAreColumns ? '0.4rem' : '0.7rem';
+  return (
+    <div
+      className="layout-container"
+      style={{ maxWidth: `calc(1024px + ${extraWidth})` }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const IFrameContainer = ({ children }) => (
   <div className="layout-container layout-iframe-container">{children}</div>
 );
 
-export const Column = ({ children, hasMarginRight = false, flex = 1 }) => (
-  <div
-    className="layout-column"
-    style={{
-      flex: flex,
-      marginRight: hasMarginRight ? '0.8rem' : 0,
-    }}
-  >
+export const Column = ({ children, flex = 1 }) => (
+  <div className="layout-column" style={{ flex: flex }}>
     {children}
   </div>
 );
