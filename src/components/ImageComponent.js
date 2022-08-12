@@ -10,7 +10,7 @@ import '@fancyapps/ui/dist/fancybox.css';
 
 const ImageComponent = ({
   image,
-  alt = '',
+  alt,
   isRow = false,
   noPadding = false,
   description,
@@ -31,7 +31,7 @@ const ImageComponent = ({
         data-thumb={selectThumbnailFromSrcSet(getSrcSet(image))}
         className="image-component-fancybox"
       >
-        <GatsbyImage image={getImage(image)} alt={alt} />
+        <GatsbyImage image={getImage(image)} alt={alt ? alt : getSrc(image)} />
       </a>
     </figure>
   );
