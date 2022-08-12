@@ -18,6 +18,7 @@ import {
   IFrameContainer,
   Column,
   MakeItBigContainer,
+  ThreePhotosContainer,
 } from '../components/layout/Container';
 import {
   formatPostDate,
@@ -45,6 +46,7 @@ const shortcodes = {
   Column,
   MakeItBigContainer,
   IFrameContainer,
+  ThreePhotosContainer,
 };
 
 class BlogPostTemplate extends React.Component {
@@ -195,12 +197,12 @@ export const pageQuery = graphql`
         }
         images {
           childImageSharp {
-            gatsbyImageData(width: 1280, layout: CONSTRAINED, quality: 80)
+            gatsbyImageData(width: 1400, layout: CONSTRAINED, quality: 90)
           }
         }
         blogImages {
           childImageSharp {
-            gatsbyImageData(width: 1280, layout: CONSTRAINED, quality: 80)
+            gatsbyImageData(width: 1400, layout: CONSTRAINED, quality: 90)
           }
         }
       }

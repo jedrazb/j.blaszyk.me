@@ -3,6 +3,7 @@ import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
 import { GatsbyImage, getSrcSet, getImage } from 'gatsby-plugin-image';
+import { Aperture } from 'react-feather';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -53,7 +54,7 @@ const ImageGallery = props => {
             paddingBottom: '0',
           }}
         >
-          <small>Browse more, high-resolution photos.</small>
+          <small>Check out all, high-resolution photos from the trip.</small>
         </div>
         <div
           style={{
