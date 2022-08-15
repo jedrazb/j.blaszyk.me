@@ -1,7 +1,8 @@
+import React from 'react';
 import { useRef } from 'react';
 import useIntersectionObserver from '@react-hook/intersection-observer';
 
-const LazyIframe = ({ children, height }) => {
+const LazyIframe = ({ children, height, marginBottom = '0' }) => {
   const containerRef = useRef();
   const lockRef = useRef(false);
   const { isIntersecting } = useIntersectionObserver(containerRef);
@@ -12,9 +13,10 @@ const LazyIframe = ({ children, height }) => {
     <div
       style={{
         overflow: 'hidden',
-        height: '23px',
+        height: `calc(${height} + ${marginBottom}`,
         position: 'relative',
         width: '100%',
+        marginBottom: marginBottom,
       }}
       ref={containerRef}
     >
