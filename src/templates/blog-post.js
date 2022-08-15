@@ -13,6 +13,7 @@ import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
+import LazyIframe from '../components/LazyIframe';
 import {
   Container,
   IFrameContainer,
@@ -47,6 +48,7 @@ const shortcodes = {
   MakeItBigContainer,
   IFrameContainer,
   ThreePhotosContainer,
+  LazyIframe,
 };
 
 class BlogPostTemplate extends React.Component {
