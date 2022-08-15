@@ -2,6 +2,8 @@ import React from 'react';
 import { useRef } from 'react';
 import useIntersectionObserver from '@react-hook/intersection-observer';
 
+import './layout/Container.css';
+
 const LazyIframe = ({ children, height, marginBottom = '0' }) => {
   const containerRef = useRef();
   const lockRef = useRef(false);
@@ -11,11 +13,9 @@ const LazyIframe = ({ children, height, marginBottom = '0' }) => {
   }
   return (
     <div
+      className="layout-container layout-iframe-container"
       style={{
-        overflow: 'hidden',
         height: `calc(${height} + ${marginBottom}`,
-        position: 'relative',
-        width: '100%',
         marginBottom: marginBottom,
       }}
       ref={containerRef}
