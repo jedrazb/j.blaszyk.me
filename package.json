@@ -87,7 +87,5 @@
       "git add"
     ]
   },
-  "resolutions": {
-    "**/sharp": "^0.29.3"
-  }
+  "packageManager": "yarn@3.2.2"
 }
