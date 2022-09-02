@@ -9,6 +9,7 @@ import { getSrc } from 'gatsby-plugin-image';
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
+import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
@@ -105,38 +106,9 @@ class BlogPostTemplate extends React.Component {
                 {post.body}
               </MDXRenderer>
             </MDXProvider>
-            <footer>
-              <p>
-                <a href={discussUrl} target="_blank" rel="noopener noreferrer">
-                  Discuss on Twitter
-                </a>
-                {` • `}
-                <a href={editUrl} target="_blank" rel="noopener noreferrer">
-                  Edit on GitHub
-                </a>
-              </p>
-            </footer>
           </article>
         </main>
         <aside>
-          <h3
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              marginTop: rhythm(0.25),
-            }}
-          >
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'var(--textLink)',
-              }}
-              to={'/'}
-            >
-              Personal blog
-            </Link>
-          </h3>
-          <Bio />
           <nav>
             <ul
               style={{
@@ -145,6 +117,7 @@ class BlogPostTemplate extends React.Component {
                 justifyContent: 'space-between',
                 listStyle: 'none',
                 padding: 0,
+                marginLeft: 0,
               }}
             >
               <li>
@@ -152,7 +125,7 @@ class BlogPostTemplate extends React.Component {
                   <Link
                     to={previous.fields.slug}
                     rel="prev"
-                    style={{ marginRight: 20 }}
+                    // style={{ marginRight: 20 }}
                   >
                     ← {previous.frontmatter.title}
                   </Link>
@@ -167,7 +140,26 @@ class BlogPostTemplate extends React.Component {
               </li>
             </ul>
           </nav>
+          <h3
+            style={{
+              fontFamily: 'Montserrat, sans-serif',
+              marginTop: rhythm(0.25),
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'var(--textLink)',
+              }}
+              to={'/'}
+            >
+              Jedr's Blog
+            </Link>
+          </h3>
+          <Bio />
         </aside>
+        <Footer />
       </Layout>
     );
   }

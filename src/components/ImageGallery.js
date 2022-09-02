@@ -3,7 +3,6 @@ import { rhythm, scale } from '../utils/typography';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper';
 import { GatsbyImage, getSrcSet, getImage } from 'gatsby-plugin-image';
-import { Aperture } from 'react-feather';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
@@ -16,14 +15,14 @@ import 'swiper/css/pagination';
 
 import './ImageGallery.css';
 
-const ImageGallery = props => {
+const ImageGallery = (props) => {
   const { images } = props;
 
   const [isOpen, setIsOpen] = useState(false);
   const [previewPhotoIdx, setPreviewPhotoIdx] = useState(null);
   const [swiper, setSwiper] = useState(null);
 
-  const slideTo = index => swiper.slideTo(index);
+  const slideTo = (index) => swiper.slideTo(index);
 
   const pageWrapperStyle = {
     marginLeft: 'auto',
@@ -117,7 +116,7 @@ const ImageGallery = props => {
   );
 };
 
-const selectSrc = image => {
+const selectSrc = (image) => {
   return selectHighestResolutionFromSrcSet(getSrcSet(image));
 };
 

@@ -1,6 +1,11 @@
 import React from 'react';
 
+import { Twitter, GitHub, Linkedin, Rss } from 'react-feather';
+import Strava from '../assets/strava.inline.svg';
+
 import { rhythm } from '../utils/typography';
+
+import './Footer.css';
 
 class Footer extends React.Component {
   render() {
@@ -12,40 +17,46 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: 'right' }}>
-          <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
-            rss
+          <a
+            href="/rss.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-icon"
+          >
+            <Rss />
           </a>
         </div>
         <a
           href="https://mobile.twitter.com/jedr_blaszyk"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-icon icon-has-next"
         >
-          twitter
-        </a>{' '}
-        &bull;{' '}
+          <Twitter />
+        </a>
         <a
           href="https://github.com/jedrazb"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-icon icon-has-next"
         >
-          github
-        </a>{' '}
-        &bull;{' '}
+          <GitHub />
+        </a>
         <a
           href="https://www.strava.com/athletes/jedrzej_blaszyk"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-icon icon-has-next"
         >
-          strava
-        </a>{' '}
-        &bull;{' '}
+          <Strava />
+        </a>
         <a
-          href="https://www.yelp.com/user_details?userid=iNhtBqAm2UyyIxqZTc5Drg"
+          href="https://www.linkedin.com/in/jedrzej-blaszyk/"
           target="_blank"
           rel="noopener noreferrer"
+          className="footer-icon"
         >
-          yelp
+          <Linkedin />
         </a>
       </footer>
     );

@@ -1,0 +1,12 @@
+.footer-icon {
+    color: var(--textTitle);
+    box-shadow: none;
+}
+
+.footer-icon:hover {
+    color: var(--textLink);
+}
+
+.icon-has-next {
+    margin-right: 1.5rem;
+}

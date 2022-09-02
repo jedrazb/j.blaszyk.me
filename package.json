@@ -4,7 +4,7 @@
   "engines": {
     "node": "14.x"
   },
-  "description": "Jedr Blaszyk - Personal Blog",
+  "description": "Jedr's Blog",
   "version": "1.0.0",
   "author": "Jedrze Blaszyk <j@blaszyk.com>",
   "bugs": {
@@ -24,6 +24,7 @@
     "gatsby-plugin-mdx": "^3.20.0",
     "gatsby-plugin-offline": "^5.21.0",
     "gatsby-plugin-react-helmet": "^5.21.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sharp": "4.21.0",
     "gatsby-plugin-sitemap": "^5.21.0",

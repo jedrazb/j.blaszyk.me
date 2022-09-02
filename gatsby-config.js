@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jedr Blaszyk - Blog',
+    title: "Jedr's Blog",
     author: 'Jedr Blaszyk',
     description:
       'Personal blog by Jedr Blaszyk. Bikepacking, triathlon & tech.',
@@ -79,11 +79,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map(edge => {
+              return allMdx.edges.map((edge) => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog. You can read it online by <a href="${siteUrl +
-                  edge.node.fields.slug}">clicking here</a>.)</div>
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog. You can read it online by <a href="${
+                  siteUrl + edge.node.fields.slug
+                }">clicking here</a>.)</div>
               `;
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.spoiler,
@@ -116,7 +117,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Jedr Blaszyk - Blog',
+            title: "Jedr's Blog",
           },
         ],
       },
@@ -124,7 +125,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jedr Blaszyk - Personal Blog`,
+        name: `Jedr's Blog`,
         short_name: `personal-blog`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -148,6 +149,14 @@ module.exports = {
         host: 'https://j.blaszyk.me/',
         sitemap: 'https://j.blaszyk.me/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
   ],
