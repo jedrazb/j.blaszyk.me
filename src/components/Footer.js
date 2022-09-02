@@ -43,7 +43,7 @@ class Footer extends React.Component {
           <GitHub />
         </a>
         <a
-          href="https://www.strava.com/athletes/jedrzej_blaszyk"
+          href="https://www.strava.com/athletes/jedr_blaszyk"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon icon-has-next"
