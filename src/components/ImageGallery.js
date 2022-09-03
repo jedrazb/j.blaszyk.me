@@ -27,7 +27,7 @@ const ImageGallery = (props) => {
   const pageWrapperStyle = {
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: rhythm(28),
+    maxWidth: rhythm(30),
     padding: `2rem ${rhythm(3 / 4)}`,
     width: '100%',
   };

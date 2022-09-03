@@ -83,6 +83,7 @@ class BlogPostTemplate extends React.Component {
               <h1
                 style={{
                   color: 'var(--textTitle)',
+                  marginTop: '1.5rem',
                 }}
               >
                 {post.frontmatter.title}
