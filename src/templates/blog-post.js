@@ -70,7 +70,12 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={'Contact'} slug={'/contact'} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.spoiler}
+          slug={post.fields.slug}
+          image={ogImagePath}
+        />
         <main>
           <article className="post">
             <header>

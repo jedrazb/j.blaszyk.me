@@ -11,7 +11,7 @@ class NotFoundPage extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO />
+        <SEO title={'Contact'} slug={'/contact'} />
         <main>
           <h1>Contact</h1>
           <p>
