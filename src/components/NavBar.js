@@ -11,30 +11,34 @@ import moon from '../assets/moon.png';
 import { rhythm, scale } from '../utils/typography';
 
 function NavBar({ title, location, toggle }) {
-  const [click, setClick] = useState(false);
+  const [opened, setOpened] = useState(false);
 
-  const handleClick = () => {
-    setClick(!click);
+  const closeMenu = () => {
+    setOpened(false);
 
     //menu close
     document.body.style.removeProperty('overflow');
     document.body.style.removeProperty('position');
   };
 
-  const handleOpenMenu = () => {
-    if (!click) {
-      //menu open
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.display = 'block';
-      document.body.style.width = '100%';
-    } else {
-      //menu close
-      document.body.style.removeProperty('overflow');
-      document.body.style.removeProperty('position');
-    }
-    setClick(!click);
+  const openMenu = () => {
+    setOpened(true);
+
+    //menu open
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.display = 'block';
+    document.body.style.width = '100%';
   };
+
+  const handleMenuClick = () => {
+    if (opened) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -52,6 +56,7 @@ function NavBar({ title, location, toggle }) {
                 textDecoration: 'none',
                 color: 'var(--textTitle)',
               }}
+              onClick={closeMenu}
               to={'/'}
               className="no-select"
             >
@@ -59,13 +64,13 @@ function NavBar({ title, location, toggle }) {
             </Link>
           </h1>
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <ul className={opened ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
               <Link
                 to="/"
                 activeClassName="active"
                 className="nav-links"
-                onClick={handleClick}
+                onClick={closeMenu}
               >
                 Blog
               </Link>
@@ -75,7 +80,7 @@ function NavBar({ title, location, toggle }) {
                 to="/through-the-lens"
                 activeClassName="active"
                 className="nav-links"
-                onClick={handleClick}
+                onClick={closeMenu}
                 partiallyActive={true}
               >
                 Through the Lens
@@ -86,7 +91,7 @@ function NavBar({ title, location, toggle }) {
                 to="/contact"
                 activeClassName="active"
                 className="nav-links"
-                onClick={handleClick}
+                onClick={closeMenu}
               >
                 Contact
               </Link>
@@ -97,11 +102,9 @@ function NavBar({ title, location, toggle }) {
 
           <div
             className={`menu-btn-1 no-select menu-btn-1-controller ${
-              click && 'active'
+              opened && 'active'
             }`}
-            onClick={() => {
-              handleOpenMenu();
-            }}
+            onClick={handleMenuClick}
           >
             <span></span>
           </div>

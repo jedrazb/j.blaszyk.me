@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Jedr's Blog",
     author: 'Jedr Blaszyk',
-    description: 'Blog by Jedr Blaszyk. Bikepacking, triathlon & tech.',
+    description: 'Blog by Jedr Blaszyk. Bikepacking, photography & tech.',
     siteUrl: 'https://j.blaszyk.me',
     social: {
       twitter: '@jedr_blaszyk',
