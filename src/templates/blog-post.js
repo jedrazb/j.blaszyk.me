@@ -9,7 +9,6 @@ import { getSrc } from 'gatsby-plugin-image';
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
-import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
@@ -71,12 +70,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.spoiler}
-          slug={post.fields.slug}
-          image={ogImagePath}
-        />
+        <SEO title={'Contact'} slug={'/contact'} />
         <main>
           <article className="post">
             <header>
@@ -160,7 +154,6 @@ class BlogPostTemplate extends React.Component {
           </h3>
           <Bio />
         </aside>
-        <Footer />
       </Layout>
     );
   }

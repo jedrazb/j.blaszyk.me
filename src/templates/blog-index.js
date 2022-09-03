@@ -6,7 +6,6 @@ import {
 } from '../utils/helpers';
 
 import Bio from '../components/Bio';
-import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 import React from 'react';
 import SEO from '../components/SEO';
@@ -78,7 +77,6 @@ class BlogIndexTemplate extends React.Component {
             );
           })}
         </main>
-        <Footer />
       </Layout>
     );
   }

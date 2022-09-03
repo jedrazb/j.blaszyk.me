@@ -15,6 +15,13 @@ function NavBar({ title, location, toggle }) {
 
   const handleClick = () => {
     setClick(!click);
+
+    //menu close
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('position');
+  };
+
+  const handleOpenMenu = () => {
     if (!click) {
       //menu open
       document.body.style.overflow = 'hidden';
@@ -26,6 +33,7 @@ function NavBar({ title, location, toggle }) {
       document.body.style.removeProperty('overflow');
       document.body.style.removeProperty('position');
     }
+    setClick(!click);
   };
   return (
     <>
@@ -91,7 +99,9 @@ function NavBar({ title, location, toggle }) {
             className={`menu-btn-1 no-select menu-btn-1-controller ${
               click && 'active'
             }`}
-            onClick={handleClick}
+            onClick={() => {
+              handleOpenMenu();
+            }}
           >
             <span></span>
           </div>

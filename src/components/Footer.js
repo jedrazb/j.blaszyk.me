@@ -12,8 +12,11 @@ class Footer extends React.Component {
     return (
       <footer
         style={{
-          marginTop: rhythm(2.5),
-          paddingTop: rhythm(1),
+          padding: `2rem ${rhythm(3 / 4)}`,
+          width: '100%',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          maxWidth: rhythm(30),
         }}
       >
         <div style={{ float: 'right' }}>

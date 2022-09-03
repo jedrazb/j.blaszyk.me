@@ -4,12 +4,14 @@ import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
 class NotFoundPage extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <SEO />
         <main>
           <h1>Contact</h1>
           <p>

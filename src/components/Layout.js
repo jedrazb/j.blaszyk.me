@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Toggle from './Toggle';
 import Helmet from 'react-helmet';
 import Header from './NavBar';
+import Footer from '../components/Footer';
 
 import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
@@ -61,6 +62,8 @@ class Layout extends React.Component {
           background: 'var(--bg)',
           transition: 'color 0.2s ease-out, background 0.2s ease-out',
           minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <Helmet
@@ -82,10 +85,13 @@ class Layout extends React.Component {
             marginRight: 'auto',
             maxWidth: rhythm(30),
             padding: `2.625rem ${rhythm(3 / 4)}`,
+            flex: 1,
+            width: '100%',
           }}
         >
           {children}
         </div>
+        <Footer />
       </div>
     );
   }
