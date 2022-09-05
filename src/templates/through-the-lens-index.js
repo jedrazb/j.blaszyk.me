@@ -3,6 +3,7 @@ import {
   formatPostDate,
   formatReadingTime,
   formatNumberOfPhotos,
+  formatPostLocation,
 } from '../utils/helpers';
 
 import Bio from '../components/Bio';
@@ -13,21 +14,27 @@ import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-class BlogIndexTemplate extends React.Component {
+import './through-the-lens-index.css';
+
+class ThroughTheLensIndexTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const posts = get(this, 'props.data.allMdx.edges');
 
+    const title = 'Through the Lens';
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO />
+        <SEO title={title} location={this.props.location} />
         <aside>
-          <Bio />
+          <h1>Through the Lens</h1>
         </aside>
-        <main>
+        <main className="posts-layout-wrapper">
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
-            const indexImage = get(node, 'frontmatter.indexImage');
+            const featuredImage = get(node, 'frontmatter.featuredImage');
+            const location = get(node, 'frontmatter.location');
+            const postLink = `/${node.fields.category}${node.fields.slug}`;
             return (
               <Link
                 style={{
@@ -35,7 +42,7 @@ class BlogIndexTemplate extends React.Component {
                   textDecoration: 'none',
                   color: 'var(--textNormal)',
                 }}
-                to={node.fields.slug}
+                to={`/${node.fields.category}${node.fields.slug}`}
                 rel="bookmark"
               >
                 <article key={node.fields.slug}>
@@ -44,7 +51,7 @@ class BlogIndexTemplate extends React.Component {
                       style={{
                         color: 'var(--textLink)',
                         fontFamily: 'Montserrat, sans-serif',
-                        fontSize: rhythm(4 / 5),
+                        fontSize: rhythm(5 / 8),
                         marginBottom: rhythm(1 / 4),
                       }}
                     >
@@ -53,21 +60,21 @@ class BlogIndexTemplate extends React.Component {
                     <small>
                       {formatPostDate(node.frontmatter.date)}
                       <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                      {formatReadingTime(node.timeToRead)}
+                      {formatPostLocation(location)}
                       <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
                       {formatNumberOfPhotos(node.frontmatter)}
                     </small>
                   </header>
                   <p
-                    style={{ marginTop: '5px' }}
+                    style={{ margin: 0, marginTop: '1em' }}
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.spoiler,
                     }}
                   />
 
-                  {indexImage && (
+                  {featuredImage && (
                     <GatsbyImage
-                      image={getImage(indexImage)}
+                      image={getImage(featuredImage)}
                       alt={'Blog Image'}
                     />
                   )}
@@ -81,7 +88,7 @@ class BlogIndexTemplate extends React.Component {
   }
 }
 
-export default BlogIndexTemplate;
+export default ThroughTheLensIndexTemplate;
 
 export const pageQuery = graphql`
   {
@@ -93,27 +100,25 @@ export const pageQuery = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { category: { eq: "blog" } } }
+      filter: { fields: { category: { eq: "through-the-lens" } } }
     ) {
       edges {
         node {
           fields {
             slug
+            category
           }
           timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            spoiler
-            indexImage {
+            location
+            featuredImage {
               childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED)
+                gatsbyImageData(width: 1000, layout: CONSTRAINED)
               }
             }
             images {
-              id
-            }
-            blogImages {
               id
             }
           }

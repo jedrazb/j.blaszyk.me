@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera } from 'react-feather';
+import { Camera, MapPin } from 'react-feather';
 
 import get from 'lodash/get';
 
@@ -13,6 +13,14 @@ export function formatReadingTime(minutes) {
   } else {
     return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
   }
+}
+
+export function formatPostLocation(location) {
+  return (
+    <span>
+      <MapPin size={11} /> {` ${location}`}
+    </span>
+  );
 }
 
 // `lang` is optional and will default to the current user agent locale

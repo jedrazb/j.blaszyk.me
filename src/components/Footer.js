@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Twitter, GitHub, Linkedin, Rss } from 'react-feather';
+import { Twitter, GitHub, Linkedin, Instagram, Rss } from 'react-feather';
 import Strava from '../assets/strava.inline.svg';
 
 import { rhythm } from '../utils/typography';
@@ -57,9 +57,17 @@ class Footer extends React.Component {
           href="https://www.linkedin.com/in/jedrzej-blaszyk/"
           target="_blank"
           rel="noopener noreferrer"
-          className="footer-icon"
+          className="footer-icon icon-has-next"
         >
           <Linkedin />
+        </a>
+        <a
+          href="https://www.instagram.com/jedraz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-icon"
+        >
+          <Instagram />
         </a>
       </footer>
     );

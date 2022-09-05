@@ -12,10 +12,19 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      // blog posts
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/pages`,
-        name: 'pages',
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      // through the lens posts
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/through-the-lens`,
+        name: 'through-the-lens',
       },
     },
     {
@@ -98,7 +107,8 @@ module.exports = {
               {
                 allMdx(
                   limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] }
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fields: {category: {eq: "blog"}}}
                 ) {
                   edges {
                     node {

@@ -16,7 +16,6 @@ import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
 import {
   Container,
-  IFrameContainer,
   Column,
   MakeItBigContainer,
   ThreePhotosContainer,
@@ -46,7 +45,6 @@ const shortcodes = {
   Container,
   Column,
   MakeItBigContainer,
-  IFrameContainer,
   ThreePhotosContainer,
   LazyIframe,
 };
@@ -57,7 +55,7 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     let { previous, next, slug } = this.props.pageContext;
 
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/pages/${slug.slice(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog/${slug.slice(
       1,
       slug.length - 1
     )}/index.mdx`;
@@ -96,8 +94,9 @@ class BlogPostTemplate extends React.Component {
                 }}
               >
                 {formatPostDate(post.frontmatter.date)}
-                {` • ${formatReadingTime(post.timeToRead)}`}
-                {` • `}
+                <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
+                {formatReadingTime(post.timeToRead)}
+                <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
                 {formatNumberOfPhotos(post.frontmatter)}
               </p>
             </header>

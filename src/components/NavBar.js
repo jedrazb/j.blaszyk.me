@@ -75,7 +75,7 @@ function NavBar({ title, location, toggle }) {
                 Blog
               </Link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link
                 to="/through-the-lens"
                 activeClassName="active"
@@ -85,7 +85,7 @@ function NavBar({ title, location, toggle }) {
               >
                 Through the Lens
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item">
               <Link
                 to="/contact"

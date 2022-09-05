@@ -75,11 +75,6 @@
     "deploy": "yarn build && cp now.json public/ && cp CNAME public/ && gh-pages -d public",
     "dry": "yarn build && cp now.json public/ && cd public && now"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "{gatsby-*.js,src/**/*.{js,jsx,json,css}}": [
       "yarn format",
