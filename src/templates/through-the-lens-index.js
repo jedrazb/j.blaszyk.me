@@ -27,7 +27,7 @@ class ThroughTheLensIndexTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={title} location={this.props.location} />
         <aside>
-          <h1>Through the Lens</h1>
+          <h1 style={{ marginTop: 0 }}>Through the Lens</h1>
         </aside>
         <main className="posts-layout-wrapper">
           {posts.map(({ node }) => {

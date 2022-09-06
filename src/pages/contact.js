@@ -13,7 +13,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={'Contact'} slug={'/contact'} />
         <main>
-          <h1>Contact</h1>
+          <h1 style={{ marginTop: 0 }}>Contact</h1>
           <p>
             You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>{' '}
           </p>

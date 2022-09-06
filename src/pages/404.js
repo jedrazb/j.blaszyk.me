@@ -11,7 +11,7 @@ class NotFoundPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <main>
-          <h1>Not Found - 404 :(</h1>
+          <h1 style={{ marginTop: 0 }}>Not Found - 404 :(</h1>
           <p>I haven’t written this post yet.</p>
           <p>
             Go back to{' '}
