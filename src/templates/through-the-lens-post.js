@@ -65,7 +65,7 @@ class ThroughTheLensPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
+          title={`${post.frontmatter.title} - Through the Lens`}
           description={`Through the Lens: ${post.frontmatter.title}`}
           slug={this.props.path}
           image={ogImagePath}
@@ -109,16 +109,23 @@ class ThroughTheLensPostTemplate extends React.Component {
                 {formatNumberOfPhotos(post.frontmatter)}
               </p>
             </header>
-            {/* <MDXProvider components={shortcodes}>
-              <MDXRenderer frontmatter={post.frontmatter}>
-                {post.body}
-              </MDXRenderer>
-            </MDXProvider> */}
-            {images.map((img) => (
-              <MakeItBigContainer>
-                <ImageComponent image={img} />
-              </MakeItBigContainer>
-            ))}
+            <MakeItBigContainer>
+              {images.map((img) => {
+                const imgExifData = img.childImageSharp.fields.exif;
+                const exifCaption =
+                  `${imgExifData.Make} ${imgExifData.Model}<br/>` +
+                  `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
+                  `f/${imgExifData.FNumber} ${imgExifData.ExposureTimeFormatted} ISO ${imgExifData.ISO} ${imgExifData.FocalLength}mm`;
+                return (
+                  <ImageComponent
+                    image={img}
+                    alt={img.childImageSharp.id}
+                    key={img.childImageSharp.id}
+                    description={exifCaption}
+                  />
+                );
+              })}
+            </MakeItBigContainer>
           </article>
         </main>
         <aside>
@@ -164,10 +171,23 @@ class ThroughTheLensPostTemplate extends React.Component {
                 boxShadow: 'none',
                 textDecoration: 'none',
                 color: 'var(--textLink)',
+                fontSize: rhythm(4 / 5),
               }}
               to={'/'}
             >
               Jedr's Blog
+            </Link>
+            {' • '}
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'var(--textLink)',
+                fontSize: rhythm(4 / 5),
+              }}
+              to={'/through-the-lens/'}
+            >
+              Through the Lens
             </Link>
           </h3>
           <Bio />
@@ -202,7 +222,20 @@ export const pageQuery = graphql`
         }
         images {
           childImageSharp {
+            id
             gatsbyImageData(width: 1800, layout: CONSTRAINED, quality: 90)
+            fields {
+              exif {
+                Make
+                Model
+                ExposureTimeFormatted
+                FNumber
+                FocalLength
+                LensMake
+                LensModel
+                ISO
+              }
+            }
           }
         }
       }

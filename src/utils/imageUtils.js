@@ -1,6 +1,6 @@
-export const selectHighestResolutionFromSrcSet = srcSet => {
+export const selectHighestResolutionFromSrcSet = (srcSet) => {
   const srcSetArray = srcSet.split(',');
-  const srcArraySorted = srcSetArray.map(srcWithResolution => {
+  const srcArraySorted = srcSetArray.map((srcWithResolution) => {
     const [src, resolution] = srcWithResolution.split(' ');
     return src;
   });
@@ -8,9 +8,9 @@ export const selectHighestResolutionFromSrcSet = srcSet => {
   return srcArraySorted[srcArraySorted.length - 1];
 };
 
-export const selectThumbnailFromSrcSet = srcSet => {
+export const selectThumbnailFromSrcSet = (srcSet) => {
   const srcSetArray = srcSet.split(',');
-  const srcArraySorted = srcSetArray.map(srcWithResolution => {
+  const srcArraySorted = srcSetArray.map((srcWithResolution) => {
     const [src, resolution] = srcWithResolution.split(' ');
     return src;
   });
