@@ -113,8 +113,8 @@ class ThroughTheLensPostTemplate extends React.Component {
               {images.map((img) => {
                 const imgExifData = img.childImageSharp.fields.exif;
                 const exifCaption =
-                  `${imgExifData.Make} ${imgExifData.Model}<br/>` +
-                  `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
+                  // `${imgExifData.Make} ${imgExifData.Model}<br/>` +
+                  // `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
                   `f/${imgExifData.FNumber} ${imgExifData.ExposureTimeFormatted} ISO ${imgExifData.ISO} ${imgExifData.FocalLength}mm`;
                 return (
                   <ImageComponent
