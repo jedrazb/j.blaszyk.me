@@ -89,7 +89,7 @@ class ThroughTheLensPostTemplate extends React.Component {
                   color: 'var(--textLink)',
                   fontFamily: 'Montserrat, sans-serif',
                 }}
-                to={`/${post.fields.category}`}
+                to={`/${post.fields.category}/`}
                 rel="bookmark"
               >
                 <p>{'Through The Lens'}</p>
