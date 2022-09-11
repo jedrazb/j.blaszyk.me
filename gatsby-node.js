@@ -80,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
     );
 
     createPage({
-      path: '/through-the-lens',
+      path: '/through-the-lens/',
       component: path.resolve('./src/templates/through-the-lens-index.js'),
     });
 
