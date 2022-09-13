@@ -17,6 +17,7 @@ class NotFoundPage extends React.Component {
           <p>
             You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>{' '}
           </p>
+          <p>I currently work on ranking systems @ Yelp.</p>
           <p>Have a great day! :)</p>
         </main>
       </Layout>
