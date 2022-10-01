@@ -14,7 +14,7 @@ class NotFoundPage extends React.Component {
         <SEO title={'Contact'} slug={'/contact'} />
         <main>
           <h1 style={{ marginTop: 0 }}>Contact</h1>
-          <p>I currently work on ranking systems @ Yelp.</p>
+          <p>I currently work on ranking systems and data ingestion @ Yelp.</p>
           <p>
             You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>{' '}
           </p>

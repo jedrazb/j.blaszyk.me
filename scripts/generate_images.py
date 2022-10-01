@@ -11,4 +11,4 @@ def read_images(relative_path):
 
 
 
-read_images('content/through-the-lens/izery-mountains-bikepacking/photos')
+read_images('content/through-the-lens/iceland-4x4-roadtrip/photos')
