@@ -118,7 +118,7 @@ export const pageQuery = graphql`
                 gatsbyImageData(width: 1000, layout: CONSTRAINED)
               }
             }
-            images {
+            imageRows {
               id
             }
           }

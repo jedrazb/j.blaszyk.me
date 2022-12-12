@@ -40,7 +40,8 @@ export function formatPostDate(date, lang = 'en') {
 export function formatNumberOfPhotos(frontmatter) {
   const photosNum =
     (get(frontmatter, 'images') || []).length +
-    (get(frontmatter, 'blogImages') || []).length;
+    (get(frontmatter, 'blogImages') || []).length +
+    (get(frontmatter, 'imageRows').flat() || []).length;
 
   return (
     photosNum > 0 && (

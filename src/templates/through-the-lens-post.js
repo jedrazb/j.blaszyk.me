@@ -15,7 +15,7 @@ import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
 import {
-  Container,
+  MobileContainer,
   Column,
   MakeItBigContainer,
   ThreePhotosContainer,
@@ -42,7 +42,6 @@ const shortcodes = {
   BlockMath,
   InlineMath,
   ImageComponent,
-  Container,
   Column,
   MakeItBigContainer,
   ThreePhotosContainer,
@@ -60,7 +59,7 @@ class ThroughTheLensPostTemplate extends React.Component {
 
     const location = get(post, 'frontmatter.location');
 
-    const images = get(post, 'frontmatter.images');
+    const imageRows = get(post, 'frontmatter.imageRows');
 
     const category = get(post, 'fields.category');
 
@@ -112,19 +111,27 @@ class ThroughTheLensPostTemplate extends React.Component {
               </p>
             </header>
             <MakeItBigContainer>
-              {images.map((img) => {
-                const imgExifData = img.childImageSharp.fields.exif;
-                const exifCaption =
-                  // `${imgExifData.Make} ${imgExifData.Model}<br/>` +
-                  // `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
-                  `f/${imgExifData.FNumber} ${imgExifData.ExposureTimeFormatted} ISO ${imgExifData.ISO} ${imgExifData.FocalLength}mm`;
+              {imageRows.map((imgRow) => {
                 return (
-                  <ImageComponent
-                    image={img}
-                    alt={img.childImageSharp.id}
-                    key={img.childImageSharp.id}
-                    description={exifCaption}
-                  />
+                  <MobileContainer>
+                    {imgRow.map((img) => {
+                      const imgExifData = img.childImageSharp.fields.exif;
+                      const exifCaption =
+                        // `${imgExifData.Make} ${imgExifData.Model}<br/>` +
+                        // `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
+                        `f/${imgExifData.FNumber} ${imgExifData.ExposureTimeFormatted} ISO ${imgExifData.ISO} ${imgExifData.FocalLength}mm`;
+                      return (
+                        <Column>
+                          <ImageComponent
+                            image={img}
+                            alt={img.childImageSharp.id}
+                            key={img.childImageSharp.id}
+                            description={exifCaption}
+                          />
+                        </Column>
+                      );
+                    })}
+                  </MobileContainer>
                 );
               })}
             </MakeItBigContainer>
@@ -222,7 +229,7 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 960, layout: FIXED)
           }
         }
-        images {
+        imageRows {
           childImageSharp {
             id
             gatsbyImageData(width: 1800, layout: CONSTRAINED, quality: 90)

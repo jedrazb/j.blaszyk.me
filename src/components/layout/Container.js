@@ -3,7 +3,7 @@ import React from 'react';
 import './Container.css';
 
 export const Container = ({ children }) => {
-  const isChildColumn = child => child.props.mdxType == 'Column';
+  const isChildColumn = (child) => child.props.mdxType == 'Column';
   const someAreColumns =
     Array.isArray(children) && children.some(isChildColumn);
 
@@ -12,6 +12,23 @@ export const Container = ({ children }) => {
   return (
     <div
       className="layout-container"
+      style={{ maxWidth: `calc(1024px + ${extraWidth})` }}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const MobileContainer = ({ children }) => {
+  const isChildColumn = (child) => child.props.mdxType == 'Column';
+  const someAreColumns =
+    Array.isArray(children) && children.some(isChildColumn);
+
+  // Fix weird behaviour with columns when taking extra margin into account
+  const extraWidth = someAreColumns ? '0.4rem' : '0.7rem';
+  return (
+    <div
+      className="layout-container layout-mobile-container"
       style={{ maxWidth: `calc(1024px + ${extraWidth})` }}
     >
       {children}

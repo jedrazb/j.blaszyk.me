@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 .layout-iframe-container {
   max-width: 100% !important;
   width: auto !important;
@@ -62,4 +63,10 @@
   grid-column: 3;
   grid-row: 2;
   width: calc(100% - 0.11rem);
+}
+
+@media only screen and (max-width: 600px) {
+  .layout-mobile-container {
+    flex-direction: column;
+  }
 }
