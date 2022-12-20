@@ -40,7 +40,7 @@ function NavBar({ title, location, toggle }) {
   };
 
   return (
-    <>
+    <header>
       <nav className="navbar">
         <div className="nav-container">
           <h1
@@ -112,7 +112,7 @@ function NavBar({ title, location, toggle }) {
           {/* </div> */}
         </div>
       </nav>
-    </>
+    </header>
   );
 }
 
