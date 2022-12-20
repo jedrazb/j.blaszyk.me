@@ -81,10 +81,23 @@ class BlogPostTemplate extends React.Component {
                 style={{
                   color: 'var(--textTitle)',
                   marginTop: '1.5rem',
+                  marginBottom: '0.5rem',
                 }}
               >
                 {post.frontmatter.title}
               </h1>
+              <Link
+                style={{
+                  boxShadow: 'none',
+                  textDecoration: 'none',
+                  color: 'var(--textLink)',
+                  fontFamily: 'Montserrat, sans-serif',
+                }}
+                to={`/${post.fields.category}/`}
+                rel="bookmark"
+              >
+                <p>{'Blog'}</p>
+              </Link>
               <p
                 style={{
                   ...scale(-1 / 5),
