@@ -1,6 +1,6 @@
 body {
   --orange: rgb(245, 158, 71);
-  --blue: #005392;
+  --blue: #1a4fd6;
   background-color: var(--bg);
   font-family: 'Roboto', sans-serif;
 }
@@ -26,8 +26,8 @@ body.light {
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #202020;
-  --bg-secondary: rgb(47, 52, 63);
-  --post-outline: rgb(88, 88, 88);
+  --bg-secondary: #2e2e2e;
+  --post-outline: rgb(65, 66, 68);
   --bg-gallery: rgb(16, 31, 49);
   --header: #ffffff;
   --textNormal: rgba(255, 255, 255, 1);

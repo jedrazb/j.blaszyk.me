@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby';
 
+import countriesJSON from '../assets/world-countries.json';
+
 import get from 'lodash/get';
 import {
   ComposableMap,
@@ -16,13 +18,43 @@ import SEO from '../components/SEO';
 import { MakeItBigContainer } from '../components/layout/Container';
 import { set } from 'lodash';
 
-const visitedList = ['POL'];
+const visitedList = [
+  'POL',
+  'DEU',
+  'AUT',
+  'CZE',
+  'SVK',
+  'SVN',
+  'GBR',
+  'USA',
+  'ESP',
+  'ITA',
+  'FRA',
+  'CHE',
+  'HRV',
+  'SRB',
+  'BIH',
+  'MNE',
+  'NOR',
+  'SWE',
+  'ISL',
+  'DNK',
+  'GRC',
+  'MYS',
+  'PHL',
+  'KHM',
+  'MMR',
+  'IDN',
+  'THA',
+  'SGP',
+  'VAT',
+  'LAO',
+  'TUR',
+];
 
 const RoadTo195Page = (props) => {
   const [content, setContent] = useState('');
 
-  const geoUrl =
-    'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json';
   const siteTitle = get(props, 'data.site.siteMetadata.title');
 
   return (
@@ -42,7 +74,9 @@ const RoadTo195Page = (props) => {
 
         <p>
           Progress:{' '}
-          <strong style={{ color: 'var(--textLink)' }}>1 / 195</strong>
+          <strong style={{ color: 'var(--textLink)' }}>
+            {visitedList.length} / 195
+          </strong>
         </p>
 
         <MakeItBigContainer>
@@ -65,7 +99,7 @@ const RoadTo195Page = (props) => {
               <Sphere stroke="var(--textTitle)" strokeWidth={0.5} />
               <Graticule stroke="var(--textTitle)" strokeWidth={0.5} />
 
-              <Geographies geography={geoUrl}>
+              <Geographies geography={countriesJSON}>
                 {({ geographies }) =>
                   geographies.map((geo) => {
                     const isVisited = visitedList.find((s) => s === geo.id);
@@ -84,13 +118,18 @@ const RoadTo195Page = (props) => {
                         onMouseLeave={() => {
                           setContent('');
                         }}
+                        style={{
+                          default: { outline: 'none' },
+                          hover: { outline: 'none' },
+                          pressed: { outline: 'none' },
+                        }}
                       />
                     );
                   })
                 }
               </Geographies>
             </ComposableMap>
-            <Tooltip>{content}</Tooltip>
+            {/* <Tooltip>{content}</Tooltip> */}
           </div>
         </MakeItBigContainer>
       </main>

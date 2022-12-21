@@ -93,7 +93,7 @@ class BlogPostTemplate extends React.Component {
                   color: 'var(--textLink)',
                   fontFamily: 'Montserrat, sans-serif',
                 }}
-                to={`/${post.fields.category}/`}
+                to={`/`}
                 rel="bookmark"
               >
                 <p>{'Blog'}</p>
