@@ -50,6 +50,7 @@ const visitedList = [
   'VAT',
   'LAO',
   'TUR',
+  'HUN',
 ];
 
 const RoadTo195Page = (props) => {
