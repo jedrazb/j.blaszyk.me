@@ -40,7 +40,7 @@ function NavBar({ title, location, toggle }) {
   };
 
   return (
-    <>
+    <header>
       <nav className="navbar">
         <div className="nav-container">
           <h1
@@ -88,6 +88,17 @@ function NavBar({ title, location, toggle }) {
             </li>
             <li className="nav-item">
               <Link
+                to="/road-to-195/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={closeMenu}
+                partiallyActive={true}
+              >
+                Road to 195
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/contact/"
                 activeClassName="active"
                 className="nav-links"
@@ -112,7 +123,7 @@ function NavBar({ title, location, toggle }) {
           {/* </div> */}
         </div>
       </nav>
-    </>
+    </header>
   );
 }
 

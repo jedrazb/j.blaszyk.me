@@ -8,7 +8,7 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
-          marginBottom: rhythm(2),
+          marginBottom: rhythm(1),
         }}
       >
         <div
@@ -34,7 +34,7 @@ class Bio extends React.Component {
         <p style={{ maxWidth: 380 }}>
           Blog by{' '}
           <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.{' '}
-          Tech, bikes, photography & travelling.
+          Tech, cycling, photography & travelling.
         </p>
       </div>
     );

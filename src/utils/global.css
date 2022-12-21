@@ -1,29 +1,33 @@
 body {
   --orange: rgb(245, 158, 71);
-  --blue: #024698;
+  --blue: #1a4fd6;
   background-color: var(--bg);
   font-family: 'Roboto', sans-serif;
 }
 
 body.light {
-  --bg: #ffffff;
-  --bg-secondary: rgb(249, 250, 251);
+  --bg: #fff;
+  --bg-secondary: #f7f9fa;
+  --post-outline: rgb(211, 233, 235);
   --bg-gallery: rgb(238, 247, 253);
   --header: var(--blue);
-  --textNormal: #222;
-  --textTitle: #222;
+  --textNormal: #36313d;
+  --textTitle: #36313d;
   --textLink: var(--blue);
   --hr: hsla(0, 0%, 0%, 0.2);
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
   --form-shadow: 0 2px 15px 0 rgba(210, 214, 220, 0.5);
   --swiper-pagination-bullet-inactive-color: #000;
+  --map-visited: var(--blue);
+  --map-notvisited: rgb(162, 195, 233);
 }
 
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #202020;
-  --bg-secondary: rgb(54, 60, 72);
+  --bg-secondary: #2e2e2e;
+  --post-outline: rgb(65, 66, 68);
   --bg-gallery: rgb(16, 31, 49);
   --header: #ffffff;
   --textNormal: rgba(255, 255, 255, 1);
@@ -34,6 +38,8 @@ body.dark {
   --inlineCode-text: #e6e6e6;
   --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
   --swiper-pagination-bullet-inactive-color: #fff;
+  --map-visited: var(--orange);
+  --map-notvisited: rgb(159, 128, 82);
 }
 
 html,
