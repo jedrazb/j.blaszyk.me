@@ -25,7 +25,11 @@ class ThroughTheLensIndexTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={title} location={this.props.location} />
+        <SEO
+          title={title}
+          location={this.props.location}
+          description={'Capturing moments through the camera lens. Photo blog.'}
+        />
         <aside>
           <h1 style={{ marginTop: 0 }}>Through the Lens</h1>
         </aside>

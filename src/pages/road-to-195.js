@@ -60,7 +60,13 @@ const RoadTo195Page = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={'Road to 195'} slug={'/road-to-195'} />
+      <SEO
+        title={'Road to 195'}
+        slug={'/road-to-195'}
+        description={
+          'Reporting on a progress to visit all 195 countries in the world.'
+        }
+      />
       <main>
         <h1 style={{ marginTop: 0, marginBottom: '1rem' }}>Road to 195</h1>
 
