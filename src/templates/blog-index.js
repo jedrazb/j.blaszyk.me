@@ -38,39 +38,65 @@ class BlogIndexTemplate extends React.Component {
                 to={node.fields.slug}
                 rel="bookmark"
               >
-                <article key={node.fields.slug}>
+                <article
+                  key={node.fields.slug}
+                  style={{
+                    backgroundColor: 'var(--bg-secondary)',
+                    borderRadius: '20px',
+                    border: 'solid 1px var(--post-outline)',
+                    marginBottom: '1.5rem',
+                  }}
+                >
                   <header>
                     <h3
                       style={{
                         color: 'var(--textLink)',
                         fontFamily: 'Montserrat, sans-serif',
                         fontSize: rhythm(4 / 5),
-                        marginBottom: rhythm(1 / 4),
+                        marginBottom: rhythm(1 / 3),
+                        marginTop: rhythm(1 / 3),
+                        paddingTop: rhythm(1 / 3),
+                        paddingLeft: rhythm(1 / 3),
+                        paddingRight: rhythm(1 / 3),
+                        paddingBottom: rhythm(1 / 6),
                       }}
                     >
                       {title}
                     </h3>
-                    <small>
-                      {formatPostDate(node.frontmatter.date)}
-                      <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                      {formatReadingTime(node.timeToRead)}
-                      <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                      {formatNumberOfPhotos(node.frontmatter)}
-                    </small>
+
+                    {indexImage && (
+                      <GatsbyImage
+                        image={getImage(indexImage)}
+                        alt={'Blog Image'}
+                      />
+                    )}
+
+                    <div
+                      style={{
+                        padding: rhythm(1 / 3),
+                        paddingBottom: 0,
+                        paddingTop: rhythm(1 / 5),
+                      }}
+                    >
+                      <small>
+                        {formatPostDate(node.frontmatter.date)}
+                        <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
+                        {formatReadingTime(node.timeToRead)}
+                        <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
+                        {formatNumberOfPhotos(node.frontmatter)}
+                      </small>
+                    </div>
                   </header>
                   <p
-                    style={{ marginTop: '5px' }}
+                    style={{
+                      padding: rhythm(1 / 3),
+                      marginBottom: 0,
+                      paddingTop: rhythm(1 / 6),
+                    }}
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.spoiler,
                     }}
                   />
-
-                  {indexImage && (
-                    <GatsbyImage
-                      image={getImage(indexImage)}
-                      alt={'Blog Image'}
-                    />
-                  )}
                 </article>
               </Link>
             );

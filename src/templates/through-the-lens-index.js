@@ -45,32 +45,44 @@ class ThroughTheLensIndexTemplate extends React.Component {
                 to={`/${node.fields.category}${node.fields.slug}`}
                 rel="bookmark"
               >
-                <article key={node.fields.slug}>
+                <article
+                  key={node.fields.slug}
+                  style={{
+                    backgroundColor: 'var(--bg-secondary)',
+                    borderRadius: '20px',
+                    border: 'solid 1px var(--post-outline)',
+                    marginBottom: '1.5rem',
+                    overflow: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
+                >
                   <header>
                     <h3
                       style={{
                         color: 'var(--textLink)',
                         fontFamily: 'Montserrat, sans-serif',
                         fontSize: rhythm(5 / 8),
-                        marginBottom: rhythm(1 / 4),
+                        margin: rhythm(1 / 3),
                       }}
                     >
                       {title}
                     </h3>
-                    <small>
-                      {formatPostDate(node.frontmatter.date)}
-                      <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                      {formatPostLocation(location)}
-                      <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                      {formatNumberOfPhotos(node.frontmatter)}
-                    </small>
+                    <div
+                      style={{
+                        margin: rhythm(1 / 3),
+                        marginBottom: rhythm(1 / 4),
+                        marginTop: 0,
+                      }}
+                    >
+                      <small>
+                        {formatPostDate(node.frontmatter.date)}
+                        <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
+                        {formatPostLocation(location)}
+                        <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
+                        {formatNumberOfPhotos(node.frontmatter)}
+                      </small>
+                    </div>
                   </header>
-                  <p
-                    style={{ margin: 0, marginTop: '1em' }}
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.spoiler,
-                    }}
-                  />
 
                   {featuredImage && (
                     <GatsbyImage
