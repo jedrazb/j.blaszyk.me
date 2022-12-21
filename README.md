@@ -16,3 +16,4 @@ My personal blog.
 * [Norway Bikepacking - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/norway-bikepacking/)
 * [Iceland Roadtrip - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/iceland-4x4-roadtrip/)
 * [Contact — Jedr's Blog](https://j.blaszyk.me/contact/)
+* [Road to 195 — Jedr's Blog](https://j.blaszyk.me/road-to-195/)
