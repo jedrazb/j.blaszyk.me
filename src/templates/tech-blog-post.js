@@ -153,10 +153,23 @@ class TechBlogPostTemplate extends React.Component {
                 boxShadow: 'none',
                 textDecoration: 'none',
                 color: 'var(--textLink)',
+                fontSize: rhythm(4 / 5),
               }}
               to={'/'}
             >
               Jedr's Blog
+            </Link>
+            {' • '}
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'var(--textLink)',
+                fontSize: rhythm(4 / 5),
+              }}
+              to={'/tech-blog/'}
+            >
+              Tech Blog
             </Link>
           </h3>
           <Bio />
