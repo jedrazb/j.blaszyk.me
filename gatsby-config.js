@@ -28,6 +28,14 @@ module.exports = {
       },
     },
     {
+      // through the lens posts
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/tech-blog`,
+        name: 'tech-blog',
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
