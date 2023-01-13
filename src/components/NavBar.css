@@ -75,7 +75,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
