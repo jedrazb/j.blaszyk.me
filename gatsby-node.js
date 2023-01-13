@@ -10,6 +10,8 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js');
 
+    const techBlogPost = path.resolve('./src/templates/tech-blog-post.js');
+
     const throughTheLensPost = path.resolve(
       './src/templates/through-the-lens-post.js'
     );
@@ -69,6 +71,74 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: post.node.fields.slug,
             component: blogPost,
+            context: {
+              slug: post.node.fields.slug,
+              previous,
+              next,
+            },
+          });
+        });
+      })
+    );
+
+    createPage({
+      path: '/tech-blog/',
+      component: path.resolve('./src/templates/tech-blog-index.js'),
+    });
+
+    // tech-blog posts
+    resolve(
+      graphql(
+        `
+          {
+            allMdx(
+              sort: { fields: [frontmatter___date], order: DESC }
+              filter: { fields: { category: { eq: "tech-blog" } } }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  fields {
+                    slug
+                    directoryName
+                    category
+                  }
+                  frontmatter {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        `
+      ).then((result) => {
+        if (result.errors) {
+          console.log(result.errors);
+          reject(result.errors);
+          return;
+        }
+
+        // Create blog posts pages.
+        const posts = result.data.allMdx.edges;
+        const allSlugs = _.reduce(
+          posts,
+          (result, post) => {
+            result.add(post.node.fields.slug);
+            return result;
+          },
+          new Set()
+        );
+
+        _.each(posts, (post, index) => {
+          const previous =
+            index === posts.length - 1 ? null : posts[index + 1].node;
+          const next = index === 0 ? null : posts[index - 1].node;
+
+          const nodePath = `${post.node.fields.category}${post.node.fields.slug}`;
+
+          createPage({
+            path: nodePath,
+            component: techBlogPost,
             context: {
               slug: post.node.fields.slug,
               previous,
