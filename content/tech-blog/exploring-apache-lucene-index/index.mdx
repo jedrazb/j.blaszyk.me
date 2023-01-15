@@ -1,0 +1,15 @@
+---
+title: 'Exploring Apache Lucene - Part 1: The Index'
+date: '2022-01-11'
+spoiler: Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".
+cta: 'apache lucene'
+blogImages: []
+---
+
+When joining Yelp in 2020, as a software engineer, I became part of the Ranking Platform team. We were responsible for the development and maintenance of Yelp’s search and ranking infrastructure, a crucial part of our ecosystem, that allows for business search, reviews search and powers the internal real-time ad bidding system. At that time, I was part of an initiative to revamp our core search & ranking infra in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of early 2023, is used for the majority of search and ranking use cases at Yelp, with more migrations underway set to replace Elasticsearch. With nrtsearch our p50s, p95s and p99s improved by 30-50% while costs dropped by as much as 40% for some cases. You can read more about the nrtsearch project results in the blog post from Yelp’s Engineering Blog:
+
+> [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
+
+Nrtsearch development was led by senior folks, industry experts who know ins and outs of Apache Lucene - the core search library on top of which nrtsearch was built. I worked on well-scoped projects, like scalable ingestion, logging, plugin development and scatter-gather service, which allows for application-level cluster sharding. While I enjoyed those projects, I feel that, for a long time, I treated the nrtsearch core search functionality as a black-box - not fully understanding its internals. Therefore, I decided to take a step back, explore, and understand Apache Lucene - a search library at the core of nrtsearch and Elasticsearch (maintained by Elastic with market cap of 5B$).
+
+This is the first tech blog post from the series _Exploring Apache Lucene_ in which I'll describe, in the bottom-up manner, the building blocks of modern search engines.
