@@ -3,10 +3,7 @@ title: Geometric Deep Learning - an overview
 date: '2020-06-10'
 spoiler: Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".
 cta: 'gdl'
-blogImages: [
-    './comparison_2d_graph.jpg',
-    './cora.png'
-]
+blogImages: ['./comparison_2d_graph.jpg', './cora.png']
 ---
 
 - [Non-Euclidean domains](#non-euclidean-domains)
@@ -24,7 +21,7 @@ their hidden representations by aggregating information they collect from their 
 
 ## Non-Euclidean domains
 
-**Graph.** A graph *G* is a pair *(V,E)* with the finite set of vertices *V* and edges *E*. It captures interactions (edges) between individual units (nodes).
+**Graph.** A graph _G_ is a pair _(V,E)_ with the finite set of vertices _V_ and edges _E_. It captures interactions (edges) between individual units (nodes).
 
 **Manifold.** A manifold is a is a locally Euclidean space. In computer graphics, shapes are represented as discrete 2-dimensional manifolds. A discrete manifold has vertices uniformly sampled from the surface of the manifold with edges expressing the local structure of the shape. It's commonly called a triangular mesh.
 
@@ -69,8 +66,6 @@ PyTorch Geometric makes use of Generic Message Passing Scheme to implement any c
 <BlockMath
   math={`\\mathbf{x'}_i = \\sum_{j \\in \\mathcal{N}(i) \\cup \\{ i \\}} \\text{msg}(x_i, x_j)`}
 ></BlockMath>
-
-
 
 where neighboring node features are first transformed by a weight matrix <InlineMath>\mathbf{\Theta}</InlineMath>, normalized by their degree, and finally summed up.
 This formula can be divided into the following steps:

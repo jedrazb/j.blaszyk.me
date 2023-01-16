@@ -85,7 +85,7 @@ class TechBlogPostTemplate extends React.Component {
                   color: 'var(--textLink)',
                   fontFamily: 'Montserrat, sans-serif',
                 }}
-                to={`/tech-blog`}
+                to={`/tech-blog/`}
                 rel="bookmark"
               >
                 <p>{'Tech Blog'}</p>
