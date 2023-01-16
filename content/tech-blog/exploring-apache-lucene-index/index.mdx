@@ -82,14 +82,14 @@ For each segment, Lucene maintains a per-segment bitset (vector of 0 and 1s). Fl
 
 ### Visualising Lucene's segment merges
 
-Below there is a visualisation of how Lucene handles insertions, deletion and segment merges (taken from this great [blog post](https://blog.mikemccandless.com/2011/02/visualizing-lucenes-segment-merges.html)). Each segment is a bar, whose height is the size (in MB) of the segment. Segments on the left are the largest; as new segments are flushed, they appear on the right. The dark grey band on top of each segment shows the proportion of deletions in that segment.
+Below there is a visualisation of how Lucene handles insertions, deletion and segment merges (taken from this great [blog post](https://blog.mikemccandless.com/2011/02/visualizing-lucenes-segment-merges.html) by Michael McCandless). Each segment is a bar, whose height is the size (in MB) of the segment. Segments on the left are the largest; as new segments are flushed, they appear on the right. The dark grey band on top of each segment shows the proportion of deletions in that segment.
 
 ![Lucene segment merges](./segment_merges.gif)
 
-### Lucenes' data storage architecture: pros and cons
+### Lucene's data storage architecture: pros and cons
 
 - (-) Document insertions require writing a new segment. Which can be costly for single-document insertions. Therefore bulk inserts are preferred.
 - (+) Segments are never modified in-place, so they are filesystem cache-friendly. Segments can be searched concurrently lock-free, with no risk of race conditions. It also allows for concurrent query execution.
 - (+) Terms compression. Deduplication of terms within a segment, it can save a lot of space for very high-frequency terms.
 - (+) Terms are uniquely identified by an ordinal, useful for sorting and faceting.
-- (+) DocValues optimization can help with efficient sorting and faceting. Sorted fields can help with retreving whole documents.
+- (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retreving whole documents.
