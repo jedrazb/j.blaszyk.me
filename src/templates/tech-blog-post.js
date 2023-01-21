@@ -194,6 +194,7 @@ export const pageQuery = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body
+      tableOfContents
       timeToRead
       frontmatter {
         title
