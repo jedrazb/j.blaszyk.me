@@ -27,6 +27,11 @@ import {
 } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
+import {
+  StatefulSliderPicker,
+  StatefulBlockPicker,
+} from '../components/ColorPicker';
+
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
@@ -47,7 +52,11 @@ const shortcodes = {
   MakeItBigContainer,
   ThreePhotosContainer,
   LazyIframe,
+  StatefulSliderPicker,
+  StatefulBlockPicker,
 };
+
+import { SketchPicker, SliderPicker } from 'react-color';
 
 class TechBlogPostTemplate extends React.Component {
   render() {
