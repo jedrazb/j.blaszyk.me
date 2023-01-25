@@ -11,6 +11,7 @@ My personal blog.
 * [Bikepacking & wild camping in Sweden — Jedr's Blog](https://j.blaszyk.me/bikepacking-in-sweden/)
 * [My take on cycling in London — Jedr's Blog](https://j.blaszyk.me/cycling-in-london/)
 * [Sussex Coastal Marathon — Jedr's Blog](https://j.blaszyk.me/sussex-coastal-marathon/)
+* [The Tech Stack of Fast, Free, and Customizable Blog — Jedr's Blog](https://j.blaszyk.me/tech-blog/tech-stach-of-fast-free-and-customizable-blog/)
 * [Exploring Apache Lucene - Part 1: The Index — Jedr's Blog](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/)
 * [Geometric Deep Learning - an overview — Jedr's Blog](https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/)
 * [Tenerife Pleasures - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/tenerife-pleasures/)
