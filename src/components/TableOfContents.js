@@ -68,10 +68,7 @@ const renderItems = (items, activeId) => {
 
 const TableOfContents = (props) => {
   const idList = getIds(props.items);
-  console.log(idList);
   const activeId = useActiveId(idList);
-  console.log(activeId);
-  console.log(props.items);
   return (
     <details open style={{ position: 'sticky' }}>
       <summary>Table of Contents</summary>

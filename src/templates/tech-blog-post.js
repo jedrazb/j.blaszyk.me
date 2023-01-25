@@ -27,6 +27,11 @@ import {
 } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
+import {
+  StatefulSliderPicker,
+  StatefulBlockPicker,
+} from '../components/ColorPicker';
+
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
@@ -47,7 +52,11 @@ const shortcodes = {
   MakeItBigContainer,
   ThreePhotosContainer,
   LazyIframe,
+  StatefulSliderPicker,
+  StatefulBlockPicker,
 };
+
+import { SketchPicker, SliderPicker } from 'react-color';
 
 class TechBlogPostTemplate extends React.Component {
   render() {
@@ -57,6 +66,8 @@ class TechBlogPostTemplate extends React.Component {
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
+
+    const category = get(post, 'fields.category');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -125,7 +136,7 @@ class TechBlogPostTemplate extends React.Component {
               <li>
                 {previous && (
                   <Link
-                    to={previous.fields.slug}
+                    to={`/${category}${previous.fields.slug}`}
                     rel="prev"
                     // style={{ marginRight: 20 }}
                   >
@@ -135,7 +146,7 @@ class TechBlogPostTemplate extends React.Component {
               </li>
               <li>
                 {next && (
-                  <Link to={next.fields.slug} rel="next">
+                  <Link to={`/${category}${next.fields.slug}`} rel="next">
                     {next.frontmatter.title} →
                   </Link>
                 )}
@@ -198,7 +209,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         spoiler
-        cta
         ogimage {
           childImageSharp {
             gatsbyImageData(width: 960, layout: FIXED)
@@ -217,6 +227,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        category
       }
     }
   }

@@ -2,7 +2,6 @@
 title: 'Exploring Apache Lucene - Part 1: The Index'
 date: '2022-01-16'
 spoiler: Exploring Apache Lucene's core concepts - inverted index, insertions and deletions.
-cta: 'apache lucene'
 blogImages: ['./inverted_index.png', './lucene_segments.png']
 ---
 
@@ -103,4 +102,4 @@ Below there is a visualisation of how Lucene handles insertions, deletion and se
 - (+) The inverted index allows for fast and efficient searching by providing a way to look up documents that contain a specific term or set of terms.
 - (+) Terms compression. Deduplication of terms within a segment, it can save a lot of space for very high-frequency terms.
 - (+) Terms are uniquely identified by an ordinal, useful for sorting and faceting.
-- (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retreving whole documents.
+- (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retrieving whole documents.

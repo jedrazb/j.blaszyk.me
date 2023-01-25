@@ -194,7 +194,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         spoiler
-        cta
         ogimage {
           childImageSharp {
             gatsbyImageData(width: 960, layout: FIXED)

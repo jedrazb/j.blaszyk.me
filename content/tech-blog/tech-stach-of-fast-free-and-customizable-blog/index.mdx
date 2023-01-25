@@ -1,0 +1,147 @@
+---
+title: 'The Tech Stack of Fast, Free, and Customizable Blog'
+date: '2022-01-26'
+spoiler: 'Building a blog with GatsbyJS, GraphQL, MDX and Github Pages.  Customization, open-source and performance - completely for free.'
+blogImages: ['./blog_performance.png']
+---
+
+## To Blog or Not
+
+We are living in the digital age - publishing content has never been easier thanks to social platform tech giants. After all, they do need to fill up the space on your feed with something, in between showing paid ads.
+
+Content type matters. Best holiday pictures from? Instagram. A bit more pictures from a bikepacking trip? Flickr. Career move or a success story? Linkedin. Wanna dive deeper into tech? Medium. Sharing something shorter? Twitter. There seems to be no good solution that ticks all of the boxes to share content you want, on your terms.
+
+Search engine optimization (SEO) is another issue. Is the stuff we post to Facebook, Instagram, LinkedIn and Twitter even searchable? Before going on cycling trips I would usually spend quite a bit of time researching places, campsites and routes worth visiting. I don’t remember seeing any content sourced from big tech apps - search engines will usually rank them pretty low in search results. Medium is an exception - if I happen to be lucky enough not to hit the paywall. Blogs are absolute winners in the SEO category. They are indexable by search engines, searchable and readable for us, with tons of valuable content. Blogs are great sources of information whether I’m researching a tech topic or a bikepacking route.
+
+It’s because of my bikepacking trips, that I decided to start a blog. I wanted to tell this story, on my terms, without restrictions on how the content is organized and presented. I wanted my experience and well-researched routes to be discoverable by anyone interested - in order to give back, hopefully, an inspiration, to the community. It's also a great way to reflect on your experience after doing something interesting.
+
+And it worked! Take for example `"norway bikepacking"` search query in Google, you should find the story usually in the top 10 results.
+
+> [Norway Bikepacking: Trondheim to Bergen](https://j.blaszyk.me/norway-bikepacking-trondheim-to-bergen/)
+
+The content is very important for being ranked highly. But as a techie, I did my research to make sure all non-content related metrics will boost my blog in page rank algorithm: performance, SEO practices and mobile usability. I will go over the tech stack of my blog, and some design decisions which made this performant, customizable and completely free - the only recurring cost is a few dollars for the domain name - and it enabled such results from [pagespeed.web.dev](https://pagespeed.web.dev/) - a Google tool to measure overall website performance.
+
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Blog performance metrics"
+></ImageComponent>
+
+## Blogging solutions market
+
+There are tons of options on the market - try searching for `"blog"`. The choice is hard, especially for someone without much technical experience. Questions I asked myself when researching this topic were:
+
+- Can I host the blog myself? - I didn't want to lock myself with a single hosting provider.
+- Will ads be displayed on my blog? - Some blogging providers (e.g. wordpress.com) show ads on your blog by default when on a "free plan".
+- How much will it cost? - All the costs related to hosting, themes and customization.
+- How easy is it to customize? - Can I easily use code to customize the blog?
+
+I wanted to choose my own hosting provider, customize my blog without having to buy “magical” plugins and eliminate all ads (without having to be on a paid plan). It also had to be fast - the UX was very important to me.
+
+## This Blog's Tech Stack
+
+I decided to use GatsbyJS which is an open-source static site generator built on top of Node.js using React and GraphQL. You are able to define your blogging templates in React, while your content is written in MDX - Markdown supporting JSX (React) components, which allows you to add interactive React components directly into your copy written in Markdown, like that one:
+
+<StatefulSliderPicker />
+<br />
+
+Check this post's source to verif that it's just a React `<SliderPicker />` defined in MDX file.
+
+The static webpage is hosted completely for free thanks to GitHub Pages. To speed up the website load times, I use Cloudflare (amazing) free plan which offers a content delivery network (CDN) along with caching. This setup, along with built-in Gatsby’s optimizations such as image lazy-loading, is sufficient to score near-perfect scores for website performance on popular benchmarks.
+
+Let's go over the building blocks.
+
+### GatsbyJS, GraphQL, MDX
+
+Gatsby.js is a static site generator that uses React.js (for the client-side) and GraphQL (to access data) to build reliable, fast, static websites. You can use React to define pages or templates (like blog post pages) that query for data using GQL. The GQL queries can fetch your data from CMS (like Contentful) or your local filesystem - e.g. blog posts organized in folders. It might sound a bit complex but if you are familiar with React and GQL, the learning curve is not steep at all. The [documentation](https://www.gatsbyjs.com/docs/) is great and there are lots of starter templates (check [Gatsby Starter Libary](https://www.gatsbyjs.com/starters/)). It allows you to start with having a fully functional Gatsby blog so that you can focus on writing content and customizations.
+
+The rough structure of your GatsbyJS blog will look like that:
+
+```
+├── content
+│   └── blog-post-1
+│       └── index.mdx
+├── src
+│   ├── blog-post-template.js
+│   ├── blog-index.js
+│   └── ... other React components / files
+├── ...
+├── gatsby-config.js
+└── gatsby-node.js
+
+```
+
+You organize your blog posts as folders inside `/content`. The folder name can map to your post's slug so that on path `/blog-post-1` you would serve content sourced from Markdown (MDX) file `content/blog-post-1/index.mdx`. The content will be displayed inside a template you defined in React - in our case `blog-post-template.js` and your blog index (main) page will be defined in `blog-index.js`. In `gatsby-config.js` you would need to use a few open-source (and free plugins!), like [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/), to use GQL queries to fetch blog post content from your local filesystem. The GQL for e.g. blog post is defined directly in your js template file and looks roughly like this:
+
+```graphql
+query BlogPostBySlug($slug: String!) {
+  mdx(fields: { slug: { eq: $slug } }) {
+    id
+    body
+    timeToRead
+    ... # more fields, e.g. images
+    fields {
+      slug
+    }
+  }
+}
+
+```
+
+Your blog content written in Markdown can be easily rendered inside React post templates. But using Markdown can be quite limiting as it is pretty basic when it comes to layout and customizations. MDX comes to the rescue! It allows you to add JSX (React) components directly into your posts written in Markdown, just like that:
+
+```
+import { BlockPicker } from "react-color"
+
+_Hello, world!_
+
+Here's a color picker!
+
+<BlockPicker />
+```
+
+_Hello, world!_
+
+Here's a color picker!
+
+<StatefulBlockPicker />
+<br />
+
+When using Gatsby performance is baked in as it automates code splitting, image optimization, inlining critical styles, lazy-loading, prefetching resources, and more to ensure your blog is fast — from my experience, no manual tuning is required to ace the benchmarks.
+
+As you can see Gatsby, GQL and MDX are powerful tools to build customizable, interactive and performant static blogs.
+
+### Github Pages
+
+Github Pages allows you to host static websites directly on Github. It’s free for public repos. All you need to do is to generate your static website and push the code into a branch, `gh-pages` npm package will help you with automating this process. Once the generated site is pushed to the branch, Github Actions will take it from there and deploy the static website under your domain name.
+
+### Cloudflare CDN
+
+CloudFlare is an awesome reverse cache proxy and CDN that provides DNS and HTTPS. Once you add your static site make sure to enable Cloudflare to cache it - and effectively serve it from CDN - by adding a page rule to “Cache Everything” - this should visibly speed up the load times. Whenever you make a change to your site you would need to remember to manually purge the cache in Cloudflare (it probably can be automated using Github Actions).
+
+### Developing and Deploying the Blog
+
+#### Running locally
+
+For local dev Gatsby offers a hot-reloading development environment, just run `gatsby develop`. Once I'm happy with my changes I would usually run the production build and serve it locally to double-check that everything is generated correctly, you can do it via:
+
+```
+gatsby build && gatsby serve
+```
+
+I found that sometimes the develop server is not 100% consistent with production builds when it comes to CSS styling - all issues were related to Chrome, Safari, etc. default styles being overwritten by develop server, but for prod build the default styles were taking precedence (e.g. extra margin under `<p>` tags). Though I didn't have that issue for a long time, perhaps upgrading Gatsby fixed it.
+
+#### Deploying changes
+
+Once I'm happy with the results, I do the following:
+
+- Run `yarn deploy` what maps to `yarn build && gh-pages -d public`, the generated static website from the `build` folder will be pushed to github branch.
+- Github Actions will start a deployment process, it can take a while until the process finishes. After that's done I go to Cloudflare to purge the cache. That's all!
+- You can optionally go to Google Search Console (SEO tool) and tell it directly to index your newly created blog post - so that it can appear in search results ASAP.
+
+### Limitations
+
+- The blog is `static` - it means it's fast but also it means there is no server able to serve dynamic content. User accounts, reactions, comments - all of that can't and won't be natively supported by Gatsby. Though there are many (freemium and paid) solutions on the market which at least allow you to embed reactions and comments.
+- I store images directly in the repo, they are also included in the static build. This will work until I don't hit GitHub repo size limit (afaik it's 100GB). I optimize, and downsize all the images so for now it works fine. But if you are planning on storing a lot of images you can use any image CMS/CDN provider and integrate it with Gatsby directly - read more about it [here](https://www.gatsbyjs.com/docs/how-to/images-and-media/using-gatsby-plugin-image/#using-images-from-a-cms-or-cdn).
+- The developer is in the driver's seat, meaning I can customize the blog as I wish but I'm also responsible for all housekeeping stuff e.g. adding `SEO` meta tags for search engines. Gatsby won't complain if you forget add `title` and `description` tags (very important for SEO) - so in that respect, I find WordPress much easier and safer to use - it by nature works well with search engines by asking you to provide important meta tags.
+
+Hope you enjoyed this article. This blog is [open-source](https://github.com/jedrazb/personal-blog), feel free to check out, fork or star the repo.
