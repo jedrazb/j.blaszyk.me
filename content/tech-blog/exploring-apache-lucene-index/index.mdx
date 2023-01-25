@@ -2,7 +2,6 @@
 title: 'Exploring Apache Lucene - Part 1: The Index'
 date: '2022-01-16'
 spoiler: Exploring Apache Lucene's core concepts - inverted index, insertions and deletions.
-cta: 'apache lucene'
 blogImages: ['./inverted_index.png', './lucene_segments.png']
 ---
 
@@ -27,7 +26,7 @@ Before starting, I want to explain some terms closely linked to Apache Lucene. T
 - **doc values** - Lucene's column-stride field value storage. Efficient for getting a few field values for many docs. Useful for sorting and faceting.
 - **index segments** - Lucene indexes may be composed of multiple sub-indexes, or segments. Each segment is a fully independent index, which could be searched separately.
 
-## Storing data with Lucene
+## Representing data with Lucene
 
 #### Inverted Index
 
@@ -44,6 +43,8 @@ The inverted index is composed of two substructures:
 ></ImageComponent>
 
 In the above example we can see three documents indexed into Lucene's inverted index. Each of the document's conten is analyzed (tokenized) into terms which are inserted into inverted index.
+
+Since the terms in the dictionary are sorted, we can quickly find a term (think binary search), and subsequently its occurrences in the postings-structure. This is contrary to a "forward index", which lists terms related to a specific document.
 
 #### DocValues
 
@@ -67,7 +68,11 @@ _DocValues_ and _Stored fields_ approached are not mutually exclusive settings, 
 
 ### Insertions
 
-Lucene indexes are stored in segments. A new segment is created when a new writer is opened and when a writer commits or is closed - meaning that segments are created whenever new docs are ingested.
+When building inverted indexes, we need to prioritize things like: search speed, index compactness, indexing speed and the time it takes for new changes to become visible. Search speed and index compactness are related: when searching over a smaller index, less data needs to be processed, and more of it will fit in memory. Both, particularly compactness, come at the cost of indexing speed.
+
+To minimize index sizes, various compression techniques are used. For example, when storing the postings (which can get quite large), Lucene does tricks like delta-encoding - e.g. `[1, 9, 420]` is stored as `[1, 8, 411]` - so small numbers can be saved with less bytes.
+
+When new documents are added, the index changes are first buffered in memory. Eventually, the index files in their entirety, are flushed to disk. The written files make up an index segment.
 
 <ImageComponent
   image={props.frontmatter.blogImages[1]}
@@ -80,6 +85,10 @@ Lucene index segments are "write-once" files: once a segment has been written to
 
 For each segment, Lucene maintains a per-segment bitset (vector of 0 and 1s). Flipping a bit from 1 to 0 signals to Lucene that a document is deleted. All subsequent searches simply skip any deleted documents. It is not until segments are merged that the bytes consumed by deleted documents are reclaimed, as after the merge the resulting segment won't contain deleted documents. Deleting the documents in-place in the existing segment would be far too costly.
 
+### Updates
+
+Updating a previously indexed document is a "cheap" delete followed by a re-insertion of the document. This means that updating a document is even more expensive than adding it in the first place. Thus, storing things like rapidly changing values in a Lucene index is probably not a good idea – there is no in-place update of values.
+
 ### Visualising Lucene's segment merges
 
 Below there is a visualisation of how Lucene handles insertions, deletion and segment merges (taken from this great [blog post](https://blog.mikemccandless.com/2011/02/visualizing-lucenes-segment-merges.html) by Michael McCandless). Each segment is a bar, whose height is the size (in MB) of the segment. Segments on the left are the largest; as new segments are flushed, they appear on the right. The dark grey band on top of each segment shows the proportion of deletions in that segment.
@@ -90,6 +99,7 @@ Below there is a visualisation of how Lucene handles insertions, deletion and se
 
 - (-) Document insertions require writing a new segment. Which can be costly for single-document insertions. Therefore bulk inserts are preferred.
 - (+) Segments are never modified in-place, so they are filesystem cache-friendly. Segments can be searched concurrently lock-free, with no risk of race conditions. It also allows for concurrent query execution.
+- (+) The inverted index allows for fast and efficient searching by providing a way to look up documents that contain a specific term or set of terms.
 - (+) Terms compression. Deduplication of terms within a segment, it can save a lot of space for very high-frequency terms.
 - (+) Terms are uniquely identified by an ordinal, useful for sorting and faceting.
-- (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retreving whole documents.
+- (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retrieving whole documents.
