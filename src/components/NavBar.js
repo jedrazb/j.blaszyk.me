@@ -15,17 +15,20 @@ function NavBar({ title, location, toggle }) {
 
   const closeMenu = () => {
     setOpened(false);
+    const scrollY = document.body.style.top;
 
     //menu close
     document.body.style.removeProperty('overflow');
     document.body.style.removeProperty('position');
+    document.body.style.removeProperty('top');
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   };
 
   const openMenu = () => {
     setOpened(true);
-
     //menu open
     document.body.style.overflow = 'hidden';
+    document.body.style.top = `-${window.scrollY}px`;
     document.body.style.position = 'fixed';
     document.body.style.display = 'block';
     document.body.style.width = '100%';
@@ -119,9 +122,7 @@ function NavBar({ title, location, toggle }) {
               </Link>
             </li>
           </ul>
-          {/* <div className="navbar-right-container"> */}
           {toggle}
-
           <div
             className={`menu-btn-1 no-select menu-btn-1-controller ${
               opened && 'active'
