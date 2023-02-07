@@ -8,7 +8,7 @@ body {
 body.light {
   --bg: #fff;
   --bg-secondary: #f7f9fa;
-  --bg-header: #f7f9fa99;
+  --bg-header: #f7f9faBF;
   --post-outline: rgb(211, 233, 235);
   --bg-gallery: rgb(238, 247, 253);
   --header: var(--blue);
@@ -26,9 +26,9 @@ body.light {
 
 body.dark {
   -webkit-font-smoothing: antialiased;
-  --bg: #202020;
-  --bg-secondary: #2e2e2e;
-  --bg-header: #2e2e2e99;
+  --bg: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-header: #161b22BF;
   --post-outline: rgb(65, 66, 68);
   --bg-gallery: rgb(16, 31, 49);
   --header: #ffffff;

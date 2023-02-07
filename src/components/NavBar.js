@@ -14,7 +14,6 @@ function NavBar({ title, location, toggle }) {
   const [opened, setOpened] = useState(false);
 
   const closeMenu = () => {
-    setOpened(false);
     const scrollY = document.body.style.top;
 
     //menu close
@@ -22,16 +21,17 @@ function NavBar({ title, location, toggle }) {
     document.body.style.removeProperty('position');
     document.body.style.removeProperty('top');
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    setOpened(false);
   };
 
   const openMenu = () => {
-    setOpened(true);
     //menu open
     document.body.style.overflow = 'hidden';
     document.body.style.top = `-${window.scrollY}px`;
     document.body.style.position = 'fixed';
     document.body.style.display = 'block';
     document.body.style.width = '100%';
+    setOpened(true);
   };
 
   const handleMenuClick = () => {

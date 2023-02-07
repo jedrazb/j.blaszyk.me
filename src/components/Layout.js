@@ -12,7 +12,7 @@ import './Layout.css';
 
 class Layout extends React.Component {
   state = {
-    theme: null,
+    theme: 'dark',
   };
   componentDidMount() {
     this.setState({ theme: window.__theme });
@@ -44,6 +44,7 @@ class Layout extends React.Component {
             />
           ),
         }}
+        defaultChecked
         checked={this.state.theme === 'dark'}
         onChange={(e) =>
           window.__setPreferredTheme(e.target.checked ? 'dark' : 'light')
