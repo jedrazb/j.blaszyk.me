@@ -64,6 +64,7 @@ class Layout extends React.Component {
           minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
+          paddingTop: '70px',
         }}
       >
         <Helmet
