@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
+import './Layout.css';
 
 class Layout extends React.Component {
   state = {
@@ -64,8 +65,8 @@ class Layout extends React.Component {
           minHeight: '100vh',
           display: 'flex',
           flexDirection: 'column',
-          paddingTop: '70px',
         }}
+        className={'layout'}
       >
         <Helmet
           meta={[
