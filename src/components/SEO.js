@@ -91,16 +91,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                         content: ogCustomImagePath,
                       },
                     ]
-                  : [
-                      {
-                        property: 'og:image',
-                        content: metaImage,
-                      },
-                      {
-                        name: 'twitter:image',
-                        content: metaImage,
-                      },
-                    ]
+                  : []
               )
               .concat(meta)}
           />
