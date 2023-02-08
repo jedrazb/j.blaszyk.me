@@ -58,6 +58,7 @@ function NavBar({ title, location, toggle }) {
                 boxShadow: 'none',
                 textDecoration: 'none',
                 color: 'var(--textTitle)',
+                fontSize: '1.1rem',
               }}
               onClick={closeMenu}
               to={'/'}
