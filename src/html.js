@@ -14,7 +14,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body {...this.props.bodyAttributes} className="light">
+        <body {...this.props.bodyAttributes} className="dark">
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -39,12 +39,12 @@ export default class HTML extends React.Component {
                   } catch (err) {}
                 }
 
-                var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-                darkQuery.addListener(function(e) {
-                  window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+                var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+                lightQuery.addListener(function(e) {
+                  window.__setPreferredTheme(e.matches ? 'light' : 'dark')
                 });
 
-                setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+                setTheme(preferredTheme || (lightQuery.matches ? 'light' : 'dark'));
               })();
             `,
             }}
