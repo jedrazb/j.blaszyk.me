@@ -64,6 +64,10 @@ h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
+th,td {
+  border-bottom: 1px solid var(--post-outline);
+}
+
 /*
   RTL layout
 */
