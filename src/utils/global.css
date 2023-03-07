@@ -44,6 +44,31 @@ body.dark {
   --map-notvisited: rgb(159, 128, 82);
 }
 
+/**
+ * Fix fonts that render as bold in Firefox
+ *
+ * Put this near the top of your style.css
+ * Before any overriding styles
+ */
+
+ html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+/**
+ * Firefox specific rule
+ */
+
+@-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+  }
+}
+
+
 html,
 body {
   overflow-x: hidden;
