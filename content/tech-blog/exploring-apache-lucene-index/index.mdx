@@ -48,7 +48,7 @@ Since the terms in the dictionary are sorted, we can quickly find a term (think 
 
 #### DocValues
 
-Inverted index builds a list of terms found in all the documents in the index and next to each term is a list of documents that the term appears in. This makes search very fast - since users search by terms, having a ready list of term-to-document values makes the query process faster.
+Inverted index builds a mapping of terms found in all the documents in the index to a list of documents that the term appears in. This makes search very fast - since users search by terms, having a ready list of term-to-document values makes the query process faster.
 
 For other features that are associated with search, such as sorting, faceting, and highlighting, this approach is not very efficient. The faceting engine, for example, must look up each term that appears in each document that will make up the result set and pull the document IDs to build the facet list.
 
@@ -103,3 +103,5 @@ Below there is a visualisation of how Lucene handles insertions, deletion and se
 - (+) Terms compression. Deduplication of terms within a segment, it can save a lot of space for very high-frequency terms.
 - (+) Terms are uniquely identified by an ordinal, useful for sorting and faceting.
 - (+) DocValues optimization can help with efficient sorting and faceting. Stored fields can help with retrieving whole documents.
+
+Exploring Lucene series is continued in: [Exploring Apache Lucene - Part 2: Search and Ranking](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/).

@@ -1,0 +1,107 @@
+---
+title: 'Exploring Apache Lucene - Part 2: Search and Ranking'
+date: '2023-03-07'
+spoiler: Diving deep into Lucene's search and ranking - data structures, query types, concurrent searching and custom scoring.
+blogImages: []
+---
+
+In the last post [Exploring Apache Lucene - Part 1: The Index](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/), we took a deep dive to look at the building blocks of the Lucene index. Here is a quick recap of key points:
+
+- The Lucene index is built using an inverted index, a data structure that maps terms to their corresponding documents. In an inverted index, each term is associated with a list of documents that contain that term. This allows for fast lookups of documents that match a given term or set of terms.
+- The index is split into index segments, which contain a subset of documents, to allow for more efficient searching and a reduction in memory requirements. Segments are never modified in-place, so they can be cached easily by the filesystem. Segments can be searched concurrently lock-free, with no risk of race conditions. It also allows concurrent query execution.
+- It is not just about inverted indexes in Lucene. For example, doc values are a columnar data structure that stores the values of a field for each document in the index. It allows for fast lookups of field values without having to load the entire document - useful for efficient sorting and faceting.
+
+Now let's focus on what factors enable Lucene to be so effective at search and ranking, and how its design makes it suitable to run at scale. But let's not forget that the true value of Lucene is its community - hundreds of developers who have committed to the project since it was open-sourced in 2001.
+
+## Efficient search
+
+### Index data structures
+
+One of the key reasons for Lucene's performance is its efficient use of data structures. Inverted index and doc values are effective for fast lookups for different query types, while index segments ensure efficient resource consumption and concurrent read access for queries. There are still more "tricks" that Lucene uses to optimize query performance.
+
+**Bitsets** are used in Lucene to represent sets of documents that match a particular query. Bitsets use one bit to represent the presence or absence of a document in the set, which makes them very compact and efficient to use. Bitsets can also be applied to perform Boolean operations on sets of documents. For example, Lucene can leverage bitsets to efficiently perform OR, AND, and NOT operations, allowing complex queries to be executed quickly and efficiently. Moreover, bitsets are used to handle delete operations - documents in the segment as marked as deleted deleted - until the documents are actually removed during the segment merge.
+
+**Caches** help to improve Lucene's search performance. The field cache is used to cache field values across multiple documents, while the filter cache is used to cache the results of expensive filters. Filter caches are encoded as bitsets to determine which document match the filter. The query cache is used to cache the results of previously executed queries. If a subsequent query is found to be identical to a previously executed query, the cached result can be returned instead of executing the query again.
+
+Lucene also uses **[finite-state transducers](https://en.wikipedia.org/wiki/Finite-state_transducer)** (FSTs) - they are compact and efficient data structures that allow for fast lookups of key-value pairs. It's used for features like auto-suggest and spell-checking - Lucene uses the FST to efficiently look up all possible completions of the partially typed, or misspelled query. FSTs provide fast lookups of term frequencies, prefixes and other metadata associated with each term, useful in a variety of search-related operations. More about this data structure can be read in: [Using Finite State Transducers in Lucene](https://blog.mikemccandless.com/2010/12/using-finite-state-transducers-in.html).
+
+**Block trees** are used to represent the posting list - a set of doc ids and offsets associated with each term in an inverted index. By compressing the posting lists, Lucene can reduce the amount of disk I/O required to access the posting lists during search operations. This can result in significant performance improvements, especially when dealing with large indexes. Block trees are also used to implement skip lists, which allow for fast skipping over irrelevant documents during search operations. Skip lists are used to quickly navigate the posting lists associated with each term in a search index, allowing for fast identification of relevant documents.
+
+### Query Types
+
+Lucene's extensive support for different query types allows its community to build sophisticated search applications that can handle a wide range of use cases. Lucene query types are modular, therefore making it possible to combine different queries to create more complex search queries.
+
+Here are some commonly used Lucene query types.
+
+| Query            | Role                                                                                            |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| Term Query       | matches documents that contain a specific term                                                  |
+| Phrase Query     | matches documents that contain a specific sequence of terms in order                            |
+| Boolean Query    | allows for the combination of multiple queries using boolean operators such as AND, OR, and NOT |
+| Fuzzy Query      | matches documents that contain similar terms to a specified term                                |
+| Wildcard Query   | matches documents that contain terms that match a specified pattern                             |
+| Range Query      | matches documents that contain terms within a specified range                                   |
+| Prefix Query     | matches documents that contain terms that begin with a specified prefix                         |
+| Multi-term Query | matches documents that contain multiple terms                                                   |
+| Boost Query      | allows for the boosting of certain queries to give them more weight in the search results       |
+
+Let's look at an example query. Assume you have a set of bikepacking blog posts - all indexed in Lucene so that they can be easily searchable. If you are looking for an adventure in Norway, where the distance covered is between 300 and 800km, you can construct the following Lucene query:
+
+```sql
+(title:bikepacking norway^2 OR content:bikepacking norway) AND distance:[300 TO 800]
+
+```
+
+This query searches for documents that meet the following criteria (Boolean query with subqueries joined by `AND` and `OR` operators):
+
+- must contain the term `"bikepacking norway"` in either the title or the content field (Multi-term query). The boost operator `^` is used to boost the score of documents that contain the term in the title field (Boost query)
+- must have a distance between 300 and 800 (Range query)
+
+### Concurrent query execution
+
+The concurrency model for a Lucene application is one thread per query at search time, but it's also possible to execute a single query concurrently using multiple threads to greatly reduce the time of the slowest queries. A Lucene index is segmented, which makes searching it an embarrassingly parallel problem: each query must visit all segments in the index, collecting their globally competitive hits.
+
+When the query is single-threaded, that one query thread must visit all segments sequentially. If the index is large, and the queries are costly, those queries will require high CPU cost and wall clock time to find the top hits.
+
+When a query is run in multi-threaded mode, the segments in the index are first grouped up front into single thread work units called thread slices. By default, large segments belong to their own thread slice and smaller segments will be put together into a single thread slice, since they are presumably quick to search sequentially by a single thread. But, even though searching a Lucene index is a naturally and embarrassingly parallel problem, using multiple threads for one query incurs an inherent coordination overhead.
+
+Concurrent query execution feature is still missing from popular search engines based on Lucene like Elasticsearch, but it's supported in [nrtsearch](https://github.com/Yelp/nrtsearch).
+
+## Document scoring
+
+Lucene scoring uses a combination of the [Vector Space Model](https://en.wikipedia.org/wiki/Vector_space_model) (VSM) and the Boolean model to determine how relevant a given document is to a user's query. In general, the idea behind the VSM is that the more times a query term appears in a document relative to the number of times the term appears in all the documents in the collection, the more relevant that document is to the query. It uses the boolean model to first narrow down the documents that need to be scored based on the use of boolean logic in the query specification.
+
+The [BM25](https://en.wikipedia.org/wiki/Okapi_BM25) algorithm - which stands for "Best Match 25" - is a variant of the Vector Space Model that takes into account document length and term frequency. It is used in Lucene as a default scoring VSM. The algorithm calculates a relevance score for each document based on the following formula:
+
+```python
+score(q, d) = sum(weight(t, d) * weight(t, q))
+```
+
+where `score(q, d)` is the relevance score for the document `d` with respect to the query `q`, `weight(t, d)` is the weight of the term `t` in the document `d`, and `weight(t, q)` is the weight of the term `t` in the query `q`. The weights are a function of:
+
+- term `t` frequency in document `d`,
+- total number of documents containing term `t` and total number of docs in the index,
+- length of the document `d` and the average document length in the index,
+- tuning parameters that control the effect of term frequency and document length on the relevance score.
+
+#### Custom similarity scoring
+
+While the BM25 algorithm works well for many search use cases, it may not be suitable for all applications. In some cases, you may need to customize the similarity scoring algorithm to better match the specific needs of your application. Such cases include:
+
+- Domain-specific ranking factors - different search applications may have different ranking factors that are important for relevance
+- Personalization - user-specific features and signals, such as the user's preferences or search history, can be incorporated into the search results to provide more personalized and relevant results
+
+Lucene supports defining custom `Similarity` scorers - it can be a custom algorithm or a continuously retrained ML model. All you need to do then is specify your custom scorer class in the search query.
+
+```java
+public class CustomSimilarity extends Similarity {
+
+    public float score(BasicStats stats, float freq, float docLen) {
+
+        float score = ... // your magic code
+        return score;
+    }
+}
+```
+
+Overall, the document scoring mechanism allows Lucene to return highly relevant search results, given a user query, even in large and complex index. In the next post I will look at how Lucene's design makes it suitable to run at scale.
