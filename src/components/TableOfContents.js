@@ -33,7 +33,8 @@ const useActiveId = (itemIds) => {
     });
     return () => {
       itemIds.forEach((id) => {
-        observer.unobserve(document.getElementById(id));
+        const elem = document.getElementById(id);
+        elem && observer.unobserve(elem);
       });
     };
   }, [itemIds]);
@@ -71,7 +72,7 @@ const TableOfContents = (props) => {
 
   const activeId = useActiveId(idList);
   return (
-    <details open style={{ position: 'sticky' }}>
+    <details open style={{ position: 'sticky', top: '100px' }}>
       <summary>Table of Contents</summary>
       {renderItems(props.items, activeId)}
     </details>

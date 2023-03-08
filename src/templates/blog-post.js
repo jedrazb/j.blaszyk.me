@@ -14,6 +14,7 @@ import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
+import TableOfContents from '../components/TableOfContents';
 import {
   Container,
   Column,
@@ -67,7 +68,11 @@ class BlogPostTemplate extends React.Component {
     const ogImagePath = ogimage && getSrc(ogimage);
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        tocComponent={<TableOfContents {...post.tableOfContents} />}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
@@ -189,6 +194,7 @@ export const pageQuery = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body
+      tableOfContents
       timeToRead
       frontmatter {
         title

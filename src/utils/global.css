@@ -69,10 +69,15 @@ body.dark {
 }
 
 
+
+
+
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip
 }
+
+
 body {
   position: relative;
 }
@@ -87,6 +92,8 @@ h3,
 h4,
 h5 {
   font-family: 'Montserrat', sans-serif;
+  scroll-margin-top: 100px;
+  scroll-snap-margin-top: 100px; /* iOS 11 and older */
 }
 
 th,td {

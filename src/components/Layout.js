@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import classnames from 'classnames';
 import Toggle from './Toggle';
 import Helmet from 'react-helmet';
 import Header from './NavBar';
@@ -90,58 +91,17 @@ class Layout extends React.Component {
         />
         {/* classic layout */}
         {!tocComponent && (
-          <div
-            style={{
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              maxWidth: rhythm(30),
-              padding: `2.625rem ${rhythm(3 / 4)}`,
-              flex: 1,
-              width: '100%',
-            }}
-          >
-            {children}
-          </div>
+          <div className="layout-base layout-classic">{children}</div>
         )}
         {/* end classic layout */}
         {/* layout with table of contents */}
         {!!tocComponent && (
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '250px 1fr 250px',
-              // marginLeft: 'auto',
-              // marginRight: 'auto',
-              // // maxWidth: `calc(${rhythm(30)} + 300px)`,
-              // flex: 1,
-              // width: '100%',
-            }}
-          >
-            <div
-              style={{
-                gridColumn: '2',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                maxWidth: rhythm(30),
-                padding: `2.625rem ${rhythm(3 / 4)}`,
-              }}
-            >
+          <div className="layout-columns-wrapper">
+            <div className={classnames('layout-base layout-columns')}>
               {children}
             </div>
             <></>
-            <div
-              style={{
-                gridColumn: '3',
-                display: 'block',
-                position: 'sticky',
-                top: '0',
-                // padding: `2.625rem ${rhythm(3 / 4)}`,
-                // position: 'sticky',
-                // top: 0,
-              }}
-            >
-              {tocComponent}
-            </div>
+            <div className="table-of-contents">{tocComponent}</div>
           </div>
         )}
         {/* end layout with table of contents */}
