@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import classnames from 'classnames';
 
 import './TableOFContents.css';
 
@@ -26,7 +27,7 @@ const useActiveId = (itemIds) => {
           }
         });
       },
-      { rootMargin: `0% 0% -80% 0%` }
+      { rootMargin: `0% 0% -50% 0%` }
     );
     itemIds.forEach((id) => {
       observer.observe(document.getElementById(id));
@@ -68,11 +69,18 @@ const renderItems = (items, activeId) => {
 };
 
 const TableOfContents = (props) => {
+  const { items, widePostType } = props;
+
   const idList = getIds(props.items);
 
   const activeId = useActiveId(idList);
   return (
-    <details open style={{ position: 'sticky', top: '100px' }}>
+    <details
+      open
+      className={classnames('table-of-contents-wrapper', {
+        'table-of-contents-wide-post': !!widePostType,
+      })}
+    >
       <summary>Table of Contents</summary>
       {renderItems(props.items, activeId)}
     </details>

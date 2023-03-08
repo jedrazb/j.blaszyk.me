@@ -71,7 +71,9 @@ class BlogPostTemplate extends React.Component {
       <Layout
         location={this.props.location}
         title={siteTitle}
-        tocComponent={<TableOfContents {...post.tableOfContents} />}
+        tocComponent={
+          <TableOfContents {...post.tableOfContents} widePostType />
+        }
       >
         <SEO
           title={post.frontmatter.title}

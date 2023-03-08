@@ -25,11 +25,11 @@
 }
 
 .table-of-contents {
+    z-index: 10;
+    transform: translate3d(0,0,0);
     grid-column: 3;
-    display: block;
-    position: sticky;
-    top: 0;
-    padding: 4rem 0.425rem;
+    padding: 4rem 0;
+    margin-right: 0.5rem;
 }
 
 
