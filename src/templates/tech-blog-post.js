@@ -57,6 +57,7 @@ const shortcodes = {
 };
 
 import { SketchPicker, SliderPicker } from 'react-color';
+import TableOfContents from '../components/TableOfContents';
 
 class TechBlogPostTemplate extends React.Component {
   render() {
@@ -70,7 +71,12 @@ class TechBlogPostTemplate extends React.Component {
     const category = get(post, 'fields.category');
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout
+        location={this.props.location}
+        title={siteTitle}
+        layout={'column_with_toc'}
+        tocComponent={<TableOfContents {...post.tableOfContents} />}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}

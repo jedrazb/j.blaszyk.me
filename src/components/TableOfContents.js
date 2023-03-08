@@ -42,7 +42,7 @@ const useActiveId = (itemIds) => {
 
 const renderItems = (items, activeId) => {
   return (
-    <ol>
+    <ul>
       {items.map((item) => {
         if (item.url) {
           return (
@@ -62,12 +62,13 @@ const renderItems = (items, activeId) => {
           return <li>{item.items && renderItems(item.items, activeId)}</li>;
         }
       })}
-    </ol>
+    </ul>
   );
 };
 
 const TableOfContents = (props) => {
   const idList = getIds(props.items);
+
   const activeId = useActiveId(idList);
   return (
     <details open style={{ position: 'sticky' }}>

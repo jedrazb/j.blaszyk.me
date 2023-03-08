@@ -9,6 +9,7 @@ import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
 import './Layout.css';
+import TableOfContents from './TableOfContents';
 
 class Layout extends React.Component {
   state = {
@@ -54,7 +55,13 @@ class Layout extends React.Component {
     );
   }
   render() {
-    const { children, location, title } = this.props;
+    const {
+      children,
+      location,
+      title,
+      layout = 'column',
+      tocComponent,
+    } = this.props;
 
     return (
       <div
@@ -81,18 +88,63 @@ class Layout extends React.Component {
           location={location}
           toggle={this.renderToggle()}
         />
-        <div
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: rhythm(30),
-            padding: `2.625rem ${rhythm(3 / 4)}`,
-            flex: 1,
-            width: '100%',
-          }}
-        >
-          {children}
-        </div>
+        {/* classic layout */}
+        {!tocComponent && (
+          <div
+            style={{
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              maxWidth: rhythm(30),
+              padding: `2.625rem ${rhythm(3 / 4)}`,
+              flex: 1,
+              width: '100%',
+            }}
+          >
+            {children}
+          </div>
+        )}
+        {/* end classic layout */}
+        {/* layout with table of contents */}
+        {!!tocComponent && (
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '250px 1fr 250px',
+              // marginLeft: 'auto',
+              // marginRight: 'auto',
+              // // maxWidth: `calc(${rhythm(30)} + 300px)`,
+              // flex: 1,
+              // width: '100%',
+            }}
+          >
+            <div
+              style={{
+                gridColumn: '2',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                maxWidth: rhythm(30),
+                padding: `2.625rem ${rhythm(3 / 4)}`,
+              }}
+            >
+              {children}
+            </div>
+            <></>
+            <div
+              style={{
+                gridColumn: '3',
+                display: 'block',
+                position: 'sticky',
+                top: '0',
+                // padding: `2.625rem ${rhythm(3 / 4)}`,
+                // position: 'sticky',
+                // top: 0,
+              }}
+            >
+              {tocComponent}
+            </div>
+          </div>
+        )}
+        {/* end layout with table of contents */}
         <Footer />
       </div>
     );
