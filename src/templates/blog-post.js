@@ -83,7 +83,7 @@ class BlogPostTemplate extends React.Component {
         />
         <main>
           <article className="post">
-            <header>
+            <header id="post-header">
               <h1
                 style={{
                   color: 'var(--textTitle)',

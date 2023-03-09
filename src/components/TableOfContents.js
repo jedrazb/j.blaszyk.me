@@ -77,6 +77,11 @@ const TableOfContents = (props) => {
 
   const idList = getIds(props.items);
 
+  // When scrolling to the top of the post
+  // no ToC element should be active
+  const postHeaderId = 'post-header';
+  idList.unshift(postHeaderId);
+
   const activeId = useActiveId(idList);
   return (
     <div
