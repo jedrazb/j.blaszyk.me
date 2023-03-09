@@ -11,6 +11,17 @@
     border-radius: 20px;
 }
 
+.toc-link {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.toc-link:hover {
+    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .table-of-contents-wide-post {
     display: block;
 }

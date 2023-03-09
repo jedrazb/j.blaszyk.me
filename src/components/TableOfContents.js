@@ -44,15 +44,19 @@ const useActiveId = (itemIds) => {
 
 const renderItems = (items, activeId) => {
   return (
-    <ul>
+    <ul style={{ marginTop: '0', marginBottom: '14px' }}>
       {items.map((item) => {
         if (item.url) {
           return (
             <li key={item.url}>
               <a
                 href={item.url}
+                className={'toc-link'}
                 style={{
-                  color: activeId === item.url.slice(1) ? 'tomato' : 'green',
+                  color:
+                    activeId === item.url.slice(1)
+                      ? 'var(--textLink)'
+                      : 'var(--textSecondary)',
                 }}
               >
                 {item.title}
@@ -61,7 +65,7 @@ const renderItems = (items, activeId) => {
             </li>
           );
         } else {
-          return <li>{item.items && renderItems(item.items, activeId)}</li>;
+          return <>{item.items && renderItems(item.items, activeId)}</>;
         }
       })}
     </ul>

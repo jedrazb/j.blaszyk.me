@@ -22,6 +22,7 @@ body.light {
   --swiper-pagination-bullet-inactive-color: #000;
   --map-visited: var(--blue);
   --map-notvisited: rgb(162, 195, 233);
+  --textSecondary: #57606a;
 }
 
 body.dark {
@@ -42,6 +43,7 @@ body.dark {
   --swiper-pagination-bullet-inactive-color: #fff;
   --map-visited: var(--orange);
   --map-notvisited: rgb(159, 128, 82);
+  --textSecondary: #8b949e;
 }
 
 /**
