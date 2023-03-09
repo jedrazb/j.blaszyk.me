@@ -75,15 +75,14 @@ const TableOfContents = (props) => {
 
   const activeId = useActiveId(idList);
   return (
-    <details
-      open
+    <div
       className={classnames('table-of-contents-wrapper', {
         'table-of-contents-wide-post': !!widePostType,
       })}
     >
-      <summary>Table of Contents</summary>
+      <summary className="summary-toc">Contents</summary>
       {renderItems(props.items, activeId)}
-    </details>
+    </div>
   );
 };
 
