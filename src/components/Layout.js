@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import classnames from 'classnames';
 import Toggle from './Toggle';
 import Helmet from 'react-helmet';
 import Header from './NavBar';
@@ -9,6 +10,7 @@ import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
 import './Layout.css';
+import TableOfContents from './TableOfContents';
 
 class Layout extends React.Component {
   state = {
@@ -54,7 +56,7 @@ class Layout extends React.Component {
     );
   }
   render() {
-    const { children, location, title } = this.props;
+    const { children, location, title, tocComponent } = this.props;
 
     return (
       <div
@@ -81,18 +83,22 @@ class Layout extends React.Component {
           location={location}
           toggle={this.renderToggle()}
         />
-        <div
-          style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: rhythm(30),
-            padding: `2.625rem ${rhythm(3 / 4)}`,
-            flex: 1,
-            width: '100%',
-          }}
-        >
-          {children}
-        </div>
+        {/* classic layout */}
+        {!tocComponent && (
+          <div className="layout-base layout-classic">{children}</div>
+        )}
+        {/* end classic layout */}
+        {/* layout with table of contents */}
+        {!!tocComponent && (
+          <div className="layout-columns-wrapper">
+            <div className={classnames('layout-base layout-columns')}>
+              {children}
+            </div>
+            <></>
+            <div className="table-of-contents">{tocComponent}</div>
+          </div>
+        )}
+        {/* end layout with table of contents */}
         <Footer />
       </div>
     );

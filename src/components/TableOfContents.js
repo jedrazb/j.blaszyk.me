@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import classnames from 'classnames';
 
 import './TableOFContents.css';
 
@@ -26,14 +27,15 @@ const useActiveId = (itemIds) => {
           }
         });
       },
-      { rootMargin: `0% 0% -80% 0%` }
+      { rootMargin: `0% 0% -50% 0%` }
     );
     itemIds.forEach((id) => {
       observer.observe(document.getElementById(id));
     });
     return () => {
       itemIds.forEach((id) => {
-        observer.unobserve(document.getElementById(id));
+        const elem = document.getElementById(id);
+        elem && observer.unobserve(elem);
       });
     };
   }, [itemIds]);
@@ -42,15 +44,19 @@ const useActiveId = (itemIds) => {
 
 const renderItems = (items, activeId) => {
   return (
-    <ol>
+    <ul style={{ marginTop: '0', marginBottom: '14px' }}>
       {items.map((item) => {
         if (item.url) {
           return (
             <li key={item.url}>
               <a
                 href={item.url}
+                className={'toc-link'}
                 style={{
-                  color: activeId === item.url.slice(1) ? 'tomato' : 'green',
+                  color:
+                    activeId === item.url.slice(1)
+                      ? 'var(--textLink)'
+                      : 'var(--textSecondary)',
                 }}
               >
                 {item.title}
@@ -59,21 +65,33 @@ const renderItems = (items, activeId) => {
             </li>
           );
         } else {
-          return <li>{item.items && renderItems(item.items, activeId)}</li>;
+          return <>{item.items && renderItems(item.items, activeId)}</>;
         }
       })}
-    </ol>
+    </ul>
   );
 };
 
 const TableOfContents = (props) => {
+  const { items, widePostType } = props;
+
   const idList = getIds(props.items);
+
+  // When scrolling to the top of the post
+  // no ToC element should be active
+  const postHeaderId = 'post-header';
+  idList.unshift(postHeaderId);
+
   const activeId = useActiveId(idList);
   return (
-    <details open style={{ position: 'sticky' }}>
-      <summary>Table of Contents</summary>
+    <div
+      className={classnames('table-of-contents-wrapper', {
+        'table-of-contents-wide-post': !!widePostType,
+      })}
+    >
+      <summary className="summary-toc">Contents</summary>
       {renderItems(props.items, activeId)}
-    </details>
+    </div>
   );
 };
 
