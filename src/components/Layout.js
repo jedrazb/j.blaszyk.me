@@ -56,13 +56,7 @@ class Layout extends React.Component {
     );
   }
   render() {
-    const {
-      children,
-      location,
-      title,
-      layout = 'column',
-      tocComponent,
-    } = this.props;
+    const { children, location, title, tocComponent } = this.props;
 
     return (
       <div

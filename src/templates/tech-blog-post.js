@@ -74,7 +74,6 @@ class TechBlogPostTemplate extends React.Component {
       <Layout
         location={this.props.location}
         title={siteTitle}
-        layout={'column_with_toc'}
         tocComponent={<TableOfContents {...post.tableOfContents} />}
       >
         <SEO
