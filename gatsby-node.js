@@ -261,10 +261,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
           value: exifData && {
             ...exifData,
             ExposureTimeFormatted: formatExposureTime(exifData.ExposureTime),
+            FocalLengthRounded: roundFocalLength(exifData.FocalLength),
           },
         });
       });
   }
+};
+
+const roundFocalLength = (l) => {
+  return Math.round(l);
 };
 
 const formatExposureTime = (d) => {

@@ -5,7 +5,7 @@ spoiler: Diving deep into Lucene's search and ranking - data structures, query t
 blogImages: []
 ---
 
-In the last post [Exploring Apache Lucene - Part 1: The Index](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/), we took a deep dive to look at the building blocks of the Lucene index. Here is a quick recap of key points:
+In the last post [Exploring Apache Lucene - Part 1: The Index](/tech-blog/exploring-apache-lucene-index/), we took a deep dive to look at the building blocks of the Lucene index. Here is a quick recap of key points:
 
 - The Lucene index is built using an inverted index, a data structure that maps terms to their corresponding documents. In an inverted index, each term is associated with a list of documents that contain that term. This allows for fast lookups of documents that match a given term or set of terms.
 - The index is split into index segments, which contain a subset of documents, to allow for more efficient searching and a reduction in memory requirements. Segments are never modified in-place, so they can be cached easily by the filesystem. Segments can be searched concurrently lock-free, with no risk of race conditions. It also allows concurrent query execution.
@@ -104,4 +104,4 @@ public class CustomSimilarity extends Similarity {
 }
 ```
 
-Overall, the document scoring mechanism allows Lucene to return highly relevant search results, given a user query, even in large and complex index. In the next post I will look at how Lucene's design makes it suitable to run at scale.
+The document scoring mechanism allows Lucene to return highly relevant search results, given a user query, even in large and complex index. In the next post I will look at how Lucene's design makes it suitable to run at scale.
