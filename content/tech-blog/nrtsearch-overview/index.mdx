@@ -5,15 +5,31 @@ spoiler:
 blogImages: []
 ---
 
-When I joined Yelp in 2020, I became part of the Ranking Platform team as a software engineer. The team is responsible for the development and maintenance of Yelp’s search and ranking infrastructure, a crucial part of our ecosystem, that allows for business search, reviews search and powers the internal real-time ad bidding system.
+In 2020, I joined Yelp as a software engineer on the Ranking Platform team. The team is responsible for maintaining and developing Yelp's search and ranking infrastructure, which powers the business and reviews search and internal real-time ad bidding system.
 
-At that time, I was part of an initiative to revamp our core search & ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source search engine - nrtSearch - which, as of early 2023, is used for the majority of search and ranking use cases at Yelp.
+During my time with Yelp, I participated in an initiative to overhaul our core search and ranking infrastructure. Our goal was to improve performance and cost efficiency, and the hard work resulted in the creation of an open-source search engine called nrtSearch. As of early 2023, nrtSearch is now the primary search and ranking engine used for the majority of Yelp's search use cases.
 
 # Lucene at scale
 
+As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several popular implementations that can help to achieve this goal, including Elasticsearch, Solr, and nrtSearch.
+
+They all allow to scale out Lucene across multiple nodes, with an added API wrapper for data ingestion and search. But, their different designs and architectures make the problem of running Lucene at scale quite interesting. While they all aim to solve the same problem, their specific implementation may have different tradeoffs in terms of performance, scalability, fault tolerance, and ease of use.
+
+Distributing and replicating an index across multiple nodes are common approaches for achieving high scalability and performance in search applications.
+
 ## Data distribution
 
+If your searches are starting to take longer or your index is getting too large for a node to handle, it might be time to consider distributing your data across multiple nodes.
+
+To do this, you can divide your index into smaller partitions, called shards, which can then be distributed across separate nodes. A search engine can partition a search query into sub-searches that are run on each shard, and then the results are combined - this is known as _Scatter-gather_.
+
+The underlying technical details of index sharding are typically invisible to end-users. They'll simply experience faster search performance, especially when working with very large indexes. By distributing your data, you can overcome physical limitations and improve search efficiency.
+
 ## Data replication
+
+When you have a large search volume that can't be handled by a single node, you can distribute searches across multiple read-only copies of the index to improve search performance. By replicating the index, search queries can be processed concurrently across multiple nodes, resulting in faster response times for end-users. This makes it possible to handle large volumes of data and queries, which is critical for building a high-performing, scalable search engine.
+
+In scenario of a high volume of indexing that consumes resources and reduces search performance on the indexing node, you can separate indexing and searching by replicating the index. In this context _"replicating"_ can mean e.g. transferring index segments to replica nodes responsible for search. This allows you to distribute indexing and searching across different nodes, which can help to improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
 
 ## Examples
 
