@@ -70,14 +70,7 @@ const RoadTo195Page = (props) => {
       <main>
         <h1 style={{ marginTop: 0, marginBottom: '1rem' }}>Road to 195</h1>
 
-        <p>
-          Visiting all 195 countries in the world is an exciting goal. It will
-          require careful planning and a lot of hard work, but the reward of
-          experiencing so many different cultures and places is well worth it.
-          Over the course of this blog, I will be documenting my progress as I
-          travel to each country and share with you my experiences, insights,
-          and lessons learned along the way.
-        </p>
+        <p>Keeping track of the progress.</p>
 
         <p>
           Progress:{' '}

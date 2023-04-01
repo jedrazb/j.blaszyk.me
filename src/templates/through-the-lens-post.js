@@ -119,7 +119,7 @@ class ThroughTheLensPostTemplate extends React.Component {
                       const exifCaption =
                         // `${imgExifData.Make} ${imgExifData.Model}<br/>` +
                         // `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
-                        `f/${imgExifData.FNumber} ${imgExifData.ExposureTimeFormatted} ISO ${imgExifData.ISO} ${imgExifData.FocalLength}mm`;
+                        `${imgExifData.FocalLengthRounded}mm | f/${imgExifData.FNumber} | ${imgExifData.ExposureTimeFormatted} | ISO ${imgExifData.ISO}`;
                       return (
                         <Column>
                           <ImageComponent
@@ -240,6 +240,7 @@ export const pageQuery = graphql`
                 ExposureTimeFormatted
                 FNumber
                 FocalLength
+                FocalLengthRounded
                 LensMake
                 LensModel
                 ISO
