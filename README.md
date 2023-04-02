@@ -15,6 +15,7 @@ My personal blog.
 * [The Tech Stack of Fast, Free, and Customizable Blog — Jedr's Blog](https://j.blaszyk.me/tech-blog/tech-stack-of-fast-free-and-customizable-blog/)
 * [Exploring Apache Lucene - Part 1: The Index — Jedr's Blog](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/)
 * [Geometric Deep Learning - an overview — Jedr's Blog](https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/)
+* [Mallorca in Spring - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/mallorca-in-spring/)
 * [Tenerife Pleasures - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/tenerife-pleasures/)
 * [Izery Mountains Bikepacking - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/izery-mountains-bikepacking/)
 * [Norway Bikepacking - Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/norway-bikepacking/)
