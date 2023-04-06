@@ -44,7 +44,8 @@ export default class HTML extends React.Component {
                   window.__setPreferredTheme(e.matches ? 'light' : 'dark')
                 });
 
-                setTheme(preferredTheme || (lightQuery.matches ? 'light' : 'dark'));
+                let theme = preferredTheme || (lightQuery.matches ? 'light' : 'dark');
+                setTheme(theme);
               })();
             `,
             }}
