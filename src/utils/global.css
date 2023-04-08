@@ -10,7 +10,7 @@ body.light {
   --bg-secondary: #f6f8fa;
   --bg-header: #f6f8faBF;
   --post-outline: rgb(211, 233, 235);
-  --bg-gallery: rgb(238, 247, 253);
+  --bg-gallery: #f6f8fa;
   --header: var(--blue);
   --textNormal: #36313d;
   --textTitle: #36313d;

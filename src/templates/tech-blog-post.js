@@ -14,6 +14,7 @@ import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
+import Comments from '../components/Comments';
 import {
   Container,
   Column,
@@ -189,6 +190,7 @@ class TechBlogPostTemplate extends React.Component {
             </Link>
           </h3>
           <Bio />
+          <Comments />
         </aside>
       </Layout>
     );
