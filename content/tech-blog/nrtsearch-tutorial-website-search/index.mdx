@@ -1,0 +1,87 @@
+---
+title: 'Nrtsearch Tutorial - Indexing Web Content for Search'
+date: '2023-04-12'
+spoiler: Build a simple web crawler and website indexer. Support internal search with custom scoring for any website with nrtsearch.
+blogImages: []
+---
+
+Let's use [nrtsearch](https://github.com/Yelp/nrtsearch) - an open-source search engine built by Yelp - to support text search for any website. In this tutorial, I'm using my blog as an example dataset, but you can use this approach to index anything accessible on the web, like Wikipedia or an internal company wiki.
+
+We will begin by building a simple web crawler to fetch your website's data. Then we will start a local, standalone nrtsearch instance, design its index schema and set up an indexing pipeline to feed the data into the search engine. Finally, we will define nrtsearch queries to support custom scoring and highlighting. We will be able to interact with the system via a search UI. All of this will be done with minimal coding, I will make use of open-source projects to keep things simple and extensible You can clone [the tutorial repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search) to run the code for each step locally. All you need is python3 and docker installed on your system.
+
+If you want to learn more about nrtSearch you can read Yelp's Engineering blog post: [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html). Let's start!
+
+## Web crawler
+
+The purpose of the crawler is to fetch the data from websites. In this tutorial I'm using my blog as an example dataset. For simplicity, I will supply a sitemap - a list of urls - to the crawler so that it can directly fetch the data.
+
+Let's use [beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/) library for extracting the website content. The website data can be represented in a following way:
+
+- `title` - website title tag
+- `description` - meta description tag, a short summary of the website, provided by the author
+- `url`
+- `content`- extracted text content, e.g. paragraphs
+- `headings` - extracted website's headings. For simplicity we group `h1`, `h2`, `h3`, ... tags together. This multi-valued field can be used for document scoring.
+
+Our code uses `get_source_urls()` function to get the list of urls. The function will process the HTML pages to extract: title, description, content and headings. After it's done, it will save the output to a JSON file.
+
+```python
+import json
+import requests
+from bs4 import BeautifulSoup
+
+urls = get_source_urls() # urls from website sitemap
+
+website_data = []
+
+for url in urls:
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    title = soup.title.text.strip() if soup.title else None
+    description = (
+        soup.find("meta", attrs={"name": "description"})["content"].strip()
+        if soup.find("meta", attrs={"name": "description"})
+        else None
+    )
+    headings = [
+        h.text.strip() for h in soup.find_all(["h1", "h2", "h3", "h4", "h5"])
+    ]
+    content = soup.get_text(" ", strip=True)
+
+    website_data.append(
+        {
+            "url": url,
+            "title": title,
+            "description": description,
+            "headings": headings,
+            "content": content,
+        }
+    )
+
+with open('website_data.json', 'w') as outfile:
+    json.dump(website_data, outfile)
+
+```
+
+The full crawler code is located in [crawler/crawler.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/crawler/crawler.py), you can run the crawler by executing:
+
+```bash
+make run_crawler
+```
+
+## Starting the nrtsearch cluster
+
+## Designing the index schema
+
+## nrtSearch indexer
+
+## Custom search scoring
+
+## Highlighting support
+
+## Simple search UI
+
+## Putting it all together
+
+## Demo
