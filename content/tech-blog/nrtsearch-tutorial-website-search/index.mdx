@@ -72,7 +72,42 @@ make run_crawler
 
 ## Starting the nrtsearch cluster
 
-## Designing the index schema
+The nrtsearch cluster consists 2 types of nodes:
+
+- `primary` - a single node, responsible for data indexing, it periodically publishes Lucene segment updates to replicas. Hence the name: _nrtsearch - near-real time search_.
+- `replica` - one or more nodes, responsible for serving the search traffic. It receives periodic segment updates from the primary. The number of running replicas can be controlled by an auto-scaler (like [HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)).
+
+It's also possible to run the cluster with a single, standalone node, used for both data ingestion and search. It's ok for experimentation but for production environments its recommended to run separate primary and replica nodes.
+
+The source code for nrtsearch setup is available in [/nrtsearch](https://github.com/jedrazb/nrtsearch-tutorial-website-search/tree/master/nrtsearch) folder. There we have:
+
+- `Dockerfile` to setup an nrtsearch node
+- configs for primary and replicas
+- `docker-compose.yaml` to setup a local cluster with single primary and two replicas
+
+Note, in this tutorial we don't care about persisting the index state. If you restart the cluster all the state will be lost. In order to persist your index, you can attach a permanent volume. For production, it's best to use a dedicated s3 bucket where nrtsearch will preserve the cluster state. You can define it in the server configuration file, more about it in the [docs](https://nrtsearch.readthedocs.io/en/latest/server_configuration.html).
+
+In order to start the local cluster with a primary and two replicas, run a following command in a separate terminal window:
+
+```bash
+make start_nrtsearch_cluster
+```
+
+When running `docker compose ps`, you should see:
+
+```bash
+NAME                       IMAGE                    COMMAND                  SERVICE             CREATED             STATUS              PORTS
+nrtsearch-replica-node-1   nrtsearch-replica-node   "./entrypoint_replic…"   replica-node        6 seconds ago       Up 4 seconds        8000/tcp
+nrtsearch-replica-node-2   nrtsearch-replica-node   "./entrypoint_replic…"   replica-node        6 seconds ago       Up 4 seconds        8000/tcp
+primary-node               nrtsearch-primary-node   "bash -c '/user/nrts…"   primary-node        6 seconds ago       Up 4 seconds        8000/tcp
+
+```
+
+Great! Now we have a local nrtsearch cluster with nodes dedicated for data ingestion and search. Now, let's design the index schema and start the index.
+
+## Index schema
+
+## Creating the nrtsearch index
 
 ## nrtSearch indexer
 
