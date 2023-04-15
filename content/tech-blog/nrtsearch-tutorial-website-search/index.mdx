@@ -240,9 +240,9 @@ Each docker compose container has assigned a fixed `host:port` so I'm using dumm
 ```python
 # Simple service discovery
 SERVICE_DISCOVERY = {
-    "primary-node": ("0.0.0.0", 8000),
-    "replica-node-0": ("0.0.0.0", 8001),
-    "replica-node-1": ("0.0.0.0", 8002),
+    "primary-node": ("localhost", 8000),
+    "replica-node-0": ("localhost", 8001),
+    "replica-node-1": ("localhost", 8002),
 }
 ```
 
@@ -438,7 +438,7 @@ We can see that data was successfully replicated between primary and replica nod
 
 ## gRPCox web UI
 
-[gRPCox](https://github.com/gusaul/grpcox) is a web UI wrapper for `gRPCurl`. It's a simple but useful tool that lets you interact with gRPC servers.
+[gRPCox](https://github.com/gusaul/grpcox) is a web UI wrapper for `gRPCurl`. It's a simple but useful tool that lets you interact with gRPC servers. It's optional for the tutorial but I want to show how it enables ad-hoc communication with the nrtsearch server.
 
 Start the UI by running `make grpcox`. It will be accessible on `localhost:6969`. For our tutorial nrtsearch nodes running in `docker` the hostname will be always `host.docker.internal` and the port will be `8000` for the primary and `8001-2` for the two replicas.
 
@@ -462,7 +462,11 @@ You should see the search results in the UI.
 
 ![gRPCox UI](./grpcox.mp4)
 
-## Custom search scoring
+## Custom search ranking
+
+The default scoring algorithm considers the frequency and distribution of terms in the document and query vectors. For our simple scenario it should suffice to return documents that contain the user search query in their text `content`. We can add custom weights to prioritize results that contain the search term inside `title`, `description`, `headings` or `url`. We can start with simple weights, test our system and refine the algorithm as necessary to improve search results.
+
+[Building Nrtsearch Queries](https://nrtsearch.readthedocs.io/en/latest/querying_nrtsearch.html) documentation page contains supported query types along with examples and explanations. Since nrtsearch is based on Apache Lucene, its query types map closely to Lucene queries.
 
 ## Highlighting support
 
