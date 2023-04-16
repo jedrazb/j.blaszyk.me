@@ -5388,19 +5388,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:>=0.2.9, async@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "async@npm:3.2.4"
-  checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
-  languageName: node
-  linkType: hard
-
 "async@npm:^2.6.1":
   version: 2.6.4
   resolution: "async@npm:2.6.4"
   dependencies:
     lodash: ^4.17.14
   checksum: a52083fb32e1ebe1d63e5c5624038bb30be68ff07a6c8d7dfe35e47c93fc144bd8652cbec869e0ac07d57dde387aa5f1386be3559cdee799cb1f789678d88e19
+  languageName: node
+  linkType: hard
+
+"async@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "async@npm:3.2.4"
+  checksum: 43d07459a4e1d09b84a20772414aa684ff4de085cbcaec6eea3c7a8f8150e8c62aa6cd4e699fe8ee93c3a5b324e777d34642531875a0817a35697522c1b02e89
   languageName: node
   linkType: hard
 
@@ -7180,13 +7180,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-parser@npm:^1.1.0":
-  version: 1.4.1
-  resolution: "css-selector-parser@npm:1.4.1"
-  checksum: 31948754e579eedb918c2fb2d5a4c643ec769ff4a0d03a7bd10b43b25d44973f8cbe86d7ec00c4494269f7ff38b3d2ab0f6ea801cece0ef0974e74469dff770c
-  languageName: node
-  linkType: hard
-
 "css-tree@npm:1.0.0-alpha.37":
   version: 1.0.0-alpha.37
   resolution: "css-tree@npm:1.0.0-alpha.37"
@@ -7548,7 +7541,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.6.0, debug@npm:^2.6.9":
+"debug@npm:2, debug@npm:2.6.9, debug@npm:^2.6.0, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
   dependencies:
@@ -9333,16 +9326,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fluent-ffmpeg@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "fluent-ffmpeg@npm:2.1.2"
-  dependencies:
-    async: ">=0.2.9"
-    which: ^1.1.1
-  checksum: ab7ed909486298f33b991af051c38e40410ae5b03b0b6d33d0855636a0b56330ffe9efed6c7eedb00f1c6c713c795cbdb283f6f2216db925ae5e737a22c6a97f
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.14.0":
   version: 1.14.7
   resolution: "follow-redirects@npm:1.14.7"
@@ -9746,19 +9729,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-ffmpeg@npm:0.6.0, gatsby-plugin-ffmpeg@npm:^0.6.0":
-  version: 0.6.0
-  resolution: "gatsby-plugin-ffmpeg@npm:0.6.0"
-  dependencies:
-    fluent-ffmpeg: ^2.1.2
-    throat: ^6.0.1
-  peerDependencies:
-    gatsby: ^4.7.2
-    gatsby-core-utils: ^3.7.0
-  checksum: 563ccb6bc0b0b0f54df11bc72513aa7fd496e3759047a64dc5ae97b49723b3a9fdee4cf984391471d3c082e7f7aa6035b134724a7de56271e3f9f712323d9a16
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-google-gtag@npm:^4.21.0":
   version: 4.21.0
   resolution: "gatsby-plugin-google-gtag@npm:4.21.0"
@@ -10138,21 +10108,6 @@ __metadata:
   peerDependencies:
     gatsby: ^4.0.0-next
   checksum: 8aab19c63239b5568ff95a867dd245ba88770fb9a2ea5651b925fb267abcf53dca1eb34d4b0146191f6bca2a7824042fb6e30515e4af78a6b0ba441022bf87c7
-  languageName: node
-  linkType: hard
-
-"gatsby-remark-videos@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "gatsby-remark-videos@npm:0.5.2"
-  dependencies:
-    gatsby-plugin-ffmpeg: 0.6.0
-    is-relative-url: ^3.0.0
-    slash: ^3.0.0
-    unist-util-select: ^1.5.0
-  peerDependencies:
-    fluent-ffmpeg: ^2.1.2
-    gatsby: ^4.7.2
-  checksum: 7a40cbbe1febae82a791fcdc6f4a67251bac0881d85589183ff2e3b1289a22ebb1b878836ead194461f95d7b61acf16b8fe509e9019229f47a740457daa50cb9
   languageName: node
   linkType: hard
 
@@ -12222,7 +12177,6 @@ __metadata:
     gatsby: ^4.21.0
     gatsby-plugin-catch-links: ^5.7.0
     gatsby-plugin-feed: ^4.21.0
-    gatsby-plugin-ffmpeg: ^0.6.0
     gatsby-plugin-google-gtag: ^4.21.0
     gatsby-plugin-image: ^2.21.0
     gatsby-plugin-manifest: ^4.21.0
@@ -12240,7 +12194,6 @@ __metadata:
     gatsby-remark-external-links: ^0.0.4
     gatsby-remark-prismjs: ^6.21.0
     gatsby-remark-smartypants: ^5.21.0
-    gatsby-remark-videos: ^0.5.2
     gatsby-source-filesystem: ^4.21.0
     gatsby-transformer-sharp: ^4.21.0
     gh-pages: ^4.0.0
@@ -14253,7 +14206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nth-check@npm:^1.0.1, nth-check@npm:^1.0.2, nth-check@npm:~1.0.1":
+"nth-check@npm:^1.0.2, nth-check@npm:~1.0.1":
   version: 1.0.2
   resolution: "nth-check@npm:1.0.2"
   dependencies:
@@ -18240,13 +18193,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"throat@npm:^6.0.1":
-  version: 6.0.2
-  resolution: "throat@npm:6.0.2"
-  checksum: 463093768d4884772020bb18b0f33d3fec8a2b4173f7da3958dfbe88ff0f1e686ffadf0f87333bf6f6db7306b1450efc7855df69c78bf0bfa61f6d84a3361fe8
-  languageName: node
-  linkType: hard
-
 "through@npm:^2.3.6, through@npm:^2.3.8":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
@@ -18959,17 +18905,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-select@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "unist-util-select@npm:1.5.0"
-  dependencies:
-    css-selector-parser: ^1.1.0
-    debug: ^2.2.0
-    nth-check: ^1.0.1
-  checksum: 19681874146213fc151d3faecfbb2999bbc63722b0e3cda06e769dd153f128d9bfc9350aa574878a64e322fb5de8179a87fb32ff71f0262838ef8361ac8c540c
-  languageName: node
-  linkType: hard
-
 "unist-util-stringify-position@npm:^1.0.0, unist-util-stringify-position@npm:^1.1.1":
   version: 1.1.2
   resolution: "unist-util-stringify-position@npm:1.1.2"
@@ -19565,7 +19500,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"which@npm:^1.1.1, which@npm:^1.2.9, which@npm:^1.3.1":
+"which@npm:^1.2.9, which@npm:^1.3.1":
   version: 1.3.1
   resolution: "which@npm:1.3.1"
   dependencies:

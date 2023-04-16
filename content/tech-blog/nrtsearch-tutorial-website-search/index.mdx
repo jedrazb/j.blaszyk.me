@@ -1,25 +1,30 @@
 ---
 title: 'Nrtsearch Tutorial - Indexing Web Content for Search'
-date: '2023-04-12'
+date: '2023-04-18'
 spoiler: Building a simple web crawler and website indexer. Using nrtsearch to support search with custom scoring and results highlighting for any website.
-blogImages: []
+blogImages: ['./search-ui.jpeg', './grpcox.jpeg']
 ---
 
 Let's use [nrtsearch](https://github.com/Yelp/nrtsearch) - an open-source search engine built by Yelp - to support text search for any website. In this tutorial, I'm using my blog as an example dataset, but you can apply this approach to index any text content on the internet.
 
-We will begin by building a simple web crawler to fetch your website's data. Then we will start a local nrtsearch cluster with a primary and replicas. We will design its index schema and set up an indexing pipeline to feed the data into the search engine. Finally, we will define nrtsearch queries to support custom scoring and highlighting. We will be able to interact with the system via a search UI. All of this will be done with minimal coding. I will use of open-source projects to keep things simple and extensible. You can clone [the tutorial repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search) to run the code locally. All you need is `python3` and `docker` installed on your system.
+The plan is to begin with building a simple web crawler to fetch website's data. Then we start a local nrtsearch cluster with a primary and replicas, design its index schema and set up an indexing pipeline for the search engine. Finally, we define nrtsearch queries to support custom scoring and highlighting. A simple search UI will allow us to interact with the system. All of this will be done with minimal coding. I will use of open-source projects to keep things simple and extensible. You can clone [the tutorial code repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search) to run the code locally. All you need is `python3` and `docker` installed on your system.
+
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Nrtsearch Tutorial - Indexing Web Content for Search"
+></ImageComponent>
 
 If you want to learn more about nrtSearch you can read Yelp's Engineering blog post: [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html). Let's start!
 
 ## Web crawler
 
-The crawler fetches data from websites. In this tutorial I'm using my blog as an example dataset. For simplicity, I supplied a sitemap - a list of urls - to the crawler so that it can directly fetch the data.
+The crawler fetches data from websites. In this tutorial I'm using my blog as an example dataset. For simplicity, I supplied a sitemap - a list of urls - so that the crawler can directly fetch the data.
 
-Let's use [beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/) library for extracting website content. The website data can be represented in a following way:
+I use [beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/) library for extracting website content. The website data can be represented in a following way:
 
 - `title` - website title tag
 - `description` - meta description tag, a short summary of the website, provided by the author
-- `url`
+- `url` - unique website id
 - `content`- extracted text content, e.g. paragraphs
 - `headings` - extracted website's headings. For simplicity we group `h1`, `h2`, `h3`, ... tags together.
 
@@ -70,53 +75,58 @@ The full crawler code is located in [crawler/crawler.py](https://github.com/jedr
 make run_crawler
 ```
 
-## Starting the nrtsearch cluster
+## nrtsearch cluster
 
 The nrtsearch cluster consists of 2 types of nodes:
 
 - `primary` - a single node, responsible for data indexing. It periodically publishes Lucene segment updates to replicas. Hence the name: _nrtsearch - near-real time search_.
-- `replica` - one or more nodes, responsible for serving the search traffic. It receives periodic segment updates from the primary. The number of running replicas can be controlled by an auto-scaler (like [HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)).
+- `replica` - one or more nodes, responsible for serving the search traffic. It receives periodic segment updates from the primary. The number of running replicas can be controlled by an auto-scaler (like [HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)) to respond to a changing search load.
 
 It's also possible to run the cluster with a single, standalone node, used for both data ingestion and search. It's ok for experimentation but for production environments it's recommended to run separate primary and replica nodes.
 
-The source code for nrtsearch setup is available in [/nrtsearch](https://github.com/jedrazb/nrtsearch-tutorial-website-search/tree/master/nrtsearch) folder. There we have:
+The source code for nrtsearch cluster setup is available in [/nrtsearch](https://github.com/jedrazb/nrtsearch-tutorial-website-search/tree/master/nrtsearch) folder. There we have:
 
 - `Dockerfile` to setup an nrtsearch node
 - configs for primary and replicas
-- `docker-compose.yaml` to setup a local cluster with a single primary and two replicas
+- `docker-compose.yaml` with example cluster configuration
 
-Note: in this tutorial we don't care about persisting the index state. If you recreate the cluster, with docker compose, all state will be lost. In order to persist your index, you can attach a permanent volume. For production, it's advisable to use a dedicated s3 bucket where nrtsearch will store the cluster state. This can be easily setup in the configuration file. More about it in the [docs](https://nrtsearch.readthedocs.io/en/latest/server_configuration.html).
+Note: in this tutorial we don't care about persisting the index state. If you rebuild nrtsearch containers, all index state will be lost. In order to persist your index, you can attach a permanent volume. For production, it's advisable to use a dedicated s3 bucket where nrtsearch will store the cluster state - it allows deploying nrtsearch as a stateless service. More about possible configurations in [nrtsearch docs](https://nrtsearch.readthedocs.io/en/latest/server_configuration.html).
 
 In order to start the local cluster with a primary and two replicas, run a following command in a separate terminal window:
 
 ```bash
-make start_nrtsearch_cluster
+make start
 ```
 
-Above command will run `docker compose up` that takes the primary/replica configuration from [docker-compose.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch/docker-compose.yaml) file. In your terminal window you should see logs indicating that the primary and replicas are ready, and the server has started:
+Above command will essentially run `docker compose up` that starts the nrtsearch cluster defined in the root [docker-compose.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/docker-compose.yaml) file. It will also start a few other services that will be described later. In your terminal window you should see logs indicating that the primary and replicas are ready:
 
 ```bash
-primary-node              | [INFO ] 2023-04-11 08:32:16.712 [main] LuceneServer - Server started, listening on 8000 for messages
+primary-node-1        | [INFO ] 2023-04-16 12:12:42.194 [main] LuceneServer - Server started, listening on 8000 for messages
 ```
 
-When running `docker compose ps`, you should see the following output. Note that the gRPC server of each container (`8000` container port) is accessible on a different port on the host machine. We use port `8000` for the primary node and ports `8001` and `8002` for the two replicas.
+The address of nrtsearch nodes depends on whether you connect to them from the host machine of from a different docker container.
+
+- For the host machine, the nrtsearch gRPC server (`8000` container port) of each node in the cluster is exposed on a host's physical port. We use port `8000` for the primary node and ports `8001` and `8002` for the two replicas.
+- Within docker containers, we can use docker DNS. The primary is advertised under `primary-node` hostname and both replicas are under `replica-node` hostname with gRPC servers running on port `8000`.
+
+You can run `docker compose ps`, to see ports assigned to containers.
 
 ```bash
-NAME                       IMAGE                    COMMAND                  SERVICE             CREATED             STATUS              PORTS
-nrtsearch-replica-node-1   nrtsearch-replica-node   "./entrypoint_replic…"   replica-node        12 minutes ago      Up 12 minutes       0.0.0.0:8002->8000/tcp
-nrtsearch-replica-node-2   nrtsearch-replica-node   "./entrypoint_replic…"   replica-node        12 minutes ago      Up 12 minutes       0.0.0.0:8001->8000/tcp
-primary-node               nrtsearch-primary-node   "bash -c '/user/nrts…"   primary-node        12 minutes ago      Up 12 minutes       0.0.0.0:8000->8000/tcp
+NAME                   IMAGE                COMMAND                  SERVICE              CREATED             STATUS              PORTS
+primary-node-1         primary-node         "bash -c '/user/nrts…"   primary-node         About an hour ago   Up About an hour    0.0.0.0:8000->8000/tcp
+replica-node-1         replica-node         "./entrypoint_replic…"   replica-node         About an hour ago   Up About an hour    0.0.0.0:8002->8000/tcp
+replica-node-2         replica-node         "./entrypoint_replic…"   replica-node         About an hour ago   Up About an hour    0.0.0.0:8001->8000/tcp
 ```
 
 Great! Now we have a local nrtsearch cluster with nodes dedicated to data ingestion and search. Even though the containers are now running, no index was created. A new index must be created explicitly via a command. Once the index started is started in replicas, they register with the primary. Replication happens only after documents are ingested into the primary.
 
 Now, let’s prepare the client code to interact with our cluster.
 
-## Generating gRPC client code using protoc
+## Generate gRPC client code using protoc
 
-Clients can communicate with nrtsearch via gRPC or REST API. [gRPC](https://grpc.io/) is a high-performance remote procedure call framework that enables communication by using protocol buffers for serialization and deserialization of messages. This method yields great performance for production applications. The REST API is an optional way to communicate with nrtsearch, good for quick development and experimentation. The REST server ([grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway)) is autogenerated from `proto` definitions.
+Clients can communicate with nrtsearch via gRPC or REST API. [gRPC](https://grpc.io/) is a high-performance remote procedure call framework that enables communication by using protocol buffers. This method yields great performance for production applications. The REST API is an optional way to communicate with nrtsearch, good for quick development and experimentation. The REST server ([grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway)) is autogenerated from `proto` definitions.
 
-Let's use gRPC to communicate with nrtsearch. Since it's not a REST API we can't just `curl` the endpoints. We need to generate the native client code, `python` for this tutorial, to interact with nrtsearch.
+Let's use gRPC to communicate with nrtsearch. Since it's not a REST API we can't just `curl` the endpoints. We need to generate the native client code, `python` for this tutorial, to interact with nrtsearch nodes.
 
 To generate Python client code from proto definitions, you can use the gRPC toolchain's `protoc` compiler along with the `grpc_tools` package to compile the `.proto` files into Python code, and then use the generated client code to communicate with the gRPC server. The steps are:
 
@@ -164,7 +174,7 @@ For our tutorial index `blog_search` we need to index the data returned from [th
 - Each field is searchable (`search: true`), tokenized (`tokenize: true`) and is stored in column-oriented way (`storeDocValues: true`).
 - The `content.analyzed` field contains the index-time analyzed webpage content. We define a custom analyzer which removes any html characters (`htmlstrip` charFilter), uses `standard` tokenizer and `kStem`, `stop` and `lowercase` Lucene token filters. In order to support the [Fast Vector Highlighter](https://nrtsearch.readthedocs.io/en/latest/highlighting.html) for results highlighting, we set `termVectors`, `store` and `tokenize` properties.
 
-The `blog_search` index schema is defined in [/index_resources/index_schema.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/index_resources/index_schema.yaml) and looks like this:
+The `blog_search` index schema is located in [/index_resources/index_schema.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/index_resources/index_schema.yaml) and is defined as:
 
 ```yaml
 indexName: blog_search
@@ -223,7 +233,7 @@ field:
 
 More information about the nrtsearch field types, schema design and supported analyzers is available in the [nrtsearch docs](https://nrtsearch.readthedocs.io/en/latest/analysis.html).
 
-## Creating the nrtsearch index
+## Create nrtsearch index
 
 Now it's time to create and start an index for blog data. We have a running nrtsearch cluster, generated client code and the index schema.
 
@@ -235,10 +245,10 @@ In order to configure the index we need to run several requests in order. We nee
 4. [FieldDefRequest](https://github.com/Yelp/nrtsearch/blob/master/clientlib/src/main/proto/yelp/nrtsearch/luceneserver.proto#L583) - registers index schema
 5. [CommitRequest](https://github.com/Yelp/nrtsearch/blob/master/clientlib/src/main/proto/yelp/nrtsearch/luceneserver.proto#L687) - in production it's recommended to commit the newly created index. It ensures its state is preserved in s3 or other persistent storage
 
-Each docker compose container has assigned a fixed `host:port` so I'm using dummy service discovery to discover and communicate with nrtsearch nodes:
+Each docker compose container has assigned a fixed `host:port` so I'm using dummy service discovery to discover and communicate with nrtsearch nodes from the host machine:
 
 ```python
-# Simple service discovery
+# Simple service discovery for scripts ran from host machine
 SERVICE_DISCOVERY = {
     "primary-node": ("localhost", 8000),
     "replica-node-0": ("localhost", 8001),
@@ -255,60 +265,11 @@ def get_nrtsearch_client(host, port):
     return LuceneServerStub(channel)
 ```
 
-The code in [/nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) will use the service discovery to create clients for each node and execute above commands in order. Generated client code allows for sending gRPC messages to nrtsearch. You can run the code for index setup locally via `make setup_index`.
+The script in [/nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) creates clients for each node and executes above commands in order, using the protobuf generated code. You can run the script for index setup locally via `make setup_index`.
 
-```python
-INDEX_NAME = "blog_search"
-INDEX_SCHEMA_PATH = "index_resources/index_schema.yaml"
-INDEX_SETTINGS_PATH = "index_resources/index_settings.yaml"
+The process of starting the index is slightly different for replicas and primaries. For example, the `start_index_replica()` starts the index in `REPLICA` mode and registers to primary to listen for index updates. The `primaryAddress="primary-node"` is defined in [docker-compose.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/docker-compose.yaml#L9) and the `8001` replication port comes from the primary [server configuration](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch/nrtsearch-primary-config.yaml#L4). Note that replicas use docker internal network to communicate with the primary so we don't need to expose the replication port.
 
-
-def create_index(nrtsearch_client):
-    response = nrtsearch_client.createIndex(CreateIndexRequest(indexName=INDEX_NAME))
-    return response
-
-
-def apply_index_settings(nrtsearch_client, settings_dict):
-    settings_request = Parse(json.dumps(settings_dict), SettingsRequest())
-    response = nrtsearch_client.settings(settings_request)
-    return response
-
-
-def start_index_primary(nrtsearch_primary_client):
-    response = nrtsearch_primary_client.startIndex(
-        StartIndexRequest(indexName=INDEX_NAME, mode=1)  # PRIMARY
-    )
-    return response
-
-
-def start_index_replica(
-    nrtsearch_replica_client,
-):
-    response = nrtsearch_replica_client.startIndex(
-        StartIndexRequest(
-            indexName=INDEX_NAME,
-            mode=2,  # REPLICA
-            primaryAddress="primary-node",  # docker address, can be resolved within the container
-            port=8001,  # replication port
-        )
-    )
-    return response
-
-
-def register_fields(nrtsearch_client, index_schema_dict):
-    register_fields_req = Parse(json.dumps(index_schema_dict), FieldDefRequest())
-    response = nrtsearch_client.registerFields(register_fields_req)
-    return response
-
-
-def commit_index(nrtsearch_client):
-    response = nrtsearch_client.commit(CommitRequest(indexName=INDEX_NAME))
-    return response
-```
-
-The `start_index_replica` starts the index in `REPLICA` mode and registers to primary to listen for index updates. The `primaryAddress="primary-node"` is defined in [docker-compose.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch/docker-compose.yaml#L9) and the `8001` replication port comes from the primary [server configuration](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch/nrtsearch-primary-config.yaml#L4).
-
-You can verify the new index is created on each node by running `venv/bin/python nrtsearch_client/get_indices.py`, the output should look like:
+You can verify that the `blog_search` index is created on each node by running `make index_status`, the output should look like:
 
 ```bash
 IndicesRequest for: primary-node
@@ -333,6 +294,12 @@ indicesResponse {
 }
 ```
 
+If you restart the nrtsearch container, you will see that even though the state files are still present in the volume, the index won't be started. Nrtsearch expects a `startIndex` command after the server restart. In the [/nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) script we have extra logic to handle following scenarios:
+
+- `blog_search` index is not returned from the `indices()` call. It means that the index doesn't exist. We need to execute all 5 steps to create a new index.
+- `blog_search` index exists but is `not_started`. This can happen when you restart a docker container. We need to just issue the `StartIndexRequest`.
+- `blog_search` index exists and it's `started` - all good, index is already running.
+
 Great! Now we have a running nrtsearch cluster and our index is started and replicated between primary and replicas. Let's move on to data ingestion.
 
 ## nrtSearch indexer
@@ -343,9 +310,9 @@ A single call to `addDocuments` can contain multiple documents in the payload. Y
 
 > There is no transaction log, so you must call commit periodically to make recent changes durable on disk. This means that if a node crashes, all indexed documents since the last commit are lost. ([docs](https://nrtsearch.readthedocs.io/en/latest/introduction.html#design))
 
-When ingesting our data to nrtsearch we need to call `commit` periodically to ensure our data is persisted. It works very well with streaming frameworks, like Flink, where you can call `commit` every time your Flink application checkpoints - and the checkpoint is successful if and only if the commit call succeeds.
+When ingesting our data to nrtsearch we need to call `commit` periodically to ensure our data is persisted. It works very well with streaming frameworks, like Flink, where you can call `commit` every time your Flink application checkpoints. The checkpoint is successful if and only if the commit call succeeds.
 
-We will use a python script, which will batch docs and ingest them into the primary and commit the index. We will be able verify the state of replicas to check if index segments were replicated.
+I use a python script, which batches docs and ingests them into the primary and commits the index. Then, we can inspect the state of replicas to check if index segments were replicated.
 
 ```python
 # For prod cases we can even make it 1000, taking small value for this tutorial
@@ -401,7 +368,7 @@ def run_indexer():
     commit_response = commit_index(primary_client)
 ```
 
-You can ingest the data by running `make run_indexer`. After the script is done, let's check the number of docs in each nrtsearch node - to verify that updates were propagated to replicas.
+You can start the script by running `make run_indexer`. After the script is done, let's check the number of docs in each nrtsearch node - to verify that updates were propagated to replicas.
 
 ```bash
 > venv/bin/python nrtsearch_client/get_indices.py
@@ -440,11 +407,11 @@ We can see that data was successfully replicated between primary and replica nod
 
 [gRPCox](https://github.com/gusaul/grpcox) is a web UI wrapper for `gRPCurl`. It's a simple but useful tool that lets you interact with gRPC servers. It's optional for the tutorial but I want to show how it enables ad-hoc communication with the nrtsearch server.
 
-Start the UI by running `make grpcox`. It will be accessible on `localhost:6969`. For our tutorial nrtsearch nodes running in `docker` the hostname will be always `host.docker.internal` and the port will be `8000` for the primary and `8001-2` for the two replicas.
+The UI was started as one of the services invoked by the `make start` command and is accessible on `localhost:6969`. The primary is advertised under `primary-node` hostname, and replicas are advertised under `replica-node` (you can inspect logs to find IP of each replica). The nrtsearch gRPC server runs on port `8000`.
 
 Let's connect to one of the replicas and fire a simple search request to explore the index.
 
-- Connect to replica-1 at `host.docker.internal:8002`
+- Connect to replica-1 at `replica-node:8000`
 - Select `luceneserver.LuceneServer` service. You should then see all available gRPC methods and their schemas.
 
 We will use `search` and pass this query to explore docs in the index (note, since the `query` field is empty it will return all documents).
@@ -460,7 +427,10 @@ We will use `search` and pass this query to explore docs in the index (note, sin
 
 You should see the search results in the UI.
 
-![gRPCox UI](./grpcox.mp4)
+<ImageComponent
+  image={props.frontmatter.blogImages[1]}
+  alt="gRPCox"
+></ImageComponent>
 
 ## Custom search ranking
 
@@ -470,10 +440,73 @@ The default scoring algorithm considers the frequency and distribution of terms 
 
 ## Highlighting support
 
+Highlights are used to retrieve the information about matched terms in a hit. Nrtsearch currently supports the [Fast Vector Highlighter](https://github.com/apache/lucene/blob/main/lucene/highlighter/src/java/org/apache/lucene/search/vectorhighlight/FastVectorHighlighter.java) in Lucene.
+
+For search query it's possible to specify `highlight` field so that nrtsearch returns matching terms in search results wrapped `pre_tags` and `post_tags`.
+
+```python
+search_request = SearchRequest(
+    indexName='blog_search',
+    retrieveFields=["url", "title", "description"],
+    query=Query(...),
+    highlight=Highlight(
+        fields=["content", "content.analyzed"],
+        settings=Highlight.Settings(
+            pre_tags=["<em>"], post_tags=["</em>"]),
+    ),
+)
+```
+
+Requriements
+
+## Client-side load balancing
+
+```bash
+dig replica-node
+
+; <<>> DiG 9.18.13 <<>> replica-node
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25431
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;replica-node.                  IN      A
+
+;; ANSWER SECTION:
+replica-node.           600     IN      A       172.20.0.6
+replica-node.           600     IN      A       172.20.0.7
+
+;; Query time: 3 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11) (UDP)
+;; WHEN: Sun Apr 16 08:34:39 UTC 2023
+;; MSG SIZE  rcvd: 86
+```
+
 ## Search UI
+
+Our Search UI is a simple server side rendered React app. It was bootstrapped by `npx create-next-app` command. I used [@elastic/search-ui](https://github.com/elastic/search-ui) React components to define the app UI in [less than 100 lines of frontend code](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/pages/index.tsx). The library allows for defining custom connectors. The Search UI is [connected](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/connector/Connector.tsx) to our searcher api.
+
+It was started by running `make start` and should be accessible on `localhost:3000`. You can make a few search queries to see how our custom search ranking works.
+
+<ImageComponent
+  image={props.frontmatter.blogImages[0]}
+  alt="Search UI"
+></ImageComponent>
 
 <!-- Elastic Search-UI -->
 
 ## Putting it all together
 
-## Index your data
+Configuration for every service mentioned in this tutorial is in the `docker-compose.yaml` file. In order to start this project locally you need to execute four commands:
+
+- `make start` - starts the nrtsearch cluster, search UI and the search API server, and the gRPC web UI. It also generates nrtsearch client python code using `protoc` compiler.
+- `make start_index` - starts the `blog_search` index
+- `make run_crawler` - crawls web data
+- `make run_indexer` - indexes crawled web data
+
+You can access the Search UI on your host machine `localhost:3000` to issue search queries.
+
+You can index more web data by editing and adding sources to the `crawler.py` code. Keep in mind that when crawling websites with scripts, it is crucial to be careful and respect the robots.txt file to avoid any legal or ethical consequences.
+
+I hope this tutorial is a helpful introduction to data indexing with nrtsearch. Happy hacking!
