@@ -7,8 +7,8 @@ body {
 
 body.light {
   --bg: #fff;
-  --bg-secondary: #f9f9f9;
-  --bg-header: #F9F9F9BF;
+  --bg-secondary: #f8f8f8;
+  --bg-header: #F6F6F6BF;
   --post-outline: rgb(211, 233, 235);
   --bg-gallery: #f6f8fa;
   --header: var(--blue);
