@@ -7,7 +7,7 @@ blogImages: ['./search-ui.jpeg', './grpcox.jpeg']
 
 Let's use [nrtsearch](https://github.com/Yelp/nrtsearch) - an open-source search engine built by Yelp - to support text search for any website. In this tutorial, I'm using my blog as an example dataset, but you can apply this approach to index any kind of data.
 
-The plan is to build a simple web crawler to fetch website's data. Then we start a local nrtsearch cluster with a primary and replicas, design its index schema and set up an indexing pipeline for the search engine. Finally, we define nrtsearch queries to support custom scoring and highlighting. A simple search UI will allow us to interact with the system. All of this will be done with minimal coding. I will use of open-source projects to keep things simple and extensible. You can clone [the tutorial code repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search) to run the code locally. All you need is `python3` and `Docker` installed on your system.
+The plan is to build a simple web crawler to fetch website's data. Then we start a local nrtsearch cluster with a primary and replicas, design its index schema and set up an indexing pipeline for the search engine. Finally, we define nrtsearch queries to support custom scoring and highlighting. A simple search UI will allow us to interact with the system. All of this will be done with minimal coding. I will use open-source libraries to keep things simple and extensible. You can clone [the tutorial code repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search) to run the code locally. All you need is `python3` and `Docker` installed on your system.
 
 If you want to learn more about nrtsearch, check out Yelp's Engineering blog post:
 
@@ -25,7 +25,7 @@ I use [beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/) librar
 - `description` - meta description tag, a short summary of the website, provided by the author
 - `url` - unique website id
 - `content`- extracted text content, e.g. paragraphs
-- `headings` - extracted website's headings. For simplicity we group `h1`, `h2`, `h3`, ... tags together.
+- `headings` - extracted website's headings, we group `h1`, `h2`, `h3`, ... tags together.
 
 Our code uses `get_source_urls()` function to get the list of urls. The function will process the HTML pages to extract: title, description, content and headings. After it's done, it will save the output to a JSON file.
 
@@ -164,11 +164,11 @@ analysis_pb2_grpc.py     luceneserver_pb2_grpc.py search_pb2_grpc.py       sugge
 
 ## Index schema
 
-In order to ingest the data into nrtsearch, we must first create an index and register the fields. Appropriate schema design for our use-case enables efficient search and results highlighting.
+In order to ingest the data into nrtsearch, we must first create an index and register the fields. Appropriate schema design will enable efficient search and results highlighting for blog data.
 
-For our tutorial index `blog_search` we need to index the data returned from [the crawler](/tech-blog/nrtsearch-tutorial-website-search/#web-crawler): url, title, description, headings and text content.
+The `blog_search` index needs to represent the data returned from [the crawler](/tech-blog/nrtsearch-tutorial-website-search/#web-crawler): url, title, description, headings and text content.
 
-- We use `TEXT` type for each field, as this allows to the data to be tokenized and index to Lucene with index-time analyzer.
+- We use `TEXT` type for each field, as this allows to the data to be tokenized and indexed with index-time analyzer.
 - The nested field `url.id` has `_ID` type - it defines the unique Lucene document id. Note, the `url` field has `TEXT` type as we still want to search for keywords within the url
 - Each field is searchable (`search: true`), tokenized (`tokenize: true`) and is stored in column-oriented way (`storeDocValues: true`).
 - The `content.analyzed` field contains the index-time analyzed webpage content. We define a custom analyzer which removes any html characters (`htmlstrip` charFilter), uses `standard` tokenizer and `kStem`, `stop` and `lowercase` Lucene token filters. In order to support the [Fast Vector Highlighter](https://nrtsearch.readthedocs.io/en/latest/highlighting.html) for results highlighting, we set `termVectors`, `store` and `tokenize` properties.
@@ -408,9 +408,9 @@ We can see that data was successfully replicated between primary and replica nod
 
 The UI was started as one of the services invoked by the `make start` command and is accessible on `localhost:6969`. The primary is advertised under `primary-node` hostname, and replicas are advertised under `replica-node` (you can inspect logs to find IP of each replica). The nrtsearch gRPC server runs on port `8000`.
 
-Let's connect to one of the replicas and fire a simple search request to explore the index.
+Let's connect to the primary node and run a simple search request to explore the index.
 
-- Connect to replica-1 at `replica-node:8000`
+- Connect to primary at `primary-node:8000`
 - Select `luceneserver.LuceneServer` service. You should then see all available gRPC methods and their schemas.
 
 We will use `search` and pass this query to explore docs in the index (note, since the `query` field is empty it will return all documents).
@@ -433,7 +433,7 @@ You should see the search results in the UI.
 
 ## Custom search ranking
 
-The default scoring algorithm considers the frequency and distribution of terms in the document and query vectors. For our simple scenario it should suffice to return documents that contain the user search query in their text `content`. We can add custom weights to prioritize results that contain the search term inside `title`, `description`, `headings` or `url`. We can start with simple weights, test our system and refine the algorithm as necessary to improve search results.
+The Lucene's scoring algorithm considers the frequency and distribution of terms in the document and query vectors. For our scenario it should suffice to return documents that match the user search query. We can add custom weights to prioritize results that contain the search term inside `title`, `description`, `headings`, `url` and `content`. We can start with simple weights, test our system and refine the algorithm as necessary to improve search results.
 
 [Building Nrtsearch Queries](https://nrtsearch.readthedocs.io/en/latest/querying_nrtsearch.html) documentation page contains supported query types along with examples and explanations. Since nrtsearch is based on Apache Lucene, its query types map closely to Lucene queries. It's possible to customize queries for each field based on specific search requirements. You can combine the queries using a `BooleanQuery` with multiple clauses. For example, you could use a `MatchPhraseQuery` to search for exact phrases, or a add fuzziness parameters to `MatchQuery` to search for approximate matches.
 
@@ -443,7 +443,7 @@ The search query used for retrieving hits from `blog_search` index is defined in
 
 Highlights are used to retrieve information about matched terms in a hit. Nrtsearch currently supports the [Fast Vector Highlighter](https://github.com/apache/lucene/blob/main/lucene/highlighter/src/java/org/apache/lucene/search/vectorhighlight/FastVectorHighlighter.java) in Lucene.
 
-Results highlighting is configured in the search request's `highlight` field. Nrtsearch returns matched terms in a hit wrapped in `pre_tags` and `post_tags`. In this tutorial I use the `<em>` html tag to emphasize the matching content.
+Results highlighting is configured in the search request's `highlight` field. Nrtsearch returns matched terms in a hit wrapped in `pre_tags` and `post_tags`. In this tutorial I use the `<em>` html tag to emphasize the highlighted content.
 
 ```python
 search_request = SearchRequest(
@@ -508,7 +508,7 @@ Nrtsearch exposes Prometheus `/metrics` endpoint. You can set up Grafana dashboa
 
 ## Search UI
 
-Our Search UI is a simple server-side React app. It was bootstrapped by `npx create-next-app` command. I used [@elastic/search-ui](https://github.com/elastic/search-ui) React components to define the app UI in [less than 100 lines of frontend code](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/pages/index.tsx). The library supports custom connectors. The Search UI is [connected](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/connector/Connector.tsx) to our searcher API - a simple Flask server with `/search` endpoint.
+Our Search UI is a simple server-side React app. It was bootstrapped with `npx create-next-app` command. I used [@elastic/search-ui](https://github.com/elastic/search-ui) React components to define the app UI in [less than 100 lines of frontend code](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/pages/index.tsx). The library supports custom connectors. The Search UI is [connected](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/search_ui/src/connector/Connector.tsx) to our searcher API - a simple Flask server with `/search` endpoint.
 
 It was started by running `make start` and should be accessible on `localhost:3000`. You can make a few search queries to see how our custom search ranking works.
 
