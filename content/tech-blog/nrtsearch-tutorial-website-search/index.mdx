@@ -127,12 +127,12 @@ Clients can communicate with nrtsearch via gRPC or REST API. [gRPC](https://grpc
 
 Let's use gRPC to communicate with nrtsearch. Since it's not a REST API we can't just `curl` the endpoints. We need to generate the native client code, `python` for this tutorial, to interact with nrtsearch nodes.
 
-To generate Python client code from proto definitions, you can use the gRPC toolchain's `protoc` compiler along with the `grpc_tools` package to compile the `.proto` files into Python code. You can then use the generated client code to communicate with the gRPC server. The steps are:
+To generate Python client code from [nrtsearch proto definitions](https://github.com/Yelp/nrtsearch/tree/master/clientlib/src/main/proto/yelp/nrtsearch), you can use the gRPC toolchain's `protoc` compiler along with the `grpc_tools` package to compile the `.proto` files into Python code. You can then use the generated client code to communicate with the gRPC server. The steps are:
 
 - get all nrtsearch `.proto` files along with their dependencies to a folder, let's call it `/protos`
 - point `protoc` compiler to `/protos` folder and generate the python code
 
-In the [Makefile](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/Makefile) there are commands `nrtsearch_protos` and `nrtsearch_protos` which execute the steps above. They will put the generated code into [/nrtsearch_client/nrtsearch_py_grpc](https://github.com/jedrazb/nrtsearch-tutorial-website-search/tree/master/nrtsearch_client/nrtsearch_py_grpc).
+In the [Makefile](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/Makefile) there are commands `nrtsearch_protos` and `nrtsearch_protos` which execute the steps above. They will put the generated code into [nrtsearch_client/yelp/nrtsearch/](https://github.com/jedrazb/nrtsearch-tutorial-website-search/tree/master/nrtsearch_client/yelp/nrtsearch).
 
 ```makefile
 # Generate nrtsearch .proto files and their dependencies
@@ -173,7 +173,7 @@ The `blog_search` index needs to represent the data returned from [the crawler](
 - Each field is searchable (`search: true`), tokenized (`tokenize: true`) and is stored in column-oriented way (`storeDocValues: true`).
 - The `content.analyzed` field contains the index-time analyzed webpage content. We define a custom analyzer which removes any html characters (`htmlstrip` charFilter), uses `standard` tokenizer and `kStem`, `stop` and `lowercase` Lucene token filters. In order to support the [Fast Vector Highlighter](https://nrtsearch.readthedocs.io/en/latest/highlighting.html) for results highlighting, we set `termVectors`, `store` and `tokenize` properties.
 
-The `blog_search` index schema is located in [/index_resources/index_schema.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/index_resources/index_schema.yaml) and defined as:
+The `blog_search` index schema is located in [index_resources/index_schema.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/index_resources/index_schema.yaml) and defined as:
 
 ```yaml
 indexName: blog_search
@@ -255,7 +255,7 @@ SERVICE_DISCOVERY = {
 }
 ```
 
-In [/nrtsearch_client/client.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/client.py) we have the gRPC client which communicates with our cluster nodes:
+In [nrtsearch_client/client.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/client.py) we have the gRPC client which communicates with our cluster nodes:
 
 ```python
 @lru_cache(3)
@@ -264,7 +264,7 @@ def get_nrtsearch_client(host, port):
     return LuceneServerStub(channel)
 ```
 
-The script in [/nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) creates clients for each node and executes the above commands in order, using the protobuf generated code. You can run the script for index setup locally via `make setup_index`.
+The script in [nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) creates clients for each node and executes the above commands in order, using the protobuf generated code. You can run the script for index setup locally via `make setup_index`.
 
 The process of starting the index is slightly different for replicas and primaries. For example, the `start_index_replica()` starts the index in `REPLICA` mode and registers to primary to listen for index updates. The `primaryAddress="primary-node"` is defined in [docker-compose.yaml](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/docker-compose.yaml#L9) and the `8001` replication port comes from the primary [server configuration](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch/nrtsearch-primary-config.yaml#L4). Note that replicas use the internal Docker network to communicate with the primary so we don't need to expose the replication port.
 
@@ -293,7 +293,7 @@ indicesResponse {
 }
 ```
 
-If you restart the nrtsearch container, you will see that even though the state files are still present in the volume, the index won't be started. Nrtsearch expects a `startIndex` command after server restart. In the [/nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) script we have extra logic to handle following scenarios:
+If you restart the nrtsearch container, you will see that even though the state files are still present in the volume, the index won't be started. Nrtsearch expects a `startIndex` command after server restart. In the [nrtsearch_client/setup_index.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/setup_index.py) script we have extra logic to handle following scenarios:
 
 - `blog_search` index is not returned from the `indices()` call. It means that the index doesn't exist. We need to execute all 5 steps to create an index.
 - `blog_search` index exists but is `not_started`. This can happen when you restart a Docker container. We need to just issue the `StartIndexRequest`.
@@ -437,7 +437,7 @@ The Lucene's scoring algorithm considers the frequency and distribution of terms
 
 [Building Nrtsearch Queries](https://nrtsearch.readthedocs.io/en/latest/querying_nrtsearch.html) documentation page contains supported query types along with examples and explanations. Since nrtsearch is based on Apache Lucene, its query types map closely to Lucene queries. It's possible to customize queries for each field based on specific search requirements. You can combine the queries using a `BooleanQuery` with multiple clauses. For example, you could use a `MatchPhraseQuery` to search for exact phrases, or a add fuzziness parameters to `MatchQuery` to search for approximate matches.
 
-The search query used for retrieving hits from `blog_search` index is defined in [/nrtsearch_client/searcher.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/searcher.py#L41). We combine multiple `MatchQuery` and `MatchPhraseQuery` queries to recall and score documents based on their title, description, headings, url and content.
+The search query used for retrieving hits from `blog_search` index is defined in [nrtsearch_client/searcher.py](https://github.com/jedrazb/nrtsearch-tutorial-website-search/blob/master/nrtsearch_client/searcher.py#L41). We combine multiple `MatchQuery` and `MatchPhraseQuery` queries to recall and score documents based on their title, description, headings, url and content.
 
 ## Highlighting support
 
