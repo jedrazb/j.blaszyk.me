@@ -59,6 +59,10 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                 content: metaDescription,
               },
               {
+                property: 'og:site_name',
+                content: siteMetadata.title,
+              },
+              {
                 property: 'robots',
                 content: 'index, follow',
               },
