@@ -20,7 +20,15 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, image, title, description, slug, lang = 'en' }) {
+function SEO({
+  meta,
+  image,
+  title,
+  description,
+  slug,
+  lang = 'en',
+  structuredData = null,
+}) {
   return (
     <StaticQuery
       query={query}
@@ -98,7 +106,14 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            {/* Structured data for rich SEO snippets */}
+            {structuredData && (
+              <script type="application/ld+json">
+                {JSON.stringify(structuredData, null, 2)}
+              </script>
+            )}
+          </Helmet>
         );
       }}
     />

@@ -18,12 +18,20 @@ class TechBlogIndexTemplate extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const posts = get(this, 'props.data.allMdx.edges');
 
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      url: 'https://j.blaszyk.me/tech-blog/',
+      name: 'Tech Blog',
+    };
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={'Tech Blog'}
           location={this.props.location}
           description={'Tech blog by Jedr Blaszyk.'}
+          structuredData={structuredData}
         />
         <aside>
           <h1 style={{ marginTop: 0 }}>Tech Blog</h1>

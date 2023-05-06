@@ -64,12 +64,28 @@ class TechBlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
     let { previous, next, slug } = this.props.pageContext;
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
 
     const category = get(post, 'fields.category');
+
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.frontmatter.title,
+      datePublished: post.frontmatter.date,
+      url: `${siteUrl}/${category}${post.fields.slug}`,
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Jedr Blaszyk',
+          url: 'https://j.blaszyk.me/',
+        },
+      ],
+    };
 
     return (
       <Layout
@@ -82,6 +98,7 @@ class TechBlogPostTemplate extends React.Component {
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
           image={ogImagePath}
+          structuredData={structuredData}
         />
         <main>
           <article className="post">
@@ -141,11 +158,7 @@ class TechBlogPostTemplate extends React.Component {
             >
               <li>
                 {previous && (
-                  <Link
-                    to={`/${category}${previous.fields.slug}`}
-                    rel="prev"
-                    // style={{ marginRight: 20 }}
-                  >
+                  <Link to={`/${category}${previous.fields.slug}`} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>
                 )}
@@ -205,6 +218,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {

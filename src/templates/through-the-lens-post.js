@@ -53,6 +53,7 @@ class ThroughTheLensPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
     let { previous, next, slug } = this.props.pageContext;
 
     const ogimage = post.frontmatter.featuredImage;
@@ -64,6 +65,24 @@ class ThroughTheLensPostTemplate extends React.Component {
 
     const category = get(post, 'fields.category');
 
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'ImageGallery',
+      headline: post.frontmatter.title,
+      image: post.frontmatter.imageRows
+        .map((imageRow) => imageRow.map((image) => getSrc(image)))
+        .flat(),
+      datePublished: post.frontmatter.date,
+      url: `${siteUrl}/${category}${post.fields.slug}`,
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Jedr Blaszyk',
+          url: 'https://j.blaszyk.me/',
+        },
+      ],
+    };
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -71,6 +90,7 @@ class ThroughTheLensPostTemplate extends React.Component {
           description={`Through the Lens: ${post.frontmatter.title}`}
           slug={this.props.path}
           image={ogImagePath}
+          structuredData={structuredData}
         />
         <main>
           <article className="post">
@@ -216,6 +236,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {

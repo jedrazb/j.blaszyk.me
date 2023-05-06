@@ -55,6 +55,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
     let { previous, next, slug } = this.props.pageContext;
 
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog/${slug.slice(
@@ -67,6 +68,22 @@ class BlogPostTemplate extends React.Component {
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
+
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.frontmatter.title,
+      image: post.frontmatter.images.map((image) => getSrc(image)),
+      datePublished: post.frontmatter.date,
+      url: `${siteUrl}${post.fields.slug}`,
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Jedr Blaszyk',
+          url: 'https://j.blaszyk.me/',
+        },
+      ],
+    };
 
     return (
       <Layout
@@ -81,6 +98,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
           image={ogImagePath}
+          structuredData={structuredData}
         />
         <main>
           <article className="post">
@@ -193,6 +211,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
