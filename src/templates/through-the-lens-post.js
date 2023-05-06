@@ -67,10 +67,12 @@ class ThroughTheLensPostTemplate extends React.Component {
 
     const structuredData = {
       '@context': 'https://schema.org',
-      '@type': 'ImageGallery',
+      '@type': 'BlogPosting',
       headline: post.frontmatter.title,
       image: post.frontmatter.imageRows
-        .map((imageRow) => imageRow.map((image) => getSrc(image)))
+        .map((imageRow) =>
+          imageRow.map((image) => `${siteUrl}${getSrc(image)}`)
+        )
         .flat(),
       datePublished: post.frontmatter.date,
       url: `${siteUrl}/${category}${post.fields.slug}`,
