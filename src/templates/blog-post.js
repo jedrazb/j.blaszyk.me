@@ -73,9 +73,9 @@ class BlogPostTemplate extends React.Component {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: post.frontmatter.title,
-      image: post.frontmatter.images.map(
-        (image) => `${siteUrl}${getSrc(image)}`
-      ),
+      image:
+        post.frontmatter.images &&
+        post.frontmatter.images.map((image) => `${siteUrl}${getSrc(image)}`),
       datePublished: post.frontmatter.date,
       url: `${siteUrl}${post.fields.slug}`,
       author: [
