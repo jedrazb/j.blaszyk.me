@@ -64,6 +64,7 @@ class TechBlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
+    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
     let { previous, next, slug } = this.props.pageContext;
 
     const ogimage = post.frontmatter.ogimage;
@@ -76,6 +77,7 @@ class TechBlogPostTemplate extends React.Component {
       '@type': 'BlogPosting',
       headline: post.frontmatter.title,
       datePublished: post.frontmatter.date,
+      url: `${siteUrl}/${category}${post.fields.slug}`,
       author: [
         {
           '@type': 'Person',
@@ -216,6 +218,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
