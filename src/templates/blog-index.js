@@ -18,7 +18,7 @@ class BlogIndexTemplate extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const posts = get(this, 'props.data.allMdx.edges');
 
-    const blogStructuredData = {
+    const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Blog',
       url: 'https://j.blaszyk.me/',
@@ -27,7 +27,7 @@ class BlogIndexTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO structuredData={blogStructuredData} />
+        <SEO structuredData={structuredData} />
         <aside>
           <Bio />
         </aside>

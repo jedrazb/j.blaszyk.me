@@ -18,10 +18,10 @@ class TechBlogIndexTemplate extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const posts = get(this, 'props.data.allMdx.edges');
 
-    const techBlogStructuredData = {
+    const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      url: 'https://j.blaszyk.me/',
+      url: 'https://j.blaszyk.me/tech-blog/',
       name: 'Tech Blog',
     };
 
@@ -31,7 +31,7 @@ class TechBlogIndexTemplate extends React.Component {
           title={'Tech Blog'}
           location={this.props.location}
           description={'Tech blog by Jedr Blaszyk.'}
-          structuredData={techBlogStructuredData}
+          structuredData={structuredData}
         />
         <aside>
           <h1 style={{ marginTop: 0 }}>Tech Blog</h1>

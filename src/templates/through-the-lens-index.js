@@ -23,10 +23,10 @@ class ThroughTheLensIndexTemplate extends React.Component {
 
     const title = 'Through the Lens';
 
-    const photoBlogStructuredData = {
+    const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'Blog',
-      url: 'https://j.blaszyk.me/',
+      url: 'https://j.blaszyk.me/through-the-lens/',
       name: title,
     };
 
@@ -36,7 +36,7 @@ class ThroughTheLensIndexTemplate extends React.Component {
           title={title}
           location={this.props.location}
           description={'Capturing moments through the camera lens. Photo blog.'}
-          structuredData={photoBlogStructuredData}
+          structuredData={structuredData}
         />
         <aside>
           <h1 style={{ marginTop: 0 }}>Through the Lens</h1>
