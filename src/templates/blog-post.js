@@ -68,6 +68,21 @@ class BlogPostTemplate extends React.Component {
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
 
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.frontmatter.title,
+      image: post.frontmatter.images.map((image) => getSrc(image)),
+      datePublished: post.frontmatter.date,
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Jedr Blaszyk',
+          url: 'https://j.blaszyk.me/',
+        },
+      ],
+    };
+
     return (
       <Layout
         location={this.props.location}
@@ -81,6 +96,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.spoiler}
           slug={post.fields.slug}
           image={ogImagePath}
+          structuredData={structuredData}
         />
         <main>
           <article className="post">

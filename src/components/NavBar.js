@@ -142,8 +142,6 @@ function NavBar({ title, location, toggle }) {
           >
             <span></span>
           </div>
-
-          {/* </div> */}
         </div>
       </div>
     </header>
