@@ -31,7 +31,10 @@ const ImageComponent = ({
         data-thumb={selectThumbnailFromSrcSet(getSrcSet(image))}
         className="image-component-fancybox"
       >
-        <GatsbyImage image={getImage(image)} alt={alt ? alt : getSrc(image)} />
+        <GatsbyImage
+          image={getImage(image)}
+          alt={alt ? alt : description ? description : getSrc(image)}
+        />
       </a>
     </figure>
   );
