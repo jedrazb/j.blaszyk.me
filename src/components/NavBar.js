@@ -110,18 +110,6 @@ function NavBar({ title, location, toggle }) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/road-to-195/"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={closeMenu}
-                  partiallyActive={true}
-                  itemprop="url"
-                >
-                  <span itemprop="name">Road to 195</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
                   to="/contact/"
                   activeClassName="active"
                   className="nav-links"
