@@ -1,6 +1,6 @@
 body {
   --orange: rgb(245, 158, 71);
-  --blue: #1845b9;
+  --blue: #0077cc;
   background-color: var(--bg);
   font-family: 'Roboto', sans-serif;
 }
