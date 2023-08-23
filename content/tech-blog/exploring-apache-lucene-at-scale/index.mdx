@@ -1,8 +1,8 @@
 ---
-title: 'Running Apache Lucene at Scale'
-date: '2023-03-18'
-spoiler: 'Running Apache Lucene at scale - overview of Elasticsearch and NrtSearch.'
-blogImages: []
+title: 'Exploring Apache Lucene - Part 3: Running at a Scale'
+date: '2023-08-15'
+spoiler: Exploring strategies to scale up Apache Lucene to serve high-traffic applications. Is serverless search the best solution?
+# blogImages: ['./inverted_index.png', './lucene_segments.png']
 ---
 
 In 2020, I joined Yelp as a software engineer on the Ranking Platform team. The team is responsible for Yelp's search and ranking infrastructure, which powers the business and reviews search and internal real-time ad bidding system.
@@ -18,9 +18,9 @@ This post concludes
 
 # Lucene at scale
 
-As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several popular implementations that can help to achieve this goal, such as Elasticsearch, Solr, and nrtSearch.
+As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several open-source implementations that can help to achieve this goal. I'm personally familiar with [Elasticsearch](https://github.com/elastic/elasticsearch) and [nrtSearch](https://github.com/Yelp/nrtsearch), and so will use them to showcase classic and serverless architectures.
 
-They all allow to scale out Lucene across multiple nodes, with an added API wrapper for data ingestion and search. But, their different designs and architectures make the problem of running Lucene at scale quite interesting. While they all aim to solve the same problem, their specific implementation may have different tradeoffs in terms of performance, scalability, fault tolerance, and ease of use.
+Both Elasticsearch and nrtSearch allow to scale out Lucene across multiple nodes, with an added API wrapper for data ingestion and search. But, their different designs and architectures make the problem of running Lucene at scale quite interesting. While they all aim to solve the same problem, their specific implementation may have different tradeoffs in terms of performance, scalability, and ease of use.
 
 Distributing and replicating an index across multiple nodes are common approaches for achieving high scalability and performance in search applications.
 
