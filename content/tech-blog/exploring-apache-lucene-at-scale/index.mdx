@@ -1,28 +1,24 @@
 ---
-title: 'Exploring Apache Lucene - Part 3: Running at a Scale'
-date: '2023-08-15'
-spoiler: Exploring strategies to scale up Apache Lucene to serve high-traffic applications. Is serverless search the best solution?
+title: 'Exploring Apache Lucene - Part 3: Running at Scale'
+date: '2023-09-15'
+spoiler: Exploring strategies to scale up Apache Lucene to serve high-traffic applications. Looking at how serverless architectures can enable cost-effective scalability.
 # blogImages: ['./inverted_index.png', './lucene_segments.png']
 ---
 
-In 2020, I joined Yelp as a software engineer on the Ranking Platform team. The team is responsible for Yelp's search and ranking infrastructure, which powers the business and reviews search and internal real-time ad bidding system.
+Let's look into different, real-world architectures that allow us to deploy and run Apache Lucene at scale. Also, let's investigate what benefits the serverless architecture brings when dealing with changing traffic patterns.
 
-At that time, I participated in an initiative to overhaul our core search and ranking infrastructure. Our goal was to improve performance and cost efficiency, and the work resulted in the creation of an open-source search engine - [nrtSearch](https://github.com/Yelp/nrtsearch). As of 2023, nrtSearch is now the primary search and ranking engine used for the majority of Yelp's search use cases.
-
-Having the benefit of being a heavy nrtSearch user for the past 2 years I want to give a brief overview from the
-
-This post concludes
+If you are interested in this topic, I'm linking below other posts from the `Exploring Apache Lucene` series where I'm discussing Apache Lucene in a bottom-up manner:
 
 - [Exploring Apache Lucene - Part 1: The Index](/tech-blog/exploring-apache-lucene-index/)
 - [Exploring Apache Lucene - Part 2: Search and Ranking](/tech-blog/exploring-apache-lucene-search-and-ranking/)
 
 # Lucene at scale
 
-As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several open-source implementations that can help to achieve this goal. I'm personally familiar with [Elasticsearch](https://github.com/elastic/elasticsearch) and [nrtSearch](https://github.com/Yelp/nrtsearch), and so will use them to showcase classic and serverless architectures.
+As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several open-source implementations that can help achieve this goal. I'm personally familiar with [Elasticsearch](https://github.com/elastic/elasticsearch) and [nrtSearch](https://github.com/Yelp/nrtsearch), and I will use them to showcase classic and serverless architectures.
 
-Both Elasticsearch and nrtSearch allow to scale out Lucene across multiple nodes, with an added API wrapper for data ingestion and search. But, their different designs and architectures make the problem of running Lucene at scale quite interesting. While they all aim to solve the same problem, their specific implementation may have different tradeoffs in terms of performance, scalability, and ease of use.
+Both Elasticsearch and nrtSearch allow you to scale out Lucene across multiple nodes, with an added API wrapper for data ingestion and search. But their different designs and architectures make the problem of running Lucene at scale quite interesting. While they all aim to solve the same problem, their specific implementations have different tradeoffs in terms of performance, scalability, and ease of use.
 
-Distributing and replicating an index across multiple nodes are common approaches for achieving high scalability and performance in search applications.
+Let's start with discussing the foundations. Distributing and replicating an index across multiple nodes are common approaches for achieving high scalability and performance in search applications. Beyond this, load balancing ensures even query distribution across nodes, preventing overload and guaranteeing responsive user experiences.
 
 ## Data distribution
 
@@ -30,17 +26,29 @@ If your searches are starting to take longer or your index is getting too large 
 
 To do this, you can divide your index into smaller partitions, called shards, which can then be distributed across separate nodes. A search engine can partition a search query into sub-searches that are run on each shard, and then the results are combined - this is known as _Scatter-gather_.
 
-The underlying technical details of index sharding are typically invisible to end-users. They'll simply experience faster search performance, especially when working with very large indexes. By distributing your data, you can overcome physical limitations and improve search efficiency.
+The underlying technical details of index sharding are typically invisible to end users. They'll simply experience faster search performance, especially when working with very large indexes. By distributing your data, you can overcome physical limitations and improve search efficiency.
 
 ## Data replication
 
 When you have a large search volume that can't be handled by a single node, you can distribute searches across multiple read-only copies of the index to improve search performance. By replicating the index, search queries can be processed concurrently across multiple nodes, resulting in faster response times for end-users. This makes it possible to handle large volumes of data and queries, which is critical for building a high-performing, scalable search engine.
 
-In scenario of a high volume of indexing that consumes resources and reduces search performance on the indexing node, you can separate indexing and searching by replicating the index. In this context _"replicating"_ can mean e.g. transferring index segments to replica nodes responsible for search. This allows you to distribute indexing and searching across different nodes, which can help to improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
+In the case of a high volume of indexing that consumes resources and reduces search performance on the indexing node, you can separate indexing and searching by replicating the index. In this context _"replicating"_ can mean e.g. transferring index segments to replica nodes responsible for search. This allows you to distribute indexing and searching across different nodes, which can help improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
+
+## Load balancing
+
+When your Lucene-powered search system experiences increased traffic, maintaining consistent performance becomes crucial. Load balancing serves as a fundamental strategy for evenly distributing incoming queries across multiple nodes. This ensures that no single node is overwhelmed, resulting in a responsive and reliable search experience for users.
+
+Load balancers, such as Nginx or HAProxy, act as traffic directors. They efficiently route incoming requests to the appropriate nodes within your Lucene cluster. By intelligently distributing the workload, load balancers prevent resource bottlenecks and optimize resource utilization.
+
+Through load balancing, your search infrastructure gains the ability to seamlessly scale horizontally. As user demands fluctuate, you can dynamically add or remove nodes without disrupting service availability. This elasticity empowers your system to gracefully handle surges in traffic, ensuring that every user query receives timely attention.
+
+Load balancers often integrate health checks, monitoring the health of individual nodes and automatically directing traffic away from underperforming or unavailable nodes. By eliminating single points of failure and maximizing resource efficiency, load balancing contributes significantly to the reliability and scalability of your Lucene-based search solution.
 
 # Elasticsearch
 
 > [Elasticsearch from the Top Down](https://www.elastic.co/blog/found-elasticsearch-top-down)
+
+## Architecture
 
 ### Cluster
 
@@ -60,8 +68,12 @@ To ensure high availability and fault tolerance, Elasticsearch also allows for t
 
 To handle search requests, Elasticsearch uses coordinating nodes, which act as a gateway to the rest of the cluster. When a search request is received, the coordinating node forwards the request to the appropriate shards and aggregates the results. Coordinating nodes do not hold any data or participate in indexing, but they play a critical role in scaling Elasticsearch's search capabilities.
 
+## Elasticsearch Pros and Cons
+
+## Elasticsearch Serverless
+
 # Nrtsearch
 
-You can read more about the nrtSearch project results in the blog post from Yelp’s Engineering Blog:
+While working as a software engineer at Yelp, I was part of the Ranking Platform team. We were at the core of an initiative to revamp our core search and ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of early 2023, is used for the majority of search and ranking use cases at Yelp, with more migrations underway to replace Elasticsearch. With nrtsearch our p50s, p95s, and p99s improved by 30-50% while costs dropped by as much as 40% in some cases. You can read more about the nrtsearch project results in the blog post from Yelp’s Engineering Blog:
 
 > [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
