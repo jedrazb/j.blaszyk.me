@@ -44,7 +44,7 @@ function NavBar({ title, location, toggle }) {
 
   return (
     <header>
-      <nav className="navbar">
+      <div className="navbar">
         <div className="nav-container">
           <h1
             style={{
@@ -67,62 +67,60 @@ function NavBar({ title, location, toggle }) {
               {title}
             </Link>
           </h1>
-
-          <ul className={opened ? 'nav-menu active' : 'nav-menu'}>
-            <li className="nav-item">
-              <Link
-                to="/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={closeMenu}
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/through-the-lens/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={closeMenu}
-                partiallyActive={true}
-              >
-                Through the Lens
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/tech-blog/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={closeMenu}
-                partiallyActive={true}
-              >
-                Tech
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/road-to-195/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={closeMenu}
-                partiallyActive={true}
-              >
-                Road to 195
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/contact/"
-                activeClassName="active"
-                className="nav-links"
-                onClick={closeMenu}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <nav
+            role="navigation"
+            itemscope=""
+            itemtype="http://schema.org/SiteNavigationElement"
+          >
+            <ul className={opened ? 'nav-menu active' : 'nav-menu'}>
+              <li className="nav-item">
+                <Link
+                  to="/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={closeMenu}
+                  itemprop="url"
+                >
+                  <span itemprop="name">Blog</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/through-the-lens/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={closeMenu}
+                  partiallyActive={true}
+                  itemprop="url"
+                >
+                  <span itemprop="name">Through the Lens</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/tech-blog/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={closeMenu}
+                  partiallyActive={true}
+                  itemprop="url"
+                >
+                  <span itemprop="name">Tech</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  to="/contact/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={closeMenu}
+                  itemprop="url"
+                >
+                  <span itemprop="name">Contact</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
           {toggle}
           <div
             className={`menu-btn-1 no-select menu-btn-1-controller ${
@@ -132,10 +130,8 @@ function NavBar({ title, location, toggle }) {
           >
             <span></span>
           </div>
-
-          {/* </div> */}
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

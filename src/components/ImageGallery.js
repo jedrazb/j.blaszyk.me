@@ -63,6 +63,7 @@ const ImageGallery = (props) => {
             width: '100%',
             paddingTop: '0.5rem',
             paddingBottom: '2rem',
+            zIndex: '11',
           }}
         >
           <Swiper
