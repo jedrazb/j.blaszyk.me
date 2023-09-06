@@ -12,7 +12,7 @@ If you are interested in this topic, I'm linking below other posts from the `Exp
 - [Exploring Apache Lucene - Part 1: The Index](/tech-blog/exploring-apache-lucene-index/)
 - [Exploring Apache Lucene - Part 2: Search and Ranking](/tech-blog/exploring-apache-lucene-search-and-ranking/)
 
-# Lucene at scale
+## Lucene at scale
 
 As search volumes and datasets grow, maintaining high performance with Apache Lucene can become increasingly challenging. As a result, scaling Lucene-based search engines becomes a crucial consideration for data-driven businesses. There are several open-source implementations that can help achieve this goal. I'm personally familiar with [Elasticsearch](https://github.com/elastic/elasticsearch) and [nrtSearch](https://github.com/Yelp/nrtsearch), and I will use them to showcase classic and serverless architectures.
 
@@ -20,7 +20,7 @@ Both Elasticsearch and nrtSearch allow you to scale out Lucene across multiple n
 
 Let's start with discussing the foundations. Distributing and replicating an index across multiple nodes are common approaches for achieving high scalability and performance in search applications. Beyond this, load balancing ensures even query distribution across nodes, preventing overload and guaranteeing responsive user experiences.
 
-## Data distribution
+### Data distribution
 
 If your searches are starting to take longer or your index is getting too large for a node to handle, it might be time to consider distributing your data across multiple nodes.
 
@@ -28,13 +28,13 @@ To do this, you can divide your index into smaller partitions, called shards, wh
 
 The underlying technical details of index sharding are typically invisible to end users. They'll simply experience faster search performance, especially when working with very large indexes. By distributing your data, you can overcome physical limitations and improve search efficiency.
 
-## Data replication
+### Data replication
 
 When you have a large search volume that can't be handled by a single node, you can distribute searches across multiple read-only copies of the index to improve search performance. By replicating the index, search queries can be processed concurrently across multiple nodes, resulting in faster response times for end-users. This makes it possible to handle large volumes of data and queries, which is critical for building a high-performing, scalable search engine.
 
 In the case of a high volume of indexing that consumes resources and reduces search performance on the indexing node, you can separate indexing and searching by replicating the index. In this context _"replicating"_ can mean e.g. transferring index segments to replica nodes responsible for search. This allows you to distribute indexing and searching across different nodes, which can help improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
 
-## Load balancing
+### Load balancing
 
 When your Lucene-powered search system experiences increased traffic, maintaining consistent performance becomes crucial. Load balancing serves as a fundamental strategy for evenly distributing incoming queries across multiple nodes. This ensures that no single node is overwhelmed, resulting in a responsive and reliable search experience for users.
 
@@ -44,36 +44,64 @@ Through load balancing, your search infrastructure gains the ability to seamless
 
 Load balancers often integrate health checks, monitoring the health of individual nodes and automatically directing traffic away from underperforming or unavailable nodes. By eliminating single points of failure and maximizing resource efficiency, load balancing contributes significantly to the reliability and scalability of your Lucene-based search solution.
 
-# Elasticsearch
+## Scaling Effectively
+
+One common issue encountered in distributed systems, is the time it takes for a new node to join the cluster and become fully operational. This delay can impact immediate responsiveness during peak traffic periods. To mitigate this challenge, the resources are often over-provisioned to ensure adequate capacity for traffic spikes or region failovers. However, over-provisioning can lead to unnecessary costs and wasting resources during non-peak times.
+
+### Stateless
+
+A promising solution is adopting a stateless deployment approach. Stateless containers, housing individual Lucene instances, can be rapidly spun up or down to match demand. For example, Kubernetes' dynamic scaling and automated workload distribution ensure that new nodes are ready to serve traffic swiftly, eliminating the need for excessive resource reservation. This approach optimizes resource utilization, reduces costs, and enables your search cluster to seamlessly handle varying workloads.
+
+- give example of nrtsearch, serverless like experience on k8s bit tied to udnerlying infra, can be deployed on premises
+
+### Managed Serverless in the Cloud
+
+The evolution of [serverless architecture](https://www.elastic.co/what-is/serverless-computing) has reached a new level with cloud providers offering fully managed serverless services. With these services, users no longer need to concern themselves with the intricacies of underlying infrastructure, such as provisioning, scaling, and maintenance. This shift allows development teams to focus solely on refining search functionalities and user experiences.
+
+### Scaling Efficiently and Cost-effectively
+
+Among the array of serverless options, the stateless approach emerges as an optimal choice for companies that prioritize efficient search capabilities while managing costs. By decoupling infrastructure concerns from search functionality, organizations can achieve streamlined operations and efficient resource utilization. This ensures that search engines maintain responsiveness without incurring unnecessary expenses, making it an attractive proposition for businesses seeking high-performance solutions within reasonable budget constraints.
+
+In embracing the serverless model, particularly the stateless deployment approach, companies can not only scale their search infrastructure effectively but also position themselves at the forefront of technological innovation, where agility and performance are paramount.
+
+## Elasticsearch
 
 > [Elasticsearch from the Top Down](https://www.elastic.co/blog/found-elasticsearch-top-down)
 
-## Architecture
+### Architecture
 
-### Cluster
+#### Cluster
 
 A cluster in Elasticsearch is a collection of nodes that work together to serve search requests and maintain the cluster state. Each node in the cluster is identified by a unique name and has a specific role, such as data node, master-eligible node, or coordinating node.
 
-### Shards
+#### Shards
 
 Elasticsearch uses the concept of shards to distribute the data across the nodes in the cluster. A shard is a subset of the index data, and each shard can be hosted on a different node in the cluster. This allows Elasticsearch to scale horizontally by adding more nodes to the cluster and distributing the data across them.
 
-### Primaries and Replicas
+#### Primaries and Replicas
 
 Each shard has one primary shard, which is responsible for all write operations and indexing. The primary shard is also responsible for distributing the data to its replica shards.
 
 To ensure high availability and fault tolerance, Elasticsearch also allows for the creation of replica shards. A replica is a copy of a shard that is hosted on a different node than the primary shard. This provides redundancy in case a node or shard fails, and allows Elasticsearch to continue serving search requests even if some nodes are offline.
 
-### Request Coordinators
+#### Request Coordinators
 
 To handle search requests, Elasticsearch uses coordinating nodes, which act as a gateway to the rest of the cluster. When a search request is received, the coordinating node forwards the request to the appropriate shards and aggregates the results. Coordinating nodes do not hold any data or participate in indexing, but they play a critical role in scaling Elasticsearch's search capabilities.
 
-## Elasticsearch Pros and Cons
+### Elasticsearch Pros and Cons
 
-## Elasticsearch Serverless
+### Elasticsearch Serverless
 
-# Nrtsearch
+## Nrtsearch
 
-While working as a software engineer at Yelp, I was part of the Ranking Platform team. We were at the core of an initiative to revamp our core search and ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of early 2023, is used for the majority of search and ranking use cases at Yelp, with more migrations underway to replace Elasticsearch. With nrtsearch our p50s, p95s, and p99s improved by 30-50% while costs dropped by as much as 40% in some cases. You can read more about the nrtsearch project results in the blog post from Yelp’s Engineering Blog:
+While working as a software engineer at Yelp, I was part of the Ranking Platform team. We were at the core of an initiative to revamp the core search and ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of early 2023, is used for the majority of search and ranking use cases at Yelp, with more migrations underway to replace Elasticsearch. With nrtsearch the p50s, p95s, and p99s improved by 30-50% while costs dropped by as much as 40% in some cases. You can read more about the nrtsearch project results in the blog post from Yelp’s Engineering Blog:
 
 > [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
+
+If you are interested to run nrtsearch multi-node cluster locally, you can refer to [official docs](https://nrtsearch.readthedocs.io/en/latest/docker_compose.html) or follow: [Nrtsearch Tutorial - Indexing Web Content for Search](/tech-blog/nrtsearch-tutorial-website-search/) with [the tutorial repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search).
+
+## Nrtsearch
+
+## Nrtsearch
+
+## Nrtsearch

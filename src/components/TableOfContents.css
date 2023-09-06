@@ -33,6 +33,10 @@
     margin-bottom: 0.5rem;
 }
 
+.toc-ul-wrapper {
+    overflow: scroll;
+    max-height: 600px;
+}
 
 @media screen and (max-width: 1540px) {
     .table-of-contents-wide-post {
