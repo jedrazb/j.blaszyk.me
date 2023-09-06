@@ -1,0 +1,53 @@
+---
+title: 'Data Connectors - Elasticsearch Ingestion Made Simple'
+date: '2023-09-26'
+spoiler: Overview of a new data connectors framework integrated with the Elastic stack. Example of writing a custom connector to ingest data from any source into the Elasticsearch index.
+blogImages: []
+---
+
+In any search application, there's a pipeline that gets the data into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that the data ingestion is a key foundation for successful data-driven solutions.
+
+Therefore, in this post, I’m diving into ingestion mechanisms offered by Enterprise Search component in the Elastic stack:
+
+- Crawler - It allows to ingest content of any website in a matter of a few clicks
+- Data connectors - A new lightweight, fast, developer-friendly framework maintained by Elastic that allows you to keep any content source, e.g. database, cloud storage or local file system, in sync with Elasticsearch.
+
+All of this can be ran locally or in the cloud, for the purpose of the blog I’ll be running Elastic stack as docker containers locally (docker-compose).
+
+## Crawler
+
+In (nrtsearch tutorial post) I built a simple web crawler for the tutorial purposes to get my blog data ingested into the nrtsearch index - I encourage you to skim through to see all the steps involved in getting this working, This whole lengthy process is streamlined by the Elastic crawler. With just a few clicks to select domain, sitemaps, crawl depth or any specific entry point urls and the crawler will populate the index with your data. This works amazing for my personal needs and I immediately became a huge fan.
+
+What I really like is that:
+
+- You can set up a custom schedule to re-crawl your website.
+- The index mappings are generated automatically.
+- You can embed you data easily as a part of ingestion pipeline (within ES) with ELSER or any other huggingface transformer
+
+## Data connectors framework
+
+Now let’s focus on the data connectors framework. While crawler runs natively within the elastic stack, the data connectors are deployed as a separate stateless service. You can run it on premise (self-hosting wherever you want) or for selected native connectors run them in the elastic cloud directly.
+
+Here is a simple architecture of the service
+
+### Architecture
+
+### Connectors Protocol
+
+Connectors framework relies on a connectors protocol that is fully documented here. Essentially the protocol implies that we keep the connector state in a special ES index and pass the connector service config, like ES host and ES Api keys, in a config.yml. This comes with several benefits:
+
+- Stateless deployment, the connector relies solely on the state in ES index
+- Fault-tolerance - service can be restarted, it can resume on a different host. Once it reestablishes connection with ES it will continue to operate normally.
+- Deployment Control - if you need to index private data you can run the service on-premise to fully control what data gets sent to Elasticsearch.
+
+It’s important to set appropriate access controls for your Elasticsearch deployment, as with any database. Data stored inside index is not encrypted so that it can be searchable. Any connector configuration data such as client secrets is stored in an index unencrypted.
+
+This setup is developer friendly and aims to make connectors service easy to deploy and manage. The framework is written in async python what is a great choice for any IO-bound applications. This makes this framework lightweight, efficient and cost-effective.
+
+Currently following content sources are supported as of 8.10.
+
+Generate table with: Elasticsearch connector and link to code
+
+Feel free go over implementation of simple data sources such as.
+
+## Writing custom Elasticsearch data connector
