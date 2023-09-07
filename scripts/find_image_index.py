@@ -3,7 +3,7 @@ import argparse
 from os import listdir
 from os.path import isfile, join, getmtime
 
-relative_path = 'content/blog/tuscany-trail-bikepacking-in-italy/photos'
+relative_path = 'content/blog/bikepacking-in-provence-france/photos'
 
 
 def find_image_index(relative_path, substring_in_path):
