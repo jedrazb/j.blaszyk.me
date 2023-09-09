@@ -62,7 +62,7 @@ class Footer extends React.Component {
           <Linkedin />
         </a>
         <a
-          href="https://www.instagram.com/jedraz/"
+          href="https://www.instagram.com/cycling.jedr/"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon"
