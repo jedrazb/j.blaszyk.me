@@ -4,6 +4,7 @@ My personal blog.
 * [Jedr's Blog](https://j.blaszyk.me/)
 * [Tech Blog — Jedr's Blog](https://j.blaszyk.me/tech-blog/)
 * [Through the Lens — Jedr's Blog](https://j.blaszyk.me/through-the-lens/)
+* [Bikepacking in France - Provence and Hautes-Alpes — Jedr's Blog](https://j.blaszyk.me/bikepacking-in-provence-france/)
 * [Gravmageddon 2023: Karkonosze - Izery Gravel Race — Jedr's Blog](https://j.blaszyk.me/gravmageddon-2023-karkonosze-izery-gravel-race/)
 * [Tuscany Trail: Bikepacking in Italy — Jedr's Blog](https://j.blaszyk.me/tuscany-trail-bikepacking-in-italy/)
 * [Norway Bikepacking: Trondheim to Bergen — Jedr's Blog](https://j.blaszyk.me/norway-bikepacking-trondheim-to-bergen/)
