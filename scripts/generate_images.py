@@ -16,5 +16,4 @@ def read_images_2d(relative_path):
 
 
 
-read_images('content/blog/bikepacking-in-tuscany-italy/photos')
-# read_images_2d('content/through-the-lens/tenerife-pleasures/photos')
+read_images('content/blog/bikepacking-in-provence-france/photos')
