@@ -5,59 +5,127 @@ spoiler: Overview of a new, lightweight data connectors framework integrated wit
 images: ['./connectors-architecture.png']
 ---
 
-In any search application, there's a pipeline that gets the data into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that the data ingestion is a key foundation for successful data-driven solutions.
+In any search application, there's a pipeline that gets the data into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that easy-to-manage data ingestion is a key foundation for successful data-driven solutions.
 
 There are three types of ES ingestion solutions offered by the Enterprise Search component in the Elastic stack:
 
-- [Web Crawler](https://www.elastic.co/guide/en/enterprise-search/current/crawler.html) - It allows to index content of any domain in a matter of a few clicks.
-- [Data Connectors](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html) - A new lightweight, fast, developer-friendly framework developed by Elastic that allows you to keep any content source, e.g. database, cloud storage or local file system, in sync with an search-optimized Elasticsearch index.
+- [Web Crawler](https://www.elastic.co/guide/en/enterprise-search/current/crawler.html) - It allows you to index content from any domain in a matter of a few clicks.
+- [Data Connectors](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html) - A new lightweight, fast, developer-friendly framework developed by Elastic that allows you to keep any content source, e.g. database, cloud storage or local file system, in sync with a search-optimized Elasticsearch index.
 - [Index API](https://www.elastic.co/guide/en/enterprise-search/current/ingestion-apis.html) - This ingestion method enables you to programmatically add documents to your search-optimized Elasticsearch index.
 
-In this post, I want to focus on two of them: the crawler and the data connectors framework, as they are simple yet powerful solutions to ingestion your data into Elasticsearch index.
+In this post, I want to focus on one of them: the **data connectors framework**, as it is a simple yet powerful solution to ingestion your data into the Elasticsearch index.
 
-All of the ingestion methods can be used with your private deployment or in the Elastic cloud. For the purpose of the blog, I’ll be running Elastic stack as docker containers locally with _docker-compose_.
-
-## Crawler
-
-In (nrtsearch tutorial post) I built a simple web crawler for the tutorial purposes to get my blog data ingested into the nrtsearch index - I encourage you to skim through to see all the steps involved in getting this working, This whole lengthy process is streamlined by the Elastic crawler. With just a few clicks to select domain, sitemaps, crawl depth or any specific entry point urls and the crawler will populate the index with your data. This works amazing for my personal needs and I immediately became a huge fan.
-
-What I really like is that:
-
-- You can set up a custom schedule to re-crawl your website.
-- The index mappings are generated automatically.
-- You can embed you data easily as a part of ingestion pipeline (within ES) with ELSER or any other huggingface transformer
+Each of the ingestion methods can be used with in private Elastic deployment or in the Elastic cloud.
 
 ## Data connectors framework
 
 [elastic/connectors-python](https://github.com/elastic/connectors-python)
 
-Now let’s focus on the data connectors framework. While crawler runs natively within the elastic stack, the data connectors are deployed as a separate stateless service. You can run it on premise (self-hosting wherever you want) or for selected native connectors run them in the elastic cloud directly.
+The data connectors framework enables developers to build Elastic-supported connector clients that sync third-party data sources to Elasticsearch. The framework implements common functionalities, such as sync scheduling, integration with Kibana and creation of index mappings, out of the box, so developers can focus on the logic specific to integrating their chosen data source.
 
-### Architecture
+(insert screenshot with connector syncing data)
+
+## Architecture
+
+The data connectors framework is deployed as a separate stateless service. You can host them yourself, or for selected native connectors run them in the elastic cloud natively.
+
+The framework **connects** your third-party data source with an Elasticsearch index and keeps it in sync, so that you can focus on search and analytics.
 
 <ImageComponent
   image={props.frontmatter.images[0]}
   description="Elastic Data Connectors Architecture"
 ></ImageComponent>
 
-### Connectors Protocol
+## Connector Protocol
 
-Connectors framework relies on a connectors protocol that is fully documented here. Essentially the protocol implies that we keep the connector state in a special ES index and pass the connector service config, like ES host and ES Api keys, in a config.yml. This comes with several benefits:
+Connectors framework relies on the [Connector Protocol](https://github.com/elastic/connectors-python/blob/main/docs/CONNECTOR_PROTOCOL.md). All communication between connectors and other parts of the stack happens asynchronously through an Elasticsearch index. This comes with several benefits.
 
-- Stateless deployment, the connector relies solely on the state in ES index
-- Fault-tolerance - service can be restarted, it can resume on a different host. Once it reestablishes connection with ES it will continue to operate normally.
-- Deployment Control - if you need to index private data you can run the service on-premise to fully control what data gets sent to Elasticsearch.
+- **Stateless deployment**: The data connectors service relies on external state in an ES index
+- **Fault-tolerance**: The service can resume operation on a different host after a restart or a failure. Once it reestablishes connection with Elasticsearch, it will continue its normal operation.
+- **Control over a deployment** - This service can be easily self-hosted or run in the Elastic cloud. It only needs to be able to discover your Elasticsearch instance over the network.
 
-It’s important to set appropriate access controls for your Elasticsearch deployment, as with any database. Data stored inside index is not encrypted so that it can be searchable. Any connector configuration data such as client secrets is stored in an index unencrypted.
+This setup is developer friendly and aims to make connectors service easy to deploy and manage. The framework is written in async python making this IO-bound framework lightweight, fast and efficient.
 
-This setup is developer friendly and aims to make connectors service easy to deploy and manage. The framework is written in async python what is a great choice for any IO-bound applications. This makes this framework lightweight, efficient and cost-effective.
+## Available connectors
 
-Currently following content sources are supported as of 8.10.
+Currently, the following content sources are supported as of version `8.10`. For an up-to-date list of supported connectors check [the official documentation](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html).
 
-Generate table with: Elasticsearch connector and link to code
+- [Elasticsearch Azure Blob Storage Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-azure-blob.html)
+- [Elasticsearch Confluence Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-confluence.html)
+- [Elasticsearch Gmail Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-gmail.html)
+- [Elasticsearch Google Cloud Storage Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-google-cloud.html)
+- [Elasticsearch Google Drive Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-google-drive.html)
+- [Elasticsearch Jira Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-jira.html)
+- [Elasticsearch MongoDB Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-mongodb.html)
+- [Elasticsearch MicrosoftSQL Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-ms-sql.html)
+- [Elasticsearch MySQL Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-mysql.html)
+- [Elasticsearch Network drive Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-network-drive.html)
+- [Elasticsearch OneDrive Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-onedrive.html)
+- [Elasticsearch Oracle Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-oracle.html)
+- [Elasticsearch PostgreSQL Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-postgresql.html)
+- [Elasticsearch S3 Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-s3.html)
+- [Elasticsearch Salesforce Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-salesforce.html)
+- [Elasticsearch SharePoint Server Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-sharepoint.html)
+- [Elasticsearch SharePoint Online Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-sharepoint-online.html)
+- [Elasticsearch Slack Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-slack.html)
 
-Feel free go over implementation of simple data sources such as.
+You can check the connector implementations in: [connectors-python/connectors/sources](https://github.com/elastic/connectors-python/tree/main/connectors/sources).
 
-## Retrieval augmented generation with private data
+## Custom connectors
 
-## Writing custom Elasticsearch data connector
+You are not limited to the connectors included in the data connectors framework. It is easy to implement a custom data connector using the abstractions provided by the framework.
+
+All you need to do is define a custom `DataSource` class in async python and the framework will take care of making it compatible with common functionalities, such as sync scheduling, integration with Kibana and creation of index mappings.
+
+Here is an example starting point for implementing `MyCustomDataSource`. In order to turn this into a functional connector you need to define `get_default_configuration`, `ping` and `get_docs` methods.
+
+```python
+class MyCustomDataSource(BaseDataSource):
+    """Connector to my custom data source"""
+
+    name = "Custom Source"
+    service_type = "custom_source"
+
+    @classmethod
+    def get_default_configuration(cls):
+        """Returns a dict with a default configuration"""
+        raise NotImplementedError
+
+    async def ping(self):
+        """When called, pings the backend
+
+        If the backend has an issue, raises an exception
+        """
+        raise NotImplementedError
+
+   async def get_docs(self, filtering=None):
+        """Returns an iterator on all documents present in the backend
+
+        Each document is a tuple with:
+        - a mapping with the data to index
+        - a coroutine to download extra data (attachments)
+
+        The mapping should have least an `id` field
+        and optionally a `timestamp` field in ISO 8601 UTC
+
+        The coroutine is called if the document needs to be synced
+        and has attachments. It needs to return a mapping to index.
+
+        It has two arguments: doit and timestamp
+        If doit is False, it should return None immediately.
+        If timestamp is provided, it should be used in the mapping.
+
+        Example:
+
+           async def get_file(doit=True, timestamp=None):
+               if not doit:
+                   return
+               return {'TEXT': 'DATA', 'timestamp': timestamp,
+                       'id': 'doc-id'}
+        """
+        raise NotImplementedError
+```
+
+To learn more how to write a custom connector, [check implementation of existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources) or refer to [Custom data source connector framework for Elasticsearch](fsd) blog post.
+
+To learn how to contribute new connectors to the framework, refer to the [How to contribute connectors guide](https://github.com/elastic/connectors-python/blob/main/docs/CONTRIBUTING.md) in the `connectors-python` repository.
