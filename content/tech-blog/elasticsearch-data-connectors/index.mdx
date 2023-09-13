@@ -2,7 +2,7 @@
 title: 'Elastic Data Connectors - Elasticsearch Ingestion Made Simple'
 date: '2023-09-26'
 spoiler: Overview of a new, lightweight data connectors framework integrated with the Elastic stack that can ingest data from any source into the Elasticsearch index.
-images: ['./connectors-architecture.png']
+images: ['./connectors-architecture.png', './google_drive_connector.png']
 ---
 
 In any search application, there's a pipeline that gets the data into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that easy-to-manage data ingestion is a key foundation for successful data-driven solutions.
@@ -23,7 +23,10 @@ Each of the ingestion methods can be used with in private Elastic deployment or 
 
 The data connectors framework enables developers to build Elastic-supported connector clients that sync third-party data sources to Elasticsearch. The framework implements common functionalities, such as sync scheduling, integration with Kibana and creation of index mappings, out of the box, so developers can focus on the logic specific to integrating their chosen data source.
 
-(insert screenshot with connector syncing data)
+<ImageComponent
+  image={props.frontmatter.images[1]}
+  description="Elastic data connectors - Google Drive connector syncing data"
+></ImageComponent>
 
 ## Architecture
 
