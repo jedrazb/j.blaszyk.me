@@ -29,7 +29,7 @@ The data connectors framework enables developers to build Elastic-supported conn
 
 The data connectors framework is deployed as a separate stateless service. You can host them yourself, or for selected native connectors run them in the elastic cloud natively.
 
-The framework **connects** your third-party data source with an Elasticsearch index and keeps it in sync, so that you can focus on search and analytics.
+The framework **connects** your third-party data source with an Elasticsearch index and keeps it in sync, so that you can focus on search and analytics with your data.
 
 <ImageComponent
   image={props.frontmatter.images[0]}
@@ -42,7 +42,7 @@ Connectors framework relies on the [Connector Protocol](https://github.com/elast
 
 - **Stateless deployment**: The data connectors service relies on external state in an ES index
 - **Fault-tolerance**: The service can resume operation on a different host after a restart or a failure. Once it reestablishes connection with Elasticsearch, it will continue its normal operation.
-- **Control over a deployment** - This service can be easily self-hosted or run in the Elastic cloud. It only needs to be able to discover your Elasticsearch instance over the network.
+- **Developer has control over a deployment** - This service can be easily self-hosted or run in the Elastic cloud. It only needs to be able to discover your Elasticsearch instance over the network.
 
 This setup is developer friendly and aims to make connectors service easy to deploy and manage. The framework is written in async python making this IO-bound framework lightweight, fast and efficient.
 
@@ -126,6 +126,8 @@ class MyCustomDataSource(BaseDataSource):
         raise NotImplementedError
 ```
 
-To learn more how to write a custom connector, [check implementation of existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources) or refer to [Custom data source connector framework for Elasticsearch](fsd) blog post.
+To learn more about how to write a custom connector, [check the implementation of existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources) or refer to the [Custom data source connector framework for Elasticsearch](fsd) blog post.
 
-To learn how to contribute new connectors to the framework, refer to the [How to contribute connectors guide](https://github.com/elastic/connectors-python/blob/main/docs/CONTRIBUTING.md) in the `connectors-python` repository.
+You can use _Customized connector_ to configure and run your custom connector from Kibana. Navigate to: **Search > Indices > Create a new index > Connector > Customized connector**.
+
+If you want to contribute your custom connector to the open-source connectors framework, refer to the [How to contribute connectors guide](https://github.com/elastic/connectors-python/blob/main/docs/CONTRIBUTING.md) in the `connectors-python` repository.
