@@ -21,7 +21,7 @@ Each of the ingestion methods can be used with in private Elastic deployment or 
 
 [elastic/connectors-python](https://github.com/elastic/connectors-python)
 
-The data connectors framework enables developers to build Elastic-supported connector clients that sync third-party data sources to Elasticsearch. The framework implements common functionalities, such as sync scheduling, integration with Kibana and creation of index mappings, out of the box, so developers can focus on the logic specific to integrating their chosen data source.
+The data connectors framework makes it easier for developers to create connector clients that can sync data from other sources into Elasticsearch. The framework takes care of essential tasks like scheduling data syncs, extracting text from files, and setting up index mappings automatically. This way, developers can concentrate on integrating their chosen data source without worrying about these common tasks.
 
 <ImageComponent
   image={props.frontmatter.images[1]}
@@ -78,7 +78,7 @@ You can check the connector implementations in: [connectors-python/connectors/so
 
 You are not limited to the connectors included in the data connectors framework. It is easy to implement a custom data connector using the abstractions provided by the framework.
 
-All you need to do is define a custom `DataSource` class in async python and the framework will take care of making it compatible with common functionalities, such as sync scheduling, integration with Kibana and creation of index mappings.
+All you need to do is define a custom `DataSource` class in async python and the framework will take care of making it compatible with common functionalities, such as scheduling data syncs, extracting text from files, and setting up index mappings automatically.
 
 Here is an example starting point for implementing `MyCustomDataSource`. In order to turn this into a functional connector you need to define `get_default_configuration`, `ping` and `get_docs` methods.
 
