@@ -45,7 +45,11 @@ const useActiveId = (itemIds) => {
 const renderItems = (items, activeId, isTop = false) => {
   return (
     <ul
-      style={{ marginTop: '0', marginBottom: '14px' }}
+      style={{
+        marginTop: '0',
+        marginBottom: isTop ? 0 : '14px',
+        marginLeft: isTop ? '1rem' : '1.75rem',
+      }}
       className={classnames({ ['toc-ul-wrapper']: isTop })}
     >
       {items.map((item) => {

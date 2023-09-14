@@ -5,7 +5,7 @@
     z-index: 10;
     transform: translate3d(0,0,0);
     top: 100px;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0;
     background-color: var(--bg-header);
     border: solid 1px var(--post-outline);
     border-radius: 20px;
@@ -36,6 +36,7 @@
 .toc-ul-wrapper {
     overflow: scroll;
     max-height: 600px;
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 1540px) {

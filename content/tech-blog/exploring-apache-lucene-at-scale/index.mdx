@@ -2,7 +2,7 @@
 title: 'Exploring Apache Lucene - Part 3: Running at Scale'
 date: '2023-09-15'
 spoiler: Exploring strategies to scale up Apache Lucene to serve high-traffic applications. Looking at how serverless architectures can enable cost-effective scalability.
-# blogImages: ['./inverted_index.png', './lucene_segments.png']
+images: ['./elastic-stateless.png']
 ---
 
 Let's explore real-world solutions that enable us to deploy and operate Apache Lucene at scale, and delve into the advantages that a stateless architecture offers when managing shifting traffic patterns.
@@ -37,13 +37,15 @@ Data replication implies keeping the primary node in sync with all of its replic
 - [document replication](https://www.microsoft.com/en-us/research/publication/pacifica-replication-in-log-based-distributed-storage-systems/): each replica indexes documents into index segments. A given quorum of replicas has to acknowledge the success of the insertion request for it to be considered successful by the primary.
 - [segment replication](https://blog.mikemccandless.com/2017/09/lucenes-near-real-time-segment-index.html): only the primary ingests documents; new index segments are transferred to all replicas. This approach comes with less overhead as only the primary actually indexes the data; it can only guarantee point-in-time consistency.
 
-With segment-based replication, you can separate indexing and searching by replicating the index. This allows you to distribute indexing and searching across different nodes, which can help improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
+With **document-based replication**, primary and replica shards are constantly communicating to stay in sync. They do this by replicating the operations performed on the primary shard to the replica shard, which means that the cost of those operations (CPU, mainly) is incurred for each replica specified. The same shards and nodes doing this work for ingest are also serving search requests, so provisioning and scaling must be done with both workloads in mind.
+
+With **segment-based replication**, you can separate indexing and searching by replicating the index. This allows you to distribute indexing and searching across different nodes, which can help improve search performance and reduce the load on any one node. By separating indexing and searching, you can ensure that your search engine remains performant and responsive, even as your indexing needs grow.
 
 ### Load balancing
 
 When your Lucene-powered search system experiences increased traffic, maintaining consistent performance becomes crucial. Load balancing serves as a fundamental strategy for evenly distributing incoming queries across multiple nodes. This ensures that no single node is overwhelmed, resulting in a responsive and reliable search experience for users.
 
-Load balancers, such as Nginx or HAProxy, act as traffic directors. They efficiently route incoming requests to the appropriate nodes within your Lucene cluster. By intelligently distributing the workload, load balancers prevent resource bottlenecks and optimize resource utilization.
+Load balancers, such as Nginx, HAProxy or client-side load balancers, act as traffic directors. They efficiently route incoming requests to the appropriate nodes within your Lucene cluster. By intelligently distributing the workload, load balancers prevent resource bottlenecks and optimize resource utilization.
 
 Through load balancing, your search infrastructure gains the ability to seamlessly scale horizontally. As user demands fluctuate, you can dynamically add or remove nodes without disrupting service availability. This elasticity empowers your system to gracefully handle surges in traffic, ensuring that every user query receives timely attention.
 
@@ -55,7 +57,11 @@ One common issue encountered in distributed systems, is the time it takes for a 
 
 ### Stateless
 
-A promising solution is adopting a stateless deployment approach. Stateless containers, housing individual Lucene instances, can be rapidly spun up or down to match demand. For example, Kubernetes' dynamic scaling and automated workload distribution ensure that new nodes are ready to serve traffic swiftly, eliminating the need for excessive resource reservation. This approach optimizes resource utilization, reduces costs, and enables your search cluster to seamlessly handle varying workloads.
+> The future is stateless.
+
+According to [Stateless — your new state of find with Elasticsearch](https://www.elastic.co/search-labs/stateless-your-new-state-of-find-with-elasticsearch) blog.
+
+A promising solution is adopting a stateless deployment approach. Each node's state is persisted externally, for example, in an Amazon S3 bucket, instead of relying on a local disk. Stateless containers, housing individual Lucene instances, can be rapidly spun up or down to match demand. For example, Kubernetes' dynamic scaling and automated workload distribution ensure that new nodes are ready to serve traffic swiftly, eliminating the need for excessive resource reservation. This approach optimizes resource utilization, reduces costs, and enables your search cluster to seamlessly handle varying workloads.
 
 - give example of nrtsearch, serverless like experience on k8s bit tied to udnerlying infra, can be deployed on premises
 
@@ -93,9 +99,12 @@ To ensure high availability and fault tolerance, Elasticsearch also allows for t
 
 To handle search requests, Elasticsearch uses coordinating nodes, which act as a gateway to the rest of the cluster. When a search request is received, the coordinating node forwards the request to the appropriate shards and aggregates the results. Coordinating nodes do not hold any data or participate in indexing, but they play a critical role in scaling Elasticsearch's search capabilities.
 
-### Elasticsearch Pros and Cons
+### Stateful and stateless architectures
 
-### Elasticsearch Serverless
+<ImageComponent
+  image={props.frontmatter.images[0]}
+  alt="Elastic stateless architecture"
+></ImageComponent>
 
 ## Nrtsearch
 
