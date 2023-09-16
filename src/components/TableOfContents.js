@@ -42,9 +42,16 @@ const useActiveId = (itemIds) => {
   return activeId;
 };
 
-const renderItems = (items, activeId) => {
+const renderItems = (items, activeId, isTop = false) => {
   return (
-    <ul style={{ marginTop: '0', marginBottom: '14px' }}>
+    <ul
+      style={{
+        marginTop: '0',
+        marginBottom: isTop ? 0 : '14px',
+        marginLeft: isTop ? '1rem' : '1.75rem',
+      }}
+      className={classnames({ ['toc-ul-wrapper']: isTop })}
+    >
       {items.map((item) => {
         if (item.url) {
           return (
@@ -94,7 +101,7 @@ const TableOfContents = (props) => {
       })}
     >
       <summary className="summary-toc">Contents</summary>
-      {renderItems(props.items, activeId)}
+      {renderItems(props.items, activeId, true)}
     </div>
   );
 };
