@@ -13,11 +13,9 @@ There are three types of ES ingestion solutions offered by the Enterprise Search
 - [Data Connectors](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html) - A new lightweight, fast, developer-friendly framework developed by Elastic that allows you to keep any content source, e.g. database, cloud storage or local file system, in sync with a search-optimized Elasticsearch index.
 - [Index API](https://www.elastic.co/guide/en/enterprise-search/current/ingestion-apis.html) - This ingestion method enables you to programmatically add documents to your search-optimized Elasticsearch index.
 
-In this post, I want to focus on one of them: the **data connectors framework**, as it is a simple yet powerful solution to ingestion your data into the Elasticsearch index.
+Elasticsearch has many ingestion tools, but sometimes they don't fit all data sources. That's where **Elastic Data Connectors** come in. They let you easily link custom or proprietry data to Elasticsearch. This framework is open-source, flexible, and works both on-premise and in the cloud. In short, it's a straightforward way to make any data source work with Elasticsearch.
 
-Each of the ingestion methods can be used with in private Elastic deployment or in the Elastic cloud.
-
-## Data connectors framework
+## Data Connectors Framework
 
 [elastic/connectors-python](https://github.com/elastic/connectors-python)
 
@@ -30,7 +28,7 @@ The data connectors framework makes it easier for developers to create connector
 
 ## Architecture
 
-The data connectors framework is deployed as a separate stateless service. You can host them yourself, or for selected native connectors run them in the elastic cloud natively.
+The data connectors framework is deployed as a separate stateless service. You can host them yourself, or for selected native connectors run them in the Elastic Cloud natively.
 
 The framework **connects** your third-party data source with an Elasticsearch index and keeps it in sync, so that you can focus on search and analytics with your data.
 
@@ -45,7 +43,7 @@ Connectors framework relies on the [Connector Protocol](https://github.com/elast
 
 - **Stateless deployment**: The data connectors service relies on external state in an ES index
 - **Fault-tolerance**: The service can resume operation on a different host after a restart or a failure. Once it reestablishes connection with Elasticsearch, it will continue its normal operation.
-- **Developer has control over a deployment** - This service can be easily self-hosted or run in the Elastic cloud. It only needs to be able to discover your Elasticsearch instance over the network.
+- **Developers have control over a deployment** - This service can be easily self-hosted or run in the Elastic cloud. It only needs to be able to discover your Elasticsearch instance over the network.
 
 This setup is developer friendly and aims to make connectors service easy to deploy and manage. The framework is written in async python making this IO-bound framework lightweight, fast and efficient.
 
