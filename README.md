@@ -14,6 +14,7 @@ My personal blog.
 * [Bikepacking & wild camping in Sweden — Jedr's Blog](https://j.blaszyk.me/bikepacking-in-sweden/)
 * [Road cycling in London — Jedr's Blog](https://j.blaszyk.me/cycling-in-london/)
 * [Sussex Coastal Marathon — Jedr's Blog](https://j.blaszyk.me/sussex-coastal-marathon/)
+* [Exploring Apache Lucene - Part 3: Running at Scale — Jedr's Blog](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-scale/)
 * [Nrtsearch Tutorial - Indexing Web Content for Search — Jedr's Blog](https://j.blaszyk.me/tech-blog/nrtsearch-tutorial-website-search/)
 * [Exploring Apache Lucene - Part 2: Search and Ranking — Jedr's Blog](https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/)
 * [The Tech Stack of Fast, Free, and Customizable Blog — Jedr's Blog](https://j.blaszyk.me/tech-blog/tech-stack-of-fast-free-and-customizable-blog/)
