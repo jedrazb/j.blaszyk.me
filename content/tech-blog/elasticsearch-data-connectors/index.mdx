@@ -5,15 +5,11 @@ spoiler: Overview of a new, lightweight data connectors framework integrated wit
 images: ['./connectors-architecture.png', './google_drive_connector.png']
 ---
 
-In any search application, there's a pipeline that gets the data into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that easy-to-manage data ingestion is a key foundation for successful data-driven solutions.
+In any search application, the data needs to somehow get into an index. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that easy-to-manage data ingestion is a key foundation for successful data-driven solutions.
 
-There are three types of ES ingestion solutions offered by the Enterprise Search component in the Elastic stack:
+Elasticsearch (ES) has many ingestion tools, but sometimes they don't fit all data sources. That's where [Elastic Data Connectors](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html) come in. They let you easily link custom or proprietry data to Elasticsearch. This framework is lightweight, open-source and flexible, and works both on-premise and in the cloud. In short, it's a straightforward way to keep any content source, e.g. database, cloud storage or local file system, in sync with a search-optimized Elasticsearch index.
 
-- [Web Crawler](https://www.elastic.co/guide/en/enterprise-search/current/crawler.html) - It allows you to index content from any domain in a matter of a few clicks.
-- [Data Connectors](https://www.elastic.co/guide/en/enterprise-search/current/connectors.html) - A new lightweight, fast, developer-friendly framework developed by Elastic that allows you to keep any content source, e.g. database, cloud storage or local file system, in sync with a search-optimized Elasticsearch index.
-- [Index API](https://www.elastic.co/guide/en/enterprise-search/current/ingestion-apis.html) - This ingestion method enables you to programmatically add documents to your search-optimized Elasticsearch index.
-
-Elasticsearch has many ingestion tools, but sometimes they don't fit all data sources. That's where **Elastic Data Connectors** come in. They let you easily link custom or proprietry data to Elasticsearch. This framework is open-source, flexible, and works both on-premise and in the cloud. In short, it's a straightforward way to make any data source work with Elasticsearch.
+Other ingestion solutions offered by the Enterprise Search component in the Elastic stack are [Web Crawler](https://www.elastic.co/guide/en/enterprise-search/current/crawler.html) and [Index API](https://www.elastic.co/guide/en/enterprise-search/current/ingestion-apis.html).
 
 ## Data Connectors Framework
 
