@@ -22,6 +22,12 @@ The data connectors framework makes it easier for developers to create connector
   description="Elastic data connectors - Google Drive connector syncing data"
 ></ImageComponent>
 
+The data connectors framework can be configured to use Elasticsearch's [ingestion pipelines](https://www.elastic.co/guide/en/enterprise-search/current/ingest-pipelines.html) to perform transformations on data before storing it in an index. A common use case is [document enrichment with machine learning](https://www.elastic.co/guide/en/enterprise-search/current/document-enrichment.html). For example, you can:
+
+- analyze text fields using a [Text embedding](https://www.elastic.co/guide/en/machine-learning/8.10/ml-nlp-search-compare.html#ml-nlp-text-embedding) model that will generate a dense vector representation of your data
+- run text classification for sentiment analysis
+- extract key information from text with Named Entitiy Recogintion (NER)
+
 ## Architecture
 
 The data connectors framework is deployed as a separate stateless service. You can host them yourself, or for selected native connectors run them in the Elastic Cloud natively.
@@ -123,7 +129,7 @@ class MyCustomDataSource(BaseDataSource):
         raise NotImplementedError
 ```
 
-To learn more about how to write a custom connector, [check the implementation of existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources) or refer to the [Custom data source connector framework for Elasticsearch](fsd) blog post.
+To learn more about how to write a custom connector, refer to the [How to create custom data connectors for Elasticsearch](https://www.elastic.co/search-labs/how-to-create-custom-data-connectors-for-elasticsearch) blog post or check the implementation of [existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources).
 
 You can use _Customized connector_ to configure and run your custom connector from Kibana. Navigate to: **Search > Indices > Create a new index > Connector > Customized connector**.
 
