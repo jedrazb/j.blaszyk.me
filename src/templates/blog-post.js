@@ -75,7 +75,14 @@ class BlogPostTemplate extends React.Component {
       headline: post.frontmatter.title,
       image:
         post.frontmatter.images &&
-        post.frontmatter.images.map((image) => `${siteUrl}${getSrc(image)}`),
+        post.frontmatter.images.map((image) => ({
+          '@type': 'ImageObject',
+          contentUrl: `${siteUrl}${getSrc(image)}`,
+          creator: {
+            '@type': 'Person',
+            name: 'Jedr Blaszyk',
+          },
+        })),
       datePublished: post.frontmatter.date,
       url: `${siteUrl}${post.fields.slug}`,
       author: [
