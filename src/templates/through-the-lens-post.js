@@ -71,7 +71,14 @@ class ThroughTheLensPostTemplate extends React.Component {
       headline: post.frontmatter.title,
       image: post.frontmatter.imageRows
         .map((imageRow) =>
-          imageRow.map((image) => `${siteUrl}${getSrc(image)}`)
+          imageRow.map((image) => ({
+            '@type': 'ImageObject',
+            contentUrl: `${siteUrl}${getSrc(image)}`,
+            creator: {
+              '@type': 'Person',
+              name: 'Jedr Blaszyk',
+            },
+          }))
         )
         .flat(),
       datePublished: post.frontmatter.date,
