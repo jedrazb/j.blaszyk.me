@@ -110,7 +110,7 @@ function SEO({
             {/* Structured data for rich SEO snippets */}
             {structuredData && (
               <script type="application/ld+json">
-                {JSON.stringify(structuredData, null, 2)}
+                {JSON.stringify(structuredData)}
               </script>
             )}
           </Helmet>
