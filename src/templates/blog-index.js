@@ -23,9 +23,10 @@ class BlogIndexTemplate extends React.Component {
 
     const structuredData = {
       '@context': 'https://schema.org',
-      '@type': 'Blog',
+      '@type': 'WebSite',
       url: 'https://j.blaszyk.me/',
       name: "Jedr's Blog",
+      alternateName: "Jedr's Blog",
     };
 
     return (
