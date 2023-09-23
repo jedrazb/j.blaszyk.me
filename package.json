@@ -78,6 +78,7 @@
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "now-build": "gatsby build",
     "deploy": "yarn build && cp now.json public/ && cp CNAME public/ && gh-pages -d public",
+    "deploy-cached": "gatsby build && cp now.json public/ && cp CNAME public/ && gh-pages -d public",
     "dry": "yarn build && cp now.json public/ && cd public && now"
   },
   "lint-staged": {

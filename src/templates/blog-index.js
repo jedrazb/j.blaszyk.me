@@ -26,7 +26,7 @@ class BlogIndexTemplate extends React.Component {
       '@type': 'WebSite',
       url: 'https://j.blaszyk.me/',
       name: "Jedr's Blog",
-      alternateName: "Jedr's Blog",
+      alternateName: 'Jedr Blaszyk',
     };
 
     return (
