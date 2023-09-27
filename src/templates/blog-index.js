@@ -25,7 +25,7 @@ class BlogIndexTemplate extends React.Component {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       url: 'https://j.blaszyk.me/',
-      name: "Jedr's Blog",
+      name: 'Jedr Blaszyk',
       alternateName: 'Jedr Blaszyk',
     };
 

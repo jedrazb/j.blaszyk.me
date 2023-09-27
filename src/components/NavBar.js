@@ -69,8 +69,8 @@ function NavBar({ title, location, toggle }) {
           </h1>
           <nav
             role="navigation"
-            itemscope=""
-            itemtype="http://schema.org/SiteNavigationElement"
+            itemScope=""
+            itemType="http://schema.org/SiteNavigationElement"
           >
             <ul className={opened ? 'nav-menu active' : 'nav-menu'}>
               <li className="nav-item">
@@ -79,9 +79,9 @@ function NavBar({ title, location, toggle }) {
                   activeClassName="active"
                   className="nav-links"
                   onClick={closeMenu}
-                  itemprop="url"
+                  itemProp="url"
                 >
-                  <span itemprop="name">Blog</span>
+                  <span itemProp="name">Blog</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -91,9 +91,9 @@ function NavBar({ title, location, toggle }) {
                   className="nav-links"
                   onClick={closeMenu}
                   partiallyActive={true}
-                  itemprop="url"
+                  itemProp="url"
                 >
-                  <span itemprop="name">Through the Lens</span>
+                  <span itemProp="name">Through the Lens</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -103,9 +103,9 @@ function NavBar({ title, location, toggle }) {
                   className="nav-links"
                   onClick={closeMenu}
                   partiallyActive={true}
-                  itemprop="url"
+                  itemProp="url"
                 >
-                  <span itemprop="name">Tech</span>
+                  <span itemProp="name">Tech</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -114,9 +114,9 @@ function NavBar({ title, location, toggle }) {
                   activeClassName="active"
                   className="nav-links"
                   onClick={closeMenu}
-                  itemprop="url"
+                  itemProp="url"
                 >
-                  <span itemprop="name">Contact</span>
+                  <span itemProp="name">Contact</span>
                 </Link>
               </li>
             </ul>

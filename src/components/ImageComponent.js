@@ -30,12 +30,12 @@ const ImageComponent = ({
         data-caption={description}
         data-thumb={selectThumbnailFromSrcSet(getSrcSet(image))}
         className="image-component-fancybox"
-        itemtype="https://schema.org/ImageObject"
-        itemscope=""
+        itemType="https://schema.org/ImageObject"
+        itemScope=""
       >
         <GatsbyImage
           image={getImage(image)}
-          itemprop="contentUrl"
+          itemProp="contentUrl"
           alt={alt ? alt : description ? description : getSrc(image)}
         />
       </a>
