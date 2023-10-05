@@ -76,9 +76,8 @@
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "now-build": "gatsby build",
-    "deploy": "yarn build && cp now.json public/ && cp CNAME public/ && gh-pages -d public",
-    "deploy-cached": "gatsby build && cp now.json public/ && cp CNAME public/ && gh-pages -d public",
-    "dry": "yarn build && cp now.json public/ && cd public && now"
+    "deploy": "yarn build && cp CNAME public/ && gh-pages -d public",
+    "deploy-cached": "gatsby build && cp CNAME public/ && gh-pages -d public"
   },
   "lint-staged": {
     "{gatsby-*.js,src/**/*.{js,jsx,json,css}}": [
