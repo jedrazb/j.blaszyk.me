@@ -2226,10 +2226,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fancyapps/ui@npm:^4.0.31":
-  version: 4.0.31
-  resolution: "@fancyapps/ui@npm:4.0.31"
-  checksum: 0c46695d15fc8092b942b345514f727d0d07dff3e97da824ab0a3db8978f54b38694ca603704360b053b55ba9f895adfc3b8a4de92d434e9832e71dbe3e7266c
+"@fancyapps/ui@npm:^5.0.24":
+  version: 5.0.24
+  resolution: "@fancyapps/ui@npm:5.0.24"
+  checksum: bb2f8e5106f6ba2ba0577ff301f482a4a3eb2c9caf9e36e1d20843cd39e4395d188e598dd7dbff1da4d0792cb7b4d655125413545953a0c590c9d70f2a0b5025
   languageName: node
   linkType: hard
 
@@ -12156,7 +12156,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "j.blaszyk.me@workspace:."
   dependencies:
-    "@fancyapps/ui": ^4.0.31
+    "@fancyapps/ui": ^5.0.24
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
     "@react-hook/intersection-observer": ^3.1.1
