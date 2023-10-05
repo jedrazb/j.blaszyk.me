@@ -1,5 +1,6 @@
 import React from 'react';
 import { GatsbyImage, getImage, getSrc, getSrcSet } from 'gatsby-plugin-image';
+import { Fancybox, Carousel, Panzoom } from '@fancyapps/ui';
 
 import { selectThumbnailFromSrcSet } from '../utils/imageUtils';
 
