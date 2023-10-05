@@ -10,7 +10,6 @@ import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Panel from '../components/Panel';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
@@ -24,7 +23,6 @@ import {
 import {
   formatPostDate,
   formatReadingTime,
-  formatNumberOfPhotos,
 } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
