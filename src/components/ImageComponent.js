@@ -6,7 +6,7 @@ import { selectThumbnailFromSrcSet } from '../utils/imageUtils';
 
 import './ImageComponent.css';
 
-import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import '@fancyapps/ui/dist/fancybox.css';
 
 const ImageComponent = ({
   image,
