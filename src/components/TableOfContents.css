@@ -37,6 +37,7 @@
     overflow: scroll;
     max-height: 600px;
     margin-bottom: 0;
+    background-color: var(--bg-header);
 }
 
 @media screen and (max-width: 1540px) {
