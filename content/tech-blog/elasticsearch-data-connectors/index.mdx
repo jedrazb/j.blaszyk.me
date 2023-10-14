@@ -13,7 +13,7 @@ Other ingestion solutions offered by the Enterprise Search component in the Elas
 
 ## Data Connectors Framework
 
-[elastic/connectors-python](https://github.com/elastic/connectors-python)
+[elastic/connectors](https://github.com/elastic/connectors)
 
 The data connectors framework makes it easier for developers to create connector clients that can sync data from other sources into Elasticsearch. The framework takes care of essential tasks like scheduling data syncs, extracting text from files, and setting up index mappings automatically. This way, developers can concentrate on integrating their chosen data source without worrying about these common tasks.
 
@@ -41,7 +41,7 @@ The framework **connects** your third-party data source with an Elasticsearch in
 
 ## Connector Protocol
 
-Connectors framework relies on the [Connector Protocol](https://github.com/elastic/connectors-python/blob/main/docs/CONNECTOR_PROTOCOL.md). All communication between connectors and other parts of the stack happens asynchronously through an Elasticsearch index. This comes with several benefits.
+Connectors framework relies on the [Connector Protocol](https://github.com/elastic/connectors/blob/main/docs/CONNECTOR_PROTOCOL.md). All communication between connectors and other parts of the stack happens asynchronously through an Elasticsearch index. This comes with several benefits.
 
 - **Stateless deployment**: The data connectors service relies on external state in an ES index
 - **Fault-tolerance**: The service can resume operation on a different host after a restart or a failure. Once it reestablishes connection with Elasticsearch, it will continue its normal operation.
@@ -72,7 +72,7 @@ Currently, the following content sources are supported as of version `8.10`. For
 - [Elasticsearch SharePoint Online Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-sharepoint-online.html)
 - [Elasticsearch Slack Connector](https://www.elastic.co/guide/en/enterprise-search/current/connectors-slack.html)
 
-You can check the connector implementations in: [connectors-python/connectors/sources](https://github.com/elastic/connectors-python/tree/main/connectors/sources).
+You can check the connector implementations in: [connectors/sources](https://github.com/elastic/connectors/tree/main/connectors/sources).
 
 ## Custom connectors
 
@@ -129,8 +129,8 @@ class MyCustomDataSource(BaseDataSource):
         raise NotImplementedError
 ```
 
-To learn more about how to write a custom connector, refer to the [How to create customized connectors for Elasticsearch](https://www.elastic.co/search-labs/how-to-create-customized-connectors-for-elasticsearch) blog post or check the implementation of [existing connectors](https://github.com/elastic/connectors-python/tree/main/connectors/sources).
+To learn more about how to write a custom connector, refer to the [How to create customized connectors for Elasticsearch](https://www.elastic.co/search-labs/how-to-create-customized-connectors-for-elasticsearch) blog post or check the implementation of [existing connectors](https://github.com/elastic/connectors/tree/main/connectors/sources).
 
 You can use _Customized connector_ to configure and run your custom connector from Kibana. Navigate to: **Search > Indices > Create a new index > Connector > Customized connector**.
 
-If you want to contribute your custom connector to the open-source connectors framework, refer to the [How to contribute connectors guide](https://github.com/elastic/connectors-python/blob/main/docs/CONTRIBUTING.md) in the `connectors-python` repository.
+If you want to contribute your custom connector to the open-source connectors framework, refer to the [How to contribute connectors guide](https://github.com/elastic/connectors/blob/main/docs/CONTRIBUTING.md) in the `connectors` repository.
