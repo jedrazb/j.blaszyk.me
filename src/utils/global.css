@@ -1,8 +1,8 @@
 body {
-  --orange: rgb(245, 158, 71);
-  --blue: #0077cc;
+  --orange: #C69774;
+  --blue: #567189;
   background-color: var(--bg);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body.light {

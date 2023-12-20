@@ -1,5 +1,5 @@
 .layout {
-    padding-top: 70px;
+    /* padding-top: 70px; */
     box-sizing: border-box;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .layout-classic {
-    flex: 1 1 0%; 
+    flex: 1 1 0%;
     width: 100%;
 }
 
@@ -48,8 +48,8 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
     .layout {
         padding-top: 60px;
     }
-}
+} */

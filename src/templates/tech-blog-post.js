@@ -34,12 +34,6 @@ import {
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
-const GITHUB_USERNAME = 'jedrazb';
-const GITHUB_REPO_NAME = 'personal-blog';
-const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif`;
-
 const shortcodes = {
   Link,
   ImageGallery,
@@ -55,7 +49,6 @@ const shortcodes = {
   StatefulBlockPicker,
 };
 
-import { SketchPicker, SliderPicker } from 'react-color';
 import TableOfContents from '../components/TableOfContents';
 
 class TechBlogPostTemplate extends React.Component {

@@ -1,25 +1,18 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { MDXProvider } from '@mdx-js/react';
-import { BlockMath, InlineMath } from 'react-katex';
 import { getSrc } from 'gatsby-plugin-image';
 
 import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Panel from '../components/Panel';
-import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
-import LazyIframe from '../components/LazyIframe';
 import Comments from '../components/Comments';
 import {
   MobileContainer,
   Column,
   MakeItBigContainer,
-  ThreePhotosContainer,
 } from '../components/layout/Container';
 import {
   formatPostDate,
@@ -31,23 +24,6 @@ import { rhythm, scale } from '../utils/typography';
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
-const GITHUB_USERNAME = 'jedrazb';
-const GITHUB_REPO_NAME = 'personal-blog';
-const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif`;
-
-const shortcodes = {
-  Link,
-  ImageGallery,
-  BlockMath,
-  InlineMath,
-  ImageComponent,
-  Column,
-  MakeItBigContainer,
-  ThreePhotosContainer,
-  LazyIframe,
-};
 
 class ThroughTheLensPostTemplate extends React.Component {
   render() {
