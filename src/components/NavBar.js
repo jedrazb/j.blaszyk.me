@@ -3,12 +3,7 @@ import { Link } from 'gatsby';
 
 import './NavBar.css';
 
-import Toggle from './Toggle';
-
-import sun from '../assets/sun.png';
-import moon from '../assets/moon.png';
-
-import { rhythm, scale } from '../utils/typography';
+import { scale } from '../utils/typography';
 
 function NavBar({ title, location, toggle }) {
   const [opened, setOpened] = useState(false);
