@@ -32,6 +32,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.metric {
+  font-size: 0.9rem;
+}
+
 .route-details-list {
   list-style: none; /* Removes default list styling */
   padding: 0; /* Resets default padding */
@@ -60,4 +64,9 @@
   .route-details-list {
     column-gap: 40px; /* Space between columns */
   }
+
+  .metric {
+    font-size: 1rem;
+  }
+
 }

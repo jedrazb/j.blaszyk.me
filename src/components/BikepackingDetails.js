@@ -17,16 +17,20 @@ export const BikepackingDetails = (props) => {
           <p className="title">{title}</p>
           <ul className="route-details-list">
             <li>
-              Distance: <b className="data">{distance}</b>
+              <span className="metric">Distance:</span>{' '}
+              <b className="data">{distance}</b>
             </li>
             <li>
-              Elevation: <b className="data">{elevation}</b>
+              <span className="metric">Elevation:</span>{' '}
+              <b className="data">{elevation}</b>
             </li>
             <li>
-              Time: <b className="data">{time}</b>
+              <span className="metric">Time:</span>{' '}
+              <b className="data">{time}</b>
             </li>
             <li>
-              Date: <b className="data">{date}</b>
+              <span className="metric">Date:</span>{' '}
+              <b className="data">{date}</b>
             </li>
           </ul>
         </div>
