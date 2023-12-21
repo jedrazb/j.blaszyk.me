@@ -1,0 +1,63 @@
+.bikepacking-details {
+  padding: 1rem 1rem;
+  background-color: var(--bg-header);
+  border: solid 1px var(--post-outline);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bikepacking-logo {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.route-details {
+  padding-top: 1rem;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+}
+
+.data {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.route-details-list {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Resets default padding */
+  margin: 0;
+  column-count: 2; /* Creates two columns */
+  column-gap: 10px; /* Space between columns */
+}
+
+/* Media Query for Desktop */
+@media screen and (min-width: 700px) {
+
+  .bikepacking-details {
+    padding: 1rem 2rem;
+  }
+
+  .content-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .route-details {
+    padding-top: 0;
+    padding-left: 2.5rem; /* Space between logo and details */
+  }
+
+  .route-details-list {
+    column-gap: 40px; /* Space between columns */
+  }
+}

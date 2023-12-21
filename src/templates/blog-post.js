@@ -15,6 +15,7 @@ import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
 import TableOfContents from '../components/TableOfContents';
 import Comments from '../components/Comments';
+import { BikepackingDetails } from '../components/BikepackingDetails';
 import {
   Container,
   Column,
@@ -45,6 +46,7 @@ const shortcodes = {
   MakeItBigContainer,
   ThreePhotosContainer,
   LazyIframe,
+  BikepackingDetails,
 };
 
 class BlogPostTemplate extends React.Component {
@@ -231,6 +233,11 @@ export const pageQuery = graphql`
         ogimage {
           childImageSharp {
             gatsbyImageData(width: 960, layout: FIXED)
+          }
+        }
+        logo {
+          childImageSharp {
+            gatsbyImageData(width: 960, layout: CONSTRAINED)
           }
         }
         images {
