@@ -120,8 +120,8 @@ module.exports = {
                 ) {
                   edges {
                     node {
-                      fields { 
-                        slug   
+                      fields {
+                        slug
                       }
                       frontmatter {
                         title
@@ -177,5 +177,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `jedr-blog`,
+      },
+    },
   ],
 };

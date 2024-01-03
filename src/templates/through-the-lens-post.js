@@ -24,7 +24,6 @@ import { rhythm, scale } from '../utils/typography';
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
-
 class ThroughTheLensPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx;
@@ -206,7 +205,11 @@ class ThroughTheLensPostTemplate extends React.Component {
             </Link>
           </h3>
           <Bio />
-          <Comments />
+          <Comments
+            url={`${siteUrl}/${category}${post.fields.slug}`}
+            id={post.fields.slug}
+            title={post.frontmatter.title}
+          />
         </aside>
       </Layout>
     );

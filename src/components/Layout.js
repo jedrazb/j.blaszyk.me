@@ -20,17 +20,12 @@ class Layout extends React.Component {
     this.setState({ theme: window.__theme });
     window.__onThemeChange = () => {
       this.setState({ theme: window.__theme });
-
-      // handle comments theme
-      try {
-        const utterances = document.querySelector('iframe').contentWindow;
-
-        const message = {
-          type: 'set-theme',
-          theme: window.__theme == 'dark' ? 'github-dark' : 'github-light',
-        };
-        utterances.postMessage(message, 'https://utteranc.es');
-      } catch {}
+      // Change Disqus color theme
+      if (window && window.DISQUS) {
+        window.DISQUS.reset({
+          reload: true,
+        });
+      }
     };
   }
 

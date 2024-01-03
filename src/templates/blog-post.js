@@ -203,7 +203,11 @@ class BlogPostTemplate extends React.Component {
             </Link>
           </h3>
           <Bio />
-          <Comments />
+          <Comments
+            url={`${siteUrl}${post.fields.slug}`}
+            id={post.fields.slug}
+            title={post.frontmatter.title}
+          />
         </aside>
       </Layout>
     );

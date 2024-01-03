@@ -20,10 +20,7 @@ import {
   MakeItBigContainer,
   ThreePhotosContainer,
 } from '../components/layout/Container';
-import {
-  formatPostDate,
-  formatReadingTime,
-} from '../utils/helpers';
+import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
 
 import {
@@ -63,12 +60,14 @@ class TechBlogPostTemplate extends React.Component {
 
     const category = get(post, 'fields.category');
 
+    const postUrl = `${siteUrl}/${category}${post.fields.slug}`;
+
     const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
       headline: post.frontmatter.title,
       datePublished: post.frontmatter.date,
-      url: `${siteUrl}/${category}${post.fields.slug}`,
+      url: postUrl,
       author: [
         {
           '@type': 'Person',
@@ -194,7 +193,11 @@ class TechBlogPostTemplate extends React.Component {
             </Link>
           </h3>
           <Bio />
-          <Comments />
+          <Comments
+            url={postUrl}
+            id={post.fields.slug}
+            title={post.frontmatter.title}
+          />
         </aside>
       </Layout>
     );
