@@ -15,7 +15,7 @@ class NotFoundPage extends React.Component {
         <main>
           <h1 style={{ marginTop: 0 }}>Contact</h1>
           <p>
-            I'm a software engineer working on Enterprise Search @{' '}
+            I'm a software engineer working on data ingestion @{' '}
             <a href="https://www.elastic.co/" target="_blank">
               Elastic
             </a>
@@ -24,6 +24,10 @@ class NotFoundPage extends React.Component {
               Yelp
             </a>
             .
+          </p>
+          <p>
+            I'm cycling with{' '}
+            <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
           </p>
           <p>
             You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>{' '}
