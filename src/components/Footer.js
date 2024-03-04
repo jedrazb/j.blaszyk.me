@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import { Twitter, GitHub, Linkedin, Instagram, Rss } from 'react-feather';
 import Strava from '../assets/strava.inline.svg';
+import Sitemap from '../assets/sitemap.inline.svg';
 
 import { rhythm } from '../utils/typography';
 
@@ -20,6 +22,12 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: 'right' }}>
+          <Link
+            to="/sitemap/sitemap-index.xml"
+            className="footer-icon icon-has-next"
+          >
+            <Sitemap />
+          </Link>
           <a
             href="/rss.xml"
             target="_blank"
