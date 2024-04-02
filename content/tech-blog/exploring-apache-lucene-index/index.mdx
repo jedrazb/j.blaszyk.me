@@ -40,7 +40,7 @@ The inverted index is composed of two substructures:
 <ImageComponent
   image={props.frontmatter.blogImages[0]}
   alt="Apache Lucene Inverted Index"
-></ImageComponent>
+/>
 
 In the above example we can see three documents indexed into Lucene's inverted index. Each of the document's conten is analyzed (tokenized) into terms which are inserted into inverted index.
 
@@ -77,7 +77,7 @@ When new documents are added, the index changes are first buffered in memory. Ev
 <ImageComponent
   image={props.frontmatter.blogImages[1]}
   alt="Apache Lucene Segment Merges"
-></ImageComponent>
+/>
 
 Lucene index segments are "write-once" files: once a segment has been written to permanent storage (to disk), it is never altered. This means that indexes are actually comprised of several files which are each subsets of the full index. To prevent eternal fragmentation of the index, segments are periodically merged. In the example above ([source](https://speakerdeck.com/elasticsearch/what-is-in-a-lucene-index?slide=11)) we have two segments, each consisting of a single document. On the right side of the image, we can see a result of a segment merge - where 2 segments are merged to form a new segment.
 
