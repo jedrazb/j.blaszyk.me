@@ -37,7 +37,7 @@ Spatial methods are preferred over the spectral methods for [a number of reasons
 <ImageComponent
   image={props.frontmatter.blogImages[0]}
   alt="Convolution on an 2D image vs. on a graph"
-></ImageComponent>
+/>
 
 Figure 1: 2D Convolution vs. Graph Convolution.
 
@@ -138,10 +138,7 @@ class Net(torch.nn.Module):
 
 With just 140 nodes in the training set we are able to achieve >80% classification accuracy for the rest of the nodes, the resulting classified Cora dataset looks as follows:
 
-<ImageComponent
-  image={props.frontmatter.blogImages[1]}
-  alt="Cora dataset"
-></ImageComponent>
+<ImageComponent image={props.frontmatter.blogImages[1]} alt="Cora dataset" />
 
 Figure 2: Semi-supervised node classification result on Cora dataset.
 

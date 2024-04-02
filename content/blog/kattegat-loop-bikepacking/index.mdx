@@ -25,22 +25,25 @@ ogimage: './photos/header.jpg'
 indexImage: './photos/hero-image.jpg'
 category: 'bikepacking'
 logo: './logo.png'
-
 ---
 
 - [Coastal Bike Path](#coastal-bike-path)
 - [Photos](#image-gallery)
 
 <MakeItBigContainer>
-  <ImageComponent
-    image={props.frontmatter.blogImages[0]}
-    alt="Sweden"
-  ></ImageComponent>
+  <ImageComponent image={props.frontmatter.blogImages[0]} alt="Sweden" />
 </MakeItBigContainer>
 
 In the summer of 2021, my friends and I spent a week bikepacking the **Kattegat** - a sea area bounded by the Jutlandic peninsula in the west and Sweden in the east. We started in Ystad, cycled through Gothenburg, took a ferry to Frederikshavn, Denmark and closed the loop in Copenhagen.
 
-<BikepackingDetails logo={props.frontmatter.logo} title={"Kattegat Loop Bikepacking"} distance={"900km"} elevation={"3130m"} time={"8 days"} date={"Jul 2021"}/>
+<BikepackingDetails
+  logo={props.frontmatter.logo}
+  title={'Kattegat Loop Bikepacking'}
+  distance={'900km'}
+  elevation={'3130m'}
+  time={'8 days'}
+  date={'Jul 2021'}
+/>
 
 ## Coastal Bike Path
 
@@ -67,19 +70,13 @@ Staying close to the sea meant that the route profile was rather flat with not t
     image={props.frontmatter.blogImages[1]}
     alt="Camping at the sea"
     isRow
-  ></ImageComponent>
+  />
   <Container>
     <Column>
-      <ImageComponent
-        image={props.frontmatter.images[2]}
-        alt="Gravel"
-      ></ImageComponent>
+      <ImageComponent image={props.frontmatter.images[2]} alt="Gravel" />
     </Column>
     <Column>
-      <ImageComponent
-        image={props.frontmatter.images[10]}
-        alt="Coffee break"
-      ></ImageComponent>
+      <ImageComponent image={props.frontmatter.images[10]} alt="Coffee break" />
     </Column>
   </Container>
 </MakeItBigContainer>
