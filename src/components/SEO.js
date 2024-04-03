@@ -11,6 +11,7 @@ const query = graphql`
         author
         description
         siteUrl
+        domain
         social {
           twitter
         }
@@ -35,7 +36,6 @@ function SEO({
       render={(data) => {
         const { siteMetadata } = data.site;
         const metaDescription = description || siteMetadata.description;
-        const metaImage = `${siteMetadata.siteUrl}${siteMetadata.image}`;
         const url = `${siteMetadata.siteUrl}${slug}`;
         const ogCustomImagePath = `${siteMetadata.siteUrl}${image}`;
         return (
@@ -76,11 +76,19 @@ function SEO({
               },
               {
                 name: 'twitter:card',
-                content: 'summary',
+                content: 'summary_large_image',
               },
               {
                 name: 'twitter:creator',
                 content: siteMetadata.social.twitter,
+              },
+              {
+                name: 'twitter:domain',
+                content: siteMetadata.domain,
+              },
+              {
+                name: 'twitter:url',
+                content: url,
               },
               {
                 name: 'twitter:title',

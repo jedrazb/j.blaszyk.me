@@ -4,6 +4,7 @@ module.exports = {
     author: 'Jedr Blaszyk',
     description: 'Blog by Jedr Blaszyk. Bikepacking, photography & tech.',
     siteUrl: 'https://j.blaszyk.me',
+    domain: 'j.blaszyk.me',
     social: {
       twitter: '@jedr_blaszyk',
     },
