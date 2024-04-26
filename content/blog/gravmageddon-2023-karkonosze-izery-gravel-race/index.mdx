@@ -34,7 +34,10 @@ blogImages: []
 - [Photos](#photos)
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[3]} alt="Gravmageddon 2023" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[3]}
+    alt="Gravmageddon 2023"
+  />
 </MakeItBigContainer>
 
 Ultra gravel racing is something I have wanted to try for a long time. Welcome to the recap of my first (and hopefully not last!) ultra gravel race - 2023 Gravmageddon.
@@ -48,7 +51,7 @@ Most riders will try to cycle the lengthy route in one go, with breaks only long
 ## Race Route
 
 <BikepackingDetails
-  logo={props.frontmatter.logo}
+  logo={props.data.mdx.frontmatter.logo}
   title={'Gravmageddon 2023'}
   distance={'360km'}
   elevation={'7400m'}
@@ -67,8 +70,8 @@ Gravmageddon 2023 was definitely a fight against elevation gains and steep climb
       frameborder="0"
       scrolling="no"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 
@@ -86,13 +89,13 @@ Gravmageddon 2023 was definitely a fight against elevation gains and steep climb
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[0]}
+        image={props.data.mdx.frontmatter.images[0]}
         alt="Gravmageddon 2023 Strava route."
       />
     </Column>
     <Column flex={1.505}>
       <ImageComponent
-        image={props.frontmatter.images[1]}
+        image={props.data.mdx.frontmatter.images[1]}
         alt="Cycling Dude and Jedr."
       />
     </Column>
@@ -107,13 +110,13 @@ Gravmageddon offers pit stops at 95 and 270km, where you can send equipment to w
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[4]}
+        image={props.data.mdx.frontmatter.images[4]}
         alt="Karkonosze Pass uphill."
       />
     </Column>
     <Column flex={2.26}>
       <ImageComponent
-        image={props.frontmatter.images[5]}
+        image={props.data.mdx.frontmatter.images[5]}
         alt="Odrodzenie shelter in Karkonosze Pass."
       />
     </Column>
@@ -125,7 +128,10 @@ After reaching the Karkonosze Pass, we descended on a fast tarmac road into the 
 Rolling hills, going up just to go down, are the only things I can recall from the next section. I only “woke up” near Liberec when we started the big climb to Jested.
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[12]} alt="Jested Tower" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[12]}
+    alt="Jested Tower"
+  />
 </MakeItBigContainer>
 
 At the top of Jested, there is a famous tower and a viewing spot. The climb is perfectly suitable (and probably more enjoyable) for road bikes. We stopped there for a while to stretch, catch a breath, and dress up before the long descent.
@@ -140,13 +146,13 @@ All in all, I enjoyed the race route a lot. Shoutout to the race organisers for 
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[13]}
+        image={props.data.mdx.frontmatter.images[13]}
         alt="Gravmageddon 2023 Race Cap"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[14]}
+        image={props.data.mdx.frontmatter.images[14]}
         alt="Gravmageddon 2023 Race Cap - top"
       />
     </Column>
@@ -163,7 +169,7 @@ I raced on my trusty Canyon Grizl AL 6 with 45mm wide tyres, running tubeless, a
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[7]}
+    image={props.data.mdx.frontmatter.images[7]}
     alt=" Canyon Grizl AL 6"
   />
 </MakeItBigContainer>
@@ -191,14 +197,14 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[6]}
+        image={props.data.mdx.frontmatter.images[6]}
         alt="Mountains."
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[2]}
+        image={props.data.mdx.frontmatter.images[2]}
         alt="Gravmageddon racing."
         isRow
       />
@@ -207,14 +213,14 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
   <Container>
     <Column flex={1.7765}>
       <ImageComponent
-        image={props.frontmatter.images[8]}
+        image={props.data.mdx.frontmatter.images[8]}
         alt="Canyon Grizl bike at the water reservoir"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[9]}
+        image={props.data.mdx.frontmatter.images[9]}
         alt="View from Jested."
         isRow
       />
@@ -222,11 +228,14 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
   </Container>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[11]} alt="Pit stop 1" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[11]}
+        alt="Pit stop 1"
+      />
     </Column>
     <Column flex={2.135}>
       <ImageComponent
-        image={props.frontmatter.images[10]}
+        image={props.data.mdx.frontmatter.images[10]}
         alt="Gravmageddon 2023."
       />
     </Column>

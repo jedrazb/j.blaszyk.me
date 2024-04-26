@@ -1,4 +1,11 @@
-module.exports = {
+import remarkGfm from 'remark-gfm';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const config = {
+  trailingSlash: 'always',
   siteMetadata: {
     title: "Jedr's Blog",
     author: 'Jedr Blaszyk',
@@ -39,6 +46,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
         gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',
           {
@@ -219,3 +229,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

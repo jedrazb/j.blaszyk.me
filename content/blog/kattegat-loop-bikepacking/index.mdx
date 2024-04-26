@@ -31,13 +31,16 @@ logo: './logo.png'
 - [Photos](#image-gallery)
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.blogImages[0]} alt="Sweden" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.blogImages[0]}
+    alt="Sweden"
+  />
 </MakeItBigContainer>
 
 In the summer of 2021, my friends and I spent a week bikepacking the **Kattegat** - a sea area bounded by the Jutlandic peninsula in the west and Sweden in the east. We started in Ystad, cycled through Gothenburg, took a ferry to Frederikshavn, Denmark and closed the loop in Copenhagen.
 
 <BikepackingDetails
-  logo={props.frontmatter.logo}
+  logo={props.data.mdx.frontmatter.logo}
   title={'Kattegat Loop Bikepacking'}
   distance={'900km'}
   elevation={'3130m'}
@@ -56,8 +59,8 @@ In the summer of 2021, my friends and I spent a week bikepacking the **Kattegat*
       frameborder="0"
       scrolling="no"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 
@@ -67,16 +70,22 @@ Staying close to the sea meant that the route profile was rather flat with not t
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[1]}
+    image={props.data.mdx.frontmatter.blogImages[1]}
     alt="Camping at the sea"
     isRow
   />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[2]} alt="Gravel" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[2]}
+        alt="Gravel"
+      />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[10]} alt="Coffee break" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[10]}
+        alt="Coffee break"
+      />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -91,4 +100,4 @@ Our bikepacking adventure concluded in Copenhagen, Denmark's capital. We took tw
 
 In total we spent 6 days on bikes, covering 730km. We rode gravel/touring bikes with 35-42mm tyres. For navigation, we used a mix of Komoot and bike route signs in Sweden, which worked well. This trip not only got us around Kattegat, but also marked our completion of cycling along the Swedish southern coastline (from Stockholm to Gothenburg). On our previous bikepacking trip we cycled from Stockholm to Ystad. That journey is described in previous blog post: [Bikepacking & wild camping in Sweden](/bikepacking-in-sweden/).
 
-<ImageGallery images={props.frontmatter.images}></ImageGallery>
+<ImageGallery images={props.data.mdx.frontmatter.images}></ImageGallery>

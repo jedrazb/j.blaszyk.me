@@ -57,7 +57,7 @@ blogImages:
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[4]}
+    image={props.data.mdx.frontmatter.images[4]}
     alt="Isle of Wight seen from the plane"
   />
 </MakeItBigContainer>
@@ -72,16 +72,22 @@ Our trip started at Redhill airport, a small airport near London with an all-gra
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[0]}
+    image={props.data.mdx.frontmatter.images[0]}
     alt="Crew in the plane"
     isRow
   />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[5]} alt="Landing" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[5]}
+        alt="Landing"
+      />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[6]} alt="Georgios" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[6]}
+        alt="Georgios"
+      />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -95,10 +101,16 @@ We reached Bembridge airport on the Isle of Wight after 45 minutes in the air. J
 <MakeItBigContainer>
   <Container>
     <Column flex={2}>
-      <ImageComponent image={props.frontmatter.images[1]} alt="Planes" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[1]}
+        alt="Planes"
+      />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.blogImages[0]} alt="Pilot" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.blogImages[0]}
+        alt="Pilot"
+      />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -113,24 +125,23 @@ Our hike started late in the afternoon after lunch at the Bembridge airport pub.
       src="https://www.google.com/maps/d/u/0/embed?mid=1dMga6tWd9gJCnzGqmD6G_bWqYRHmgZs&ehbc=2E312F"
       width="1024"
       height="500"
-      frameBorder="0"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 <MakeItBigContainer>
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[11]}
+        image={props.data.mdx.frontmatter.images[11]}
         alt="Coastline"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[12]}
+        image={props.data.mdx.frontmatter.images[12]}
         alt="Village"
         isRow
       />
@@ -140,17 +151,20 @@ Our hike started late in the afternoon after lunch at the Bembridge airport pub.
 <MakeItBigContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.blogImages[3]} alt="Shortcut" />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.blogImages[3]}
+        alt="Shortcut"
+      />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.blogImages[2]}
+        image={props.data.mdx.frontmatter.blogImages[2]}
         alt="Shortcut 2"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.blogImages[1]}
+        image={props.data.mdx.frontmatter.blogImages[1]}
         alt="Shortcut done"
       />
     </Column>
@@ -166,14 +180,22 @@ On day two of our adventure, we got to the Isle of Wight Area of Outstanding Nat
 <MakeItBigContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[20]} alt="Tent" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[20]}
+        alt="Tent"
+        isRow
+      />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[22]} alt="Cliffs" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[22]}
+        alt="Cliffs"
+        isRow
+      />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[27]}
+    image={props.data.mdx.frontmatter.images[27]}
     alt="The Needles"
     isRow
   />
@@ -181,4 +203,4 @@ On day two of our adventure, we got to the Isle of Wight Area of Outstanding Nat
 
 We spend the second night at the [Paradise Cottage Campsite](https://goo.gl/maps/vpqvTxpfxVD7otxD7) ran by a very nice old couple. On the 3rd day of our hike, we could already see the faint white-coloured cliffs in front of us, the Needles, the goal of our journey. Initially, we planned to hike for 4 days, but because of the forecasted storm we stretched our 3rd-day hike to 35kms and we managed to get to the Needles for the sunset. Then we ran for the bus which got us to Yarmouth, just in time to catch the last ferry back.
 
-<ImageGallery images={props.frontmatter.images}></ImageGallery>
+<ImageGallery images={props.data.mdx.frontmatter.images}></ImageGallery>

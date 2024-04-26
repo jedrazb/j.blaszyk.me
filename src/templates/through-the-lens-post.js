@@ -29,7 +29,7 @@ class ThroughTheLensPostTemplate extends React.Component {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
-    let { previous, next, slug } = this.props.pageContext;
+    let { previous, next } = this.props.pageContext;
 
     const ogimage = post.frontmatter.featuredImage;
     const ogImagePath = ogimage && getSrc(ogimage);
@@ -121,10 +121,7 @@ class ThroughTheLensPostTemplate extends React.Component {
                   <MobileContainer>
                     {imgRow.map((img) => {
                       const imgExifData = img.childImageSharp.fields.exif;
-                      const exifCaption =
-                        // `${imgExifData.Make} ${imgExifData.Model}<br/>` +
-                        // `${imgExifData.LensMake} ${imgExifData.LensModel}<br/>` +
-                        `${imgExifData.FocalLengthRounded}mm | f/${imgExifData.FNumber} | ${imgExifData.ExposureTimeFormatted} | ISO ${imgExifData.ISO}`;
+                      const exifCaption = `${imgExifData.FocalLengthRounded}mm | f/${imgExifData.FNumber} | ${imgExifData.ExposureTimeFormatted} | ISO ${imgExifData.ISO}`;
                       return (
                         <Column>
                           <ImageComponent
@@ -156,11 +153,7 @@ class ThroughTheLensPostTemplate extends React.Component {
             >
               <li>
                 {previous && (
-                  <Link
-                    to={`/${category}${previous.fields.slug}`}
-                    rel="prev"
-                    // style={{ marginRight: 20 }}
-                  >
+                  <Link to={`/${category}${previous.fields.slug}`} rel="prev">
                     ← {previous.frontmatter.title}
                   </Link>
                 )}

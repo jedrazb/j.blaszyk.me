@@ -24,7 +24,7 @@ blogImages: []
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[0]}
+    image={props.data.mdx.frontmatter.images[0]}
     description={`Riding on Hazay Family - a <a href="https://hazaybikes.com/en/">cargo bike</a> made in Poland`}
   />
 </MakeItBigContainer>
@@ -51,7 +51,7 @@ Cargo bikes produce zero emissions, navigate congested streets way better, and r
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[1]}
+    image={props.data.mdx.frontmatter.images[1]}
     description={`<a href="https://hazaybikes.com/en/product/hazay-family/">Cargo bike customized for carrying kids</a>`}
   />
 </MakeItBigContainer>
@@ -76,14 +76,14 @@ They don't only manufacture cargo bikes; they also build an <a href="https://haz
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[2]}
+        image={props.data.mdx.frontmatter.images[2]}
         description="Child sear for cargo bike"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[3]}
+        image={props.data.mdx.frontmatter.images[3]}
         description="Cargo bike rain tent"
         isRow
       />
@@ -92,13 +92,13 @@ They don't only manufacture cargo bikes; they also build an <a href="https://haz
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[4]}
+        image={props.data.mdx.frontmatter.images[4]}
         description="Cargo bike dog carrier"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[5]}
+        image={props.data.mdx.frontmatter.images[5]}
         description="Cargo bike box"
       />
     </Column>

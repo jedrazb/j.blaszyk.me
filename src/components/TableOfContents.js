@@ -82,10 +82,6 @@ const renderItems = (items, activeId, isTop = false) => {
 const TableOfContents = (props) => {
   const { items, widePostType } = props;
 
-  if (!items) {
-    return;
-  }
-
   const idList = getIds(props.items);
 
   // When scrolling to the top of the post
@@ -94,6 +90,11 @@ const TableOfContents = (props) => {
   idList.unshift(postHeaderId);
 
   const activeId = useActiveId(idList);
+
+  if (!items) {
+    return;
+  }
+
   return (
     <div
       className={classnames('table-of-contents-wrapper', {

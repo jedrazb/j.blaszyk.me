@@ -1,16 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import classnames from 'classnames';
 import Toggle from './Toggle';
 import Helmet from 'react-helmet';
 import Header from './NavBar';
 import Footer from '../components/Footer';
 
-import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
 import './Layout.css';
-import TableOfContents from './TableOfContents';
 
 class Layout extends React.Component {
   constructor(props) {

@@ -22,7 +22,7 @@ First thing I did after moving in to London was getting a proper road bike and I
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[0]}
+    image={props.data.mdx.frontmatter.blogImages[0]}
     alt="Roehampton Gate cafe early in the morning"
   />
 </MakeItBigContainer>
@@ -53,7 +53,10 @@ A flat and fast route from Richmond Park out to Royal Windsor. The profile is pa
 
 [Strava activity](https://www.strava.com/activities/3349993673)
 
-<ImageComponent image={props.frontmatter.blogImages[1]} alt="Windsor route" />
+<ImageComponent
+  image={props.data.mdx.frontmatter.blogImages[1]}
+  alt="Windsor route"
+/>
 
 ### London to Box Hill
 
@@ -61,7 +64,7 @@ South West London and Surrey are famous when it comes to cycling. The 2012 olymp
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[2]}
+    image={props.data.mdx.frontmatter.blogImages[2]}
     alt="Steep road leading to the top of the Box Hill."
   />
 </MakeItBigContainer>
@@ -72,7 +75,10 @@ This is my favourite bike ride so far. The route I followed goes through Richmon
 
 [Strava activity](https://www.strava.com/activities/3360618841)
 
-<ImageComponent image={props.frontmatter.blogImages[3]} alt="Box hill route" />
+<ImageComponent
+  image={props.data.mdx.frontmatter.blogImages[3]}
+  alt="Box hill route"
+/>
 
 ## London to ...
 
@@ -82,7 +88,7 @@ From the city, through the suburbs and into the countryside, with the testing cl
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[4]}
+    image={props.data.mdx.frontmatter.blogImages[4]}
     alt="Cycling through the sheep pasture."
   />
 </MakeItBigContainer>
@@ -91,7 +97,7 @@ Direct route to the coastline through a sheep pasture > muddy road.
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[5]}
+    image={props.data.mdx.frontmatter.blogImages[5]}
     alt="View of the English Channel."
   />
 </MakeItBigContainer>

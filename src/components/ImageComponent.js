@@ -15,6 +15,7 @@ const ImageComponent = ({
   noPadding = false,
   description,
 }) => {
+  console.log(image);
   return (
     <figure
       style={{

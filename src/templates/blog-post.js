@@ -48,6 +48,7 @@ const shortcodes = {
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const { children } = this.props;
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
@@ -135,11 +136,7 @@ class BlogPostTemplate extends React.Component {
                 {formatNumberOfPhotos(post.frontmatter)}
               </p>
             </header>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer frontmatter={post.frontmatter}>
-                {post.body}
-              </MDXRenderer>
-            </MDXProvider>
+            <MDXProvider components={shortcodes}>{children}</MDXProvider>
           </article>
         </main>
         <aside>

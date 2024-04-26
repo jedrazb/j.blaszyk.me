@@ -9,17 +9,17 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js');
+    const blogPost = path.resolve('src/templates/blog-post.js');
 
-    const techBlogPost = path.resolve('./src/templates/tech-blog-post.js');
+    const techBlogPost = path.resolve('src/templates/tech-blog-post.js');
 
     const throughTheLensPost = path.resolve(
-      './src/templates/through-the-lens-post.js'
+      'src/templates/through-the-lens-post.js'
     );
 
     createPage({
       path: '/',
-      component: path.resolve('./src/templates/blog-index.js'),
+      component: path.resolve('src/templates/blog-index.js'),
     });
 
     // blog posts
@@ -38,6 +38,9 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 frontmatter {
                   title
+                }
+                internal {
+                  contentFilePath
                 }
               }
             }
@@ -68,7 +71,7 @@ exports.createPages = ({ graphql, actions }) => {
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: `${blogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
             context: {
               slug: post.node.fields.slug,
               previous,
@@ -81,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     createPage({
       path: '/tech-blog/',
-      component: path.resolve('./src/templates/tech-blog-index.js'),
+      component: path.resolve('src/templates/tech-blog-index.js'),
     });
 
     // tech-blog posts
@@ -101,6 +104,9 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 frontmatter {
                   title
+                }
+                internal {
+                  contentFilePath
                 }
               }
             }
@@ -133,7 +139,7 @@ exports.createPages = ({ graphql, actions }) => {
 
           createPage({
             path: nodePath,
-            component: techBlogPost,
+            component: `${techBlogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
             context: {
               slug: post.node.fields.slug,
               previous,
@@ -146,7 +152,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     createPage({
       path: '/through-the-lens/',
-      component: path.resolve('./src/templates/through-the-lens-index.js'),
+      component: path.resolve('src/templates/through-the-lens-index.js'),
     });
 
     // through the lens posts

@@ -18,7 +18,7 @@ Other ingestion solutions offered by the Enterprise Search component in the Elas
 The data connectors framework makes it easier for developers to create connector clients that can sync data from other sources into Elasticsearch. The framework takes care of essential tasks like scheduling data syncs, extracting text from files, and setting up index mappings automatically. This way, developers can concentrate on integrating their chosen data source without worrying about these common tasks.
 
 <ImageComponent
-  image={props.frontmatter.images[1]}
+  image={props.data.mdx.frontmatter.images[1]}
   description="Elastic data connectors - Google Drive connector syncing data"
 />
 
@@ -35,7 +35,7 @@ The data connectors framework is deployed as a separate stateless service. You c
 The framework **connects** your third-party data source with an Elasticsearch index and keeps it in sync, so that you can focus on search and analytics with your data.
 
 <ImageComponent
-  image={props.frontmatter.images[0]}
+  image={props.data.mdx.frontmatter.images[0]}
   description="Elastic Data Connectors Architecture"
 />
 
