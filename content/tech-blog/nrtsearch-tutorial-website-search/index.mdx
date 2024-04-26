@@ -479,7 +479,7 @@ def get_search_replica_client():
 
 In order to verify that `replica-node` resolves to our replica IPs, we can run a `dig` command within any of the created docker containers. There are two IP addresses in the response, `172.20.0.6` and `172.20.0.7`, which correspond to the IP addresses of our replicas.
 
-```bash
+```
 dig replica-node
 
 ; <<>> DiG 9.18.13 <<>> replica-node
@@ -510,8 +510,6 @@ Our Search UI is a simple server-side React app. It was bootstrapped with `npx c
 It was started by running `make start` and should be accessible on `localhost:3000`. You can make a few search queries to see how our custom search ranking works.
 
 <ImageComponent image={props.frontmatter.blogImages[0]} alt="Search UI" />
-
-<!-- Elastic Search-UI -->
 
 ## Putting it all together
 

@@ -94,49 +94,82 @@ module.exports = {
           }
         `,
         feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map((edge) => {
-                const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog. You can read it online by <a href="${
-                  siteUrl + edge.node.fields.slug
-                }">clicking here</a>.)</div>
-              `;
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.spoiler,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': postText }],
-                });
-              });
-            },
-            query: `
-              {
-                allMdx(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fields: {category: {eq: "blog"}}}
-                ) {
-                  edges {
-                    node {
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        spoiler
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: "Jedr's Blog",
-          },
+          // {
+          //   serialize: ({ query: { site, allMdx } }) => {
+          //     return allMdx.edges.map((edge) => {
+          //       return Object.assign({}, edge.node.frontmatter, {
+          //         description: edge.node.frontmatter.spoiler,
+          //         date: edge.node.frontmatter.date,
+          //         url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+          //         guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+          //         custom_elements: [{ 'content:encoded': edge.node.html }],
+          //       });
+          //     });
+          //   },
+          //   query: `
+          //     {
+          //       allMdx(
+          //         limit: 1000,
+          //         sort: { order: DESC, fields: [frontmatter___date] },
+          //         filter: {fields: {category: {eq: "blog"}}}
+          //       ) {
+          //         edges {
+          //           node {
+          //             html
+          //             fields {
+          //               slug
+          //             }
+          //             frontmatter {
+          //               title
+          //               date
+          //               spoiler
+          //             }
+          //           }
+          //         }
+          //       }
+          //     }
+          //   `,
+          //   output: '/rss.xml',
+          //   title: "Jedr's Blog",
+          // },
+          // {
+          //   serialize: ({ query: { site, allMdx } }) => {
+          //     return allMdx.edges.map((edge) => {
+          //       return Object.assign({}, edge.node.frontmatter, {
+          //         description: edge.node.frontmatter.spoiler,
+          //         date: edge.node.frontmatter.date,
+          //         url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+          //         guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+          //         custom_elements: [{ 'content:encoded': edge.node.html }],
+          //       });
+          //     });
+          //   },
+          //   query: `
+          //     {
+          //       allMdx(
+          //         limit: 1000,
+          //         sort: { order: DESC, fields: [frontmatter___date] },
+          //         filter: {fields: {category: {eq: "tech-blog"}}}
+          //       ) {
+          //         edges {
+          //           node {
+          //             html
+          //             fields {
+          //               slug
+          //             }
+          //             frontmatter {
+          //               title
+          //               date
+          //               spoiler
+          //             }
+          //           }
+          //         }
+          //       }
+          //     }
+          //   `,
+          //   output: '/tech-blog/rss.xml',
+          //   title: "Jedr's Tech Blog",
+          // },
         ],
       },
     },

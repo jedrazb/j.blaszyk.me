@@ -46,7 +46,6 @@
 
 /* Media Query for Desktop */
 @media screen and (min-width: 700px) {
-
   .bikepacking-details {
     padding: 1rem 2rem;
   }
@@ -68,5 +67,4 @@
   .metric {
     font-size: 1rem;
   }
-
 }

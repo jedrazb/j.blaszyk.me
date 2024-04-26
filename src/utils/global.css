@@ -1,5 +1,5 @@
 body {
-  --orange: #C69774;
+  --orange: #c69774;
   --blue: #756f56;
   background-color: var(--bg);
   font-family: 'Inter', sans-serif;
@@ -8,7 +8,7 @@ body {
 body.light {
   --bg: #fff;
   --bg-secondary: #f8f8f8;
-  --bg-header: #F6F6F6BF;
+  --bg-header: #f6f6f6bf;
   --post-outline: rgb(164, 182, 184);
   --bg-gallery: #f6f8fa;
   --header: var(--blue);
@@ -29,7 +29,7 @@ body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #0d1117;
   --bg-secondary: #161b22;
-  --bg-header: #161b22BF;
+  --bg-header: #161b22bf;
   --post-outline: rgb(91, 94, 100);
   --bg-gallery: rgb(16, 31, 49);
   --header: #ffffff;
@@ -53,7 +53,7 @@ body.dark {
  * Before any overriding styles
  */
 
- html {
+html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -70,15 +70,10 @@ body.dark {
   }
 }
 
-
-
-
-
 html,
 body {
-  overflow-x: clip
+  overflow-x: clip;
 }
-
 
 body {
   position: relative;
@@ -88,7 +83,6 @@ ul,
 ol {
   margin-left: 1.75rem;
 }
-
 
 h1,
 h2,
@@ -100,7 +94,8 @@ h5 {
   scroll-snap-margin-top: 100px; /* iOS 11 and older */
 }
 
-th,td {
+th,
+td {
   border-bottom: 1px solid var(--post-outline);
 }
 
@@ -111,7 +106,13 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: white;
   background: none;
-  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family:
+    Consolas,
+    Menlo,
+    Monaco,
+    source-code-pro,
+    Courier New,
+    monospace;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;

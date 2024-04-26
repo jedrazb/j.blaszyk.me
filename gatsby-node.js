@@ -3,9 +3,10 @@ const Promise = require('bluebird');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 var exifr = require('exifr');
+const readingTime = require('reading-time');
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js');
@@ -23,29 +24,26 @@ exports.createPages = ({ graphql, actions }) => {
 
     // blog posts
     resolve(
-      graphql(
-        `
-          {
-            allMdx(
-              sort: { fields: [frontmatter___date], order: DESC }
-              filter: { fields: { category: { eq: "blog" } } }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    directoryName
-                  }
-                  frontmatter {
-                    title
-                  }
+      graphql(`
+        {
+          allMdx(
+            sort: { frontmatter: { date: DESC } }
+            filter: { fields: { category: { eq: "blog" } } }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
                 }
               }
             }
           }
-        `
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
@@ -54,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         const posts = result.data.allMdx.edges;
-        const allSlugs = _.reduce(
+        _.reduce(
           posts,
           (result, post) => {
             result.add(post.node.fields.slug);
@@ -88,30 +86,27 @@ exports.createPages = ({ graphql, actions }) => {
 
     // tech-blog posts
     resolve(
-      graphql(
-        `
-          {
-            allMdx(
-              sort: { fields: [frontmatter___date], order: DESC }
-              filter: { fields: { category: { eq: "tech-blog" } } }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    directoryName
-                    category
-                  }
-                  frontmatter {
-                    title
-                  }
+      graphql(`
+        {
+          allMdx(
+            sort: { frontmatter: { date: DESC } }
+            filter: { fields: { category: { eq: "tech-blog" } } }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                  category
+                }
+                frontmatter {
+                  title
                 }
               }
             }
           }
-        `
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
@@ -120,7 +115,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         const posts = result.data.allMdx.edges;
-        const allSlugs = _.reduce(
+        _.reduce(
           posts,
           (result, post) => {
             result.add(post.node.fields.slug);
@@ -156,30 +151,27 @@ exports.createPages = ({ graphql, actions }) => {
 
     // through the lens posts
     resolve(
-      graphql(
-        `
-          {
-            allMdx(
-              sort: { fields: [frontmatter___date], order: DESC }
-              filter: { fields: { category: { eq: "through-the-lens" } } }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                    directoryName
-                    category
-                  }
-                  frontmatter {
-                    title
-                  }
+      graphql(`
+        {
+          allMdx(
+            sort: { frontmatter: { date: DESC } }
+            filter: { fields: { category: { eq: "through-the-lens" } } }
+            limit: 1000
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                  category
+                }
+                frontmatter {
+                  title
                 }
               }
             }
           }
-        `
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
@@ -188,7 +180,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create through the lens posts pages.
         const posts = result.data.allMdx.edges;
-        const allSlugs = _.reduce(
+        _.reduce(
           posts,
           (result, post) => {
             result.add(post.node.fields.slug);
@@ -225,8 +217,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (_.get(node, 'internal.type') === `Mdx`) {
     createNodeField({
       node,
-      name: 'directoryName',
-      value: path.basename(path.dirname(_.get(node, 'fileAbsolutePath'))),
+      name: `timeToRead`,
+      value: readingTime(node.body),
     });
     createNodeField({
       node,
@@ -237,7 +229,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: `category`,
       value: path.basename(
-        path.dirname(path.dirname(_.get(node, 'fileAbsolutePath')))
+        path.dirname(path.dirname(_.get(node, 'internal.contentFilePath')))
       ),
     });
   }

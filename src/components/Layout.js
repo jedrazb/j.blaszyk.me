@@ -13,9 +13,12 @@ import './Layout.css';
 import TableOfContents from './TableOfContents';
 
 class Layout extends React.Component {
-  state = {
-    theme: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: null,
+    };
+  }
   componentDidMount() {
     this.setState({ theme: window.__theme });
     window.__onThemeChange = () => {

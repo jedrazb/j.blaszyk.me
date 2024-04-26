@@ -53,7 +53,7 @@ class TechBlogPostTemplate extends React.Component {
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
-    let { previous, next, slug } = this.props.pageContext;
+    let { previous, next } = this.props.pageContext;
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
@@ -124,7 +124,7 @@ class TechBlogPostTemplate extends React.Component {
               >
                 {formatPostDate(post.frontmatter.date)}
                 <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                {formatReadingTime(post.timeToRead)}
+                {formatReadingTime(post.fields.timeToRead.minutes)}
               </p>
             </header>
             <MDXProvider components={shortcodes}>
@@ -219,7 +219,6 @@ export const pageQuery = graphql`
       id
       body
       tableOfContents
-      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -243,6 +242,9 @@ export const pageQuery = graphql`
       fields {
         slug
         category
+        timeToRead {
+          minutes
+        }
       }
     }
   }

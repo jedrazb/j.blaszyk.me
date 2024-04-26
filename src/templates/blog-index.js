@@ -64,7 +64,7 @@ class BlogIndexTemplate extends React.Component {
                     {indexImage && (
                       <GatsbyImage
                         image={getImage(indexImage)}
-                        alt={'Blog Image'}
+                        alt={title}
                       />
                     )}
                   </div>
@@ -90,7 +90,7 @@ class BlogIndexTemplate extends React.Component {
                           <small>
                             {formatPostDate(node.frontmatter.date)}
                             <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                            {formatReadingTime(node.timeToRead)}
+                            {formatReadingTime(node.fields.timeToRead.minutes)}
                             <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
                             {formatNumberOfPhotos(node.frontmatter)}
                           </small>
@@ -129,15 +129,17 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fields: { category: { eq: "blog" } } }
     ) {
       edges {
         node {
           fields {
             slug
+            timeToRead {
+              minutes
+            }
           }
-          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
