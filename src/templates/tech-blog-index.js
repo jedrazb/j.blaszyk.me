@@ -77,10 +77,7 @@ class TechBlogIndexTemplate extends React.Component {
                     </h3>
 
                     {indexImage && (
-                      <GatsbyImage
-                        image={getImage(indexImage)}
-                        alt={title}
-                      />
+                      <GatsbyImage image={getImage(indexImage)} alt={title} />
                     )}
 
                     <div

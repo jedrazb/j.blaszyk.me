@@ -42,7 +42,6 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "katex": "^0.16.10",
-    "lint-staged": "^15.2.2",
     "lodash": "^4.17.21",
     "prismjs": "^1.29.0",
     "react": "^18.3.0",
@@ -69,6 +68,7 @@
     "eslint-plugin-react": "^7.34.1",
     "gh-pages": "^6.1.1",
     "glob": "^10.3.12",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
   },
   "homepage": "https://j.blaszyk.me",
@@ -76,7 +76,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "lint": "yarn eslint content/**/*.{md,mdx}",
-    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
+    "format": "prettier --write '{gatsby-*.{js,mjs},src/**/*.{js,jsx,json,css},content/**/*.mdx}'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
@@ -85,13 +85,7 @@
     "deploy-cached": "gatsby build && cp CNAME public/ && gh-pages -d public"
   },
   "lint-staged": {
-    "{gatsby-*.js,src/**/*.{js,jsx,json,css}}": [
-      "yarn format",
-      "git add"
-    ],
-    "src/pages/**/*.md": [
-      "git add"
-    ]
+    "*": "yarn format"
   },
   "packageManager": "yarn@3.2.2"
 }

@@ -62,10 +62,7 @@ class BlogIndexTemplate extends React.Component {
                 >
                   <div className="blog-post-tile-column">
                     {indexImage && (
-                      <GatsbyImage
-                        image={getImage(indexImage)}
-                        alt={title}
-                      />
+                      <GatsbyImage image={getImage(indexImage)} alt={title} />
                     )}
                   </div>
                   <div className="blog-post-tile-column">

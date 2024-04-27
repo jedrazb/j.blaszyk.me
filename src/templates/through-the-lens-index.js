@@ -97,10 +97,7 @@ class ThroughTheLensIndexTemplate extends React.Component {
                   </header>
 
                   {featuredImage && (
-                    <GatsbyImage
-                      image={getImage(featuredImage)}
-                      alt={title}
-                    />
+                    <GatsbyImage image={getImage(featuredImage)} alt={title} />
                   )}
                 </article>
               </Link>
