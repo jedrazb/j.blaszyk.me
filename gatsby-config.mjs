@@ -1,6 +1,9 @@
-import remarkGfm from 'remark-gfm';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -47,7 +50,8 @@ const config = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         mdxOptions: {
-          remarkPlugins: [remarkGfm],
+          rehypePlugins: [rehypeKatex],
+          remarkPlugins: [remarkGfm, remarkMath],
         },
         gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',

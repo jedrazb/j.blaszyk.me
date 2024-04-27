@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 import { MDXProvider } from '@mdx-js/react';
-import { BlockMath, InlineMath } from 'react-katex';
 import { getSrc } from 'gatsby-plugin-image';
 
 import '../fonts/fonts-post.css';
@@ -35,8 +34,6 @@ import './blog-post.css';
 const shortcodes = {
   Link,
   ImageGallery,
-  BlockMath,
-  InlineMath,
   ImageComponent,
   Container,
   Column,

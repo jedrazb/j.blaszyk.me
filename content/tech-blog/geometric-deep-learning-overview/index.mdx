@@ -56,17 +56,17 @@ PyTorch Geometric makes use of Generic Message Passing Scheme to implement any c
 - propagate step - messages from nodes are propagated to their local neighborhoods.
 - update step - embedded node's features are updated by the message vector.
 
-**Graph Convolutional Network (GCN)** was defined by Kipf et al. [[7]](#references). The intuition of this method is that it can alleviate the problem of overfitting on local neighborhood structures for graphs with very wide node degree distributions, such as social networks, citation networks, and many other real-world graph datasets. The computational complexity of this approach is <InlineMath>O(n)</InlineMath>. It applies simple filters acting on the 1-hop neighborhood of the graph in the spatial domain. It can be expressed in the generic message-passing scheme as:
+**Graph Convolutional Network (GCN)** was defined by Kipf et al. [[7]](#references). The intuition of this method is that it can alleviate the problem of overfitting on local neighborhood structures for graphs with very wide node degree distributions, such as social networks, citation networks, and many other real-world graph datasets. The computational complexity of this approach is $$O(n)$$. It applies simple filters acting on the 1-hop neighborhood of the graph in the spatial domain. It can be expressed in the generic message-passing scheme as:
 
-<BlockMath
-  math={`\\text{msg}(x_i, x_j) = \\frac{1}{\\sqrt{\\deg(x_i)} \\sqrt{deg(x_j)}} \\left( \\mathbf{x}\_j\\mathbf{\\Theta} \\right)`}
-></BlockMath>
+$$
+\text{msg}(x_i, x_j) = \frac{1}{\sqrt{\deg(x_i)} \sqrt{deg(x_j)}} \left( \mathbf{x}_j \mathbf{\Theta} \right)
+$$
 
-<BlockMath
-  math={`\\mathbf{x'}_i = \\sum_{j \\in \\mathcal{N}(i) \\cup \\{ i \\}} \\text{msg}(x_i, x_j)`}
-></BlockMath>
+$$
+\mathbf{x'}_i = \sum_{j \in \mathcal{N}(i) \cup \{ i \}} \text{msg}(x_i, x_j)
+$$
 
-where neighboring node features are first transformed by a weight matrix <InlineMath>\mathbf{Theta}</InlineMath>, normalized by their degree, and finally summed up.
+where neighboring node features are first transformed by a weight matrix $$\mathbf{\Theta}$$, normalized by their degree, and finally summed up.
 This formula can be divided into the following steps:
 
 1. Add self-loops to the adjacency matrix.
@@ -151,16 +151,16 @@ It shows that Geometric Deep Learning is an elegant and performant approach when
 
 ### References
 
-[1] Bronstein, Michael M., et al. "Geometric deep learning: going beyond euclidean data." IEEE Signal Processing Magazine 34.4 (2017): 18-42.
+- [1] Bronstein, Michael M., et al. "Geometric deep learning: going beyond euclidean data." IEEE Signal Processing Magazine 34.4 (2017): 18-42.
 
-[2] Monti, Federico, Michael Bronstein, and Xavier Bresson. "Geometric matrix completion with recurrent multi-graph neural networks." Advances in Neural Information Processing Systems. 2017.
+- [2] Monti, Federico, Michael Bronstein, and Xavier Bresson. "Geometric matrix completion with recurrent multi-graph neural networks." Advances in Neural Information Processing Systems. 2017.
 
-[3] Gainza, Pablo, et al. "Deciphering interaction fingerprints from protein molecular surfaces using geometric deep learning." Nature Methods 17.2 (2020): 184-192.
+- [3] Gainza, Pablo, et al. "Deciphering interaction fingerprints from protein molecular surfaces using geometric deep learning." Nature Methods 17.2 (2020): 184-192.
 
-[4] Twitter: [fabula_ai](https://twitter.com/fabula_ai)
+- [4] Twitter: [fabula_ai](https://twitter.com/fabula_ai)
 
-[5] Veselkov, Kirill, et al. "HyperFoods: Machine intelligent mapping of cancer-beating molecules in foods." Scientific reports 9.1 (2019): 1-12.
+- [5] Veselkov, Kirill, et al. "HyperFoods: Machine intelligent mapping of cancer-beating molecules in foods." Scientific reports 9.1 (2019): 1-12.
 
-[6] Kipf, Thomas N., and Max Welling. "Semi-supervised classification with graph convolutional networks." arXiv preprint arXiv:1609.02907 (2016).
+- [6] Kipf, Thomas N., and Max Welling. "Semi-supervised classification with graph convolutional networks." arXiv preprint arXiv:1609.02907 (2016).
 
-[7] Fey, Matthias, and Jan Eric Lenssen. "Fast graph representation learning with PyTorch Geometric." arXiv preprint arXiv:1903.02428 (2019).
+- [7] Fey, Matthias, and Jan Eric Lenssen. "Fast graph representation learning with PyTorch Geometric." arXiv preprint arXiv:1903.02428 (2019).
