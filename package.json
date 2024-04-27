@@ -82,13 +82,13 @@
     "format": "prettier --write '{gatsby-*.{js,mjs},src/**/*.{js,jsx,json,css},content/**/*.mdx}'",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "build": "rm -rf public && rm -rf .cac.he && gatsby build",
     "now-build": "gatsby build",
     "deploy": "yarn build && cp CNAME public/ && gh-pages -d public",
     "deploy-cached": "gatsby build && cp CNAME public/ && gh-pages -d public"
   },
   "lint-staged": {
-    "*.{js,jsx,json,md,mdx,mjs,css}'": "yarn format"
+    "*.{js,jsx,json,md,mdx,mjs,css}": "yarn format"
   },
   "packageManager": "yarn@3.2.2"
 }
