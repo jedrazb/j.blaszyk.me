@@ -10206,6 +10206,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
+  bin:
+    husky: bin.mjs
+  checksum: 1aebc3334dc7ac6288ff5e1fb72cfb447cfa474e72cf7ba692e8c5698c573ab725c28c6a5088c9f8e6aca5f47d40fa7261beffbc07a4d307ca21656dc4571f07
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.24, iconv-lite@npm:^0.4.4":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -11189,6 +11198,7 @@ __metadata:
     gatsby-transformer-sharp: ^5.13.1
     gh-pages: ^6.1.1
     glob: ^10.3.12
+    husky: ^9.0.11
     katex: ^0.16.10
     lint-staged: ^15.2.2
     lodash: ^4.17.21
