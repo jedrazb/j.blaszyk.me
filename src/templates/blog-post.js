@@ -90,6 +90,10 @@ class BlogPostTemplate extends React.Component {
           <TableOfContents {...post.tableOfContents} widePostType />
         }
       >
+
+
+
+
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}

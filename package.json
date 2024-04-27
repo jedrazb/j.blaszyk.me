@@ -75,6 +75,7 @@
   "homepage": "https://j.blaszyk.me",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky",
     "dev": "gatsby develop",
     "lint": "yarn eslint content/**/*.{md,mdx}",
     "precommit": "lint-staged",
@@ -87,7 +88,7 @@
     "deploy-cached": "gatsby build && cp CNAME public/ && gh-pages -d public"
   },
   "lint-staged": {
-    "*": "yarn format"
+    "*.{js,jsx,json,md,mdx,mjs,css}'": "yarn format"
   },
   "packageManager": "yarn@3.2.2"
 }
