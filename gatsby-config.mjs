@@ -160,14 +160,20 @@ const config = {
                   <div>
                     <p>
                       ${edge.node.excerpt}...
-                      <a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}">Read more >>></a>
+                      <a href="${site.siteMetadata.siteUrl + '/tech-blog' + edge.node.fields.slug}">Read more >>></a>
                     </p>
                   </div>`;
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.spoiler,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    '/tech-blog' +
+                    edge.node.fields.slug,
+                  guid:
+                    site.siteMetadata.siteUrl +
+                    '/tech-blog' +
+                    edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': feedHTML }],
                 });
               });
