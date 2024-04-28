@@ -11,7 +11,7 @@ INDEXNOW_APIS = [
 ]
 
 
-SITEMAP_URL = 'https://j.blaszyk.me/sitemap/sitemap-0.xml'
+SITEMAP_URL = 'https://j.blaszyk.me/sitemap-0.xml'
 r = requests.get(SITEMAP_URL)
 sitemap = r.text
 page_links = re.findall('<loc>(.*?)</loc>', sitemap, re.IGNORECASE)
@@ -32,6 +32,3 @@ for indexnow_api in INDEXNOW_APIS:
     )
 
     print(f'{indexnow_api} - response: {response}')
-
-
-

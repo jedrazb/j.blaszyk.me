@@ -108,82 +108,96 @@ const config = {
           }
         `,
         feeds: [
-          // {
-          //   serialize: ({ query: { site, allMdx } }) => {
-          //     return allMdx.edges.map((edge) => {
-          //       return Object.assign({}, edge.node.frontmatter, {
-          //         description: edge.node.frontmatter.spoiler,
-          //         date: edge.node.frontmatter.date,
-          //         url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-          //         guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-          //         custom_elements: [{ 'content:encoded': edge.node.html }],
-          //       });
-          //     });
-          //   },
-          //   query: `
-          //     {
-          //       allMdx(
-          //         limit: 1000,
-          //         sort: { order: DESC, fields: [frontmatter___date] },
-          //         filter: {fields: {category: {eq: "blog"}}}
-          //       ) {
-          //         edges {
-          //           node {
-          //             html
-          //             fields {
-          //               slug
-          //             }
-          //             frontmatter {
-          //               title
-          //               date
-          //               spoiler
-          //             }
-          //           }
-          //         }
-          //       }
-          //     }
-          //   `,
-          //   output: '/rss.xml',
-          //   title: "Jedr's Blog",
-          // },
-          // {
-          //   serialize: ({ query: { site, allMdx } }) => {
-          //     return allMdx.edges.map((edge) => {
-          //       return Object.assign({}, edge.node.frontmatter, {
-          //         description: edge.node.frontmatter.spoiler,
-          //         date: edge.node.frontmatter.date,
-          //         url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-          //         guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-          //         custom_elements: [{ 'content:encoded': edge.node.html }],
-          //       });
-          //     });
-          //   },
-          //   query: `
-          //     {
-          //       allMdx(
-          //         limit: 1000,
-          //         sort: { order: DESC, fields: [frontmatter___date] },
-          //         filter: {fields: {category: {eq: "tech-blog"}}}
-          //       ) {
-          //         edges {
-          //           node {
-          //             html
-          //             fields {
-          //               slug
-          //             }
-          //             frontmatter {
-          //               title
-          //               date
-          //               spoiler
-          //             }
-          //           }
-          //         }
-          //       }
-          //     }
-          //   `,
-          //   output: '/tech-blog/rss.xml',
-          //   title: "Jedr's Tech Blog",
-          // },
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map((edge) => {
+                const feedHTML = `
+                  <div>
+                    <p>
+                      ${edge.node.excerpt}...
+                      <a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}">Read more >>></a>
+                    </p>
+                  </div>`;
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.spoiler,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': feedHTML }],
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fields: {category: {eq: "blog"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        spoiler
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "Jedr's Blog",
+          },
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map((edge) => {
+                const feedHTML = `
+                  <div>
+                    <p>
+                      ${edge.node.excerpt}...
+                      <a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}">Read more >>></a>
+                    </p>
+                  </div>`;
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.spoiler,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': feedHTML }],
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fields: {category: {eq: "tech-blog"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        spoiler
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/tech-blog/rss.xml',
+            title: "Jedr's Tech Blog",
+          },
         ],
       },
     },
@@ -212,7 +226,7 @@ const config = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://j.blaszyk.me/',
-        sitemap: 'https://j.blaszyk.me/sitemap/sitemap-index.xml',
+        sitemap: 'https://j.blaszyk.me/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
