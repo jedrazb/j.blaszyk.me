@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jedr's Tech Blog]]></title><description><![CDATA[Blog by Jedr Blaszyk. Bikepacking, photography & tech.]]></description><link>https://j.blaszyk.me</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Apr 2024 21:23:02 GMT</lastBuildDate><item><title><![CDATA[Elastic Data Connectors - Elasticsearch Ingestion Made Simple]]></title><description><![CDATA[Overview of a new, lightweight data connectors framework integrated with the Elastic stack that can ingest data from any source into the Elasticsearch index.]]></description><link>https://j.blaszyk.me/tech-blog/elasticsearch-data-connectors/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/elasticsearch-data-connectors/</guid><pubDate>Thu, 05 Oct 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      In any search application, the is an underlying ingestion pipeline that indexes the data. While developers often focus on speedy searches…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/elasticsearch-data-connectors/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Exploring Apache Lucene - Part 3: Running at Scale]]></title><description><![CDATA[Exploring strategies to scale up Apache Lucene to serve high-traffic applications. Looking at how serverless architectures can enable cost-effective scalability.]]></description><link>https://j.blaszyk.me/tech-blog/exploring-apache-lucene-scale/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/exploring-apache-lucene-scale/</guid><pubDate>Sat, 16 Sep 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      Let’s explore real-world solutions that enable us to deploy and operate Apache Lucene at scale and discuss the advantages that a stateless…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/exploring-apache-lucene-scale/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Nrtsearch Tutorial - Indexing Web Content for Search]]></title><description><![CDATA[Let's use nrtsearch search engine to support website search with custom ranking and results highlighting. I'm also building a website crawler, data indexer and Search UI to interact with the system.]]></description><link>https://j.blaszyk.me/tech-blog/nrtsearch-tutorial-website-search/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/nrtsearch-tutorial-website-search/</guid><pubDate>Tue, 18 Apr 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      Let’s use nrtsearch - an open-source search engine built by Yelp - to support text search for any website. In this tutorial, I’m using my…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/nrtsearch-tutorial-website-search/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Exploring Apache Lucene - Part 2: Search and Ranking]]></title><description><![CDATA[Diving deep into Lucene's search and ranking - data structures, query types, concurrent searching and custom scoring.]]></description><link>https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/</guid><pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      In the last post Exploring Apache Lucene - Part 1: The Index, we took a deep dive to look at the building blocks of the Lucene index. Here…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[The Tech Stack of Fast, Free, and Customizable Blog]]></title><description><![CDATA[Building a blog with GatsbyJS, GraphQL, MDX and Github Pages.  Customization, open-source and performance - completely for free.]]></description><link>https://j.blaszyk.me/tech-blog/tech-stack-of-fast-free-and-customizable-blog/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/tech-stack-of-fast-free-and-customizable-blog/</guid><pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      To Blog or Not We are living in the digital age - publishing content has never been easier thanks to social platform tech giants. After all,…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/tech-stack-of-fast-free-and-customizable-blog/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Exploring Apache Lucene - Part 1: The Index]]></title><description><![CDATA[Exploring Apache Lucene's core concepts - inverted index, insertions and deletions.]]></description><link>https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/</guid><pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      When I joined Yelp in 2020, as a software engineer, I became part of the Ranking Platform team. The team is responsible for the development…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/exploring-apache-lucene-index/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item><item><title><![CDATA[Geometric Deep Learning - an overview]]></title><description><![CDATA[Series of posts covering learnings from my MEng thesis "Geometric Deep Learning for Subcortical Brain Shape Analysis".]]></description><link>https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/</link><guid isPermaLink="false">https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/</guid><pubDate>Wed, 10 Jun 2020 00:00:00 GMT</pubDate><content:encoded>
+                  &lt;div&gt;
+                    &lt;p&gt;
+                      Non-Euclidean domains Spectral methods Spatial methods Why spatial is better than spectral Introduction by example: GCN implemented in…...
+                      &lt;a href=&quot;https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/&quot;&gt;Read more &gt;&gt;&gt;&lt;/a&gt;
+                    &lt;/p&gt;
+                  &lt;/div&gt;</content:encoded></item></channel></rss>

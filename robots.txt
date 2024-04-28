@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://j.blaszyk.me/sitemap/sitemap-index.xml
+Sitemap: https://j.blaszyk.me/sitemap-index.xml
 Host: https://j.blaszyk.me
