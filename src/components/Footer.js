@@ -22,20 +22,16 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: 'right' }}>
-          <Link
-            to="/sitemap/sitemap-index.xml"
-            className="footer-icon icon-has-next"
-          >
+          <Link to="/sitemap-index.xml" className="footer-icon icon-has-next">
             <Sitemap />
           </Link>
-          <a
+          <Link
             href="/rss.xml"
-            target="_blank"
             rel="noopener noreferrer"
             className="footer-icon"
           >
             <Rss />
-          </a>
+          </Link>
         </div>
         <a
           href="https://mobile.twitter.com/jedr_blaszyk"

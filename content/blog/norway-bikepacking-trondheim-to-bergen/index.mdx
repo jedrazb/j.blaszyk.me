@@ -87,7 +87,10 @@ category: 'bikepacking'
 - [Photos](#image-gallery)
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[41]} description="" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[41]}
+    description=""
+  />
 </MakeItBigContainer>
 
 > Pack light, travel far.
@@ -99,7 +102,7 @@ This year, I packed a proper camera to capture moments from our adventure. Welco
 ## Route
 
 <BikepackingDetails
-  logo={props.frontmatter.logo}
+  logo={props.data.mdx.frontmatter.logo}
   title={'Bikepacking along fjords and glaciers'}
   distance={'930km'}
   elevation={'14200m'}
@@ -122,8 +125,8 @@ Some interesting spots on our route included Trollstigen - a famous serpentine r
       frameborder="0"
       scrolling="no"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 
@@ -145,7 +148,7 @@ Soon, we finished assembling our bikes, mounted the bags, and put on our warm, r
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[0]}
+    image={props.data.mdx.frontmatter.images[0]}
     description="All of us at the Trondheim airport, ready to start the trip"
   />
 </MakeItBigContainer>
@@ -156,28 +159,28 @@ The constant cold weather worried me as we planned to climb high mountain passes
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[2]}
+    image={props.data.mdx.frontmatter.images[2]}
     description="One of the few gravel sections"
     isRow
   />
   <ThreePhotosContainer>
-    <ImageComponent image={props.frontmatter.images[12]} isRow />
+    <ImageComponent image={props.data.mdx.frontmatter.images[12]} isRow />
     <ImageComponent
-      image={props.frontmatter.images[1]}
+      image={props.data.mdx.frontmatter.images[1]}
       description="Brewing morning coffee"
       noPadding
     />
-    <ImageComponent image={props.frontmatter.images[11]} isRow />
+    <ImageComponent image={props.data.mdx.frontmatter.images[11]} isRow />
   </ThreePhotosContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[7]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[7]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[9]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[9]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[10]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[10]} isRow />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -194,18 +197,18 @@ Trollstigen is one of the most visually stunning cycling climbs I've ever done. 
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[19]}
+    image={props.data.mdx.frontmatter.images[19]}
     description="View of Trollstiegen serpentine road"
     isRow
   />
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[23]}
+      image={props.data.mdx.frontmatter.images[23]}
       description="Lake at the top of Trollstiegen"
       isRow
     />
-    <ImageComponent image={props.frontmatter.images[22]} noPadding />
-    <ImageComponent image={props.frontmatter.images[25]} isRow />
+    <ImageComponent image={props.data.mdx.frontmatter.images[22]} noPadding />
+    <ImageComponent image={props.data.mdx.frontmatter.images[25]} isRow />
   </ThreePhotosContainer>
 </MakeItBigContainer>
 
@@ -216,27 +219,27 @@ To begin our main climb that day, we first had to reach Geiranger by Møllsbygda
 <MakeItBigContainer>
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[28]}
+      image={props.data.mdx.frontmatter.images[28]}
       description="Geiranger village and Geirangerfjord as seen from the start of the second climb that day"
       isRow
     />
     <ImageComponent
-      image={props.frontmatter.images[33]}
+      image={props.data.mdx.frontmatter.images[33]}
       description="Break after finishing the second climb"
       noPadding
     />
-    <ImageComponent image={props.frontmatter.images[34]} isRow />
+    <ImageComponent image={props.data.mdx.frontmatter.images[34]} isRow />
   </ThreePhotosContainer>
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[26]}
+        image={props.data.mdx.frontmatter.images[26]}
         description="Geirangerfjord viewpoint"
         isRow
       />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[31]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[31]} isRow />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -247,29 +250,29 @@ Sognefjellet is northern Europe's highest mountain pass, reaching 1428m. It was 
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[36]}
+    image={props.data.mdx.frontmatter.images[36]}
     description="Climbing up Sognefjellet, halfway there"
     isRow
   />
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[37]}
+      image={props.data.mdx.frontmatter.images[37]}
       description="Bike pic at the top"
       isRow
     />
     <ImageComponent
-      image={props.frontmatter.images[40]}
+      image={props.data.mdx.frontmatter.images[40]}
       description="In our warmest layers and rainproof shell - ready for the descent"
       noPadding
     />
     <ImageComponent
-      image={props.frontmatter.images[39]}
+      image={props.data.mdx.frontmatter.images[39]}
       description="Thunderstorm seen from the shelter"
       isRow
     />
   </ThreePhotosContainer>
   <ImageComponent
-    image={props.frontmatter.images[41]}
+    image={props.data.mdx.frontmatter.images[41]}
     description="Cycling on 1400m with the glacier in the back"
     isRow
   />
@@ -284,23 +287,23 @@ The rainiest city in Europe didn't disappoint us. It rained for almost 100% of o
 <MakeItBigContainer>
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[47]}
+      image={props.data.mdx.frontmatter.images[47]}
       description="Last 1000m climb"
       isRow
     />
-    <ImageComponent image={props.frontmatter.images[45]} noPadding />
-    <ImageComponent image={props.frontmatter.images[46]} isRow />
+    <ImageComponent image={props.data.mdx.frontmatter.images[45]} noPadding />
+    <ImageComponent image={props.data.mdx.frontmatter.images[46]} isRow />
   </ThreePhotosContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[49]} />
+      <ImageComponent image={props.data.mdx.frontmatter.images[49]} />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[52]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[52]} isRow />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[54]}
+        image={props.data.mdx.frontmatter.images[54]}
         description="Fish market in Bergen"
       />
     </Column>
@@ -309,4 +312,4 @@ The rainiest city in Europe didn't disappoint us. It rained for almost 100% of o
 
 On the last day of the trip, we cycled to [Trek Bergen](https://trekbergen.no/) bike shop, as we had asked them to save cardboard bike boxes for us. They did it for free! We spent 2 hours disassembling and packing our bikes at the airport. We were heading home thinking about next year's bikepacking adventure.
 
-<ImageGallery images={props.frontmatter.images}></ImageGallery>
+<ImageGallery images={props.data.mdx.frontmatter.images} />

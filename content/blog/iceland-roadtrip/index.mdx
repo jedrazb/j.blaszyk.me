@@ -80,7 +80,10 @@ blogImages: ['./photos/20220701-DSCF1551.jpg', './photos/sky_lagoon_crop.jpg']
 - [Photos](#image-gallery)
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[47]} alt="Glacier Lagoon" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[47]}
+    alt="Glacier Lagoon"
+  />
 </MakeItBigContainer>
 
 This summer, Ann and I decided to ditch warm, sunny destinations to explore the land of ice and fire - Iceland. It’s a destination unlike any other in Europe. Its unique landscapes, smouldering volcanoes and blue glaciers complement the modern lifestyle and especially the coffee culture of the capital city of Reykjavik.
@@ -107,8 +110,8 @@ We stayed in Iceland for 8 days. We decided not to go 1,400km along the famous r
       height="520"
       frameBorder="0"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 
@@ -128,17 +131,25 @@ We stayed in Iceland for 8 days. We decided not to go 1,400km along the famous r
 We landed at Keflavik airport in the afternoon and picked up our car from [IcePol](https://icepole.eu/) - a local car rental company (we had a great experience). There, we also rented some camping gear: a folding table and chairs, cutlery and a gas stove - so we could have a proper morning coffee. Car pickup proceeded smoothly and soon after landing we were already in the car driving towards Snæfellsnes Penninsula. Passing by Reykjavik, we stopped by a big store to buy food for the next few days. On the way, we stopped by Gerðuberg Cliffs and Bjarnarfoss. After a few hours, we arrived at Hellissandur Camping. It was a nice campsite to spend the night on with suitable grounds for pitching a tent.
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[3]} alt="Clouds" isRow />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[3]}
+    alt="Clouds"
+    isRow
+  />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[2]}
+        image={props.data.mdx.frontmatter.images[2]}
         alt="Coffee 1"
         isRow
       />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[0]} alt="Cliffs" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[0]}
+        alt="Cliffs"
+        isRow
+      />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -149,23 +160,23 @@ We explored Snæfellsnes Peninsula by following a rocky road to Skarðsvík Beac
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[13]}
+    image={props.data.mdx.frontmatter.images[13]}
     alt="Scenic mountains"
     isRow
   />
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[7]}
+      image={props.data.mdx.frontmatter.images[7]}
       alt="Car on a road"
       noPadding
     />
     <ImageComponent
-      image={props.frontmatter.images[6]}
+      image={props.data.mdx.frontmatter.images[6]}
       alt="Black rocks"
       noPadding
     />
     <ImageComponent
-      image={props.frontmatter.images[8]}
+      image={props.data.mdx.frontmatter.images[8]}
       alt="Orange lighthouse"
       noPadding
     />
@@ -178,21 +189,21 @@ The Golden Circle follows the “must-see” Iceland tourist destinations. It in
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[16]}
+    image={props.data.mdx.frontmatter.images[16]}
     alt="Tectonic plates park"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[15]}
+        image={props.data.mdx.frontmatter.images[15]}
         alt="Tectonic plates"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[17]}
+        image={props.data.mdx.frontmatter.images[17]}
         alt="Jedr Geysir park"
         isRow
       />
@@ -200,21 +211,21 @@ The Golden Circle follows the “must-see” Iceland tourist destinations. It in
   </Container>
 
   <ImageComponent
-    image={props.frontmatter.images[21]}
+    image={props.data.mdx.frontmatter.images[21]}
     alt="Gullfoss"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[19]}
+        image={props.data.mdx.frontmatter.images[19]}
         alt="Geysir Park"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[20]}
+        image={props.data.mdx.frontmatter.images[20]}
         alt="Flowers"
         isRow
       />
@@ -227,46 +238,54 @@ The Golden Circle follows the “must-see” Iceland tourist destinations. It in
 _Foss_ is the Icelandic word for waterfall, so on a Foss day, we’ve seen many beautiful waterfalls. We visited Gluggafoss, Seljalandsfoss (there is a path leading “inside”) and Skógafoss (a great location for photos). We also hiked to Seljavallalaug Pool to relax in the warm water from a local hot spring. It’s an outdoor swimming pool located in the mountains, built in 1923 by a local who wanted to teach kids how to swim. Nowadays, it’s open to everybody willing to hike up the mountains to jump into the pool. We ended our day with a hike to the Solheimasandur Plane Wreck. However, I don’t think taking a photo is worth walking there and back for 1.5 hours.
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[24]} alt="Big foss" isRow />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[24]}
+    alt="Big foss"
+    isRow
+  />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[22]} alt="Horses" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[22]}
+        alt="Horses"
+        isRow
+      />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[23]}
+        image={props.data.mdx.frontmatter.images[23]}
         alt="Foss and Bejb"
         isRow
       />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[25]}
+    image={props.data.mdx.frontmatter.images[25]}
     alt="Swimming pool"
     isRow
   />
-  <ImageComponent image={props.frontmatter.images[26]} alt="Plane" />
+  <ImageComponent image={props.data.mdx.frontmatter.images[26]} alt="Plane" />
 </MakeItBigContainer>
 
 We spent our 4th night in Þakgil camping, located high up in Katla geopark, on Katla volcano - one of Iceland's largest and most active volcanoes. It's located near Vik city. The road leading there requires a 4x4 car and is one of the most scenic routes we've driven in Iceland. The campsite is situated in a valley with many hiking trails around the geopark.
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[27]}
+    image={props.data.mdx.frontmatter.images[27]}
     alt="Katla park road"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[28]}
+        image={props.data.mdx.frontmatter.images[28]}
         alt="Katla 1"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[29]}
+        image={props.data.mdx.frontmatter.images[29]}
         alt="Katla 2"
         isRow
       />
@@ -279,41 +298,52 @@ We spent our 4th night in Þakgil camping, located high up in Katla geopark, on 
 My favourite part of the trip started that day. First we needed to leave the campsite, driving down rough gravel roads to Vik. Then we headed south-east towards one of Europe's biggest glaciers. On the way, we stopped by a beautiful foss: Svartifoss which is surrounded by hexagonal basalt columns. Their geometric shape is the result of physical processes occurring inside a lava flow during a cool-down. The main attractions of the day were glacier lagoons, whose still blue waters were dotted with icebergs from the surrounding glaciers. We’ve also had a very pleasant chat with a bike-packer - [Chris Hankey](https://chrishankey-artist.com/) - who is spending two months this summer cycling around Iceland.
 
 <MakeItBigContainer>
-  <ImageComponent image={props.frontmatter.images[32]} alt="Svartifoss" isRow />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[32]}
+    alt="Svartifoss"
+    isRow
+  />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[30]}
+        image={props.data.mdx.frontmatter.images[30]}
         alt="Cyclists"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[31]}
+        image={props.data.mdx.frontmatter.images[31]}
         alt="Glacier 2"
         isRow
       />
     </Column>
   </Container>
-  <ImageComponent image={props.frontmatter.images[34]} alt="Glacier 3" isRow />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[34]}
+    alt="Glacier 3"
+    isRow
+  />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[33]}
+        image={props.data.mdx.frontmatter.images[33]}
         alt="Glacier 4"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[35]}
+        image={props.data.mdx.frontmatter.images[35]}
         alt="Glacier 5"
         isRow
       />
     </Column>
   </Container>
-  <ImageComponent image={props.frontmatter.images[37]} alt="Glacier 6" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[37]}
+    alt="Glacier 6"
+  />
 </MakeItBigContainer>
 
 ## Day 6: F-Roads Day
@@ -323,47 +353,58 @@ Not driving on F-roads with a 4x4 rental is a sin. We spent this whole day drivi
 <MakeItBigContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[38]} alt="Jedr" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[38]}
+        alt="Jedr"
+        isRow
+      />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[39]} alt="Beach" isRow />
+      <ImageComponent
+        image={props.data.mdx.frontmatter.images[39]}
+        alt="Beach"
+        isRow
+      />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[44]}
+    image={props.data.mdx.frontmatter.images[44]}
     alt="Landmannalaugar view"
     isRow
   />
   <ThreePhotosContainer>
     <ImageComponent
-      image={props.frontmatter.images[43]}
+      image={props.data.mdx.frontmatter.images[43]}
       alt="Fjallbaki park roads"
       isRow
     />
     <ImageComponent
-      image={props.frontmatter.images[43]}
+      image={props.data.mdx.frontmatter.images[43]}
       alt="Fjallbaki park roads"
-      image={props.frontmatter.images[45]}
+      image={props.data.mdx.frontmatter.images[45]}
       alt="Landmannalaugar and Bejb"
       noPadding
     />
     <ImageComponent
-      image={props.frontmatter.images[41]}
+      image={props.data.mdx.frontmatter.images[41]}
       alt="Fjallbaki park views"
       isRow
     />
   </ThreePhotosContainer>
   <ImageComponent
-    image={props.frontmatter.images[46]}
+    image={props.data.mdx.frontmatter.images[46]}
     alt="Landmannalaugar baths"
     isRow
   />
   <ImageComponent
-    image={props.frontmatter.images[47]}
+    image={props.data.mdx.frontmatter.images[47]}
     alt="Landmannalaugar campsite"
     isRow
   />
-  <ImageComponent image={props.frontmatter.images[49]} alt="Icelandic road" />
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[49]}
+    alt="Icelandic road"
+  />
 </MakeItBigContainer>
 
 ## Day 7: Reykjavik and Chill
@@ -372,7 +413,7 @@ We took it slow, spent some time in Reykjavik - tried the famous hot dogs and go
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.blogImages[1]}
+    image={props.data.mdx.frontmatter.blogImages[1]}
     alt="Sky Lagoon"
     isRow
   />
@@ -386,14 +427,14 @@ It was a short day. We only had time for a hike to the Fagradalsfjall volcano, w
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[53]}
+        image={props.data.mdx.frontmatter.images[53]}
         alt="Volcano hike 1"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[54]}
+        image={props.data.mdx.frontmatter.images[54]}
         alt="Volcano hike 2"
         isRow
       />
@@ -407,10 +448,8 @@ It was a short day. We only had time for a hike to the Fagradalsfjall volcano, w
 - [Campsites Map](https://www.google.com/maps/d/u/0/viewer?mid=1wk_t105qo4BYqaBL7xTcLUz5uXQ&ll=64.97646224919062%2C-19.022746749999992&z=6) - absolute must when camping, includes all campsites in Iceland, has useful info like prices, whether they accept debit cards or what amenities are available. Much better than Google Maps!
 - [road.is](https://www.road.is/) - important website with current road conditions. Check before driving or you might flood your rental car like that:
   <ImageComponent
-    image={props.frontmatter.blogImages[0]}
+    image={props.data.mdx.frontmatter.blogImages[0]}
     alt="River crossing"
   />
 
-<!-- end of the list -->
-
-<ImageGallery images={props.frontmatter.images}></ImageGallery>
+<ImageGallery images={props.data.mdx.frontmatter.images} />

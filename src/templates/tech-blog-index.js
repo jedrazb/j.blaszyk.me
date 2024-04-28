@@ -77,10 +77,7 @@ class TechBlogIndexTemplate extends React.Component {
                     </h3>
 
                     {indexImage && (
-                      <GatsbyImage
-                        image={getImage(indexImage)}
-                        alt={'Blog Image'}
-                      />
+                      <GatsbyImage image={getImage(indexImage)} alt={title} />
                     )}
 
                     <div
@@ -93,7 +90,7 @@ class TechBlogIndexTemplate extends React.Component {
                       <small>
                         {formatPostDate(node.frontmatter.date)}
                         <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                        {formatReadingTime(node.timeToRead)}
+                        {formatReadingTime(node.fields.timeToRead.minutes)}
                       </small>
                     </div>
                   </header>
@@ -128,7 +125,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fields: { category: { eq: "tech-blog" } } }
     ) {
       edges {
@@ -136,8 +133,11 @@ export const pageQuery = graphql`
           fields {
             slug
             category
+            timeToRead {
+              minutes
+            }
           }
-          timeToRead
+
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

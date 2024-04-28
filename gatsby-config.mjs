@@ -1,4 +1,14 @@
-module.exports = {
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const config = {
+  trailingSlash: 'always',
   siteMetadata: {
     title: "Jedr's Blog",
     author: 'Jedr Blaszyk',
@@ -39,6 +49,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        mdxOptions: {
+          rehypePlugins: [rehypeKatex],
+          remarkPlugins: [remarkGfm, remarkMath],
+        },
         gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',
           {
@@ -97,18 +111,19 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
-                const siteUrl = site.siteMetadata.siteUrl;
-                const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog. You can read it online by <a href="${
-                  siteUrl + edge.node.fields.slug
-                }">clicking here</a>.)</div>
-              `;
+                const feedHTML = `
+                  <div>
+                    <p>
+                      ${edge.node.excerpt}...
+                      <a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}">Read more >>></a>
+                    </p>
+                  </div>`;
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.spoiler,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': postText }],
+                  custom_elements: [{ 'content:encoded': feedHTML }],
                 });
               });
             },
@@ -121,6 +136,7 @@ module.exports = {
                 ) {
                   edges {
                     node {
+                      excerpt
                       fields {
                         slug
                       }
@@ -136,6 +152,57 @@ module.exports = {
             `,
             output: '/rss.xml',
             title: "Jedr's Blog",
+          },
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map((edge) => {
+                const feedHTML = `
+                  <div>
+                    <p>
+                      ${edge.node.excerpt}...
+                      <a href="${site.siteMetadata.siteUrl + '/tech-blog' + edge.node.fields.slug}">Read more >>></a>
+                    </p>
+                  </div>`;
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.spoiler,
+                  date: edge.node.frontmatter.date,
+                  url:
+                    site.siteMetadata.siteUrl +
+                    '/tech-blog' +
+                    edge.node.fields.slug,
+                  guid:
+                    site.siteMetadata.siteUrl +
+                    '/tech-blog' +
+                    edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': feedHTML }],
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  limit: 1000,
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fields: {category: {eq: "tech-blog"}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        spoiler
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/tech-blog/rss.xml',
+            title: "Jedr's Tech Blog",
           },
         ],
       },
@@ -165,7 +232,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://j.blaszyk.me/',
-        sitemap: 'https://j.blaszyk.me/sitemap/sitemap-index.xml',
+        sitemap: 'https://j.blaszyk.me/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
@@ -186,3 +253,5 @@ module.exports = {
     },
   ],
 };
+
+export default config;

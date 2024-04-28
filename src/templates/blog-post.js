@@ -32,9 +32,6 @@ import { rhythm, scale } from '../utils/typography';
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
-const GITHUB_USERNAME = 'jedrazb';
-const GITHUB_REPO_NAME = 'personal-blog';
-
 const shortcodes = {
   Link,
   ImageGallery,
@@ -51,18 +48,11 @@ const shortcodes = {
 
 class BlogPostTemplate extends React.Component {
   render() {
+    const { children } = this.props;
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
-    let { previous, next, slug } = this.props.pageContext;
-
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog/${slug.slice(
-      1,
-      slug.length - 1
-    )}/index.mdx`;
-    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://j.blaszyk.me${slug}`
-    )}`;
+    let { previous, next } = this.props.pageContext;
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
@@ -141,16 +131,12 @@ class BlogPostTemplate extends React.Component {
               >
                 {formatPostDate(post.frontmatter.date)}
                 <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                {formatReadingTime(post.timeToRead)}
+                {formatReadingTime(post.fields.timeToRead.minutes)}
                 <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
                 {formatNumberOfPhotos(post.frontmatter)}
               </p>
             </header>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer frontmatter={post.frontmatter}>
-                {post.body}
-              </MDXRenderer>
-            </MDXProvider>
+            <MDXProvider components={shortcodes}>{children}</MDXProvider>
           </article>
         </main>
         <aside>
@@ -229,7 +215,6 @@ export const pageQuery = graphql`
       id
       body
       tableOfContents
-      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -257,6 +242,9 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        timeToRead {
+          minutes
+        }
       }
     }
   }

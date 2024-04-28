@@ -26,6 +26,7 @@ images:
     './photos/the-a-team.jpeg',
     './photos/good-morning-calpe.jpeg',
   ]
+blogImages: []
 ---
 
 - [Staying in Calpe](#staying-in-calpe)
@@ -34,7 +35,7 @@ images:
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[0]}
+    image={props.data.mdx.frontmatter.images[0]}
     description="On top of Puig de la Llorença"
   />
 </MakeItBigContainer>
@@ -55,14 +56,14 @@ Weekends and days off allowed for longer rides over 100km, after which we'd stil
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[1]}
+        image={props.data.mdx.frontmatter.images[1]}
         description="Morning fog around Penon de Ifach. Pic taken from our apartment."
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[2]}
+        image={props.data.mdx.frontmatter.images[2]}
         description="Morning coffee with a view"
         isRow
       />
@@ -71,13 +72,13 @@ Weekends and days off allowed for longer rides over 100km, after which we'd stil
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[4]}
+        image={props.data.mdx.frontmatter.images[4]}
         description="Edificio Xanadu"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[3]}
+        image={props.data.mdx.frontmatter.images[3]}
         description="La Muralla Roja"
       />
     </Column>
@@ -102,21 +103,21 @@ I won't delve into specific routes here, but if you're interested, check out thi
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[7]}
+    image={props.data.mdx.frontmatter.images[7]}
     description="Cap de San Antoni"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[5]}
+        image={props.data.mdx.frontmatter.images[5]}
         description="Blurred cyclist near Xalo"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[6]}
+        image={props.data.mdx.frontmatter.images[6]}
         description="Sunset in Calpe"
         isRow
       />
@@ -124,32 +125,32 @@ I won't delve into specific routes here, but if you're interested, check out thi
   </Container>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[8]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[8]} isRow />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[9]}
+        image={props.data.mdx.frontmatter.images[9]}
         description="Canyon Ultimate"
         isRow
       />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[10]}
+    image={props.data.mdx.frontmatter.images[10]}
     description="Coll de Rates"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[11]}
+        image={props.data.mdx.frontmatter.images[11]}
         description="Climb to Xalo"
         isRow
       />
     </Column>
     <Column flex={2.2522}>
       <ImageComponent
-        image={props.frontmatter.images[12]}
+        image={props.data.mdx.frontmatter.images[12]}
         description="Xalo"
         isRow
       />
@@ -169,7 +170,7 @@ Despite hopes for a more extensive list, only a few spots made the cut for quali
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[13]}
+    image={props.data.mdx.frontmatter.images[13]}
     description="Musette Café"
   />
 </MakeItBigContainer>
@@ -188,13 +189,13 @@ I enjoyed the trip so much that I'm planning to make winter cycling trips a year
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[14]}
+        image={props.data.mdx.frontmatter.images[14]}
         description="Our team, from left to right: Banan, Jedr, Andrzej"
       />
     </Column>
     <Column flex={2.2525}>
       <ImageComponent
-        image={props.frontmatter.images[15]}
+        image={props.data.mdx.frontmatter.images[15]}
         description="Good morning Calpe"
       />
     </Column>

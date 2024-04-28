@@ -38,7 +38,7 @@ The inverted index is composed of two substructures:
 - **postings list** - creates a list of each term, indicating the documents where the term appears.
 
 <ImageComponent
-  image={props.frontmatter.blogImages[0]}
+  image={props.data.mdx.frontmatter.blogImages[0]}
   alt="Apache Lucene Inverted Index"
 />
 
@@ -75,7 +75,7 @@ To minimize index sizes, various compression techniques are used. For example, w
 When new documents are added, the index changes are first buffered in memory. Eventually, the index files in their entirety, are flushed to disk. The written files make up an index segment.
 
 <ImageComponent
-  image={props.frontmatter.blogImages[1]}
+  image={props.data.mdx.frontmatter.blogImages[1]}
   alt="Apache Lucene Segment Merges"
 />
 

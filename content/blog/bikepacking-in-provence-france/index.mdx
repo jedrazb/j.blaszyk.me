@@ -64,6 +64,7 @@ images:
     './photos/20230902-DSCF6451.jpg',
     './photos/20230902-DSCF6464.jpg',
   ]
+blogImages: []
 ---
 
 - [Provence: Tour du Verdon](#provence-tour-du-verdon)
@@ -73,7 +74,7 @@ images:
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[47]}
+    image={props.data.mdx.frontmatter.images[47]}
     description="Enjoying the view from the top of Col d’Izoard"
   />
 </MakeItBigContainer>
@@ -86,12 +87,12 @@ Our adventure had two parts. First, we spent five days bikepacking on fully load
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[40]}
+        image={props.data.mdx.frontmatter.images[40]}
         description="From left to right: Jedr (me), Marcin, Michał, Mikołaj"
       />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[33]} />
+      <ImageComponent image={props.data.mdx.frontmatter.images[33]} />
     </Column>
   </Container>
 </MakeItBigContainer>
@@ -99,7 +100,7 @@ Our adventure had two parts. First, we spent five days bikepacking on fully load
 ## Provence: Tour du Verdon
 
 <BikepackingDetails
-  logo={props.frontmatter.logo}
+  logo={props.data.mdx.frontmatter.logo}
   title={'Provence and Hautes-Alpes'}
   distance={'580km'}
   elevation={'11100m'}
@@ -120,8 +121,8 @@ We began our trip in Digne, leaving our car there. On the first day, we biked to
       frameborder="0"
       scrolling="no"
       loading="lazy"
-      style="margin: 0;"
-    ></iframe>
+      style={{ margin: 0 }}
+    />
   </LazyIframe>
 </MakeItBigContainer>
 
@@ -134,7 +135,7 @@ Moreover, in every village we passed through, we found patisseries serving fresh
 <MakeItBigContainer>
   <Container>
     <ImageComponent
-      image={props.frontmatter.images[29]}
+      image={props.data.mdx.frontmatter.images[29]}
       description="Gorges du Verdon"
       isRow
     />
@@ -142,42 +143,42 @@ Moreover, in every village we passed through, we found patisseries serving fresh
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[12]}
+        image={props.data.mdx.frontmatter.images[12]}
         description="Cycling along the canyon"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[13]}
+        image={props.data.mdx.frontmatter.images[13]}
         description="La Palud-sur-Verdon"
         isRow
       />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[7]}
+    image={props.data.mdx.frontmatter.images[7]}
     description="Cycling through lavender fields"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[10]}
+        image={props.data.mdx.frontmatter.images[10]}
         description="Canyon Verdon"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[9]}
+        image={props.data.mdx.frontmatter.images[9]}
         description="Moustiers-Sainte-Marie"
         isRow
       />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[22]}
+    image={props.data.mdx.frontmatter.images[22]}
     description="Our bikepacking machines"
   />
 </MakeItBigContainer>
@@ -191,20 +192,20 @@ I was pleasantly surprised by the many well-kept campsites in Provence. We easil
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[32]}
+    image={props.data.mdx.frontmatter.images[32]}
     description="Campsite in Hautes-Alpes"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[25]}
+        image={props.data.mdx.frontmatter.images[25]}
         description="Orange full moon"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[26]}
+        image={props.data.mdx.frontmatter.images[26]}
         description="Starting the day with a crossaint and a pain au chocolat"
       />
     </Column>
@@ -225,28 +226,28 @@ The Col de Vars is part of the history of the Tour de France. It has been crosse
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[36]}
+    image={props.data.mdx.frontmatter.images[36]}
     description="Climbing Col de Vars"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[39]}
+        image={props.data.mdx.frontmatter.images[39]}
         description="Col de Vars final segment"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[41]}
+        image={props.data.mdx.frontmatter.images[41]}
         description="View on Vars from the Col"
         isRow
       />
     </Column>
   </Container>
   <ImageComponent
-    image={props.frontmatter.images[43]}
+    image={props.data.mdx.frontmatter.images[43]}
     description="Descent to Lac de Serre-Ponçon"
     isRow
   />
@@ -258,20 +259,20 @@ The climb reaches an altitude of 2360m, which is one of the highest points in th
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[47]}
+    image={props.data.mdx.frontmatter.images[47]}
     description="Enjoying the view from the top of Col d’Izoard"
     isRow
   />
   <Container>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[45]}
+        image={props.data.mdx.frontmatter.images[45]}
         description="Conquering the Col"
       />
     </Column>
     <Column>
       <ImageComponent
-        image={props.frontmatter.images[44]}
+        image={props.data.mdx.frontmatter.images[44]}
         description="La Casse Déserte"
       />
     </Column>
@@ -293,7 +294,7 @@ The bike model is a Canyon Grizl AL 6 with 45mm wide tyres. Bags:
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[24]}
+    image={props.data.mdx.frontmatter.images[24]}
     description="Canyon Grizl AL - bikepacking setup."
   />
 </MakeItBigContainer>
@@ -308,7 +309,7 @@ The bike model is a Canyon Grizl AL 6 with 45mm wide tyres. Bags:
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[18]}
+    image={props.data.mdx.frontmatter.images[18]}
     description="Big Agnes tent at night"
   />
 </MakeItBigContainer>
@@ -338,7 +339,7 @@ I was positively surprised by the rust resistance of pure wax. My chain was test
 
 <MakeItBigContainer>
   <ImageComponent
-    image={props.frontmatter.images[2]}
+    image={props.data.mdx.frontmatter.images[2]}
     description="Bikepacking with waxed chain"
   />
 </MakeItBigContainer>
@@ -354,82 +355,82 @@ The setup of waxed chain, microfiber cloth, and wax-based lubricant works well f
 <MakeItBigContainer>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[0]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[0]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[1]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[1]} isRow />
     </Column>
   </Container>
-  <ImageComponent image={props.frontmatter.images[11]} isRow />
+  <ImageComponent image={props.data.mdx.frontmatter.images[11]} isRow />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[3]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[3]} isRow />
     </Column>
     <Column flex={1.1115}>
-      <ImageComponent image={props.frontmatter.images[8]} isRow />
-      <ImageComponent image={props.frontmatter.images[6]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[8]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[6]} isRow />
     </Column>
   </Container>
-  <ImageComponent image={props.frontmatter.images[5]} isRow />
+  <ImageComponent image={props.data.mdx.frontmatter.images[5]} isRow />
   <Container>
     <Column flex={1.1115}>
-      <ImageComponent image={props.frontmatter.images[14]} isRow />
-      <ImageComponent image={props.frontmatter.images[16]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[14]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[16]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[4]} isRow />
-    </Column>
-  </Container>
-  <ImageComponent image={props.frontmatter.images[21]} isRow />
-  <Container>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[19]} isRow />
-    </Column>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[20]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[4]} isRow />
     </Column>
   </Container>
-  <ImageComponent image={props.frontmatter.images[27]} isRow />
+  <ImageComponent image={props.data.mdx.frontmatter.images[21]} isRow />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[15]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[19]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[23]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[20]} isRow />
     </Column>
   </Container>
+  <ImageComponent image={props.data.mdx.frontmatter.images[27]} isRow />
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[28]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[15]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[17]} isRow />
-    </Column>
-  </Container>
-  <ImageComponent image={props.frontmatter.images[30]} isRow />
-  <Container>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[31]} isRow />
-    </Column>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[35]} isRow />
-    </Column>
-  </Container>
-  <ImageComponent image={props.frontmatter.images[37]} isRow />
-  <Container>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[38]} isRow />
-    </Column>
-    <Column>
-      <ImageComponent image={props.frontmatter.images[34]} isRow />
+      <ImageComponent image={props.data.mdx.frontmatter.images[23]} isRow />
     </Column>
   </Container>
   <Container>
     <Column>
-      <ImageComponent image={props.frontmatter.images[42]} />
+      <ImageComponent image={props.data.mdx.frontmatter.images[28]} isRow />
     </Column>
     <Column>
-      <ImageComponent image={props.frontmatter.images[46]} />
+      <ImageComponent image={props.data.mdx.frontmatter.images[17]} isRow />
+    </Column>
+  </Container>
+  <ImageComponent image={props.data.mdx.frontmatter.images[30]} isRow />
+  <Container>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[31]} isRow />
+    </Column>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[35]} isRow />
+    </Column>
+  </Container>
+  <ImageComponent image={props.data.mdx.frontmatter.images[37]} isRow />
+  <Container>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[38]} isRow />
+    </Column>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[34]} isRow />
+    </Column>
+  </Container>
+  <Container>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[42]} />
+    </Column>
+    <Column>
+      <ImageComponent image={props.data.mdx.frontmatter.images[46]} />
     </Column>
   </Container>
 </MakeItBigContainer>

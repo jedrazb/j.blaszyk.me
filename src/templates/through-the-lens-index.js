@@ -97,10 +97,7 @@ class ThroughTheLensIndexTemplate extends React.Component {
                   </header>
 
                   {featuredImage && (
-                    <GatsbyImage
-                      image={getImage(featuredImage)}
-                      alt={'Blog Image'}
-                    />
+                    <GatsbyImage image={getImage(featuredImage)} alt={title} />
                   )}
                 </article>
               </Link>
@@ -123,7 +120,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { fields: { category: { eq: "through-the-lens" } } }
     ) {
       edges {
@@ -132,7 +129,6 @@ export const pageQuery = graphql`
             slug
             category
           }
-          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

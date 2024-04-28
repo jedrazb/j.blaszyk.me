@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
-import { BlockMath, InlineMath } from 'react-katex';
 import { getSrc } from 'gatsby-plugin-image';
 
 import '../fonts/fonts-post.css';
@@ -28,14 +26,14 @@ import {
   StatefulBlockPicker,
 } from '../components/ColorPicker';
 
+import TableOfContents from '../components/TableOfContents';
+
 import 'katex/dist/katex.min.css';
 import './blog-post.css';
 
 const shortcodes = {
   Link,
   ImageGallery,
-  BlockMath,
-  InlineMath,
   ImageComponent,
   Container,
   Column,
@@ -46,14 +44,13 @@ const shortcodes = {
   StatefulBlockPicker,
 };
 
-import TableOfContents from '../components/TableOfContents';
-
 class TechBlogPostTemplate extends React.Component {
   render() {
+    const { children } = this.props;
     const post = this.props.data.mdx;
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
     const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl');
-    let { previous, next, slug } = this.props.pageContext;
+    let { previous, next } = this.props.pageContext;
 
     const ogimage = post.frontmatter.ogimage;
     const ogImagePath = ogimage && getSrc(ogimage);
@@ -124,14 +121,10 @@ class TechBlogPostTemplate extends React.Component {
               >
                 {formatPostDate(post.frontmatter.date)}
                 <span style={{ margin: '0 0.15rem' }}>{` • `}</span>
-                {formatReadingTime(post.timeToRead)}
+                {formatReadingTime(post.fields.timeToRead.minutes)}
               </p>
             </header>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer frontmatter={post.frontmatter}>
-                {post.body}
-              </MDXRenderer>
-            </MDXProvider>
+            <MDXProvider components={shortcodes}>{children}</MDXProvider>
           </article>
         </main>
         <aside>
@@ -217,9 +210,7 @@ export const pageQuery = graphql`
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      body
       tableOfContents
-      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -243,6 +234,9 @@ export const pageQuery = graphql`
       fields {
         slug
         category
+        timeToRead {
+          minutes
+        }
       }
     }
   }

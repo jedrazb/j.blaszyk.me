@@ -98,7 +98,7 @@ In a real-world scenario where Elasticsearch was used for a search application w
 [Elasticsearch is transitioning towards a stateless architecture](https://www.elastic.co/search-labs/stateless-your-new-state-of-find-with-elasticsearch), marking a significant departure from its traditional stateful design. In this new model, data persistence moves from local node disks to external blob storage platforms such as AWS S3. By doing so, there is no need for duplicating indexing across replica nodes, and it significantly reduces associated costs. Elasticsearch is evolving its operational structure: instead of mixing indexing and search operations on the same instances, they'll be separated into distinct tiers. This separation means each function, indexing and searching, can scale based on its specific needs, enhancing both efficiency and performance.
 
 <ImageComponent
-  image={props.frontmatter.images[0]}
+  image={props.data.mdx.frontmatter.images[0]}
   alt="Elastic stateless architecture"
 />
 
@@ -113,7 +113,7 @@ If you are interested in running the nrtsearch multi-node cluster locally, you c
 ### Stateless architecture
 
 <ImageComponent
-  image={props.frontmatter.images[1]}
+  image={props.data.mdx.frontmatter.images[1]}
   alt="Nrtsearch architecture"
 />
 
