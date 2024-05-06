@@ -33,7 +33,7 @@ class BlogIndexTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO structuredData={structuredData} />
         <aside>
-          <Bio />
+          <Bio isBike />
         </aside>
         <main>
           {posts.map(({ node }, idx) => {
