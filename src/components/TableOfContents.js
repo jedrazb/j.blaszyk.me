@@ -4,6 +4,9 @@ import classnames from 'classnames';
 import './TableOFContents.css';
 
 const getIds = (items) => {
+  if (!items) {
+    return [];
+  }
   return items.reduce((acc, item) => {
     if (item.url) {
       // url has a # as first character, remove it to get the raw CSS-id
