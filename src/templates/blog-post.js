@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { MDXProvider } from '@mdx-js/react';
 import { BlockMath, InlineMath } from 'react-katex';
 import { getSrc } from 'gatsby-plugin-image';
@@ -188,7 +187,7 @@ class BlogPostTemplate extends React.Component {
               Jedr's Blog
             </Link>
           </h3>
-          <Bio />
+          <Bio isBike />
           <Comments
             url={`${siteUrl}${post.fields.slug}`}
             id={post.fields.slug}
