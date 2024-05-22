@@ -6,11 +6,9 @@ spoiler: Building a Retrieval-Augmented Generation system for question answering
 images: ['./question-answering-architecture.png']
 ---
 
-Let's build a retrieval-augmented generation (RAG) system for question answering that can run locally in a notebook. We'll use the content of this blog as our toy knowledge source. By leveraging `langchain` and HuggingFace `transformer` packages, I aim to keep the code minimal and utilize their neat abstractions.
+Let's build a retrieval-augmented generation (RAG) pipeline powered by a LLM that can run locally in a notebook. We'll use the content of this blog as our sample knowledge source. By leveraging `langchain` and HuggingFace's `transformers` packages, I aim to keep the code minimal and utilize their elegant abstractions.
 
-For our vector store, I'm using Elasticsearch Serverless (currently in open preview for free), which will enable semantic search on data embedded with `HuggingFaceEmbeddings`. To maintain the entire pipeline locally in the notebook, we'll use small transformer models for both question answering and a proper LLM (running locally on the M2 Pro Macbook!) for text generation.
-
-You can run all of this for free in your notebook, which is available at the end of this post.
+For our vector store, I’m using Elasticsearch Serverless (currently in open preview), which will enable semantic search on embedded textual data. You can run the RAG pipeline locally in your notebook, linked at the end of this post.
 
 ## High-level architecture
 
@@ -68,9 +66,9 @@ loader = JSONLoader(
 
 ### Document chunking
 
-Language models have token limits, and chunking breaks down large documents into smaller, manageable pieces that fit within these limits. Additionally, chunking enhances semantic search by generating embeddings for each chunk, ensuring contextually relevant and accurate retrieval and processing of information.
+Language models have token limits, so chunking breaks down large documents into smaller, manageable pieces that fit within these limits. Larger chunks capture more context but may lead to inefficiency or truncation, while smaller chunks are better for technical or dense content.
 
-When selecting `chunk_size`, choose a size within the model’s token limit. Consider the typical length of meaningful text segments: larger chunks capture more context but may lead to inefficiency or truncation, while smaller chunks are better for technical or dense content. For `chunk_overlap`, select a value that preserves context across chunk boundaries.
+When selecting `chunk_size`, choose a size within the model’s token limit. For `chunk_overlap`, select a value that preserves context across chunk boundaries.
 
 ```python
 from langchain_community.document_loaders import TextLoader
@@ -199,7 +197,7 @@ Similar to the question-answering example, we can pass a question and context as
 ```python
 pipe = pipeline("text-generation", model="HuggingFaceH4/zephyr-7b-beta", torch_dtype=torch.bfloat16, device_map="auto")
 
-# limit the number of context docs to retrieve to top 1 context doc for paster processing by LLM
+# limit the number of context docs to retrieve to top 1 context doc for faster processing by LLM
 retriever = ElasticsearchRetriever.from_es_params(
     index_name=ES_INDEX_NAME,
     body_func=lambda query: vector_query(query, k=1),
