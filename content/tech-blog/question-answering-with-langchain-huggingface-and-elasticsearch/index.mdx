@@ -190,7 +190,7 @@ In the retrieved context blog posts (retrieved using kNN vector search), I discu
 
 ## Text generation with locally running LLM
 
-We can also use a large language model to generate comprehensive answers to questions, much like ChatGPT. For this purpose, we can utilize the `text-generation` pipeline from HuggingFace. I used [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) with "just" 7 billion parameters.
+We can also use a large language model to generate comprehensive answers to questions, much like ChatGPT. For this purpose, we can utilize the `text-generation` pipeline from HuggingFace. I used [HuggingFaceH4/zephyr-7b-beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) with "just" 7 billion parameters. You can test it yoursef with [Zephyr Chat app](https://huggingface.co/spaces/HuggingFaceH4/zephyr-chat).
 
 Similar to the question-answering example, we can pass a question and context as the user prompt, and the model can generate an answer based on that. Here is an example code:
 
