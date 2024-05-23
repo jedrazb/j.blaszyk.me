@@ -1,5 +1,5 @@
 ---
-title: 'Question Answering System with LangChain, HuggingFace, and Elasticsearch'
+title: 'Question Answering with LangChain, HuggingFace, and Elasticsearch'
 date: '2024-05-22'
 spoiler: Building a Retrieval-Augmented Generation system for question answering using data from this blog as the knowledge source. The entire RAG pipeline and the LLM can run locally in a notebook.
 
@@ -18,7 +18,7 @@ For our vector store, I’m using Elasticsearch Serverless (currently in open pr
 />
 
 - **Question**: The user input question in natural language.
-- **Retriever**: A vector search engine that retrieves relevant documents from the knowledge source (e.g. a vector store) and passes them as context to the generator.
+- **Retriever**: A search engine that retrieves relevant documents from the knowledge source and passes them as context to the generator.
 - **Knowledge Source**: A repository of documents where their vector representations are stored, serving as the database for the retriever to search for answers.
 - **Generator**: A language model that generates answers based on the question and the retrieved context.
 - **Answer**: The generated answer to the user's question in natural language.
