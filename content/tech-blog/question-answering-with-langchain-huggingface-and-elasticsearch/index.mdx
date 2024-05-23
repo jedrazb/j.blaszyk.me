@@ -246,9 +246,9 @@ Based on the provided context, a good tire width for bikepacking trips would be 
 
 Apple Silicon features a unified memory architecture that shares memory between the CPU and GPU. This design allows both the CPU and GPU to access the same data without needing to copy it between separate memory pools. As a result, if the model fits within the available RAM, both the CPU and GPU can work efficiently without significant bottlenecks.
 
-To optimize memory usage, we set the model to use `torch.bfloat16` precision, which reduces the memory required by using a 16-bit format instead of the default 32-bit. This reduces the memory footprint of our 7-billion-parameter model, `HuggingFaceH4/zephyr-7b-beta`, to about 14GB, allowing it to fit comfortably on my 32GB M2 Pro MacBook. With reasonably short prompts, it performs almost as fast as what you would get from the ChatGPT app.
+The required memory for our 7-billion-parameter model, `HuggingFaceH4/zephyr-7b-beta`, is about 14GB, which fits comfortably on my 32GB M2 Pro MacBook. With reasonably short prompts, it performs almost as fast as the ChatGPT app.
 
-Out of curiosity, I explored what happens if the model does not fit in memory. I created two instances of our 7-billion-parameter model and, as expected, received a warning: `Some parameters are on the meta device because they were offloaded to the disk`. Offloading the model to disk resulted in the model becoming unusably slow. I eventually gave up and restarted the kernel after waiting for a response that never came.
+Out of curiosity, I explored what happens if the model does not fit in memory. I created three instances of our 7-billion-parameter model and, as expected, received a warning: `Some parameters are on the meta device because they were offloaded to the disk`. Offloading the model to disk made it unusably slow. I eventually gave up and restarted the kernel after waiting for a response that never came.
 
 ## Notebook
 
