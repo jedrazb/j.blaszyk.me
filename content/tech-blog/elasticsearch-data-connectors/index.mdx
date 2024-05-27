@@ -2,7 +2,7 @@
 title: 'Elastic Data Connectors - Elasticsearch Ingestion Made Simple'
 date: '2023-10-05'
 spoiler: Overview of a new, lightweight data connectors framework integrated with the Elastic stack that can ingest data from any source into the Elasticsearch index.
-images: ['./connectors-architecture.png', './google_drive_connector.png']
+images: ['./connectors-architecture.png', './sharepoint_online_connector.png']
 ---
 
 In any search application, the is an underlying ingestion pipeline that indexes the data. While developers often focus on speedy searches, they tend to overlook the aspect of data indexing. It’s important to keep in mind that easy-to-manage data ingestion is a key foundation for successful data-driven solutions.
@@ -19,7 +19,7 @@ The data connectors framework makes it easier for developers to create connector
 
 <ImageComponent
   image={props.data.mdx.frontmatter.images[1]}
-  description="Elastic data connectors - Google Drive connector syncing data"
+  description="Elastic Sharepoint Online connector"
 />
 
 The data connectors framework can be configured to use Elasticsearch's [ingestion pipelines](https://www.elastic.co/guide/en/enterprise-search/current/ingest-pipelines.html) to perform transformations on data before storing it in an index. A common use case is [document enrichment with machine learning](https://www.elastic.co/guide/en/enterprise-search/current/document-enrichment.html). For example, you can:
