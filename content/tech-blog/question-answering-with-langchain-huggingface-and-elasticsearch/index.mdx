@@ -108,7 +108,7 @@ A [retriever](https://python.langchain.com/v0.1/docs/modules/data_connection/ret
 
 In our case, we are using pure vector search for retrieval. However, refer to the [ElasticsearchRetriever documentation](https://python.langchain.com/v0.1/docs/integrations/retrievers/elasticsearch_retriever/) for examples on how to configure a retriever with BM25 or hybrid search.
 
-In our kNN query, we use the `k` parameter to specify the number of nearest neighbors to retrieve. The `num_candidates` parameter determines the number of candidates considered during the nearest neighbor search.
+In our kNN query, the `k` parameter specifies the number of nearest neighbors to retrieve. The `num_candidates` parameter defines the search space per shard, representing the initial pool of candidates from which the most relevant k neighbors are selected.
 
 ```python
 from langchain_elasticsearch import ElasticsearchRetriever
