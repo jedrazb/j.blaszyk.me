@@ -1,0 +1,150 @@
+---
+title: 3D Printing an Aerobar Elbow Pad Riser for a Gravel Bike
+date: '2024-06-02'
+spoiler: Prototyping and 3D printing a custom aerobar elbow pad riser for my bike in preparation for an ultra gravel race. My first time doing CAD design and 3D printing.
+
+ogimage: './photos/improved-model.png'
+
+images:
+  [
+    './photos/printer.jpeg',
+    './photos/original-mount.jpeg',
+    './photos/mount-unscrewed.jpeg',
+    './photos/first-model.png',
+    './photos/improved-model.png',
+    './photos/slicer.png',
+    './photos/print-ready.jpeg',
+    './photos/riser-and-pad.jpeg',
+    './photos/weight.jpeg',
+    './photos/riser-installed.jpeg',
+    './photos/full-setup.jpeg',
+    './photos/testing.jpeg',
+  ]
+---
+
+This weekend, I experimented with installing aerobars on my gravel bike in preparation for the Warta Gravel, an ultra-endurance race starting in my hometown, Poznań. Given the mostly flat profile of the route, aerodynamics is crucial. Aerobars can help achieve a more comfortable and efficient riding position. However, I realized that my aerobars were too low, preventing me from maintaining the proper position on the bike.
+
+Fortunately, my very good friends at Hazay Bikes are engineers and designers with access to a 3D printer. They suggested I design and print a custom riser for the elbow pads. Although I had never done any CAD design or 3D printing before, I was very excited to give it a try.
+
+In this post, I'm sharing yet another cool weekend project!
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[0]}
+  description="Printing in progress"
+/>
+
+## Designing a 3D model
+
+### Measurements
+
+I have basic [Aptonia Aerobars](https://www.decathlon.pl/p/lemondka-do-kierownicy-triathlon/_/R-p-303804) from Decathlon, which have a straightforward mounting system. The elbow pad is attached to the bar with two screws. I unscrewed the original riser and took the measurements.
+
+<Container>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[1]}
+      description="Aptionia aerobars mounting system"
+    />
+  </Column>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[2]}
+      description="Aptonia aerobars elbow pad unscrewed"
+    />
+  </Column>
+</Container>
+
+My aerobars have elbow pads with a base of 5x5 cm, and 9 mounting holes (6mm wide) that are evenly spaced 1.5 cm apart. The default mounting screw is M6x10mm. For my starting point, I decided that the riser should be 30mm thick to fit my body geometry.
+
+### CAD design
+
+I used Autodesk Fusion 360 software to design the riser. There is a free version for non-commercial use. I had no idea how to use it, but ChatGPT's voice mode guided me through the entire design process without needing to Google anything (crazy times to be alive!).
+
+The process was straightforward: you start with a 2D sketch on a chosen plane with precise measurements, then extrude it to 3D. Just like that! You can also play around with other transformations, like adding chamfers to the edges, fillets to the corners, or drafts to planar surfaces to make it look cool.
+
+The riser had a base of 5x5 cm and a height of 30 mm. It included three holes for mounting screws and six additional guide pins for proper alignment when installing the riser. Here is the initial prototype that was 3D printed and tested:
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[3]}
+  description="Initial prototype of aerobar elbow pad riser"
+/>
+
+This is the improved, "cool" version that still needs to be tested:
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[4]}
+  description="Improved version of aerobar elbow pad riser"
+/>
+
+Once I was happy with my work, I exported the model to an STL file, which seems to be a standard file format for 3D printing.
+
+## 3D Printing
+
+### Slicing
+
+To convert the STL model into printable layers (slices), you need to calculate the printing path using slicer software. I had access to a Prusa MK3S printer, so I downloaded PrusaSlicer and imported the model.
+
+The software allowed me to set various printing parameters, such as layer height, infill density, and pattern. For the first print, I kept the default settings but increased the infill to 50% for extra strength. I used PETG, a strong and durable plastic ideal for rigid structures.
+
+For my second iteration, I plan to experiment with a lower infill density (30-40%) using a gyroid pattern to save weight while maintaining strength.
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[5]}
+  description="PrusaSlicer"
+/>
+
+### Result
+
+I kick-started the print and waited for the magic to happen. After three hours, this was the result:
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[6]}
+  description="Print ready for testing"
+/>
+
+I was so happy as the riser fit perfectly with the pad. The measured weight was 51g, which I hope to reduce in the next iteration with the "cool" design mentioned above.
+
+<Container>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[7]}
+      description="Aptionia aerobars mounting system"
+    />
+  </Column>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[8]}
+      description="Aptonia aerobars elbow pad unscrewed"
+    />
+  </Column>
+</Container>
+
+To raise the elbow pad by 30mm I used M6x40mm screws to attach the pads. All went smoothly here.
+
+<Container>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[9]}
+      description="Left riser installed."
+    />
+  </Column>
+  <Column>
+    <ImageComponent
+      image={props.data.mdx.frontmatter.images[10]}
+      description="Full setup with riser installed. Aerogravel ready for testing."
+    />
+  </Column>
+</Container>
+
+## Testing
+
+By far the best part! I went for a 100km+ ride to test the new setup. I followed the gravel roads from last year's edition of the Warta Gravel race. The riser worked perfectly, and I felt much more comfortable in the aero position.
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[11]}
+  description="Testing my setup on gravel roads in the forest."
+/>
+
+## Sharing the model
+
+Do you own the Aptionia Aerobars and want to try the riser yourself? I'm sharing the [3D model on Thingiverse](https://www.thingiverse.com/thing:6646841), check it out.
