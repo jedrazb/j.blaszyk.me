@@ -24,6 +24,8 @@ images:
     './photos/jested-tower.jpg',
     './photos/race_cap_1.jpg',
     './photos/race_cap_2.jpg',
+    './photos/finish_1.jpeg',
+    './photos/finish_2.jpeg',
   ]
 blogImages: []
 ---
@@ -36,7 +38,7 @@ blogImages: []
 <MakeItBigContainer>
   <ImageComponent
     image={props.data.mdx.frontmatter.images[3]}
-    alt="Gravmageddon 2023"
+    description="Gravmageddon 2023"
   />
 </MakeItBigContainer>
 
@@ -90,13 +92,13 @@ Gravmageddon 2023 was definitely a fight against elevation gains and steep climb
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[0]}
-        alt="Gravmageddon 2023 Strava route."
+        description="Gravmageddon 2023 Strava route."
       />
     </Column>
     <Column flex={1.505}>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[1]}
-        alt="Cycling Dude and Jedr."
+        description="Cycling Dude and Jedr."
       />
     </Column>
   </Container>
@@ -111,13 +113,13 @@ Gravmageddon offers pit stops at 95 and 270km, where you can send equipment to w
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[4]}
-        alt="Karkonosze Pass uphill."
+        description="Karkonosze Pass uphill."
       />
     </Column>
     <Column flex={2.26}>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[5]}
-        alt="Odrodzenie shelter in Karkonosze Pass."
+        description="Odrodzenie shelter in Karkonosze Pass."
       />
     </Column>
   </Container>
@@ -130,7 +132,7 @@ Rolling hills, going up just to go down, are the only things I can recall from t
 <MakeItBigContainer>
   <ImageComponent
     image={props.data.mdx.frontmatter.images[12]}
-    alt="Jested Tower"
+    description="Jested Tower"
   />
 </MakeItBigContainer>
 
@@ -143,23 +145,45 @@ Around the 300km mark, the forecasted heavy rains hit us, and the apparent tempe
 All in all, I enjoyed the race route a lot. Shoutout to the race organisers for their awesome job! Also, I’m a huge fan of the Gravmageddon cycling cap design. In the front, you can see "Wytrwajcie do końca wy konie" which roughly translates to „Keep it up till the end". And the pattern that goes around the head depicts the race’s elevation profile, with notable climbs.
 
 <MakeItBigContainer>
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[15]}
+    description="Crossing the finish line with dude.cycling."
+    isRow
+  />
   <Container>
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[13]}
-        alt="Gravmageddon 2023 Race Cap"
+        description="Gravmageddon 2023 Race Cap"
       />
     </Column>
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[14]}
-        alt="Gravmageddon 2023 Race Cap - top"
+        description="Gravmageddon 2023 Race Cap - top"
       />
     </Column>
   </Container>
 </MakeItBigContainer>
 
 [Strava activity](https://www.strava.com/activities/9588319669) for anyone interested.
+
+## Video
+
+Here's a great video from the race organizers that captures the vibe of the event:
+
+<LazyIframe height="800px">
+  <iframe
+    width="800"
+    height="450"
+    src="https://www.youtube.com/embed/2StBCY2ATPQ?si=v2SgBPy4XXdosiQG"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  />
+</LazyIframe>
 
 ## My Bike Setup
 
@@ -170,7 +194,7 @@ I raced on my trusty Canyon Grizl AL 6 with 45mm wide tyres, running tubeless, a
 <MakeItBigContainer>
   <ImageComponent
     image={props.data.mdx.frontmatter.images[7]}
-    alt=" Canyon Grizl AL 6"
+    description=" Canyon Grizl AL 6"
   />
 </MakeItBigContainer>
 
@@ -194,18 +218,23 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
 ## Photos
 
 <MakeItBigContainer>
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[16]}
+    description="Finish line."
+    isRow
+  />
   <Container>
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[6]}
-        alt="Mountains."
+        description="Mountains."
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[2]}
-        alt="Gravmageddon racing."
+        description="Gravmageddon racing."
         isRow
       />
     </Column>
@@ -214,14 +243,14 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
     <Column flex={1.7765}>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[8]}
-        alt="Canyon Grizl bike at the water reservoir"
+        description="Canyon Grizl bike at the water reservoir"
         isRow
       />
     </Column>
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[9]}
-        alt="View from Jested."
+        description="View from Jested."
         isRow
       />
     </Column>
@@ -230,13 +259,13 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
     <Column>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[11]}
-        alt="Pit stop 1"
+        description="Pit stop 1"
       />
     </Column>
     <Column flex={2.135}>
       <ImageComponent
         image={props.data.mdx.frontmatter.images[10]}
-        alt="Gravmageddon 2023."
+        description="Gravmageddon 2023."
       />
     </Column>
   </Container>
