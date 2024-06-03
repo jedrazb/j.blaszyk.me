@@ -26,6 +26,7 @@ images:
     './photos/race_cap_2.jpg',
     './photos/finish_1.jpeg',
     './photos/finish_2.jpeg',
+    './photos/en_route.jpeg',
   ]
 blogImages: []
 ---
@@ -218,6 +219,11 @@ Strong front lamp with sufficient battery is a must when racing at night. I sett
 ## Photos
 
 <MakeItBigContainer>
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[17]}
+    description="En route."
+    isRow
+  />
   <ImageComponent
     image={props.data.mdx.frontmatter.images[16]}
     description="Finish line."
