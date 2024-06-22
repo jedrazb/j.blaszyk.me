@@ -11,7 +11,7 @@ The plan is to build a simple web crawler to fetch website's data. Then we start
 
 If you want to learn more about nrtsearch, check out Yelp's Engineering blog post:
 
-> [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
+> [Nrtsearch: Yelp's Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
 
 Let's start!
 
@@ -119,7 +119,7 @@ replica-node-2         replica-node         "./entrypoint_replic…"   replica-n
 
 Great! Now we have a local nrtsearch cluster with nodes dedicated to data ingestion and search. Even though the containers are now running, no index was created. A new index must be created via a command. Once the index has been started in replicas, they register with the primary. Replication happens only after documents are ingested into the primary.
 
-Now, let’s prepare the client code to interact with our cluster.
+Now, let's prepare the client code to interact with our cluster.
 
 ## Generate gRPC client code using protoc
 
@@ -305,7 +305,7 @@ Great! Now we have a running nrtsearch cluster and our index is started and repl
 
 In order to ingest data into nrtsearch we can use the [addDocuments](https://github.com/Yelp/nrtsearch/blob/master/clientlib/src/main/proto/yelp/nrtsearch/luceneserver.proto#L135) client method. It allows streaming multiple `AddDocumentRequest` to the primary for indexing.
 
-A single call to `addDocuments` can contain multiple documents in the payload. You can call it a bulk update. It’s more efficient when indexing a large amounts of documents. Therefore, it's advisable to batch your documents and ingest them in bulk for production use-cases.
+A single call to `addDocuments` can contain multiple documents in the payload. You can call it a bulk update. It's more efficient when indexing a large amounts of documents. Therefore, it's advisable to batch your documents and ingest them in bulk for production use-cases.
 
 > There is no transaction log, so you must call commit periodically to make recent changes durable on disk. This means that if a node crashes, all indexed documents since the last commit are lost. ([docs](https://nrtsearch.readthedocs.io/en/latest/introduction.html#design))
 

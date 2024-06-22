@@ -10,7 +10,11 @@ const getIds = (items) => {
   return items.reduce((acc, item) => {
     if (item.url) {
       // url has a # as first character, remove it to get the raw CSS-id
-      acc.push(item.url.slice(1));
+      const id = item.url.slice(1);
+      // in dev env I often have empty headings, ignore them in ToC
+      if (id) {
+        acc.push(id);
+      }
     }
     if (item.items) {
       acc.push(...getIds(item.items));

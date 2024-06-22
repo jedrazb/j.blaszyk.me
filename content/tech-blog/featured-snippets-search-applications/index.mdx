@@ -1,0 +1,173 @@
+---
+title: How to Implement Featured Snippets for Search Applications
+date: '2024-06-22'
+spoiler: Discover how to implement passage retrieval to enhance semantic search and deliver the most relevant results, just like Google's Featured Snippets.
+images: [./sentence-similarity.jpg]
+---
+
+Featured Snippets really stand out to me as a feature in Google search. They are displayed at the top of results for certain search queries, highlighting a relevant excerpt from the source webpage that often directly answers the query. This provides a great user experience when looking for an answer from a given set of documents!
+
+In our scenario, let's assume that the "knowledge" contained in a document set can be used to answer our questions. Since the answer is within our documents, it's just a matter of finding the right passage — a _featured snippet_ — that addresses our query. The good news is that we can use a vector search on embedded passages and sentences to find the answer, instead of relying on a slow and more expensive LLM to generate one. The concept of relying on embeddings for passage retrieval has been around for a while, for example, see: [Dense Passage Retrieval](https://arxiv.org/abs/2004.04906) paper.
+
+Similarly to the previous blog post, [Question Answering with LangChain, HuggingFace, and Elasticsearch](/tech-blog/question-answering-with-langchain-huggingface-and-elasticsearch), I'm using this blog as a data source together with free, open-source models and libraries to build a solution.
+
+## Featured Snippet
+
+Assume that our collection contains several documents. We first split each document into text passages of equal length, using these passages as the basic retrieval units. Each passage may contain multiple sentences and can be viewed as a sequence of tokens.
+
+Given a query, the featured snippet is a span of one or more sentences from one of the retrieved passages that best answers the question.
+
+Let's look into the logic that allows to find the best featured snippet.
+
+## Data Processing and Ingestion
+
+I used the Elastic web crawler to crawl the content of this blog. The output is available in: [blog-pages.jsonl](https://gist.github.com/jedrazb/0c9df82143b694147e7b018370508535).
+
+Text content from pages is chunked, and individual chunks are embedded into 768-dimensional dense vectors using the [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) model.
+
+```python
+
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+
+embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2')
+
+text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+    chunk_size=512, chunk_overlap=128
+)
+docs = loader.load_and_split(text_splitter=text_splitter)
+```
+
+Chunks and their embeddings are indexed into Elasticsearch for fast retrieval.
+
+```python
+from langchain_elasticsearch import ElasticsearchStore
+
+db = ElasticsearchStore.from_documents(
+    docs,
+    embeddings,
+    vector_query_field=ES_VECTOR_FIELD,
+    index_name=ES_INDEX_NAME,
+    ...
+)
+```
+
+## Document Retrieval
+
+Embeddings play a crucial role in our architecture. Since we store chunks and their embeddings in elasticsearch, we can use kNN vector search to find the most relevant chunks for a given query.
+
+The `retriever` for ES looks as follows with the Langchain library. The `vector_query` is a kNN search function used by the retriever. `embeddings.embed_query` represents the query as a dense vector.
+
+```python
+from langchain_elasticsearch import ElasticsearchRetriever
+
+def vector_query(search_query, k=3):
+    return {
+        "knn": {
+            "field": ES_VECTOR_FIELD,
+            "query_vector": embeddings.embed_query(search_query),
+            "k": k,
+            "num_candidates": 10,
+        },
+        '_source': [
+            'text', 'metadata.title', 'metadata.url'
+        ]
+    }
+
+
+retriever = ElasticsearchRetriever.from_es_params(
+    index_name=ES_INDEX_NAME,
+    body_func=vector_query,
+    content_field="text",
+    ...
+)
+```
+
+## Snippet Selection
+
+Our retriever returns the top 3 chunks for a given query. Each chunk is then processed to identify the best snippet using a sliding window selection method. This involves:
+
+- Tokenizing the retrieved chunk into sentences.
+- Calculating similarity scores for each sentence in the chunk (could be optimized by pre-computing sentence embeddings and storing them in the index for quick lookup).
+- Filtering out less relevant sentences using a threshold score that can be adjusted.
+- Starting from the most relevant sentence, expanding the selection window to include neighboring sentences, if relevant, to form a coherent snippet.
+
+Here is an example representing how similarity scores could look for neighboring sentences in a retrieved snippet. The threshold score determines if the second sentence should be included in the resulting snippet.
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[0]}
+  alt="Sentence similarity from a retrieved chunk"
+/>
+
+Applying the selection window to retrieved chunks can capture meaningful snippets that best answer the query, instead of a single sentence.
+
+The final step is to calculate a score for the selected snippet to determine its global ranking against snippets from other chunks. This is also done using the similarity score of the snippet to the query. I found that the best snippet was not always present in the highest-scoring retrieved document chunk.
+
+The final best snippet can then be returned in the search results at "position 0", before links to relevant pages from our knowledge source.
+
+### When not to show the snippet?
+
+In some cases, the query may not be answered by any of the retrieved chunks. In such cases, we can set an arbitrary minimum snippet score to detect a lack of knowledge (if `score < min_required score`) and don't return any snippets.
+
+## Evaluation
+
+I tested featured snippets search with a number of queries that could be answered by the content of this blog. The results are promising, with the system returning relevant snippets for most queries, but there are bits and pieces that could be improved.
+
+### The good
+
+What is a good tyre width for bikepacking trips?
+
+> Bikepacking Setup Bike The bike model is a Canyon Grizl AL 6 with 45mm wide tyres. ([source](/bikepacking-in-provence-france/))
+
+What is Verdon National Park?
+
+> Verdon and exploring the southern area of Parc naturel régional du Verdon. Parc naturel régional du Verdon The Verdon National Park in France is a stunning natural area known for its deep canyon, turquoise river, and dramatic limestone cliffs. It's a fantastic destination for bikepacking, offering scenic routes, beautiful mountain towns, and opportunities to explore the picturesque landscapes of Provence. The iconic Canyon Verdon is a highlight of the park's rugged beauty. ([source](/bikepacking-in-provence-france/))
+
+Is wildcamping legal in Norway?
+
+> Wildcamping The freedom to stay and camp anywhere in nature is taken from the Everyman's Right (Norwegian Allemannsretten). It is a customary right of everyone to enjoy nature regardless of ownership of the land. It's permitted to wild camp for a maximum of 2 nights in the same spot, on uncultivated land and at least 150m from the nearest house. ([source](/norway-bikepacking-trondheim-to-bergen/))
+
+What is an inverted index?
+
+> In an inverted index, each term is associated with a list of documents that contain that term. ([source](/tech-blog/exploring-apache-lucene-search-and-ranking/))
+
+What are good climbs for cycling in France?
+
+> Then we drove to Hautes-Alpes, near Briançon, the highest city in France, to tackle two famous Tour de France climbs: Col de Vars and Col d'Izoard. ([source](/bikepacking-in-provence-france/))
+
+### The not so good
+
+What is the weather in Calpe?
+
+> Calpe's weather. ([source](/work-bike-balance-in-calpe/))
+
+How to ingest data to Elasticsearch?
+
+> Elastic Data Connectors - Elasticsearch Ingestion Made Simple — Jedr's Blog Jedr's Blog Blog Through the Lens Tech Contact Elastic Data Connectors - Elasticsearch Ingestion Made Simple Tech Blog October 5, 2023 • ☕️ 5 min read In any search application, the is an underlying ingestion pipeline that indexes the data. ([source](/tech-blog/elasticsearch-data-connectors/))
+
+### Results
+
+For queries that could be answered by the content of this blog, the featured snippet search performed reasonably well, providing coherent snippets.
+
+However, there were some queries where a single returned sentence had such a high similarity score that it was selected as the snippet (e.g., “Calpe's weather” for “What is the weather in Calpe?”) without actually answering the question. The subsequent sentence in the document was: "In this Spanish Costa Blanca, winters are mild and sunny." This suggests that the threshold function for snippet selection could be improved.
+
+More testing would be needed to ensure that modifying the sentence selection threshold doesn't negatively impact other results (e.g. by selecting too much content). This is a known trade-off between precision and recall in information retrieval.
+
+### Timings
+
+Since featured snippets are useful for search applications, performance is crucial for a good user experience. The current implementation is not ideal in terms of performance. I ran several queries and measured the time taken for vector search (ES in the cloud) and document processing (locally in a notebook).
+
+The averaged results are as follows:
+
+| Metric      | Vector Search + Network Transfer Time | Local Document Processing Time |
+| ----------- | ------------------------------------- | ------------------------------ |
+| Time (s)    | 0.228s                                | 0.265s                         |
+| Runtime (%) | 46.2%                                 | 53.8%                          |
+
+The document processing time is not acceptable for a production-level experience. This is because we are splitting chunks into sentences and embedding them in real-time. This could be optimized by pre-computing sentence embeddings and storing them along with chunk metadata in the index.
+
+Another approach would be to use a single sentence as a chunk. This could work well given that a featured snippet usually consists of one or more sentences. For such an approach, we would split and embed each sentence before ingesting it into ES, with some additional metadata (e.g. in-document offsets) to quickly find neighboring snippets in the retriever. I want to test this approach in the future.
+
+## Notebook
+
+All steps are available in a notebook: [featured_snippets_search.ipynb](https://gist.github.com/jedrazb/5fa951bc2636eaaa7d95c5535aae4457).
