@@ -7,13 +7,13 @@ images: [./sentence-similarity.jpg]
 
 Featured Snippets really stand out to me as a feature in Google search. They are displayed at the top of results for certain search queries, highlighting a relevant excerpt from the source webpage that often directly answers the query. This provides a great user experience when looking for an answer from a given set of documents!
 
-In our scenario, let's assume that the "knowledge" contained in a document set can be used to answer our questions. Since the answer is within our documents, it's just a matter of finding the right passage — a _featured snippet_ — that addresses our query. The good news is that we can use a vector search on embedded passages and sentences to find the answer, instead of relying on a slow and more expensive LLM to generate one. The concept of relying on embeddings for passage retrieval has been around for a while, for example, see: [Dense Passage Retrieval](https://arxiv.org/abs/2004.04906) paper.
+In our scenario, let's assume that the "knowledge" contained in a document set can be used to answer our questions. Since the answer is within our documents, it's just a matter of finding the right passage — a _featured snippet_ — that addresses our query. The good news is that we can use a vector search on embedded chunks and sentences to find the answer, instead of relying on a slow and more expensive LLM to generate one. The concept of relying on embeddings for passage retrieval has been around for a while, for example, see: [Dense Passage Retrieval](https://arxiv.org/abs/2004.04906) paper.
 
 Similarly to the previous blog post, [Question Answering with LangChain, HuggingFace, and Elasticsearch](/tech-blog/question-answering-with-langchain-huggingface-and-elasticsearch), I'm using this blog as a data source together with free, open-source models and libraries to build a solution.
 
 ## Featured Snippet
 
-Assume that our collection contains several documents. We first split each document into text passages of equal length, using these passages as the basic retrieval units. Each passage may contain multiple sentences and can be viewed as a sequence of tokens.
+Assume that our collection contains several documents. We first split each document into text chunks of equal length, using these passages as the basic retrieval units. Each passage may contain multiple sentences and can be viewed as a sequence of tokens.
 
 Given a query, the featured snippet is a span of one or more sentences from one of the retrieved passages that best answers the question.
 
@@ -85,7 +85,7 @@ retriever = ElasticsearchRetriever.from_es_params(
 
 ## Snippet Selection
 
-Our retriever returns the top 3 chunks for a given query. Each chunk is then processed to identify the best snippet using a sliding window selection method. This involves:
+Our retriever returns the top 3 chunks for a given query. Each chunk is then processed to identify the best snippet using an expanding window method. This involves:
 
 - Tokenizing the retrieved chunk into sentences.
 - Calculating similarity scores for each sentence in the chunk (could be optimized by pre-computing sentence embeddings and storing them in the index for quick lookup).
@@ -103,7 +103,7 @@ Applying the selection window to retrieved chunks can capture meaningful snippet
 
 The final step is to calculate a score for the selected snippet to determine its global ranking against snippets from other chunks. This is also done using the similarity score of the snippet to the query. I found that the best snippet was not always present in the highest-scoring retrieved document chunk.
 
-The final best snippet can then be returned in the search results at "position 0", before links to relevant pages from our knowledge source.
+The best snippet can then be returned in the search results at "position 0", before links to relevant pages from our knowledge source.
 
 ### When not to show the snippet?
 
@@ -166,7 +166,7 @@ The averaged results are as follows:
 
 The document processing time is not acceptable for a production-level experience. This is because we are splitting chunks into sentences and embedding them in real-time. This could be optimized by pre-computing sentence embeddings and storing them along with chunk metadata in the index.
 
-Another approach would be to use a single sentence as a chunk. This could work well given that a featured snippet usually consists of one or more sentences. For such an approach, we would split and embed each sentence before ingesting it into ES, with some additional metadata (e.g. in-document offsets) to quickly find neighboring snippets in the retriever. I want to test this approach in the future.
+Another approach would be to use a single sentence as a chunk unit. This could work well given that a featured snippet usually consists of one or more sentences. For such an approach, we would split and embed each sentence before ingesting it into ES, with some additional metadata (e.g. in-document offsets) to quickly find neighboring snippets in the retriever. I want to test this approach in the future.
 
 ## Notebook
 
