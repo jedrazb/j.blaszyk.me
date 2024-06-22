@@ -11,9 +11,9 @@ We are living in the digital age - publishing content has never been easier than
 
 Content type matters. Best holiday pictures from? Instagram. A bit more pictures from a bikepacking trip? Flickr. Career move or a success story? Linkedin. Wanna dive deeper into tech? Medium. Sharing something shorter? Twitter. There seems to be no good solution that ticks all of the boxes to share content you want, on your terms.
 
-Search engine optimization (SEO) is another issue. Is the stuff we post to Facebook, Instagram, LinkedIn and Twitter even searchable? Before going on cycling trips I would usually spend quite a bit of time researching places, campsites and routes worth visiting. I don’t remember seeing any content sourced from big tech apps - search engines will usually rank them pretty low in search results. Medium is an exception - if I happen to be lucky enough not to hit the paywall. Blogs are absolute winners in the SEO category. They are indexable by search engines, searchable and readable for us, with tons of valuable content. Blogs are great sources of information whether I’m researching a tech topic or a bikepacking route.
+Search engine optimization (SEO) is another issue. Is the stuff we post to Facebook, Instagram, LinkedIn and Twitter even searchable? Before going on cycling trips I would usually spend quite a bit of time researching places, campsites and routes worth visiting. I don't remember seeing any content sourced from big tech apps - search engines will usually rank them pretty low in search results. Medium is an exception - if I happen to be lucky enough not to hit the paywall. Blogs are absolute winners in the SEO category. They are indexable by search engines, searchable and readable for us, with tons of valuable content. Blogs are great sources of information whether I'm researching a tech topic or a bikepacking route.
 
-It’s because of my bikepacking trips, that I decided to start a blog. I wanted to tell this story, on my terms, without restrictions on how the content is organized and presented. I wanted my experience and well-researched routes to be discoverable by anyone interested - in order to give back, hopefully, an inspiration, to the community. It's also a great way to reflect on your experience after doing something interesting.
+It's because of my bikepacking trips, that I decided to start a blog. I wanted to tell this story, on my terms, without restrictions on how the content is organized and presented. I wanted my experience and well-researched routes to be discoverable by anyone interested - in order to give back, hopefully, an inspiration, to the community. It's also a great way to reflect on your experience after doing something interesting.
 
 And it worked! Take for example `"norway bikepacking"` search query in Google, you should find the story usually in the top 10 results.
 
@@ -46,7 +46,7 @@ I decided to use GatsbyJS which is an open-source static site generator built on
 
 Check this post's [source](https://github.com/jedrazb/personal-blog/blob/master/content/tech-blog/tech-stack-of-fast-free-and-customizable-blog/index.mdx?plain=1#L44) to verify that it's just a React `<SliderPicker />` defined in MDX file.
 
-The static webpage is hosted completely for free thanks to GitHub Pages. To speed up the website load times, I use Cloudflare (amazing) free plan which offers a content delivery network (CDN) along with caching. This setup, along with built-in Gatsby’s optimizations such as image lazy-loading, is sufficient to score near-perfect scores for website performance on popular benchmarks.
+The static webpage is hosted completely for free thanks to GitHub Pages. To speed up the website load times, I use Cloudflare (amazing) free plan which offers a content delivery network (CDN) along with caching. This setup, along with built-in Gatsby's optimizations such as image lazy-loading, is sufficient to score near-perfect scores for website performance on popular benchmarks.
 
 Let's go over the building blocks.
 
@@ -112,7 +112,7 @@ As you can see Gatsby, GQL and MDX are powerful tools to build customizable, int
 
 ### Github Pages
 
-Github Pages allows you to host static websites directly on Github. It’s free for public repos. All you need to do is to generate your static website and push the code into a branch, `gh-pages` npm package will help you with automating this process. Once the generated site is pushed to the branch, Github Actions will take it from there and deploy the static website under your domain name.
+Github Pages allows you to host static websites directly on Github. It's free for public repos. All you need to do is to generate your static website and push the code into a branch, `gh-pages` npm package will help you with automating this process. Once the generated site is pushed to the branch, Github Actions will take it from there and deploy the static website under your domain name.
 
 ### Cloudflare CDN
 

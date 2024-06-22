@@ -30,7 +30,7 @@ The underlying technical details of index sharding are typically invisible to en
 
 ### Data replication
 
-When you have large search volumes that can’t be handled by a single node, you can distribute searches across multiple read-only copies of the index to improve search performance. By replicating the index, search queries can be processed concurrently across multiple nodes, resulting in faster response times for end-users. This makes it possible to handle large volumes of data and queries, which is critical for building a high-performing, scalable search engine.
+When you have large search volumes that can't be handled by a single node, you can distribute searches across multiple read-only copies of the index to improve search performance. By replicating the index, search queries can be processed concurrently across multiple nodes, resulting in faster response times for end-users. This makes it possible to handle large volumes of data and queries, which is critical for building a high-performing, scalable search engine.
 
 Data replication implies keeping the primary node in sync with all of its replicas and can increase the ingestion overhead. High volumes of indexing can consume extra resources and effectively reduce search performance.
 
@@ -67,7 +67,7 @@ While Lucene itself inherently deals with indexed data stored on disk, modern de
 
 Stateless containers, housing individual Lucene instances, can be rapidly spun up or down to match demand. For example, Kubernetes' dynamic scaling and automated workload distribution can ensure that new nodes are ready to serve traffic swiftly, eliminating the need for excessive resource reservation. This approach optimizes resource utilization, reduces costs, and enables your search cluster to seamlessly handle varying workloads.
 
-For instance, [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html) blog post highlights the advantages they gained from transitioning to a stateless Lucene-based search engine. The significant cost benefits stemmed primarily from the system's capability to swiftly auto-scale in response to fluctuating user traffic.
+For instance, [Nrtsearch: Yelp's Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html) blog post highlights the advantages they gained from transitioning to a stateless Lucene-based search engine. The significant cost benefits stemmed primarily from the system's capability to swiftly auto-scale in response to fluctuating user traffic.
 
 ### Managed Serverless in the Cloud
 
@@ -83,7 +83,7 @@ Stateless architectures simplify auto-scaling and minimize wasted resources. Thi
 
 Elasticsearch runs on a stateful setup with a cluster at the core of its architecture. A cluster is a group of interconnected nodes that collectively manage and serve data. There are different types of nodes: data nodes store data, master-eligible nodes decide which node is in charge, and coordinating nodes manage search queries. Data in Elasticsearch is split into parts called `shards`. This makes it easy to spread data across many nodes and grow the system.
 
-Primary shards handle data writing and manage copies called replicas. Replicas are backups; if one shard has an issue, a replica takes over. Coordinating nodes receive search requests, send them to the right shards, and calculate the answers. They don’t hold data, but they manage the flow of search requests. Data is organized into different lifecycle stages for efficient storage and access: `hot` for frequently accessed data, `cold` for less frequently accessed data, and `frozen` for archival data. Nodes can be specifically configured or optimized to handle data at each of these stages.
+Primary shards handle data writing and manage copies called replicas. Replicas are backups; if one shard has an issue, a replica takes over. Coordinating nodes receive search requests, send them to the right shards, and calculate the answers. They don't hold data, but they manage the flow of search requests. Data is organized into different lifecycle stages for efficient storage and access: `hot` for frequently accessed data, `cold` for less frequently accessed data, and `frozen` for archival data. Nodes can be specifically configured or optimized to handle data at each of these stages.
 
 In a real-world scenario where Elasticsearch was used for a search application with heavy user traffic, I've witnessed several issues with that setup:
 
@@ -104,9 +104,9 @@ In a real-world scenario where Elasticsearch was used for a search application w
 
 ## Nrtsearch
 
-While working as a software engineer at Yelp, I was part of the Ranking Platform team. We were at the core of an initiative to revamp the core search and ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of 2023, is used for the majority of search and ranking use cases at Yelp. You can read more about the nrtsearch project results in the blog post from Yelp’s Engineering Blog:
+While working as a software engineer at Yelp, I was part of the Ranking Platform team. We were at the core of an initiative to revamp the core search and ranking infrastructure in terms of performance and cost efficiency. This effort resulted in an open-source project - [nrtsearch](https://github.com/Yelp/nrtsearch) - which, as of 2023, is used for the majority of search and ranking use cases at Yelp. You can read more about the nrtsearch project results in the blog post from Yelp's Engineering Blog:
 
-> [Nrtsearch: Yelp’s Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
+> [Nrtsearch: Yelp's Fast, Scalable and Cost Effective Search Engine](https://engineeringblog.yelp.com/2021/09/nrtsearch-yelps-fast-scalable-and-cost-effective-search-engine.html)
 
 If you are interested in running the nrtsearch multi-node cluster locally, you can refer to the [official docs](https://nrtsearch.readthedocs.io/en/latest/docker_compose.html) or follow: [Nrtsearch Tutorial - Indexing Web Content for Search](/tech-blog/nrtsearch-tutorial-website-search/) with [the tutorial repo](https://github.com/jedrazb/nrtsearch-tutorial-website-search).
 
@@ -117,7 +117,7 @@ If you are interested in running the nrtsearch multi-node cluster locally, you c
   alt="Nrtsearch architecture"
 />
 
-Nrtsearch is a search engine developed with specific design goals, including utilizing Lucene's capabilities and ensuring near-real-time segment replication. Nrtsearch is built on Lucene, which enables the reuse of custom Java code for features like ML-based ranking, analysis, highlighting, and suggestions.
+Nrtsearch is a search engine developed with specific design goals, including utilizing Lucene's capabilities and ensuring near-real-time segment replication.
 
 The cluster is at the core of its architecture. It consists of a single primary and replicas.
 
