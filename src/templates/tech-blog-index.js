@@ -1,11 +1,7 @@
 import { Link, graphql } from 'gatsby';
-import {
-  formatPostDate,
-  formatReadingTime,
-  formatNumberOfPhotos,
-} from '../utils/helpers';
+import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import { Rss } from 'react-feather';
 
-import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import React from 'react';
 import SEO from '../components/SEO';
@@ -33,8 +29,21 @@ class TechBlogIndexTemplate extends React.Component {
           description={'Tech blog by Jedr Blaszyk.'}
           structuredData={structuredData}
         />
-        <aside>
+        <aside
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
           <h1 style={{ marginTop: 0 }}>Tech Blog</h1>
+          <Link
+            href="/tech-blog/rss.xml"
+            rel="noopener noreferrer"
+            className="footer-icon"
+            style={{ marginLeft: '1em', marginBottom: '1em' }}
+          >
+            <Rss />
+          </Link>
         </aside>
         <main>
           {posts.map(({ node }) => {
