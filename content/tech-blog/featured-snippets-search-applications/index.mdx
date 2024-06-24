@@ -2,7 +2,7 @@
 title: How to Implement Featured Snippets for Search Applications
 date: '2024-06-22'
 spoiler: Discover how to implement passage retrieval to enhance semantic search and deliver the most relevant results, just like Google's Featured Snippets.
-images: [./sentence-similarity.jpg]
+images: [./sentence-similarity.jpg, ./highlight-text-fragment.jpg]
 ---
 
 Featured Snippets really stand out to me as a feature in Google search. They are displayed at the top of results for certain search queries, highlighting a relevant excerpt from the source webpage that often directly answers the query. This provides a great user experience when looking for an answer from a given set of documents!
@@ -167,6 +167,24 @@ The averaged results are as follows:
 The document processing time is not acceptable for a production-level experience. This is because we are splitting chunks into sentences and embedding them in real-time. This could be optimized by pre-computing sentence embeddings and storing them along with chunk metadata in the index.
 
 Another approach would be to use a single sentence as a chunk unit. This could work well given that a featured snippet usually consists of one or more sentences. For such an approach, we would split and embed each sentence before ingesting it into ES, with some additional metadata (e.g. in-document offsets) to quickly find neighboring snippets in the retriever. I want to test this approach in the future.
+
+## Highlighting with Text Fragment
+
+[Text fragments](https://developer.mozilla.org/en-US/docs/Web/Text_fragments) enable linking directly to a specific portion of text on a page without the need to pre-annotate it with an ID, by using a special syntax in the URL fragment. If we know the snippet and its source page, we can dynamically construct a URL that will automatically make the browser scroll to and highlight the snippet on the source page. For example:
+
+```
+> What is an inverted index?
+
+In an inverted index, each term is associated with a list of documents that contain that term.
+
+URL: https://j.blaszyk.me/tech-blog/exploring-apache-lucene-search-and-ranking/#:~:text=In%20an,that%20term
+
+```
+
+<ImageComponent
+  image={props.data.mdx.frontmatter.images[1]}
+  alt="Highlighted text fragment "
+/>
 
 ## Notebook
 
