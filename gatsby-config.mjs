@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const config = {
   trailingSlash: 'always',
   siteMetadata: {
-    title: "Jedr's Blog",
+    title: 'Jedr Blaszyk',
     author: 'Jedr Blaszyk',
     description: 'Blog by Jedr Blaszyk. Bikepacking, photography & tech.',
     siteUrl: 'https://j.blaszyk.me',
@@ -151,7 +151,7 @@ const config = {
               }
             `,
             output: '/rss.xml',
-            title: "Jedr's Blog",
+            title: 'Jedr Blaszyk',
           },
           {
             serialize: ({ query: { site, allMdx } }) => {
@@ -210,7 +210,7 @@ const config = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jedr's Blog`,
+        name: `Jedr Blaszyk`,
         short_name: `personal-blog`,
         start_url: `/`,
         background_color: `#ffffff`,
