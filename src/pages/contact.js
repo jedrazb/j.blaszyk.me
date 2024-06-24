@@ -23,16 +23,14 @@ class NotFoundPage extends React.Component {
             <a href="https://www.yelp.com/" target="_blank">
               Yelp
             </a>
-            .
-          </p>
-          <p>
-            I'm cycling with{' '}
+            . I'm cycling with{' '}
             <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
           </p>
+
           <p>
-            You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>{' '}
+            You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>.
           </p>
-          <p>Have a great day! :)</p>
+          <p>I'm based in Poznań, Poland.</p>
         </main>
       </Layout>
     );
