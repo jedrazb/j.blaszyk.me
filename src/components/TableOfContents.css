@@ -36,6 +36,7 @@
   overflow: scroll;
   max-height: 800px;
   margin-bottom: 0;
+  font-size: 0.925rem;
 }
 
 @media screen and (max-width: 1540px) {
