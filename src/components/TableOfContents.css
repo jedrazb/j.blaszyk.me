@@ -6,9 +6,6 @@
   transform: translate3d(0, 0, 0);
   top: 100px;
   padding: 0.5rem 0.5rem 0;
-  background-color: var(--bg-header);
-  border: solid 1px var(--post-outline);
-  border-radius: 20px;
 }
 
 .toc-link {
@@ -29,13 +26,15 @@
 .summary-toc {
   text-align: center;
   width: 100%;
+  color: var(--textLink);
+  font-family: 'Montserrat', sans-serif;
   border-bottom: solid 1px var(--post-outline);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .toc-ul-wrapper {
   overflow: scroll;
-  max-height: 600px;
+  max-height: 800px;
   margin-bottom: 0;
 }
 
