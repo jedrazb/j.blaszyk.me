@@ -54,8 +54,9 @@ const renderItems = (items, activeId, isTop = false) => {
     <ul
       style={{
         marginTop: '0',
-        marginBottom: isTop ? 0 : '14px',
-        marginLeft: isTop ? '1rem' : '1.75rem',
+        marginBottom: '10px',
+        padding: 0,
+        marginLeft: isTop ? '0.5rem' : '1.5rem',
       }}
       className={classnames({ ['toc-ul-wrapper']: isTop })}
     >
@@ -67,6 +68,8 @@ const renderItems = (items, activeId, isTop = false) => {
                 href={item.url}
                 className={'toc-link'}
                 style={{
+                  marginBottom: item.items ? '0.5rem' : '0px',
+                  padding: 0,
                   color:
                     activeId === item.url.slice(1)
                       ? 'var(--textLink)'
@@ -108,8 +111,8 @@ const TableOfContents = (props) => {
         'table-of-contents-wide-post': !!widePostType,
       })}
     >
-      <summary className="summary-toc">Contents</summary>
-      {renderItems(props.items, activeId, true)}
+      <summary className="summary-toc">Jump to</summary>
+      {renderItems(items, activeId, true)}
     </div>
   );
 };
