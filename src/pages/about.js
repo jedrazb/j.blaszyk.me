@@ -11,9 +11,9 @@ class NotFoundPage extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={'Contact'} slug={'/contact'} />
+        <SEO title={'About'} slug={'/about'} />
         <main>
-          <h1 style={{ marginTop: 0 }}>Contact</h1>
+          <h1 style={{ marginTop: 0 }}>About</h1>
           <p>
             I'm a software engineer working on data ingestion @{' '}
             <a href="https://www.elastic.co/" target="_blank">
@@ -26,11 +26,12 @@ class NotFoundPage extends React.Component {
             . I'm cycling with{' '}
             <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
           </p>
+          <p>I'm based in Poznań, Poland.</p>
 
+          <h2 style={{ marginTop: 0 }}>Contact</h2>
           <p>
             You can reach me at <a href="mailto:j@blaszyk.me">j@blaszyk.me</a>.
           </p>
-          <p>I'm based in Poznań, Poland.</p>
         </main>
       </Layout>
     );

@@ -105,13 +105,13 @@ function NavBar({ title, location, toggle }) {
               </li>
               <li className="nav-item">
                 <Link
-                  to="/contact/"
+                  to="/about/"
                   activeClassName="active"
                   className="nav-links"
                   onClick={closeMenu}
                   itemProp="url"
                 >
-                  <span itemProp="name">Contact</span>
+                  <span itemProp="name">About</span>
                 </Link>
               </li>
             </ul>
