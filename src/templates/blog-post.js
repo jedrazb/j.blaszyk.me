@@ -12,6 +12,7 @@ import SEO from '../components/SEO';
 import ImageGallery from '../components/ImageGallery';
 import ImageComponent from '../components/ImageComponent';
 import LazyIframe from '../components/LazyIframe';
+import LazyStravaContainer from '../components/LazyStravaContainer';
 import TableOfContents from '../components/TableOfContents';
 import Comments from '../components/Comments';
 import { BikepackingDetails } from '../components/BikepackingDetails';
@@ -42,6 +43,7 @@ const shortcodes = {
   MakeItBigContainer,
   ThreePhotosContainer,
   LazyIframe,
+  LazyStravaContainer,
   BikepackingDetails,
 };
 
