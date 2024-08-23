@@ -9,11 +9,19 @@ export const selectHighestResolutionFromSrcSet = (srcSet) => {
 };
 
 export const selectThumbnailFromSrcSet = (srcSet) => {
-  const srcSetArray = srcSet.split(',');
-  const srcArraySorted = srcSetArray.map((srcWithResolution) => {
-    const [src, resolution] = srcWithResolution.split(' ');
-    return src;
-  });
+  if (!srcSet) {
+    return null; // Handle null or undefined srcSet
+  }
 
-  return srcArraySorted[0];
+  try {
+    const srcSetArray = srcSet.split(',');
+    const srcArraySorted = srcSetArray.map((srcWithResolution) => {
+      const [src] = srcWithResolution.trim().split(' ');
+      return src;
+    });
+
+    return srcArraySorted[0] || null; // Return the first source or null if none
+  } catch (e) {
+    throw new Error(`Failed to process srcSet: ${e.message}`);
+  }
 };
