@@ -41,11 +41,12 @@ function NavBar({ title, location, toggle }) {
     <header>
       <div className="navbar">
         <div className="nav-container">
-          <h1
+          <span
             style={{
               ...scale(0.5),
               marginBottom: 0,
               marginTop: 0,
+              fontFamily: "'Montserrat', sans-serif",
             }}
           >
             <Link
@@ -61,7 +62,7 @@ function NavBar({ title, location, toggle }) {
             >
               {title}
             </Link>
-          </h1>
+          </span>
           <nav
             role="navigation"
             itemScope=""
