@@ -189,7 +189,7 @@ class BlogPostTemplate extends React.Component {
               Jedr's Blog
             </Link>
           </h3>
-          <Bio isBike />
+          <Bio isBike size="l" />
           <Comments
             url={`${siteUrl}${post.fields.slug}`}
             id={post.fields.slug}

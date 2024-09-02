@@ -185,7 +185,7 @@ class TechBlogPostTemplate extends React.Component {
               Tech Blog
             </Link>
           </h3>
-          <Bio />
+          <Bio size="l" />
           <Comments
             url={postUrl}
             id={post.fields.slug}

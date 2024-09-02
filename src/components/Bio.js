@@ -2,7 +2,27 @@ import React from 'react';
 import { rhythm } from '../utils/typography';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const Bio = ({ isBike }) => {
+const Bio = ({ isBike, size = 'm' }) => {
+  const imageSizePx = (() => {
+    switch (size) {
+      case 'm':
+        return 150;
+      case 'l':
+        return 300;
+      default:
+        return 150;
+    }
+  })();
+  const imageSize = (() => {
+    switch (size) {
+      case 'm':
+        return 2;
+      case 'l':
+        return 3;
+      default:
+        return 2;
+    }
+  })();
   return (
     <div
       style={{
@@ -14,9 +34,9 @@ const Bio = ({ isBike }) => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          width: rhythm(2),
-          minWidth: rhythm(2),
-          height: rhythm(2),
+          width: rhythm(imageSize),
+          minWidth: rhythm(imageSize),
+          height: rhythm(imageSize),
           borderRadius: '50%',
           overflow: 'hidden',
           transform: 'translateZ(0)',
@@ -26,15 +46,15 @@ const Bio = ({ isBike }) => {
           <StaticImage
             src={`../assets/profile-pic-bike.jpg`}
             alt={`Profile pic`}
-            width={90}
-            height={90}
+            width={imageSizePx}
+            height={imageSizePx}
           />
         ) : (
           <StaticImage
             src={`../assets/profile-pic.jpg`}
             alt={`Profile pic`}
-            width={90}
-            height={90}
+            width={imageSizePx}
+            height={imageSizePx}
           />
         )}
       </div>

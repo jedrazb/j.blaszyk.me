@@ -197,7 +197,7 @@ class ThroughTheLensPostTemplate extends React.Component {
               Through the Lens
             </Link>
           </h3>
-          <Bio isBike />
+          <Bio isBike size="l" />
           <Comments
             url={`${siteUrl}/${category}${post.fields.slug}`}
             id={post.fields.slug}
