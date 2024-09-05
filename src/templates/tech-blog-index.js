@@ -8,6 +8,7 @@ import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Bio from '../components/Bio';
 
 class TechBlogIndexTemplate extends React.Component {
   render() {
@@ -26,7 +27,7 @@ class TechBlogIndexTemplate extends React.Component {
         <SEO
           title={'Tech Blog'}
           location={this.props.location}
-          description={'Tech blog by Jedr Blaszyk.'}
+          description={'Tech Blog by Jedr Blaszyk.'}
           structuredData={structuredData}
         />
         <aside
@@ -44,6 +45,9 @@ class TechBlogIndexTemplate extends React.Component {
           >
             <Rss />
           </Link>
+        </aside>
+        <aside>
+          <Bio />
         </aside>
         <main>
           {posts.map(({ node }) => {

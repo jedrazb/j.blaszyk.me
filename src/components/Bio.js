@@ -2,7 +2,7 @@ import React from 'react';
 import { rhythm } from '../utils/typography';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const Bio = ({ isBike, size = 'm' }) => {
+const Bio = ({ isBike, size = 'm', style }) => {
   const imageSizePx = (() => {
     switch (size) {
       case 'm':
@@ -26,8 +26,11 @@ const Bio = ({ isBike, size = 'm' }) => {
   return (
     <div
       style={{
-        display: 'flex',
-        marginBottom: rhythm(1),
+        ...{
+          display: 'flex',
+          marginBottom: rhythm(1),
+        },
+        ...style,
       }}
     >
       <div
@@ -59,7 +62,7 @@ const Bio = ({ isBike, size = 'm' }) => {
         )}
       </div>
 
-      <p style={{ maxWidth: 380 }}>
+      <p style={{ maxWidth: 380, margin: 0 }}>
         Blog by{' '}
         <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.{' '}
         Tech, cycling, photography & travelling.
