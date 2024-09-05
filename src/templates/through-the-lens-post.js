@@ -197,7 +197,17 @@ class ThroughTheLensPostTemplate extends React.Component {
               Through the Lens
             </Link>
           </h3>
-          <Bio isBike size="l" />
+          <aside
+            style={{
+              width: '100%',
+              backgroundColor: 'var(--bg-header)',
+              borderRadius: '1em',
+              padding: '1.2em 0.6em',
+              marginBottom: '1.5rem',
+            }}
+          >
+            <Bio isBike style={{ marginBottom: 0 }} size="l" />
+          </aside>
           <Comments
             url={`${siteUrl}/${category}${post.fields.slug}`}
             id={post.fields.slug}

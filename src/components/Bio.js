@@ -3,16 +3,6 @@ import { rhythm } from '../utils/typography';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Bio = ({ isBike, size = 'm', style }) => {
-  const imageSizePx = (() => {
-    switch (size) {
-      case 'm':
-        return 150;
-      case 'l':
-        return 300;
-      default:
-        return 150;
-    }
-  })();
   const imageSize = (() => {
     switch (size) {
       case 'm':
@@ -49,15 +39,15 @@ const Bio = ({ isBike, size = 'm', style }) => {
           <StaticImage
             src={`../assets/profile-pic-bike.jpg`}
             alt={`Profile pic`}
-            width={imageSizePx}
-            height={imageSizePx}
+            width={300}
+            height={300}
           />
         ) : (
           <StaticImage
             src={`../assets/profile-pic.jpg`}
             alt={`Profile pic`}
-            width={imageSizePx}
-            height={imageSizePx}
+            width={300}
+            height={300}
           />
         )}
       </div>
