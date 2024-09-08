@@ -48,8 +48,6 @@ Everybody likes fun. And fun, like anything, can be nuanced. Not all fun is crea
 
 This year's edition of Gravmageddon promised to be even more challenging, as the weather forecast called for rain and strong wind gusts throughout the day. True to its reputation, Mother Nature didn't disappoint. Looking back, I can now say that this year's Gravmageddon falls squarely into the "Type 2 fun" category.
 
-## Route
-
 <BikepackingDetails
   logo={props.data.mdx.frontmatter.logo}
   title={'Gravmageddon 2024'}
@@ -59,16 +57,23 @@ This year's edition of Gravmageddon promised to be even more challenging, as the
   date={'Aug 2023'}
 />
 
-<MakeItBigContainer>
-  <LazyStravaContainer height="800px">
-    <div
-      class="strava-embed-placeholder"
-      data-embed-type="activity"
-      data-embed-id="12052121611"
-      data-style="standard"
-    />
-  </LazyStravaContainer>
-</MakeItBigContainer>
+## Route
+
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyIframe height="800px">
+      <iframe
+        src="https://www.komoot.com/tour/1728937991/embed?profile=1"
+        width="1024"
+        height="800"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+        style={{ margin: 0 }}
+      />
+    </LazyIframe>
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
 
 ## The Race
 
@@ -175,6 +180,21 @@ From there, it was just a few more hills and then the final descent to the finis
     description="Gravmageddon 2024 finish line"
   />
 </MakeItBigContainer>
+
+## Strava
+
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyStravaContainer height="800px">
+      <div
+        class="strava-embed-placeholder"
+        data-embed-type="activity"
+        data-embed-id="12052121611"
+        data-style="standard"
+      />
+    </LazyStravaContainer>
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
 
 ## Photos
 

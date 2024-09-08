@@ -21,6 +21,7 @@ import {
   Column,
   MakeItBigContainer,
   ThreePhotosContainer,
+  FullWidthBackgroundContainer,
 } from '../components/layout/Container';
 import {
   formatPostDate,
@@ -41,6 +42,7 @@ const shortcodes = {
   Container,
   Column,
   MakeItBigContainer,
+  FullWidthBackgroundContainer,
   ThreePhotosContainer,
   LazyIframe,
   LazyStravaContainer,

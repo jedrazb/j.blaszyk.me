@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './Container.css';
+import '../Layout.css';
 
 export const Container = ({ children }) => {
   const isChildColumn = (child) => child.props.mdxType == 'Column';
@@ -56,4 +57,12 @@ export const ThreePhotosContainer = ({ children }) => (
       <div className="grid-image-three">{children[2]}</div>
     </div>
   </Container>
+);
+
+export const FullWidthBackgroundContainer = ({ children }) => (
+  <div className="full-screen-wrapper">
+    <div className="full-screen-inner">
+      <div className="layout-base layout-classic">{children}</div>
+    </div>
+  </div>
 );

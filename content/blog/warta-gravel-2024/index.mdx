@@ -2,14 +2,23 @@
 title: 'Warta Gravel 2024'
 date: '2024-09-05'
 spoiler: The mountains are calling and I must go again... 340km ultra gravel race in rainy conditions. Top 20 finish.
-# indexImage: './highlight.jpeg'
-# ogimage: './highlight.jpeg'
+indexImage: './highlight.jpeg'
+ogimage: './highlight.jpeg'
 category: 'bikepacking'
 logo: './logo.png'
-images: []
+images: ['./photos/100km-1.jpeg', './photos/100km-2.jpeg']
 ---
 
-## Route
+- [Route](#route)
+- [The Race](#the-race)
+- [Photos](#photos)
+
+<MakeItBigContainer>
+  <ImageComponent
+    image={props.data.mdx.frontmatter.images[1]}
+    description="Crossing finish line at Gravmageddon 2024 after 30 hours of cycling."
+  />
+</MakeItBigContainer>
 
 <BikepackingDetails
   logo={props.data.mdx.frontmatter.logo}
@@ -19,3 +28,41 @@ images: []
   time={'22 hrs'}
   date={'Aug 2023'}
 />
+
+## Route
+
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyIframe height="800px">
+      <iframe
+        src="https://www.komoot.com/tour/1847670860/embed?profile=1"
+        width="1024"
+        height="800"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+        style={{ margin: 0 }}
+      />
+    </LazyIframe>
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
+
+## The Race
+
+## Photos
+
+## Strava
+
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyStravaContainer height="800px">
+      <div
+        class="strava-embed-placeholder"
+        data-embed-type="activity"
+        data-embed-id="12234808972"
+        data-style="standard"
+      />
+    </LazyStravaContainer>
+
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
