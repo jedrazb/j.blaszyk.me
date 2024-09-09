@@ -185,7 +185,17 @@ class TechBlogPostTemplate extends React.Component {
               Tech Blog
             </Link>
           </h3>
-          <Bio />
+          <aside
+            style={{
+              width: '100%',
+              backgroundColor: 'var(--bg-header)',
+              borderRadius: '1em',
+              padding: '1.2em 0.6em',
+              marginBottom: '1.5rem',
+            }}
+          >
+            <Bio style={{ marginBottom: 0 }} size="l" />
+          </aside>
           <Comments
             url={postUrl}
             id={post.fields.slug}

@@ -15,6 +15,7 @@ import { rhythm } from '../utils/typography';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './blog-index.css';
+import { Rss } from 'react-feather';
 
 class BlogIndexTemplate extends React.Component {
   render() {
@@ -32,8 +33,32 @@ class BlogIndexTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO structuredData={structuredData} />
-        <aside>
-          <Bio isBike />
+        <aside
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <h1 style={{ marginTop: 0 }}>Blog</h1>
+          <Link
+            href="/rss.xml"
+            rel="noopener noreferrer"
+            className="footer-icon"
+            style={{ marginLeft: '1em', marginBottom: '1em' }}
+          >
+            <Rss />
+          </Link>
+        </aside>
+        <aside
+          style={{
+            width: '100%',
+            backgroundColor: 'var(--bg-header)',
+            borderRadius: '1em',
+            padding: '1.2em 0.6em',
+            marginBottom: '1.5rem',
+          }}
+        >
+          <Bio isBike style={{ marginBottom: 0 }} />
         </aside>
         <main>
           {posts.map(({ node }, idx) => {
