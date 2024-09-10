@@ -69,3 +69,26 @@
     flex-direction: column;
   }
 }
+
+.full-screen-wrapper {
+  width: 100%;
+  min-height: 10rem;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  z-index: 0;
+}
+
+.full-screen-inner {
+  min-height: 10rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-gallery);
+}

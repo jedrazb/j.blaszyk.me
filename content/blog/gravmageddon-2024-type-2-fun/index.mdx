@@ -5,7 +5,6 @@ spoiler: The mountains are calling and I must go again... 340km ultra gravel rac
 indexImage: './highlight.jpeg'
 ogimage: './highlight.jpeg'
 category: 'bikepacking'
-logo: './logo.png'
 images:
   [
     './photos/crossing-finish-line.jpeg',
@@ -50,16 +49,21 @@ This year's edition of Gravmageddon promised to be even more challenging, as the
 
 ## Route
 
-<MakeItBigContainer>
-  <LazyStravaContainer height="800px">
-    <div
-      class="strava-embed-placeholder"
-      data-embed-type="activity"
-      data-embed-id="12052121611"
-      data-style="standard"
-    />
-  </LazyStravaContainer>
-</MakeItBigContainer>
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyIframe height="800px">
+      <iframe
+        src="https://www.komoot.com/tour/1728937991/embed?profile=1"
+        width="1024"
+        height="800"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+        style={{ margin: 0 }}
+      />
+    </LazyIframe>
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
 
 ## The Race
 
@@ -166,6 +170,21 @@ From there, it was just a few more hills and then the final descent to the finis
     description="Gravmageddon 2024 finish line"
   />
 </MakeItBigContainer>
+
+## Strava
+
+<FullWidthBackgroundContainer>
+  <MakeItBigContainer>
+    <LazyStravaContainer height="800px">
+      <div
+        class="strava-embed-placeholder"
+        data-embed-type="activity"
+        data-embed-id="12052121611"
+        data-style="standard"
+      />
+    </LazyStravaContainer>
+  </MakeItBigContainer>
+</FullWidthBackgroundContainer>
 
 ## Photos
 
