@@ -37,6 +37,12 @@ class ThroughTheLensIndexTemplate extends React.Component {
           location={this.props.location}
           description={'Capturing moments through the camera lens. Photo blog.'}
           structuredData={structuredData}
+          meta={[
+            {
+              property: 'og:type',
+              content: 'website',
+            },
+          ]}
         />
         <aside>
           <h1 style={{ marginTop: 0 }}>Through the Lens</h1>

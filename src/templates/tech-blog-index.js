@@ -29,6 +29,12 @@ class TechBlogIndexTemplate extends React.Component {
           location={this.props.location}
           description={'Tech Blog by Jedr Blaszyk.'}
           structuredData={structuredData}
+          meta={[
+            {
+              property: 'og:type',
+              content: 'website',
+            },
+          ]}
         />
         <aside
           style={{

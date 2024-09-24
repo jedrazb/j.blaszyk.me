@@ -75,6 +75,20 @@ class ThroughTheLensPostTemplate extends React.Component {
           slug={this.props.path}
           image={ogImagePath}
           structuredData={structuredData}
+          meta={[
+            {
+              property: 'og:type',
+              content: 'article',
+            },
+            {
+              property: 'og:article:published_time',
+              content: post.frontmatter.date,
+            },
+            {
+              property: 'og:article:author',
+              content: 'https://j.blaszyk.me/about/',
+            },
+          ]}
         />
         <main>
           <article className="post">

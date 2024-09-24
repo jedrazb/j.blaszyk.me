@@ -66,6 +66,12 @@ const RoadTo195Page = (props) => {
         description={
           'Reporting on a progress to visit all 195 countries in the world.'
         }
+        meta={[
+          {
+            property: 'og:type',
+            content: 'website',
+          },
+        ]}
       />
       <main>
         <h1 style={{ marginTop: 0, marginBottom: '1rem' }}>Road to 195</h1>
