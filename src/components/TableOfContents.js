@@ -92,8 +92,6 @@ const renderItems = (items, activeId, isTop = false) => {
 const TableOfContents = (props) => {
   const { items, widePostType } = props;
 
-  console.log(items);
-
   const idList = getIds(props.items);
 
   // When scrolling to the top of the post
