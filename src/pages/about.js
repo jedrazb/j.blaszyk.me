@@ -11,7 +11,24 @@ class NotFoundPage extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={'About'} slug={'/about'} />
+        <SEO
+          title={'About'}
+          slug={'/about'}
+          meta={[
+            {
+              property: 'og:type',
+              content: 'profile',
+            },
+            {
+              property: 'og:profile:first_name',
+              content: 'Jedr',
+            },
+            {
+              property: 'og:profile:last_name',
+              content: 'Blaszyk',
+            },
+          ]}
+        />
         <main>
           <h1 style={{ marginTop: 0 }}>About</h1>
           <p>

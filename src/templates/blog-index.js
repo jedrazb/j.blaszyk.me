@@ -32,7 +32,15 @@ class BlogIndexTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO structuredData={structuredData} />
+        <SEO
+          structuredData={structuredData}
+          meta={[
+            {
+              property: 'og:type',
+              content: 'website',
+            },
+          ]}
+        />
         <aside
           style={{
             display: 'flex',
