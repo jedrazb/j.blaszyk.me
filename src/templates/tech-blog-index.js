@@ -27,6 +27,7 @@ class TechBlogIndexTemplate extends React.Component {
         <SEO
           title={'Tech Blog'}
           location={this.props.location}
+          slug={'/tech-blog/'}
           description={'Tech Blog by Jedr Blaszyk.'}
           structuredData={structuredData}
           meta={[

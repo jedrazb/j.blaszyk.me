@@ -62,7 +62,7 @@ const RoadTo195Page = (props) => {
     <Layout location={props.location} title={siteTitle}>
       <SEO
         title={'Road to 195'}
-        slug={'/road-to-195'}
+        slug={'/road-to-195/'}
         description={
           'Reporting on a progress to visit all 195 countries in the world.'
         }

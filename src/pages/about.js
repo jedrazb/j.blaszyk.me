@@ -13,7 +13,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={'About'}
-          slug={'/about'}
+          slug={'/about/'}
           meta={[
             {
               property: 'og:type',

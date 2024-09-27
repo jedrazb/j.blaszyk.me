@@ -35,6 +35,7 @@ class ThroughTheLensIndexTemplate extends React.Component {
         <SEO
           title={title}
           location={this.props.location}
+          slug={'/through-the-lens/'}
           description={'Capturing moments through the camera lens. Photo blog.'}
           structuredData={structuredData}
           meta={[
