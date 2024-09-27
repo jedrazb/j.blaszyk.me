@@ -121,7 +121,7 @@ function SEO({
                 {JSON.stringify(structuredData)}
               </script>
             )}
-            <link rel="canonical" href={'https://j.blaszyk.me/'} />
+            {url && <link rel="canonical" href={url} />}
           </Helmet>
         );
       }}
