@@ -72,7 +72,7 @@ class ThroughTheLensPostTemplate extends React.Component {
         <SEO
           title={`${post.frontmatter.title} - Through the Lens`}
           description={`Through the Lens: ${post.frontmatter.title}`}
-          slug={this.props.path}
+          slug={`/${post.fields.category}${post.fields.slug}`}
           image={ogImagePath}
           structuredData={structuredData}
           meta={[

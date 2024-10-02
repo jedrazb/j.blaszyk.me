@@ -83,7 +83,7 @@ class TechBlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.spoiler}
-          slug={post.fields.slug}
+          slug={`/${post.fields.category}${post.fields.slug}`}
           image={ogImagePath}
           structuredData={structuredData}
           meta={[
