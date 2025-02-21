@@ -6,11 +6,11 @@ body {
 }
 
 body.light {
-  --bg: #fff;
-  --bg-secondary: #f8f8f8;
-  --bg-header: #f6f6f6bf;
+  --bg: #faf9f5;
+  --bg-secondary: #f0eee7;
+  --bg-header: #f3f2ec;
   --post-outline: rgb(164, 182, 184);
-  --bg-gallery: #f6f8fa;
+  --bg-gallery: #f0eee7;
   --header: var(--blue);
   --textNormal: #36313d;
   --textTitle: #36313d;
