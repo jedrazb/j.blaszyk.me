@@ -17,6 +17,7 @@ import {
   Column,
   MakeItBigContainer,
   ThreePhotosContainer,
+  FullWidthBackgroundContainer,
 } from '../components/layout/Container';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
@@ -42,6 +43,7 @@ const shortcodes = {
   LazyIframe,
   StatefulSliderPicker,
   StatefulBlockPicker,
+  FullWidthBackgroundContainer,
 };
 
 class TechBlogPostTemplate extends React.Component {
