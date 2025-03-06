@@ -54,6 +54,14 @@ const config = {
           remarkPlugins: [remarkGfm, remarkMath],
         },
         gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-mermaid`,
+            options: {
+              mermaidConfig: {
+                theme: 'forest',
+              },
+            },
+          },
           'gatsby-remark-autolink-headers',
           {
             resolve: 'gatsby-remark-prismjs',
