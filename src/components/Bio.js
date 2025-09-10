@@ -54,8 +54,9 @@ const Bio = ({ isBike, size = 'm', style }) => {
 
       <p style={{ maxWidth: 380, margin: 0 }}>
         Blog by{' '}
-        <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.{' '}
-        Tech, cycling, photography & travelling.
+        <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.
+        Check out <a href="https://www.cyclingdoppio.cc/en">cyclingdoppio.cc</a>{' '}
+        for bikepacking and travel stories.
       </p>
     </div>
   );

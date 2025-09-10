@@ -43,6 +43,11 @@ class NotFoundPage extends React.Component {
             . I'm cycling with{' '}
             <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
           </p>
+          <p>
+            Follow{' '}
+            <a href="https://www.cyclingdoppio.cc/en">cyclingdoppio.cc</a> for
+            more bikepacking and travel stories.
+          </p>
           <p>I'm based in Poznań, Poland.</p>
 
           <h2 style={{ marginTop: 0 }}>Contact</h2>
