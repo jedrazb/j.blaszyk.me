@@ -32,7 +32,7 @@ class NotFoundPage extends React.Component {
         <main>
           <h1 style={{ marginTop: 0 }}>About</h1>
           <p>
-            I'm a software engineer working on data ingestion @{' '}
+            I'm a software engineer working on Agent Builder @{' '}
             <a href="https://www.elastic.co/" target="_blank">
               Elastic
             </a>
@@ -42,6 +42,13 @@ class NotFoundPage extends React.Component {
             </a>
             . I'm cycling with{' '}
             <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
+          </p>
+          <p>
+            Maintaining{' '}
+            <a href="https://querybox.dev/" target="_blank">
+              QueryBox
+            </a>{' '}
+            - a platform for website AI search and chat.
           </p>
           <p>
             Follow{' '}
