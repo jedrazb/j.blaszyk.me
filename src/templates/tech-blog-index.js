@@ -7,7 +7,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Bio from '../components/Bio';
 
 class TechBlogIndexTemplate extends React.Component {
@@ -67,7 +66,6 @@ class TechBlogIndexTemplate extends React.Component {
         <main>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
-            const indexImage = get(node, 'frontmatter.indexImage');
             return (
               <Link
                 style={{
@@ -103,10 +101,6 @@ class TechBlogIndexTemplate extends React.Component {
                     >
                       {title}
                     </h3>
-
-                    {indexImage && (
-                      <GatsbyImage image={getImage(indexImage)} alt={title} />
-                    )}
 
                     <div
                       style={{
@@ -170,17 +164,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
-            indexImage {
-              childImageSharp {
-                gatsbyImageData(width: 800, layout: CONSTRAINED)
-              }
-            }
-            images {
-              id
-            }
-            blogImages {
-              id
-            }
           }
         }
       }

@@ -13,7 +13,7 @@ class NotFoundPage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={'About'}
-          slug={'/about/'}
+          slug={'/'}
           meta={[
             {
               property: 'og:type',
@@ -30,7 +30,6 @@ class NotFoundPage extends React.Component {
           ]}
         />
         <main>
-          <h1 style={{ marginTop: 0 }}>About</h1>
           <p>
             I'm a software engineer working on Agent Builder @{' '}
             <a href="https://www.elastic.co/" target="_blank">
@@ -40,8 +39,7 @@ class NotFoundPage extends React.Component {
             <a href="https://www.yelp.com/" target="_blank">
               Yelp
             </a>
-            . I'm cycling with{' '}
-            <a href="https://hazaybikes.com/en/">Hazay Bikes</a>.
+            .
           </p>
           <p>
             Maintaining{' '}
@@ -55,7 +53,6 @@ class NotFoundPage extends React.Component {
             <a href="https://www.cyclingdoppio.cc/en">cyclingdoppio.cc</a> for
             more bikepacking and travel stories.
           </p>
-          <p>I'm based in Poznań, Poland.</p>
 
           <h2 style={{ marginTop: 0 }}>Contact</h2>
           <p>

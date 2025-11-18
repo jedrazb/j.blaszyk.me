@@ -26,7 +26,7 @@ class Footer extends React.Component {
             <Sitemap />
           </Link>
           <Link
-            href="/rss.xml"
+            href="/tech-blog/rss.xml"
             rel="noopener noreferrer"
             className="footer-icon"
           >
@@ -49,14 +49,7 @@ class Footer extends React.Component {
         >
           <GitHub />
         </a>
-        <a
-          href="https://www.strava.com/athletes/jedr_blaszyk"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-icon icon-has-next"
-        >
-          <Strava />
-        </a>
+
         <a
           href="https://www.linkedin.com/in/jedrzej-blaszyk/"
           target="_blank"
@@ -64,14 +57,6 @@ class Footer extends React.Component {
           className="footer-icon icon-has-next"
         >
           <Linkedin />
-        </a>
-        <a
-          href="https://www.instagram.com/cycling.jedr/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-icon"
-        >
-          <Instagram />
         </a>
       </footer>
     );

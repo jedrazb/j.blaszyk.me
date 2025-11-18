@@ -77,19 +77,7 @@ function NavBar({ title, location, toggle }) {
                   onClick={closeMenu}
                   itemProp="url"
                 >
-                  <span itemProp="name">Blog</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/through-the-lens/"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={closeMenu}
-                  partiallyActive={true}
-                  itemProp="url"
-                >
-                  <span itemProp="name">Through the Lens</span>
+                  <span itemProp="name">About</span>
                 </Link>
               </li>
               <li className="nav-item">
@@ -101,18 +89,7 @@ function NavBar({ title, location, toggle }) {
                   partiallyActive={true}
                   itemProp="url"
                 >
-                  <span itemProp="name">Tech</span>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/about/"
-                  activeClassName="active"
-                  className="nav-links"
-                  onClick={closeMenu}
-                  itemProp="url"
-                >
-                  <span itemProp="name">About</span>
+                  <span itemProp="name">Blog</span>
                 </Link>
               </li>
             </ul>
