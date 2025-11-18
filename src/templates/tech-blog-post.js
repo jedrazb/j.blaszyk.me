@@ -30,7 +30,7 @@ import {
 import TableOfContents from '../components/TableOfContents';
 
 import 'katex/dist/katex.min.css';
-import './blog-post.css';
+import './tech-blog-post.css';
 
 const shortcodes = {
   Link,
@@ -177,18 +177,6 @@ class TechBlogPostTemplate extends React.Component {
               marginTop: rhythm(0.25),
             }}
           >
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'var(--textLink)',
-                fontSize: rhythm(4 / 5),
-              }}
-              to={'/'}
-            >
-              Jedr's Blog
-            </Link>
-            {' • '}
             <Link
               style={{
                 boxShadow: 'none',

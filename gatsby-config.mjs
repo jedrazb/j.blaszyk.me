@@ -12,7 +12,8 @@ const config = {
   siteMetadata: {
     title: 'Jedr Blaszyk',
     author: 'Jedr Blaszyk',
-    description: 'Blog by Jedr Blaszyk. Bikepacking, photography & tech.',
+    description:
+      'Tech blog by Jedr Blaszyk. Software engineering, search, and AI.',
     siteUrl: 'https://j.blaszyk.me',
     domain: 'j.blaszyk.me',
     social: {
@@ -23,23 +24,7 @@ const config = {
   pathPrefix: '/',
   plugins: [
     {
-      // blog posts
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: 'blog',
-      },
-    },
-    {
-      // through the lens posts
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/through-the-lens`,
-        name: 'through-the-lens',
-      },
-    },
-    {
-      // through the lens posts
+      // tech blog posts
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/tech-blog`,
@@ -116,51 +101,6 @@ const config = {
           }
         `,
         feeds: [
-          {
-            serialize: ({ query: { site, allMdx } }) => {
-              return allMdx.edges.map((edge) => {
-                const feedHTML = `
-                  <div>
-                    <p>
-                      ${edge.node.excerpt}...
-                      <a href="${site.siteMetadata.siteUrl + edge.node.fields.slug}">Read more >>></a>
-                    </p>
-                  </div>`;
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.spoiler,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': feedHTML }],
-                });
-              });
-            },
-            query: `
-              {
-                allMdx(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {fields: {category: {eq: "blog"}}}
-                ) {
-                  edges {
-                    node {
-                      excerpt
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        spoiler
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: 'Jedr Blaszyk',
-          },
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map((edge) => {
