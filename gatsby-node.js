@@ -9,78 +9,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('src/templates/blog-post.js');
-
     const techBlogPost = path.resolve('src/templates/tech-blog-post.js');
-
-    const throughTheLensPost = path.resolve(
-      'src/templates/through-the-lens-post.js'
-    );
 
     createPage({
       path: '/',
-      component: path.resolve('src/templates/blog-index.js'),
+      component: path.resolve('src/pages/about.js'),
     });
-
-    // blog posts
-    resolve(
-      graphql(`
-        {
-          allMdx(
-            sort: { frontmatter: { date: DESC } }
-            filter: { fields: { category: { eq: "blog" } } }
-            limit: 1000
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
-                internal {
-                  contentFilePath
-                }
-              }
-            }
-          }
-        }
-      `).then((result) => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-          return;
-        }
-
-        // Create blog posts pages.
-        const posts = result.data.allMdx.edges;
-        _.reduce(
-          posts,
-          (result, post) => {
-            result.add(post.node.fields.slug);
-            return result;
-          },
-          new Set()
-        );
-
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
-          createPage({
-            path: post.node.fields.slug,
-            component: `${blogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          });
-        });
-      })
-    );
 
     createPage({
       path: '/tech-blog/',
@@ -140,71 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: nodePath,
             component: `${techBlogPost}?__contentFilePath=${post.node.internal.contentFilePath}`,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          });
-        });
-      })
-    );
-
-    createPage({
-      path: '/through-the-lens/',
-      component: path.resolve('src/templates/through-the-lens-index.js'),
-    });
-
-    // through the lens posts
-    resolve(
-      graphql(`
-        {
-          allMdx(
-            sort: { frontmatter: { date: DESC } }
-            filter: { fields: { category: { eq: "through-the-lens" } } }
-            limit: 1000
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                  category
-                }
-                frontmatter {
-                  title
-                }
-              }
-            }
-          }
-        }
-      `).then((result) => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-          return;
-        }
-
-        // Create through the lens posts pages.
-        const posts = result.data.allMdx.edges;
-        _.reduce(
-          posts,
-          (result, post) => {
-            result.add(post.node.fields.slug);
-            return result;
-          },
-          new Set()
-        );
-
-        _.each(posts, (post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
-          const nodePath = `${post.node.fields.category}${post.node.fields.slug}`;
-
-          createPage({
-            path: nodePath,
-            component: throughTheLensPost,
             context: {
               slug: post.node.fields.slug,
               previous,
