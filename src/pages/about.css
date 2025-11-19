@@ -1,0 +1,162 @@
+.intro-section {
+  margin-bottom: 2.5rem;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--textNormal);
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Vertical Line - starts from first dot and extends to end */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  margin-left: 4.5px;
+  top: 9px;
+  bottom: -2.5rem;
+  width: 1px;
+  background: var(--hr);
+}
+
+.timeline-item:last-child::before {
+  bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--textLink);
+  z-index: 1;
+}
+
+/* Timeline Content */
+.timeline-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: var(--textTitle);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-location {
+  margin: 0.25rem 0;
+  color: var(--textNormal);
+  font-size: 0.95rem;
+}
+
+.timeline-location a {
+  color: var(--textLink);
+  text-decoration: none;
+}
+
+.timeline-location a:hover {
+  text-decoration: underline;
+}
+
+.timeline-date {
+  margin: 0.25rem 0 0.75rem 0;
+  color: var(--textSecondary);
+  font-size: 0.9rem;
+}
+
+.timeline-description {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: var(--textSecondary);
+  font-size: 0.95rem;
+}
+
+/* Timeline Projects Section */
+.timeline-projects {
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.timeline-projects h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: var(--textTitle);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline-projects ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.timeline-projects li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+  color: var(--textNormal);
+  font-size: 0.9rem;
+}
+
+.timeline-projects li:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 3rem;
+}
+
+.contact-section h2 {
+  margin-top: 0;
+}
+
+.side-projects {
+  margin-top: 1rem;
+  color: var(--textSecondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item::before {
+    left: -1.25rem;
+    margin-left: 3.5px;
+    top: 8px;
+  }
+
+  .timeline-dot {
+    left: -1.25rem;
+    width: 8px;
+    height: 8px;
+  }
+}
