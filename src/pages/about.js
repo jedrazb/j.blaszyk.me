@@ -39,16 +39,9 @@ class NotFoundPage extends React.Component {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Senior Software Engineer</h3>
+                <h3>Elastic</h3>
                 <p className="timeline-location">
-                  <a
-                    href="https://www.elastic.co/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Elastic
-                  </a>{' '}
-                  • Poland, Remote
+                  Senior Software Engineer • Remote
                 </p>
                 <p className="timeline-date">2023 - Present</p>
                 <p className="timeline-description">
@@ -94,16 +87,9 @@ class NotFoundPage extends React.Component {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>Senior Software Engineer</h3>
+                <h3>Yelp</h3>
                 <p className="timeline-location">
-                  <a
-                    href="https://www.yelp.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Yelp
-                  </a>{' '}
-                  • London / San Francisco
+                  Senior Software Engineer • London / San Francisco
                 </p>
                 <p className="timeline-date">2020 - 2023</p>
                 <p className="timeline-description">
@@ -125,6 +111,33 @@ class NotFoundPage extends React.Component {
                     </li>
                     <li>
                       Worked on scalable real time data ingestion pipeline.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <h3>Imperial College London</h3>
+                <p className="timeline-location">
+                  MEng Computing (AI specialization) • London
+                </p>
+                <p className="timeline-date">2016 - 2020</p>
+                <p className="timeline-description">
+                  Completed my MEng in Computing with a focus on AI.
+                </p>
+                <div className="timeline-projects">
+                  <ul>
+                    <li>
+                      <a
+                        href="/Master_Thesis.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Master thesis: Geometric Deep Learning for Subcortical
+                        Brain Shape Analysis
+                      </a>
                     </li>
                   </ul>
                 </div>
