@@ -34,14 +34,6 @@ class Footer extends React.Component {
           </Link>
         </div>
         <a
-          href="https://mobile.twitter.com/jedr_blaszyk"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer-icon icon-has-next"
-        >
-          <Twitter />
-        </a>
-        <a
           href="https://github.com/jedrazb"
           target="_blank"
           rel="noopener noreferrer"
