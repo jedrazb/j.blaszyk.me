@@ -51,9 +51,7 @@ class WritingIndex extends React.Component {
               <ul>
                 {sections[sectionName].map((post) => (
                   <li key={post.url} style={{ marginBottom: rhythm(0.25) }}>
-                    <a href={post.url} target="_blank" rel="noopener">
-                      {post.title}
-                    </a>
+                    <a href={post.url}>{post.title}</a>
                     <span
                       style={{
                         color: 'var(--textTitle)',
