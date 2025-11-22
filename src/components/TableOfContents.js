@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 
-import './TableOFContents.css';
+import './TableOfContents.css';
 
 const getIds = (items) => {
   if (!items) {
