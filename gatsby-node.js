@@ -135,6 +135,50 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
+// Helper to fetch and parse HTML content for metadata
+const fetchPageMetadata = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.warn(`Failed to fetch page ${url}: ${response.statusText}`);
+      return null;
+    }
+    const html = await response.text();
+
+    // Simple regex to extract title (matches content in <title> tag)
+    const titleMatch = /<title[^>]*>([^<]+)<\/title>/i.exec(html);
+    let title = titleMatch ? titleMatch[1].trim() : '';
+
+    // Clean up title (common pattern: "Title | Site Name")
+    if (title.includes('|')) {
+      title = title.split('|')[0].trim();
+    } else if (title.includes(' - ')) {
+      title = title.split(' - ')[0].trim();
+    }
+
+    // Attempt to extract published date from meta tags
+    // Matches <meta property="article:published_time" content="..."> or similar
+    const dateMatch =
+      /<meta\s+(?:property|name)=["'](?:article:published_time|date|pubdate)["']\s+content=["']([^"']+)["']/i.exec(
+        html
+      );
+    let date = dateMatch ? dateMatch[1].split('T')[0] : null;
+
+    // Fallback: try to find date in structured data (schema.org)
+    if (!date) {
+      const schemaMatch = /"datePublished":\s*"([^"]+)"/.exec(html);
+      if (schemaMatch) {
+        date = schemaMatch[1].split('T')[0];
+      }
+    }
+
+    return { title, date };
+  } catch (error) {
+    console.warn(`Error extracting metadata for ${url}:`, error);
+    return null;
+  }
+};
+
 // Helper to parse XML sitemap using regex
 const parseSitemap = async (url, filter) => {
   try {
@@ -163,17 +207,29 @@ const parseSitemap = async (url, filter) => {
           continue;
         }
 
-        // Extract title from URL slug
-        // e.g. .../blog/my-post-title -> "My Post Title"
+        // Extract default data from sitemap
         const slug = postUrl.split('/').filter(Boolean).pop();
-        const title = slug
+        let title = slug
           .split('-')
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ');
 
-        const date = lastmodMatch
+        let date = lastmodMatch
           ? lastmodMatch[1].split('T')[0]
           : new Date().toISOString().split('T')[0];
+
+        // Enhance with actual page metadata if available
+        // We'll limit this to avoid hammering the server too hard sequentially,
+        // but for a build process it's usually acceptable.
+        console.log(`Fetching metadata for: ${postUrl}`);
+        const metadata = await fetchPageMetadata(postUrl);
+
+        if (metadata) {
+          if (metadata.title) title = metadata.title;
+          // Only override date if we found a specific publish date,
+          // otherwise sitemap lastmod is often more reliable for "last updated"
+          if (metadata.date) date = metadata.date;
+        }
 
         posts.push({
           title,
