@@ -92,6 +92,18 @@ function NavBar({ title, location, toggle }) {
                   <span itemProp="name">Blog</span>
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="/writing/"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={closeMenu}
+                  partiallyActive={true}
+                  itemProp="url"
+                >
+                  <span itemProp="name">Writing</span>
+                </Link>
+              </li>
             </ul>
           </nav>
           {toggle}

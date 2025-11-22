@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Twitter, GitHub, Linkedin, Instagram, Rss } from 'react-feather';
-import Strava from '../assets/strava.inline.svg';
+import { GitHub, Linkedin, Rss } from 'react-feather';
 import Sitemap from '../assets/sitemap.inline.svg';
 
 import { rhythm } from '../utils/typography';

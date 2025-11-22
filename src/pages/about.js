@@ -160,18 +160,6 @@ class NotFoundPage extends React.Component {
               </a>{' '}
               - a platform for website AI search and chat.
             </p>
-
-            <p className="side-projects">
-              Also follow{' '}
-              <a
-                href="https://www.cyclingdoppio.cc/en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                cyclingdoppio.cc
-              </a>{' '}
-              for bikepacking and travel adventures.
-            </p>
           </div>
         </main>
       </Layout>

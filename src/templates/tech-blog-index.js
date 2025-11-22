@@ -130,6 +130,9 @@ class TechBlogIndexTemplate extends React.Component {
               </Link>
             );
           })}
+          <div style={{ marginTop: rhythm(2), textAlign: 'center' }}>
+            <Link to="/writing">View external writing →</Link>
+          </div>
         </main>
       </Layout>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { rhythm } from '../utils/typography';
 import { StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
 
 const Bio = ({ isBike, size = 'm', style }) => {
   const imageSize = (() => {
@@ -55,8 +56,8 @@ const Bio = ({ isBike, size = 'm', style }) => {
       <p style={{ maxWidth: 380, margin: 0 }}>
         Blog by{' '}
         <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.
-        Check out <a href="https://www.cyclingdoppio.cc/en">cyclingdoppio.cc</a>{' '}
-        for bikepacking and travel stories.
+        Check out my <Link to="/writing">featured posts</Link> publsihed on
+        other platforms.
       </p>
     </div>
   );

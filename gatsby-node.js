@@ -135,6 +135,111 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
+// Helper to parse XML sitemap using regex
+const parseSitemap = async (url, filter) => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok)
+      throw new Error(`Failed to fetch sitemap: ${response.statusText}`);
+    const xml = await response.text();
+
+    const posts = [];
+    // Simple regex to match url blocks
+    const urlRegex = /<url>(.*?)<\/url>/gs;
+    const locRegex = /<loc>(.*?)<\/loc>/;
+    const lastmodRegex = /<lastmod>(.*?)<\/lastmod>/;
+
+    let match;
+    while ((match = urlRegex.exec(xml)) !== null) {
+      const content = match[1];
+      const locMatch = locRegex.exec(content);
+      const lastmodMatch = lastmodRegex.exec(content);
+
+      if (locMatch) {
+        const postUrl = locMatch[1].trim();
+
+        // Apply filter if provided
+        if (filter && !postUrl.includes(filter)) {
+          continue;
+        }
+
+        // Extract title from URL slug
+        // e.g. .../blog/my-post-title -> "My Post Title"
+        const slug = postUrl.split('/').filter(Boolean).pop();
+        const title = slug
+          .split('-')
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+
+        const date = lastmodMatch
+          ? lastmodMatch[1].split('T')[0]
+          : new Date().toISOString().split('T')[0];
+
+        posts.push({
+          title,
+          url: postUrl,
+          date,
+        });
+      }
+    }
+    return posts;
+  } catch (error) {
+    console.error('Error parsing sitemap:', error);
+    return [];
+  }
+};
+
+exports.sourceNodes = async ({
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
+  const { createNode } = actions;
+  const externalPostsConfig = require('./src/data/external-posts-config.js');
+
+  for (const section of externalPostsConfig) {
+    let posts = [];
+
+    if (section.sourceType === 'static') {
+      posts = section.posts || [];
+    } else if (section.sourceType === 'sitemap' && section.sitemapUrl) {
+      console.log(`Fetching sitemap for ${section.header}...`);
+      const sitemapPosts = await parseSitemap(
+        section.sitemapUrl,
+        section.urlFilter
+      );
+      posts = [...(section.posts || []), ...sitemapPosts];
+    }
+
+    for (const post of posts) {
+      createNode({
+        ...post,
+        section: section.header,
+        id: createNodeId(`external-post-${post.url}`),
+        parent: null,
+        children: [],
+        internal: {
+          type: 'ExternalPost',
+          contentDigest: createContentDigest(post),
+        },
+      });
+    }
+  }
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type ExternalPost implements Node {
+      title: String!
+      url: String!
+      date: Date @dateformat
+      section: String!
+    }
+  `;
+  createTypes(typeDefs);
+};
+
 const roundFocalLength = (l) => {
   return Math.round(l);
 };
