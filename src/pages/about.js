@@ -93,8 +93,8 @@ class NotFoundPage extends React.Component {
                 </p>
                 <p className="timeline-date">2020 - 2023</p>
                 <p className="timeline-description">
-                  Ranking Platform team. Maintaining search and ranking
-                  infrastructure for internal search and ads platform.
+                  Ranking Platform team. Building search and ranking
+                  infrastructure for app search and ads platform.
                 </p>
                 <div className="timeline-projects">
                   <ul>
@@ -109,9 +109,7 @@ class NotFoundPage extends React.Component {
                       - contributor to open-source, highly scalable search
                       engine
                     </li>
-                    <li>
-                      Worked on scalable real time data ingestion pipeline.
-                    </li>
+                    <li>Built scalable real time data ingestion pipelines.</li>
                   </ul>
                 </div>
               </div>
