@@ -39,11 +39,22 @@ class NotFoundPage extends React.Component {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
+                <h3>EigenPal</h3>
+                <p className="timeline-location">Founder • San Francisco</p>
+                <p className="timeline-date">2025 - Present</p>
+                <p className="timeline-description">
+                  Building enterprise-grade document understanding platform.
+                </p>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
                 <h3>Elastic</h3>
                 <p className="timeline-location">
                   Senior Software Engineer • Remote
                 </p>
-                <p className="timeline-date">2023 - Present</p>
+                <p className="timeline-date">2023 - 2025</p>
                 <p className="timeline-description">
                   Agent Builder team. Building framework for creating AI agents.
                 </p>

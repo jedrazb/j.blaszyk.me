@@ -56,7 +56,7 @@ const Bio = ({ isBike, size = 'm', style }) => {
       <p style={{ maxWidth: 380, margin: 0 }}>
         Blog by{' '}
         <a href="https://mobile.twitter.com/jedr_blaszyk">Jedr Blaszyk</a>.
-        Check out my <Link to="/writing">featured posts</Link> publsihed on
+        Check out my <Link to="/writing">featured posts</Link> published on
         other platforms.
       </p>
     </div>
