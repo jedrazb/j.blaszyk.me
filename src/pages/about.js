@@ -39,7 +39,7 @@ class NotFoundPage extends React.Component {
             <div className="timeline-item">
               <div className="timeline-dot"></div>
               <div className="timeline-content">
-                <h3>EigenPal</h3>
+                <h3>EigenPal (YC W26)</h3>
                 <p className="timeline-location">Founder • San Francisco</p>
                 <p className="timeline-date">2025 - Present</p>
                 <p className="timeline-description">
