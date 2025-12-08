@@ -150,7 +150,7 @@ const config = {
               }
             `,
             output: '/tech-blog/rss.xml',
-            title: "Jedr's Tech Blog",
+            title: 'Jedr Blaszyk - Tech Blog',
           },
         ],
       },
