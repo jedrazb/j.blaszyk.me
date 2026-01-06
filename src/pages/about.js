@@ -43,7 +43,7 @@ class NotFoundPage extends React.Component {
                 <p className="timeline-location">Founder • San Francisco</p>
                 <p className="timeline-date">2025 - Present</p>
                 <p className="timeline-description">
-                  Building enterprise-grade document understanding platform.
+                  Building enterprise-grade document understanding platform. <a href="https://www.eigenpal.com" target="_blank" rel="noopener noreferrer">eigenpal.com</a>
                 </p>
               </div>
             </div>
