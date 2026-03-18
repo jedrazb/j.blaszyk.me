@@ -158,6 +158,9 @@ importers:
       remark-math:
         specifier: ^5.1.1
         version: 5.1.1
+      svg-react-loader:
+        specifier: ^0.4.6
+        version: 0.4.6
       swiper:
         specifier: ^8.4.7
         version: 8.4.7

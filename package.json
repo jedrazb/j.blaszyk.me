@@ -61,6 +61,7 @@
     "rehype-react": "^8.0.0",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
+    "svg-react-loader": "^0.4.6",
     "swiper": "^8.4.7",
     "typography": "^0.16.24",
     "typography-theme-wordpress-2016": "^0.16.19"
