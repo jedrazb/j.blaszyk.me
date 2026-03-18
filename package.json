@@ -81,18 +81,18 @@
   "scripts": {
     "prepare": "husky",
     "dev": "gatsby develop",
-    "lint": "yarn eslint content/**/*.{md,mdx}",
+    "lint": "pnpm eslint content/**/*.{md,mdx}",
     "precommit": "lint-staged",
     "format": "prettier --write '{gatsby-*.{js,mjs},src/**/*.{js,jsx,json,css},content/**/*.mdx}'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "now-build": "gatsby build",
-    "deploy": "yarn build && cp CNAME public/ && gh-pages -d public",
+    "deploy": "pnpm build && cp CNAME public/ && gh-pages -d public",
     "deploy-cached": "gatsby build && cp CNAME public/ && gh-pages -d public"
   },
   "lint-staged": {
-    "*.{js,jsx,json,md,mdx,mjs,css}": "yarn format"
+    "*.{js,jsx,json,md,mdx,mjs,css}": "pnpm format"
   },
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "pnpm@9.15.4"
 }

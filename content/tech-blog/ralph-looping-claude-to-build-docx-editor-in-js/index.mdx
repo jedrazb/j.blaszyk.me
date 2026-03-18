@@ -24,7 +24,7 @@ On a positive note, LLMs seem to have deep latent knowledge of how Google Docs-s
 
 ## Results
 
-After running for a couple of nights, we had a functional editor.
+After running for a couple of nights, we had a functional editor. You can check out the .docx editor at: [docx-editor.dev](https://docx-editor.dev/).
 
 <ImageComponent
   image={props.data.mdx.frontmatter.blogImages[0]}
@@ -43,7 +43,7 @@ I also burned through my entire Claude Max 20x weekly quota. Claude could be mor
 
 ### The ugly
 
-The first night was a total false start. I didn't emphasize "WYSIWYG" strongly enough in the initial architecture doc, and I woke up to a fancy CSS mapper function that could convert some Word styles to HTML. Technically impressive, sure, but completely useless for our needs. That version had no concept of proper document layout, couldn't calculate page breaks, and certainly had no editing capabilities. 
+The first night was a total false start. I didn't emphasize "WYSIWYG" strongly enough in the initial architecture doc, and I woke up to a fancy CSS mapper function that could convert some Word styles to HTML. Technically impressive, sure, but completely useless for our needs. That version had no concept of proper document layout, couldn't calculate page breaks, and certainly had no editing capabilities.
 
 Lesson learned: the initial framing matters enormously for autonomous runs.
 
